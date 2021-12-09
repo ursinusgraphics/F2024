@@ -1,0 +1,28 @@
+I want to both improve the aesthetics and stability of the code.  I also want to add the ability to integrate with Youtube if this is possible.  There's a chance this could be applied to mental health meditations for anxiety based on a random e-mail I got this week, but regardless, I think it's a fun and unique visualizer that hopefully more people will get excited about this time around.
+
+Features / Audio Geometry
+* Michael Tecce
+* Joe Lyons
+This group will be responsible for turning audio into a shape.  Experience with linear algebra and digital audio will help, but is not strictly necessary (I can teach all of the math that's necessary).  The goal will be to come up with a curve that reacts quickly to the music, but which isn't too noisy and which has good global structure.  I have a bunch of different ideas that we can try, and I can help with some of the software to do dimension reduction, and the group can play around with different techniques and parameters to see how they work on different songs.
+
+Graphics
+* Matt Cole
+* Adam Moritz
+This group will be responsible for figuring out good ways to render the curve.  Questions to explore include, but are not limited to :
+How thick should the lines be?  Is it better to draw smooth cylinders instead of the default WebGL lines?
+Should older parts of the curve fade out over time to make room for the newer parts?  And/or should we retain parts that are close in space but not in time?
+What colormaps are good for the curve?
+What is an intuitive way to scroll through the music?
+This group may also want to pair up with the annotation interface group in the sculptures project to implement picking for the curve to jump around in time
+
+
+Web Interface / Database Engineering
+* Luke Robles
+* Griff McMann
+
+The primary responsibility of this group will be to create Javascript code to allow users to load audio through four different means:
+1. As an upload from their computer
+2. As an input from Soundcloud
+3. As an input from Youtube
+4. Pre-computed examples (as on the current LoopDitty web site)
+This group will have to learn the soundcloud and youtube APIs.   Ideally, we will be able to get the raw audio waveform, though I am not sure what the copyright restrictions are.  For youtube videos, this group should work with the graphics group to synchronize the curve with the video that's playing.  I will teach this group how to encode audio using base64 binary.

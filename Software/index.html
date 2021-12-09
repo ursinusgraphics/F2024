@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<!-- Header !-->
+	<head>
+		<title>Ursinus CS 476: Computer Graphics, Fall 2022</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
+        <style>
+        .image_off, #home:hover .image_on{
+           display:none
+        }
+        .image_on, #home:hover .image_off{
+           display:block
+        }
+        </style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../index.html" class="logo"><strong>Ursinus CS 476: Computer Graphics, Fall 2022</strong></a>
+								</header>
+<!-- End Header !-->
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Software Environment</h1>
+									</header>
+									
+									<h2><a name = "vscodeinstall">Visual Studio Code Installation with WebServer</a></h2>
+									<p>
+										We will be using the Javascript programming language in our class (and HTML and GLSL within that).  The purpose of the class is not to become an expert in Javascript, but rather to use it in the service of practicing coding implementations and debugging in general.  To make this as easy as possible, we will start with an Integrated Development Environment (IDE) known as <b>Microsoft Visual Studio Code</b> (VSCode), which will make it easy to organize your projects and to run the code you write.  Please visit <a href = "https://code.visualstudio.com/Download">this link</a> to download VSCode for your appropriate operating system.  Most Windows and Linux users will want the <b>64-bit</b> download.  Please post on Discord if you are having any issues installing VSCode.
+									</p>
+
+
+                                    <p>
+                                        <b>NOTE:</b> You may also use another editor, but you will have to <a href = "#pythonserver">manually setup a web server locally</a> to avoid <a href = "https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">cross-origin exceptions</a> for most of the assignments.  We did this last year, and it was a pain sometimes.
+									</p>
+
+									<h3><a name = "liveserver">Live Server Plugin (<b>Strongly Recommended</b>)</a></h3>
+									<p>
+										VSCode has a ton of awesome, open source plugins.  One that's particularly useful for our course is a local web server that can launch your pages in the browser and automatically refresh them as you save your file.  Once you have downloaded VSCode, you will need to click on the <code>Extensions</code> button (circled in red in the image below) and search for <code>Live Server</code>, and then click install
+									</p>
+
+									<img src = "LiveServer.png">
+
+									<p>
+										Then, open a top level folder containing the code that you want to run, right click on an HTML file you want to run, and click <BR><code>Open with Live Server</code>
+									</p>
+
+									<img src = "OpenServer.png">
+
+									<p>
+										This will then launch your code in a browser window, and as you type and save any code that the HTML page depends on, it will automatically refresh in the browser(!!).  
+									</p>
+
+									<p>
+										If you want to change the default browser that opens with the live server, then you have to change the <code>settings.json</code> to have the <code>CustomBrowser</code> field.  For example, my <code>settings.json</code> file has the following code to get it to launch Chrome by default
+									</p>
+
+									<script type="syntaxhighlighter" class="brush: js"><![CDATA[
+									{
+										"window.zoomLevel": 2,
+										"terminal.integrated.inheritEnv": false,
+										"liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+										"liveServer.settings.CustomBrowser":"chrome"
+									}
+									]]></script> 
+
+									<p>
+										The GIF below shows how to access the <code>settings.json</code> file
+									</p>
+
+									<img src = "LiveServer_CustomBrowser.gif">
+
+									<p>
+										<b>NOTE: </b> The assignments have been tested in Firefox and Chrome, so it's best if you stick to one of those browsers.
+									</p>
+									
+									<h3><a name = "vscodefeatures">Quick Features Overview</a></h3>
+
+									<p>
+										Below are a few features I want to highlight that will come in handy as your working.
+									</p>
+
+									<h4>Unused variable highlighting</h4>
+									<p>
+										If you don't use a variable, it will show up in darker text.  This is very useful when debugging.  It means that either you didn't actually need the variable, you forgot to use it (hence you didn't complete your code), or you spelled it wrong somewhere.  This saved many a student last year!
+									</p>
+
+									<img src = "HighlightingUnused.gif">
+
+									<h4>Replace within Selection</h4>
+									<p>
+										If you want to change the name of a variable in one section of your code, you can do a <code>CTRL+F</code>, which will bring up the find/replace menu, then follow these steps:
+									</p>
+									<img src = "ReplaceSelection.gif">
+
+								<h2>Debugging Javascript</h2>
+								<p>
+									Firefox and Chrome have robust tools built in that you can use to debug your code.  On most computers, you can hit <code>F12</code> to bring up the debugging console.  There, you will see any output from <code>console.log()</code>, and you will be able to set breakpoints in an interactive debugger.
+								</p>
+
+
+								<h2><a name = "pythonserver">Local web server (Optional)</a></h2>
+									<p>
+										If you want to run your code without using the built in webserver from VisualStudio cod,e the easiest way to do that is to use Python's built in web server.  Download and install Python on your machine if you don't already have it.  If you are installing Python for the first time, it is recommended that you use <a href = "https://www.anaconda.com/distribution/">Python 3.7 from Anaconda</a>.  Once you have Python installed, open up your console and navigate to the root of the directory that has all of your HTML files.  Then type
+									<p>
+									<code>
+										python -m http.server
+									</code>
+									</p>
+
+									Or if you have Python 2 as your default Python installation (<a href = "https://pythonclock.org/">Lord help you</a>), type
+									<p>
+									<code>
+										python -m SimpleHTTPServer
+									</code>
+									</p>
+
+									<p>
+									By default, this will provide access to your code on port 8000 on your local machine, so you would go to the link <a href = "http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> to run your code.  <b>Please post on Discord if you are having trouble with this</b>.  This was our default way of running code last year, and it was a bit of a pain, particularly because students often had to do a "hard refresh" in their browser to run the most updated code.
+									</p>
+
+                                    
+
+
+						</div>
+					</div>
+
+				<!--Syntax highlighting in Javascript!-->
+				<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
+				<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+				<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+				<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+				<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+				<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+				<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+                                        <li>
+											<span class="opener">General</span>
+											<ul>
+												<li><a href = "../index.html#overview">Overview</a></li>
+												<li><a href = "../index.html#logistics">Technology Logistics</a></li>
+												<li><a href = "../index.html#homework">Homework</a></li>
+												<li><a href = "../index.html#grading">Grading</a></li>
+												<li><a href = "../index.html#environment">Classroom Environment</a></li>
+												<li><a href = "../index.html#participation">Participation</a></li>
+												<li><a href = "../index.html#collaboration">Collaboration Policy</a></li>
+												<li><a href = "../index.html#other">Other Resources / Policies</a></li>
+											</ul>
+										</li>
+										<li><a href = "../Software/index.html">Software</a></li>
+										<li><a href = "../index.html#schedule">Schedule</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li>
+													<ul>
+														<li></li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Class Exercises</span>
+											<ul>
+												<li>
+													<ul>
+														<li></li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li><a href = "../FinalProject/index.html">Final Project</a></li>
+									</ul>
+								</nav>
+
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; <a href = "http://www.ctralie.com">Christopher J. Tralie</a>. All rights reserved.  Contact chris.tralie@gmail.com. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+<!-- End Sidebar !-->
+
+<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+<!-- End Scripts -->
+	</body>
+</html>

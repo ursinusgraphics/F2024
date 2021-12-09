@@ -1,0 +1,96 @@
+<a href = "https://ursinus.co1.qualtrics.com/jfe/form/SV_b8f6vIUU4KwTmcJ">Background Knowledge Assessment</a>
+
+2020-09-07
+<a href = "../Assignments/Indy0_SoftwareCheck/index.html">Individual Assignment 0: Warmup</a> Due
+
+2020-09-08
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Overview">Module 1: Javascript</a> Due Before Class
+
+2020-09-09
+<a href = "../Assignments/Indy1_GeomPrimitives">Individual Assignment 1: Geometric Primitives</a> Out
+
+2020-09-10
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Vectors1">Module 2: Vectors And Dot Products</a> Due Before Class
+
+2020-09-11
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/Vectors1">Module 3: Projections, Cross Product, Normals</a> Due Before Class
+
+2020-09-14
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/LinesAndPlanes1">Module 4: Lines/Rays/Planes</a> Due Before Class
+
+2020-09-18
+<HR><a href = "../Assignments/Indy1_GeomPrimitives/index.html#part1">Individual Assignment 1: Geometric Primitives Part 1</a> Due
+
+2020-09-18
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module5/RayIntersectPlane">Module 5: Ray Intersect Plane/Triangle/Sphere</a> Due Before Class
+
+2020-09-21
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module6/Video1">Module 6: 2D Matrices Definition, Composition, And Inverses</a> due before class
+
+2020-09-25
+<HR><a href = "../Assignments/Indy1_GeomPrimitives/index.html#part2">Individual Assignment 1: Geometric Primitives Part 2</a> Due
+
+2020-09-25
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module7/Video1">Module 7: 3D Transformations And Scene Graphs</a> due before class
+
+2020-09-30
+<HR><a href = "../Assignments/Indy2_SceneTrees">Individual Assignment 2: Scene Trees</a> Out
+
+2020-09-30
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module8/Video1">Module 8: GLSL And Shaders</a> due before class
+
+2020-10-07
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module9/Video1">Module 9: Blobby Shaders, Complex Numbers, And Fractals</a> due before class
+
+2020-10-09
+<a href = "../Assignments/Assignment3_Shaders">Assignment 3: Shaders</a> Out
+
+2020-10-07
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/Video1">Module 10: Local Illumination via Gouraud Shading</a> due before class
+
+2020-10-14
+<a href = "../Assignments/Assignment3_Shaders">Assignment 3: Shaders</a> Due
+
+2020-10-19
+<HR><a href = "../Assignments/Indy2_SceneTrees">Individual Assignment 2: Scene Trees</a> Due
+
+2020-10-09
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module11/Video1">Module 11: Ray Casting</a> due before class
+
+2020-10-16
+<a href = "../Assignments/Assignment4_RayTracer">Assignment 4: Ray Tracer</a> out
+
+2020-10-18
+<a href = "../Assignments/Assignment4_RayTracer">Assignment 4: Ray Tracer</a> Check-In Due
+
+2020-10-28
+<a href = "../Assignments/Assignment4_RayTracer">Assignment 4: Ray Tracer</a> Final Submission Due
+
+2020-11-11
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module12/Video1">Module 12: Global Illumination Part 1</a> due before class
+
+2020-10-23
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module13/Video1">Module 13: Object-First Projection Matrices</a> due before class
+
+2020-11-04
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module14/Video1">Module 14: Topological Properties of Manifold Meshes</a> due before class
+
+2020-11-13
+<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module15/Video1">Module 15: Heightmaps, Levelsets, and Marching Squares</a> due before class
+
+2020-11-23
+<a href = "../Assignments/Assignment5_3DShapeModeling">Assignment 5: Polygon Mesh Processing</a> Out
+
+2020-11-18
+<a href = "../Assignments/Assignment5_3DShapeModeling">Assignment 5: Polygon Mesh Processing</a> Part 1 due
+
+2020-11-25
+<HR>Final Project Deadline #1
+
+2020-11-25
+<a href = "../Assignments/Assignment5_3DShapeModeling">Assignment 5: Polygon Mesh Processing</a> Part 2 due
+
+2020-12-09
+Final Project Deadline #2
+
+2020-12-11

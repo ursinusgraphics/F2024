@@ -1,0 +1,900 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<!-- Header !-->
+	<head>
+		<title>Ursinus CS 476: Computer Graphics, Fall 2022</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <style>
+        .image_off, #home:hover .image_on{
+           display:none
+        }
+        .image_on, #home:hover .image_off{
+           display:block
+        }
+        </style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Ursinus CS 476: Computer Graphics, Fall 2022</strong></a>
+								</header>
+<!-- End Header !-->
+
+							<!-- Banner -->
+							<section id="banner">
+								<div class="content">
+									<header>
+										<h1>CS 476: Computer Graphics</h1>
+										<h2><a href = "http://www.ursinus.edu">Ursinus College</a>, Fall 2022</h2>
+										<h2>Instructor: <a href = "http://www.ctralie.com">Christopher J. Tralie</a></h2>
+									</header>
+
+										<div class = "row">
+											<div class="4u 12u$(medium)">
+												<center>
+												<img src = "OverviewPictures/L_Domenic.png" width = 250 height = 200>
+												</center>
+											</div>
+											<div class="4u 12u$(medium)">
+												<center>
+												<img src = "OverviewPictures/headshot_large.png" width = 130 height = 200>
+												</center>
+											</div>
+											<div class="4u 12u$(medium)">
+												<center>
+												<img src = "OverviewPictures/DinopetBoundary.png" width = 200 height = 250>
+												</center>
+											</div>
+										</div>
+
+										<div class = "row">
+											<div class="4u 12u$(medium)">
+												<center>
+												<img src = "OverviewPictures/metaballs.png" width = 250 height = 150>
+												</center>
+											</div>
+											<div class="4u 12u$(medium)">
+												<center>
+														<img src = "OverviewPictures/Activemarker2.PNG" width = 250 height = 170>
+												</center>
+											</div>
+											<div class="4u 12u$(medium)">
+												<center>
+														<img src = "OverviewPictures/subdivision.png" width = 200 height = 140>
+												</center>
+											</div>
+										</div>
+
+										<div class = "row">
+											<div class="4u 12u$(medium)">
+												<center>
+												<img src = "OverviewPictures/SceneGraph.png" width = 250 height = 200>
+												</center>
+											</div>
+											<div class="4u 12u$(medium)">
+												<center>
+													<img src = "OverviewPictures/rigging.png" width = 250 height = 170>
+												</center>
+											</div>
+											<div class="4u 12u$(medium)">
+												<center>
+												<img src = "OverviewPictures/celshading.png" width = 250 height = 170>
+												
+												</center>
+											</div>
+										</div>
+
+											<h2>Table Of Contents</h2>
+											<h3>
+												<table>
+													<tr>
+														<td>
+															<ul>
+																<li><a href = "#overview">Overview</a></li>
+																<li><a href = "#logistics">Technology Logistics</a></li>
+																<li><a href = "#readings">Readings</a></li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li><a href = "#deliverables">Deliverables</a></li>
+																<li><a href = "#schedule">Schedule</a></li>
+																<li><a href = "#grading">Grading</a></li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li><a href = "#environment">Classroom Environment</a></li>
+																<li><a href = "#collaboration">Collaboration Policy</a></li>
+																<li><a href = "#other">Other Resources / Policies</a></li>
+															</ul>
+														</td>
+													</tr>
+												</table>
+											</h3>
+											
+                                            <HR>
+											<h2><a name = "overview">Overview</a></h2>
+
+											<h3>Class Times / Locations</h3>
+											<h4>
+                                                <ul>
+													<li> Monday/Wednesday/Friday, TBD </li>
+                                                </ul>
+
+											</h4>
+											<h3>Student Office Hours</h3>
+											<h4>
+												TBD
+											</h4>
+
+											<h3>Prerequisites/Requirements</h3>
+											<p>
+												Math 111 or equivalent and CS 274 or CS 275, or permission of instructor
+											</p>
+
+											<h3>Instructor</h3>
+											<p>
+												<a href = "http://www.ctralie.com">Christopher J. Tralie</a>
+											</p>
+											<img src = "ctralie_headshot.png" width=400>
+											
+											<p>
+												I grew up right around the corner in the Montgomery County and attended <a href = "https://www.udsd.org/schools/udhs/">Upper Dublin High school</a> (class of 2007).  I then did my undergraduate degree in <a href = "https://ee.princeton.edu/">Electrical Engineering</a> at Princeton University and my master's and Ph.D. degrees in <a href = "https://ece.duke.edu/">Electrical And Computer Engineering</a> at Duke University (heavily studying math and CS along the way).  I finally started my dream job at Ursinus College in Fall of 2019!  You can read more about my interests on my <a href = "http://www.ctralie.com/">professional web site</a>.  Looking forward to getting to know everyone as we work through this course together!
+											</p>
+
+											<p>
+
+											</p>
+											<h3>Course Description</h3>
+											<p>
+												Computer graphics is the study and use of computer algorithms to simulate what humans see in the natural world, or to procedurally generate visual art.  In essence, computer graphics is an attempt to teach a computer broadly how to do the job of a visual artist (and beyond!).  For the purposes of this course, a broad taxonomy of computer graphics is three-fold:
+												<ol>
+													<li><a href = "index.html#rendering">Rendering</a>, or the generation of images of virtual worlds (including photorealistic images or chosen artistic aesthetic, such as Pixar movies)
+													</li>
+													
+													<li><a href = "index.html#shape">3D Shape representation and manipulation</a>, or geometric data structures and algorithms to enable efficient and intuitive design of 2D surfaces and 3D volumes in 3D space</li>
+	
+													<li><a href = "index.html#animation">3D Animation</a>, or the modeling of dynamics in scenes over time, often simulating aspects of physics in our natural world.</li>
+												</ol>
+											</p>
+	
+											<p>
+												This hands on capstone course will be a breadth-first introduction to the world of 3D computer graphics.  Rather than teaching the user interfaces of tools such as <a href = "https://www.blender.org/">Blender</a> and <a href = "https://www.autodesk.com/products/maya/overview">Maya</a>, which are commonly used in video game design and movies, and which might be taught in a <a href = "https://www.scad.edu/">3D design curriculum</a>, we instead focus on the <i>technologies themselves</i> behind these programs.  As such, the course will have a more mathematical and algorithmic focus.  In particular, students will write code to implement vanilla tools from the ground up to design 3D scenes, to perform <a href = "index.html#rendering">3D rendering</a>, to design and manipulate <a href = "index.html#shape">3D shapes</a>, and to help automate certain aspects of <a href = "index.html#animation">3D animation</a>, among <a href = "index.html#schedule">other things</a>.  The course will culminate in a final project related to the digital humanities, or related to video game design for those doing a <a href = "#link">linked inquiry</a>.
+											</p>
+											
+	
+	
+	
+											<h3><a name = "goals">Learning Goals</a></h3>
+											<p>
+											<ol>
+												<li>
+													Learn the unique issues that arise when implementing mathematical concepts in code.
+												</li>
+	
+												<li>
+													Develop creative strategies to debug programs using visual output.
+												</li>
+	
+												<li>
+													Articulate the way mathematics, physics, and computer science work together in an application.
+												</li>
+	
+											</ol>
+											</p>
+	
+											<h3><a name = "objectives">Learning Objectives</a></h3>
+											<p>
+											<ol>
+	
+												<li>
+													Learn to write <i>interoperable</i> code at the interface of multiple, heterogenous languages (particularly the interaction of Javascript with GLSL).  This is a very important skill for a professional software developer, since different languages have different strengths, and you will often need to combine them to leverage their joint strengths.
+												</li>
+	
+												<li>
+													"Reflect" on how humans see, and compare the tradeoffs made by different algorithms that try to simulate this process virtually.
+												</li>
+	
+												<li>
+													Develop fluency with more complicated, object-oriented data structures, such as the half-edge data structure for triangle meshes.
+												</li>
+	
+											</ol>
+											</p>
+
+												<h3><a name = "linked">Linked Inquiry</a></h3>
+
+
+
+
+
+
+
+											<hr>
+											<h2><a name = "logistics">Technology Logistics</a></h2>
+											<p>
+												We will be using a zoo of technologies in the course, as has become standard in 21st century work environments.  Below is a table summarizing what kinds of communications/activities occur via each technology, and below that there are more details on everything.  This is admittedly complex, and it will take some getting used to, but it will be worth it once we get it nailed down.  
+											</p>
+											<p>
+												<b>NOTE:</b> I will repeat the same announcements across e-mail and Discord, so you don't have to check all both for announcements.
+											</p>
+											
+											<table>
+												<tr>
+													<td>
+														Class web site (You are here!)
+													</td>
+													<td>
+														<ul>
+															<li><a href = "#schedule">Schedule</a> (Topics, Study Resource Links, Assignment Deadlines)</li>
+															<li>Assignment descriptions</li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														Canvas
+													</td>
+													<td>
+														<ul>
+															<li>Assignment Deadlines, Submission, and Feedback</li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														Discord
+													</td>
+													<td>
+														<ul>
+															<li>
+																Chat/polls during class
+															</li>
+															<li>
+																Announcements
+															</li>
+															<li>Student office hours</li>
+															<li>
+																Class-wise questions and discussions, including anonymous questions
+															</li>
+															<li>
+																Individual chat with Prof. Tralie of a less sensitive nature (e.g. tech support, assignment questions not appropriate for the entire class)
+															</li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<td>Microsoft Teams</td>
+													<td>
+														<ul>
+															<li><a href = "#buddy">Buddy</a> Collaborations/Screen Sharing</li>
+															<li>
+																Individual chat with Prof. Tralie of a less sensitive nature (e.g. tech support, assignment questions not appropriate for the entire class)
+															</li>
+															<li>
+																Individual chat with Prof. Tralie of a more sensitive/private nature (e.g. questions about grades, academic planning, personal issues) <a href = "#sensitive">(*)</a>
+															</li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														E-mail
+													</td>
+													<td>
+														<ul>
+															<li>Announcements</li>
+															<li>Individual chat with Prof. Tralie of a more sensitive/private nature (e.g. questions about grades, academic planning, personal issues), <i>though I prefer Microsoft Teams for this and will respond more quickly over Teams</i></li>
+															<li>Individual chat with Prof. Tralie of a less sensitive nature (e.g. tech support, assignment questions not appropriate for the entire class), <i>though I prefer Microsoft Teams or Discord for this and will respond more quickly over Teams</i></li>
+														</ul>
+													</td>
+												</tr>
+											</table>
+											<p>
+												<a name = "sensitive">*</a>: For <a href = "https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act">privacy reasons</a>, anything of a personal nature, and particularly things that have to with educational records (e.g. grades), need to be kept within Ursinus sanctioned platforms like Outlook e-mail and Microsoft Teams.
+											</p>
+	
+											<h3>Canvas</h3>
+											<p>
+												We will be using Canvas, but only to submit assignments and to store all of the grades.  I will also keep all of the due dates current on the calendar there, as students have appreciated this common space for all of their classes in the past.
+											</p>
+
+	
+											<h3><a name = "discord">Discord</a></h3>
+											<p>
+												To facilitate informal, class-wide discussions about the class, we will have a Discord channel for the class.  My goal is for this to turn into a flourishing area to work through <a href = "#confusion">confusion</a> and to share ideas as a group.  All questions are welcome! <b>We will also keep the CS 476 Discord channel open during class for polling and for general questions for students who are shy about speaking up verbally in front of their peers.</b>
+											</p>
+											<p>
+												In addition to the regular channel, we will be holding drop-in student office hours on Tuesdays on the Ursinus ACM Discord channel, since student office hours are joint between my classes.  You can find it under the "Chit Chat" Category, as shown below
+											</p>
+											<p>
+												<img src = "OfficeHours.png">
+											</p>
+											<p>
+												Please <b>do not</b> send me direct messages or anything of a sensitive nature (e.g. grades) over Discord.  Instead, use <a href = "#teams">Microsoft Teams</a> or e-mail for that, since those transactions are locked down better under Ursinus control.
+											</p>
+
+											
+	
+	
+											<h3><a name = "teams">Microsoft Teams</a></h3>
+											<p>
+												For one on one direct messages with me, and for <a href = "#buddy">buddy group coding</a> with screen sharing, we will be using  <a href = "https://insights.ursinus.edu/display/LEI/Microsoft+Teams">Microsoft Teams</a>, which is linked to your Office suite through Ursinus, so you are automatically enrolled.  This is an easy platform for students to initiate video sharing, so I highly recommend it for group work.
+											</p>
+
+											
+											<hr>
+											<h2><a name = "readings">Readings</a></h2>
+											<p>
+												There will be no official textbook for the course.  Instead, I will be teaching you with occasional pre-class modules, and I will sometimes link to supplementary resources from the <a href = "index.html#schedule">schedule</a>.	
+											</p>
+
+
+											<hr>
+											<h2><a name = "deliverables">Deliverables</a></h2>
+											
+
+
+											<h3><a href = "Assignments/index.html">Assignments</a> </h3>
+
+											<p>
+												The bulk of the grade in the course will be earned by completing roughly 4 small scale individual programming assignments, and a two large scale programming assignments.  Be sure to start them early!  Note that <a href = "#collaboration">collaboration and sharing rules</a> differ slightly between the individual assignments and the large assignments.
+											</p>
+	
+											
+											<h4>Programming Languages</h4>
+	
+											<h4><a name = "javascript">Javascript</a></h4>
+											<p>
+											Most assignments will be written in Javascript, but no assumption will be made about prior Javascript knowledge!  Those who can write code in any one of Java, C++, or Python can quickly learn the differences (it has syntax like Java but the typing/runtime/flexibility of Python).  There are four main reasons for using Javascript in the course:
+											<ol>
+											<li>It is widely used in modern web programming, so it will be useful in many projects beyond this course</li>
+											<li>It requires no special software to run, and it works in the browser.  As a result, it makes it easy to develop on nearly any computer, and it allows students to share their work online</li>
+											<li>Since it runs in the browser, user interfaces are easy to design for the assignments</li>
+											<li>People on the more mathematical side get to learn powerful web graphics programming techniques for communicating their ideas in the future with live demos on their web sites, rather than static images</li>
+											</ol>
+											Students will make heavy use of the <a href = "http://glmatrix.net/">glMatrix</a> library.  Skeleton code with GUIs powered by <a href = "https://en.wikipedia.org/wiki/WebGL">WebGL</a> to render 3D shapes will be provided on most assignments</p>
+	
+											<h4>GLSL</h4>
+	
+											<p>
+												Students will also make use of the <a href = "https://en.wikipedia.org/wiki/OpenGL_Shading_Language">OpenGL Shading Language (GLSL)</a>, which has syntax and programming paradigms similar to C, but which is designed for the massively parallel hardware of the GPU.  We will have a mini assignment early on in the course so that students can practice with this language before it is used in the ray tracer assignment.  In sum, the language is a bit idiosyncratic, but it is used heavily in industry, and it's possible to do incredible things with it.
+											</p>
+											
+											
+	
+
+											<h3><a name = "preclass">Class Engagement / Pre-Class Work</a></h3>
+                                            
+                                            <p>
+												It's easier to learn a difficult subject like computer graphics by going through a number of examples on each topic beyond the examples in the large assignments.  Because of this, we will often do small programming exercises and experiments in class related to a topic that we're learning.  At times, I may ask you to read over a description of an exercise or to read some notes about a new topic before class so we can go more deeply into the examples.  I may also ask you to hand in something small related to the class exercises to make sure you were putting effort in during class.  This will all make up a small part of your <a href = "#grading">grade</a> in the class.
+											</p>
+
+
+
+
+											<hr>
+											<h2><a name = "schedule">Schedule</a></h2>
+
+											<p>
+												Outlined below is the schedule for the course, including lecture topics and assignment due dates.  <b>All assignments are due at 11:59PM on the date specified</b>.  The specific dates of different topics are subject to change based on the pace at which we go through the course.
+											</p>
+											<BR><BR>
+											
+
+											<table width = "100%" cellpadding = 4>
+											
+											<tr><td>Lecture</td><td><center>Date</center></td><td>Lectures (click for notes)</td><td>Readings/Links</td><td>Assignments/Deliverables</td></tr>
+		
+
+<!-- Begin Schedule -->
+<tr><td colspan = "5"><h2><b><a name = "primitives">Geometric Primitives</a></b></h2><p>The course will start with an overview of some important mathematical concepts from linear algebra and vector geometry to get everyone on the same page.  These are the basic building blocks that will be used again and again in the rest of the course.  The pace at which we go through this section will adapt to the background knowledge of the students.  We will have two small individual programming assignments in this section to get everyone used to programming with geometry in Javascript.<p><b>Big Concepts And Questions:</b><ul><li>What is numerical geometry?</li><li>How does the quadratic formula help is with ray object intersections?</li><li>What trick can we use to incorporate both linear operations and translations into a single matrix?  Why do we want to do this?</li></ul></p></p></td></tr>
+<tr><td>1</td><td>Wed 8/31/2022</td><td>Meet & Mingle / Q&A / First Day Evaluation</td><td></td><td></td></tr>
+<tr><td>2</td><td>Fri 9/2/2022</td><td>Javascript Practice: Catastrophes with Infinite Loops and COVID 19</td><td>Javascript Resources<ul><li><a href = "https://github.com/Ursinus-CS476-F2020/Week1Exercises/archive/master.zip">Code for today</a></li><li><a href = "../ClassExercises/Week1Exercises/COVID.html">Social Distancing Simulation</a></li><li><a href = "http://www.cs.princeton.edu/courses/archive/spring19/cos426/precepts/01-precept.pdf">Princeton Javascript for Graphics Crash Course</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Javascript tutorial</a></li><li><a href = "https://google.github.io/styleguide/jsguide.html">Google Javascript Style Guide</a> (for what it's worth)</li></ul></td><td></td></tr>
+<tr><td>3</td><td>Sun 9/4/2022</td><td>Begin Vectors: Vector Addition, Dot Products</td><td>Math Resources:<ul><li><a href = "../Lectures/2_VectorsIntro">Prof. Tralie's notes on vectors</a></li><li><a href = "https://www.youtube.com/watch?v=Jes5jwLl1q8&list=PL8erL0pXF3JYm7VaTdKDaWc8Q3FuP8Sa7">Calculus Blue</a> 4.1 - 4.3, 5.1 - 5.3, 6.1 - 6.3</li><li><a href = "https://demoman.net/?a=trig-for-games">Trig for games</a></li></ul></td><td></td></tr>
+<tr><td>4</td><td>Wed 9/7/2022</td><td>Projection, Cross Products, Normals</td><td><ul><li><a href = "http://glmatrix.net/docs/">glMatrix library documentation</a></li></ul></td><td></td></tr>
+<tr><td>5</td><td>Fri 9/9/2022</td><td>Barycentric Coordinates, Triangle Interior Point Testing</td><td><ul><li><a href = "../ClassExercises/Week2_Barycentric/WeightedAverage.html">Weighted Average of Triangle Points Applet</a></li><li><a href = "../ClassExercises/Week2_Barycentric/BarycentricTriangles.html">Barycentric Coordinates via Area Ratios</a></li><li><a href = "https://github.com/Ursinus-CS476-F2020/Week2_CirclesIntersect/archive/master.zip">Circle Intersecting Exercise</a></li></ul></td><td></td></tr>
+<tr><td>6</td><td>Sun 9/11/2022</td><td>Lines, Rays, And Planes</td><td><a href = "https://www.youtube.com/watch?v=a06KMRNe6V4">Calculus Blue Parameterized Lines in 3D</a></td><td></td></tr>
+<tr><td>7</td><td>Wed 9/14/2022</td><td>Ray Intersect Plane & Ray Intersect Sphere</td><td></td><td></td></tr>
+<tr><td>8</td><td>Fri 9/16/2022</td><td>2D Matrix Transformations, Composition of Transformations, Inverses</td><td><ul><li><a href = "../Lectures/Module6_2DMatrices/slides.pdf">Slides</a></li><li><a href = "../Materials/ggslac/viewers/MatrixAnim.html">Prof. Tralie's Matrix Transformation Demo Widget</a></li></ul></td><td></td></tr>
+<tr><td>9</td><td>Sun 9/18/2022</td><td>Matrix Translations And Homogenous Coordinates, Combined Rotations/Translations</td><td><ul><li><a href = "https://ncase.me/matrix/">2D Homogenous Coordinates Reactive Demo</a></li><li><a href = "https://twitter.com/keenanisalive/status/1305074064575340544">Keenan Crane's animation of lifting and cone shearing</li></ul></td><td></td></tr>
+<tr><td colspan = "5"><h2><b><a name = "rendering">3D Rendering</a></b></h2><p>In this part of the course, we discuss how to use a computer to generate images of 3D geometric scenes, a process known as "3D rendering."  The ultimate goal of such techniques is to make photorealistic images that look like what a camera might take in the real world, though, as we will see, this is quite challenging.  In the process of attempting to meet this goal, we will think about how light bounces around in the real world and how humans see that light, and we will discuss algorithms that attempt to mimic this.  To this end, students will start off implementing a <a href = "https://en.wikipedia.org/wiki/Ray_tracing_(graphics)">ray tracer</a>, which is a non-realtime rendering technique, but which allows for visually stunning effects with reflection, refraction, and shadows.  We will then talk about the more traditional rendering pipeline, which leads to visually inferior but interactive images.  Students will learn the basics of the <a href = "https://en.wikipedia.org/wiki/WebGL">WebGL</a> / <a href = "https://en.wikipedia.org/wiki/OpenGL_Shading_Language">GLSL</a> Javascript API, which implements this rendering pipeline.<p><b>Big Concepts And Questions:</b><ul><li>What are local coordinates, and what are world coordinates?</li><li>What are we modeling in a "scene" of 3D geometry?</li><li>What kinds of visual effects emerge as light bounces around?</li><li>What can be accomplished with ray tracing that's difficult to accomplish with real time rendering pipelines?</li><li>What kinds of approximations make WebGL rendering fast?</li><li>What challenges emerge in virtual reality compared to monocular rendering?</li></ul></p></p></td></tr>
+<tr><td>10</td><td>Wed 9/21/2022</td><td>3D Matrix Transformations, Normal Transformations</td><td><ul><li><a href = "../Lectures/Module7/3DMatrix.pdf">3D Transformations Slides</a></li></ul></td><td></td></tr>
+<tr><td>11</td><td>Fri 9/23/2022</td><td>JSON, Scene Graphs</td><td><ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneViewer.html">Scene Viewer</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneEditor.html">Scene Editor</a></li><li><a href = "http://www.json.org/">http://www.json.org/</a></li></ul></td><td></td></tr>
+<tr><td>12</td><td>Sun 9/25/2022</td><td>Scene Trees Practice</td><td><ul><li><a href = "../Lectures/Module7/TableWithCone.json">TableWithCone.json</a></li></ul></td><td></td></tr>
+<tr><td>13</td><td>Wed 9/28/2022</td><td>Assignment 2 Work Session</td><td></td><td></td></tr>
+<tr><td>14</td><td>Fri 9/30/2022</td><td>Shaders And GLSL: Attributes, Varying, Uniforms, Textures, Basic Image Processing</td><td><ul><li><a href = "../Lectures/Module8_Shaders/slides.pdf">Overview Slides</li><li><a href = "../ClassExercises/Week5_EmbossMedian">Embossing And Median Filtering Class Exercise</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Mozilla developer notes on WebGL Texture Mapping</li><li><a href = "https://webglfundamentals.org/webgl/lessons/webgl-3d-textures.html">WebGL Fundamentals Notes on Texture Maps And Mipmapping</a></li><li><a href = "https://en.wikibooks.org/wiki/GLSL_Programming">GLSL Programming WikiBook</a></li><li><a href = "https://www.shadertoy.com/">shadertoy.com</a></li></ul></td><td></td></tr>
+<tr><td>15</td><td>Sun 10/2/2022</td><td>Shaders And GLSL: Complex Numbers, Fractals, Julia Sets</td><td><ul><li><a href = "../ClassExercises/Week5_JuliaSets">Julia Sets Class Exercise</a></li><li><a href = "https://en.wikipedia.org/wiki/L-system">Wikipedia Page on L-Systems</li><li><a href = "https://www.cs.uic.edu/~jbell/CourseNotes/ComputerGraphics/SpecialTopics.html">John Bell's Notes on fractals in computer graphics</li></ul></td><td></td></tr>
+<tr><td>16</td><td>Wed 10/5/2022</td><td>Q&A, Assignment 3 Work Session</td><td></td><td></td></tr>
+<tr><td>17</td><td>Fri 10/7/2022</td><td>Local Illumination: Lambertian/Phong Illumination, Gouraud/Per-Fragment Shading</td><td><ul><li><a href = "http://www.cs.toronto.edu/~jacobson/phong-demo/">Alec Jacobson's WebGL Illumination/Shading Demo</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/ClassExercise">Phong Shading Class Exercise</a></li></ul></td><td></td></tr>
+<tr><td>18</td><td>Sun 10/9/2022</td><td>3D Perspectives, Ray Casting, Sphere Normals</td><td><ul><li><a href = "http://adrianlarsson.com/stuff/gw2rtgi">Guild Wars 2 Raytraced</a></li></ul></td><td></td></tr>
+<tr><td>19</td><td>Wed 10/12/2022</td><td>Assignment 3 Work Session, Uniforms in Javascript</td><td></td><td></td></tr>
+<tr><td>20</td><td>Fri 10/14/2022</td><td>Final Project Work Session</td><td></td><td></td></tr>
+<tr><td>21</td><td>Sun 10/16/2022</td><td>Global Illumination: Multiple Lights, Shadows, Ray Instancing</td><td><ul><li><a href = "https://slate.com/culture/2014/06/the-acoustics-of-eavesdropping-how-curved-ceilings-and-walls-redirect-and-amplify-sound.html">The acoustics of eavesdropping</a></li><li><a href = "https://www.youtube.com/watch?v=8hZl3arO7SY">Carl Sagan's explanation of how the Ancient Greeks knew the earth was round (PBS)</a></li></ul></td><td></td></tr>
+<tr><td>22</td><td>Wed 10/19/2022</td><td>Work Session</td><td></td><td></td></tr>
+<tr><td>23</td><td>Fri 10/21/2022</td><td>Work Session</td><td></td><td></td></tr>
+<tr><td>24</td><td>Sun 10/23/2022</td><td>Global Illumination: Specular Reflections, Refraction/Transmission</td><td></td><td></td></tr>
+<tr><td>25</td><td>Wed 10/26/2022</td><td>Object-first rendering: The Camera Matrix, Perspective/Viewing matrices, Depth Sorting</td><td><ul><li><a href = "https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/gluLookAt.xml">gluLookAt</a> documentation</li></ul></td><td></td></tr>
+<tr><td>26</td><td>Fri 10/28/2022</td><td>Cel Shading / Toon Shading, Hidden Surface Removal/Culling</td><td><ul><li><a href = "../ClassExercises/Week9_CelShading/CelShading.zip">Cel shading code from class</a></li><li><a href = "https://en.wikipedia.org/wiki/Cel_shading">Wikipedia Page on Cel Shading</a></li><li><a href = "https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S17/final_projects/amy_toshi.pdf">RPI Final Project on Ray Tracing Cel Shading</a></li></ul></td><td></td></tr>
+<tr><td>27</td><td>Sun 10/30/2022</td><td>Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps</td><td><ul><li><a href = "https://docs.google.com/presentation/d/1nN94a5gkN7BladB9E5SAcvvQCajF8xSdC_-sytOyh7E/edit?usp=sharing">Slides from today</a></li></ul></td><td></td></tr>
+<tr><td colspan = "5"><h2><b><a name = "shape">3D Shape Representations</a></b></h2><p>Now that we are comfortable rendering basic shapes, we will discuss data structures for representing more complicated custom shapes, which form the backbone of modern CAD and 3D modeling applications.  The first of these is the triangle mesh, which is a discrete approximation of a smooth 2D manifold surface consisting of a collection of triangles connected to each other at a common edge.  We will then discuss continuous representations, including subdivision surfaces and splines.  We will conclude this unit with implicit surfaces, which are volumetric descriptions of surfaces which allow for easy boolean operations and natural design of neat shapes such as water drops.  And as we will see, implicit surfaces lead to a very particular, smooth aesthetic via "metaballs" (not "m<b>ea</b>tballs"!).<p><b>Big Concepts And Questions:</b><ul><li>What is the difference between a discrete and continuous data structure for surfaces?</li><li>What are geometric properties of a triangle mesh, and what are topological properties of a triangle mesh?</li><li>What are the strengths and limitations of different shape representations?</li><li>How many metaballs does one need to design a human head?</li></ul></p></p></td></tr>
+<tr><td>28</td><td>Wed 11/2/2022</td><td>Triangle Mesh Topology: Manifold, Boundary, Euler Characteristic</td><td><a href = "https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley-dp-1568814690/dp/1568814690/ref=mt_hardcover?_encoding=UTF8&me=&qid=">S/M</a> 12.1.1 - 12.1.3</td><td></td></tr>
+<tr><td>29</td><td>Fri 11/4/2022</td><td>Mesh Orientation, Mesh Storage Requirements, Basic Mesh Data Structures</td><td><ul><li><a href = "https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley-dp-1568814690/dp/1568814690/ref=mt_hardcover?_encoding=UTF8&me=&qid=">S/M</a> 12.1.2 - 12.1.3</li><li><a href = "https://www.cc.gatech.edu/~jarek/courses/handouts/meshes.pdf">Additional Reading on Mesh Data Structures</a></li></ul></td><td></td></tr>
+<tr><td>30</td><td>Sun 11/6/2022</td><td>Triangle Fans/Strips, Time Complexity of Queries on Basic Mesh Data Structures</td><td><ul><li><a href = "https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley-dp-1568814690/dp/1568814690/ref=mt_hardcover?_encoding=UTF8&me=&qid=">S/M</a> 12.1.2 - 12.1.3</li><li><a href = "https://www.cc.gatech.edu/~jarek/courses/handouts/meshes.pdf">Additional Reading on Mesh Data Structures</a></li></ul></td><td></td></tr>
+<tr><td>31</td><td>Wed 11/9/2022</td><td>The Half Edge Data Structure</td><td><ul><li><a href = "../Lectures/HalfEdgeMeshNotes.svg">Half-edge mesh notes from class</a></li><li><a href = "http://kaba.hilvi.org/homepage/blog/halfedge/halfedge.htm">Kalle Rutanen's Half Edge Tutorial</a></li></ul></td><td></td></tr>
+<tr><td>32</td><td>Fri 11/11/2022</td><td>Half-Edge Boundaries, Per-Vertex Normals</td><td><ul><li><a href = "http://www.bytehazard.com/articles/vertnorm.html">Per-vertex normals notes</a></li></ul></td><td></td></tr>
+<tr><td>33</td><td>Sun 11/13/2022</td><td>Subdivision Surfaces</td><td><ul><li><a href = "https://graphics.stanford.edu/~mdfisher/subdivision.html">Matt Fisher quick subdivision notes</a></li><li><a href = "https://mrl.nyu.edu/publications/subdiv-course2000/coursenotes00.pdf">SIGGRAPH 2000 Subdivision Surface Notes</a> (Long)</li><li><a href = "https://threejs.org/examples/webgl_modifier_subdivision.html">three.js subdivision demo</a></li></ul></td><td></td></tr>
+<tr><td>34</td><td>Wed 11/16/2022</td><td>Implicit Surfaces/ Marching Cubes</td><td><ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/HeightmapEditor.html">Heightmap Editor</a></li><li><a href = "../ClassExercises/ImplicitSurfaces">Volumetric levelset editor</a></li><li><a href = "https://www.willusher.io/webgl-marching-cubes/#Skull">Will Usher real-time marching cubes</a></li><li><a href = "http://jamie-wong.com/2014/08/19/metaballs-and-marching-squares/">Jamie Wong Marching Squares Live Demo</a></li><li><a href = "http://paulbourke.net/geometry/polygonise/">Paul Bourke Polygonize Notes</a></li><li><a href = "https://youtu.be/941z56i7QJE?t=71">Implicit human minus ellipsoid</a></li></ul></td><td></td></tr>
+<tr><td>35</td><td>Fri 11/18/2022</td><td>Thanksgiving Break (No Class: Splines Module Only)</td><td></td><td></td></tr>
+<tr><td>36</td><td>Sun 11/20/2022</td><td>Inflation/Smoothing, Surfaces of Revolution, Truncation, Edge Collapse Mesh Simplification</td><td></td><td></td></tr>
+<tr><td colspan = "5"><h2><b><a name = "animation">3D Animation</a></b></h2><p>In this section, we will cover some of the basics of 3D animation at a surface level.  This is an incredibly broad field, so we will focus primarily on the math underlying a subset of professional animation tools such as <a href = "https://www.blender.org/">Blender</a> and <a href = "https://www.autodesk.com/products/maya/overview">Maya</a>, rather than the tools themselves.  We will then end the unit by porting our animations over to a basic virtual reality system that we build on top of <a href = "https://github.com/ctralie/ggslac">ggslac</a> using a <a href = "https://arvr.google.com/cardboard/get-cardboard/">Google cardboard</a>, so that we can really get the motions that we develop to pop up out at us visually.  <p><b>Big Concepts And Questions:</b><ul><li>Explain why "inverse kinematics" are named as such</li></li><li>How does skinning work, and what are its shortcomings?</li><li>What is Gimbal Lock, and what animation scenarios does it adversely impact and how?</li></ul></p></p></td></tr>
+<tr><td>37</td><td>Wed 11/23/2022</td><td>Animation Overview: The Animation Loop, Collision Detection</td><td></td><td></td></tr>
+<tr><td>38</td><td>Fri 11/25/2022</td><td>Collision Response, Convex Hulls/The Separating Axis Theorem, Begin Euler Angles</td><td></td><td></td></tr>
+<tr><td>39</td><td>Sun 11/27/2022</td><td>Finish Euler Angles, Rodrigues' Rotation Formula, Quaternions/SLERP</td><td><ul><li><a href = "../Materials/SlerpViz">Quaternion SLERP Visualization App</a></li><li><a href = "http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/">Quaternions to euler angles and back: geometric explanations</a></li><li><a href = "https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Proof_of_the_quaternion_rotation_identity">Wikipedia Derivation of Quaternion Axis/Angle Identity</a></li></ul></td><td></td></tr>
+<tr><td>40</td><td>Wed 11/30/2022</td><td>Character Animation: Inverse Kinematics, MOCAP, Skinning</td><td><ul><li><a href = "../Lectures/CharacterAnimation/FABRIK/forward.html">Forward Kinematics Demo</a></li><li><a href = "http://www.andreasaristidou.com/FABRIK.html">FABRIK Paper</a></li><li><a href = "../Lectures/CharacterAnimation/FABRIK">FABRIK Demo</a></li><li><a href = "https://twitter.com/i/status/1135929820603228161">Tentacle + cake...</a></li><li><a href = "https://www.shadertoy.com/view/XldSDn">Shadertoy dancing tentacle</a></li><li><a href = "http://mocap.cs.cmu.edu/">CMU MOCAP Database</li><li><a href = "https://twitter.com/TheRujiK/status/969581641680195585">Wonky salamander</a><li><a href = "../Materials/MOCAPViz">Javascript MOCAP Visualizer</a></li></ul></td><td></td></tr>
+<tr><td>41</td><td>Fri 12/2/2022</td><td>Virtual Reality 1</td><td></td><td></td></tr>
+<tr><td>42</td><td>Sun 12/4/2022</td><td>Virtual Reality 2</td><td></td><td></td></tr>
+<!-- End Schedule -->
+<tr><td></td><td>Fri 12/17/2021</td><td></td><td></td><td bgcolor=#f4e6e7><a href = "FinalProject/index.html">Final Paper</a> Due
+</td></tr>
+				</table>
+
+											
+
+                                            
+											<hr>
+											<h2><a name = "grading">Grading</a></h2>
+
+
+											<h3>Breakdown</h3>
+											
+											<table>
+												<tr><td>Class Engagement / Pre-Class Prep</td><td>15%</td></tr>
+												<tr><td>Programming Assignments</td><td>65%</td></tr>
+												<tr><td>Midterm Takehome Programming Project</td><td>5%</td></tr>
+												<tr><td>Final Project</td><td>15%</td></tr>
+											</table>					
+											
+											<h3><a name = "flexiblesubmission">Flexible Submission Policy</a></h3>
+
+											<p>
+											In the absence of <a href = "#accommodations">accommodations</a> or <a href = "#logistics">communication with me</a>, all assignments are due at 11:59PM EST on the date(s) stated on the <a href = "index.html#schedule">schedule</a>.  Students can turn in those assignments past the deadlines, and the scores will be adjusted as follows:
+											</p>
+
+											<ul>
+											<li>-5% for work submitted between 1 minute - 6 hours late</li>
+											<li>-10% for work submitted up to 12 hours late</li>
+											<li>-15% for work submitted up to 24 hours late</li>
+											<li>-25% for work submitted up to 48 hours late</li>
+											<li>-40% for work submitted up to 96 hours late</li>
+											<li>-50% for work submitted more than 96 hours late but before solutions are returned</li>
+											</ul>
+
+											<h3>Letter Grades</h3>
+											<p>
+												Letter grades will be assigned on the scale below at the end of the course. 
+												<table>
+													<tr>
+														<td>
+															<ul>
+																<li><b>A+</b>: 99+</li>
+																<li><b>A</b>: 93-98.9</li>
+																<li><b>A-</b>: 89.5-92.9</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li><b>B+</b>: 87-89.49</li>
+																<li><b>B</b>: 83-86.9</li>
+																<li><b>B-</b>: 79.5-82.9</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li><b>C+</b>: 77-79.49</li>
+																<li><b>C</b>: 73-76.9</li>
+																<li><b>C-</b>: 69.5-72.9</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li><b>D+</b>: 67-69.49</li>
+																<li><b>D</b>: 63-66.9</li>
+																<li><b>D-</b>: 59.5-62.9</li>
+															</ul>
+														</td>
+														<td>
+															<ul>
+																<li><b>F</b>: 59.49 and below</li>
+															</ul>
+														</td>
+													</tr>
+												</table>
+											</p>
+
+											<HR>
+											<h2><a name = "environment">Classroom Environment</a></h2>
+
+											<h3><a name = "inclusive">Inclusive Environment</a></h3>
+
+											<p>
+												Computer science is a field that has <a href = "https://www.theverge.com/2017/8/16/16153740/tech-diversity-problem-science-history-explainer-inequality">historically been and continues to be</a> steeped in inequalities.  We have a double dose of this in computer graphics, since, first of all, modern work in this area is adjacent to AI and machine learning, which themselves have <a href = "https://www.youtube.com/watch?v=bbcG7e2dBj0">added fuel to the fire</a>.  Moreover, the "gamer culture" that has been adjacent to computer graphics has had a lot of issues, most prominently the impact of the <a href = "https://www.vox.com/culture/2020/1/20/20808875/gamergate-lessons-cultural-impact-changes-harassment-laws">Gamergate capaign</a> against women in the field.  So there is a special role and responsibility that those who have graphics knowledge have to play in being good stewards around both the technology and within work environments.
+											
+											</p>
+											<p>
+												Within class interactions, my goal is to foster a environment in which students across all axes of diversity feel <b>welcome and valued, both by me and by their peers</b>.  Axes of diversity include, but are not limited to, age, background, beliefs, race, ethnicity, gender/gender identity/gender expression (feel free to tell me in person or over e-mail which pronouns I should use), national origin, religious affiliation, and sexual orientation.  Discrimination of any form will not be tolerated.
+											</p>
+
+											<p>
+												A slightly more subtle thing that we want to watch out for in class is not to assume anything about others based on implicit biases.  <b>I have heard from quieter students at Ursinus from different backgrounds in the past that they sometimes feel their contributions aren't valued from their group members and that they're talked over during collaborations</b>.  So be mindful of this and be sure to curb this behavior in yourself if you notice it...this is something immediate you can to do help stem the <a href = "https://www.womenshistory.org/articles/fixing-leaky-pipeline">leaky pipeline in our field</a>.
+											</p>
+
+											<p>
+												<a name = "confusion">.</a>Furthermore, I want all students to feel <b>comfortable expressing their opinions or confusion</b> at any point in the course, as long as they do so respectfully.  As I will stress over and over, being confused is an important part of the process of learning computer science.  Learning computer science and struggling to grow is <a href = "https://i0.wp.com/katielmartin.com/wp-content/uploads/2019/02/1_9HzbByi2Uzit8474Rp4ZPg-1.jpg?w=550&ssl=1">not always comfortable</a>, but I want it to feel safe.  In other words, I will regularly keep you at the boundary of your comfort zone with challenging, real-world assignments, but I want you to feel comfortable with me and your peers and respected as a learner during the process<a name = "communication">.</a>
+											</p>
+
+											<p>
+												Finally, I am aware that, particularly during the pandemic, there are a variety of factors that may make it difficult to perform at your best level in class.  At Ursinus, we are fortunate to have quite a mix of students from different backgrounds, many of whom need to work part time, and an increasing number of whom are commuters and have family obligations.  If you find yourself having difficulty performing at the level that you want and/or turning assignments in on time because of any of these issues, <b>communicate with me</b>, and we can come up with a solution together (I will gently reach out if I notice any slips even if you don't communicate).  This is an exciting capstone course, and I want to work to keep your excitement alive, regardless of your personal circumstances.  We will get you through the course as long as the lines of communication are open and we work together.  <u><b>You belong in CS!</b></u>
+											</p>
+
+
+											<h3>Classroom Attendance And Etiquette</h3>
+
+											<p>
+												Students are expected to attend class in person.  We're shooting for <b>engagement</b> over mere attendance; students are expected to be active in class exercises and to be fully invested in the class (i.e. no internet browsing).  Students who are unable to attend class for significant reasons (whether isolation or quarantine for students who have received a positive test, those experiencing Covid-related symptoms while awaiting test results, or other issues that make it difficult to attend class) should work pro-actively to make up any <a href = "#preclass">class exercises</a> that they missed.  To help with this, I will do my best to put up Youtube videos from other instructors on topics that we cover.
+											</p>
+
+											<p>
+												Finally, students are expected to follow any college policy requiring mask wearing on campus, in addition to following any guidance faculty provide for their individual classes.Masks should be available in every academic building, if needed.
+											</p>
+
+
+
+											<h3>Maximizing Your Communal Experience</h3>
+											<p>
+												Here are ways students can maximize their experience as a class community, and which <b>could lead to extra credit in certain situations</b>.
+											</p>
+											<ul>
+												<li>Helping to teach a student a topic during student office hours.</li>
+												<li>Certain calls for participation in class</li>
+												<li>Particularly helpful or insightful messages on Discord</li>
+												<li>Finding mistakes in class notes or on the assigned homework </li>
+											</ul>
+
+											<h3>Discord Communication Policy</h3>
+											Since this is a class-wide communication, the following rules apply to online communication
+											<ul>
+												<li>
+													Students are expected to be respectful and mindful of the <a href = "#environment">classroom environment and inclusivity standards</a>.  They are equally applicable to a virtual environment as they are in class.</li>
+
+												<li>
+													Students <b>are not</b> permitted to publicly share direct answers or questions which might completely give away answers to any homework problems.  When in doubt, send me a direct message.
+												</li>
+
+												<li>
+													I will answer questions real time during any office hours that are virtual.  Otherwise, I will make every attempt to respond within 24 hours on weekdays.  <i>I cannot be expected to respond at all on Saturdays or Sundays or outside of 10AM-8PM on weekdays</i>, so plan accordingly.  (Of course, students can and should still respond to each other outside of these intervals, when appropriate).
+                                                </li>
+											</ul>
+
+											<p>
+											The points above are part of a more general term referred to as "<b>netiquette</b>."  Refer to the chart below, provided by <a href = "http://blogs.onlineeducation.touro.edu/15-rules-netiquette-online-discussion-boards/">Touro College</a>
+											</p>
+
+											<img src = "Netiquette-Online-Discussion-Boards-infographic.png">
+
+
+
+											<!--
+                                                <ul>
+                                                    <li>Helping to teach a student a topic during student office hours.</li>
+                                                    <li>Certain calls for participation in class</li>
+                                                    <li>Particularly helpful or insightful messages on Microsoft Teams</li>
+                                                    <li>Finding mistakes in the book or on the assigned homework and labs</li>
+												</ul>
+											-->
+                                            </p>
+
+											
+
+											<h2><a name = "collaboration">Collaboration Policy</a></h2>
+
+											<h3>Overall Philosophy</h3>
+											<p>
+											    The collaboration policy for this class walks the line between encouraging openness and collaboration during a challenging learning process, while also making sure that each students is progressing technically at an individual level without relying on 100% on other classmates.  Communication between students is allowed (and encouraged!) on most assignments, but it is expected that every student's code or writeups will be completely distinct.  Do not copy code off of the Internet.  Cite any sources in addition to materials linked from the course website that you used to help in crafting your code and completing the assignment.
+                                            </p>
+											
+											<h3><a name = "buddy">Assignment Buddies</a></h3>
+                                            <p>
+                                                To encourage collaboration, students will be allowed (not required) to choose one or more "<b>buddies</b>" to work "near" during the programming assignments.  Students are still expected to submit their own solutions, but they are allowed to provide substantial help to each other, and even to look at each others' code during the process.  <b>Students should indicate their buddies in the README upon assignment submission.</b>  Let me know if you would like a buddy but are having trouble finding one.
+											</p>
+											
+
+											<h3>Collaboration Scenarios Table</h3>
+                                            <p>
+                                                Below is a table spelling out in more detail when and how you are allowed to share code with people (table style cribbed from <a href = "https://www.cs.princeton.edu/courses/archive/spring19/cos126/syllabus.html">Princeton CS 126</a>).  </p>
+                                            
+
+
+												<div id="assignmentTable">
+													<table class="wide-table" id="collaboration-table">
+														<tr>
+															<th></th>
+															<th>YOUR<br>BUDDY</th>
+															<th>COURSE<br>STAFF</th>
+															<th>CS 477<br>GRADS</th>
+															<th>CLASS-<br>MATES</th>
+															<th>OTHER<br>PEOPLE</th>
+														</tr>
+														<tr>
+															<th>DISCUSS CONCEPTS WITH:</th>
+															<td class="check">&#10004;</td>
+															<td class="check">&#10004;</td>
+															<td class="check">&#10004;</td>
+															<td class="check">&#10004;</td>
+															<td class="check">&#10004;</td>
+														</tr>
+														<tr>
+															<th>ACKNOWLEDGE COLLABORATION WITH:</th>
+															<td class="check">&#10004;</td>
+															<td class="check">&#10004;</td>
+															<td class="check">&#10004;</td>
+															<td class="check">&#10004;</td>
+															<td class="check">&#10004;</td>
+														</tr>
+														<tr>
+															<th>EXPOSE YOUR CODE/SOLUTIONS TO:</th>
+															<td class="check">&#10004;</td>
+															<td class="check">&#10004;</td>
+															<td class="check">&#10004;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+														</tr>
+														<tr>
+															<th>VIEW THE CODE/SOLUTIONS OF:</th>
+															<td class="check">&#10004;</td>
+															<td class="ex"><a href = "#instructorcode">*</a></td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+														</tr>
+														<tr>
+															<th>COPY CODE/SOLUTIONS FROM:</th>
+															<td class="ex">&#10008;</td>
+															<td class="ex"><a href = "#instructorcode">*</a></td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+														</tr>
+													</table>
+												
+												</div>
+
+												<div id="individualTable">
+													<h3>Pre-Class Algorithm Design</h3>
+													<table class="wide-table" id="collaboration-table">
+														<tr>
+															<th></th>
+															<th>YOUR<br>BUDDY</th>
+															<th>COURSE<br>STAFF</th>
+															<th>CS 477<br>GRADS</th>
+															<th>CLASS-<br>MATES</th>
+															<th>OTHER<br>PEOPLE</th>
+														</tr>
+														<tr>
+															<th>DISCUSS CONCEPTS WITH:</th>
+															<td class="check">N/A</td>
+															<td class="check">&#10004;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+														</tr>
+														<tr>
+															<th>ACKNOWLEDGE COLLABORATION WITH:</th>
+															<td class="check">N/A</td>
+															<td class="check">&#10004;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+														</tr>
+														<tr>
+															<th>EXPOSE YOUR CODE/SOLUTIONS TO:</th>
+															<td class="check">N/A</td>
+															<td class="check">&#10004;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+														</tr>
+														<tr>
+															<th>VIEW THE CODE/SOLUTIONS OF:</th>
+															<td class="check">N/A</td>
+															<td class="ex"><a href = "#instructorcode">*</a></td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+														</tr>
+														<tr>
+															<th>COPY CODE/SOLUTIONS FROM:</th>
+															<td class="ex">N/A</td>
+															<td class="ex"><a href = "#instructorcode">*</a></td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+															<td class="ex">&#10008;</td>
+														</tr>
+													</table>
+												
+												</div>
+
+												<p>
+													<a name="instructorcode">*</a> You may view and copy code from class exercises and class resources without citing them, but you should not copy solutions from previous semesters that the instructor may have provided
+												</p>
+                                                <p>
+                                                    <b>NOTE: </b> The terms "exposing" and "viewing" exclude sending or ingesting electronically, which would be considered copying.  Exposing and viewing are normally done in the context of in-person working or in the help room.  <b>When students work remotely, what this means is that buddies can screen share as they are working through things, but they should not send code directly.</b>
+												</p>
+												
+
+                                                <p>
+                                                    <b>NOTE ALSO: </b> "Other people" includes internet sources.
+                                                </p>
+												
+											<script>
+												let assignment = document.getElementById("assignmentTable");
+												let individual = document.getElementById("individualTable");
+
+												function viewAssignment() {
+													assignment.style.display = "block";
+													individual.style.display = "none";
+												}
+
+												function viewIndividual() {
+													assignment.style.display = "none";
+													individual.style.display = "block";
+												}
+
+												viewAssignment();
+
+											</script>
+
+											<p>
+                                                If the collaboration policy has been violated in any way, regardless of intent, then it may be an academic dishonesty case, and it will be referred to <a href = "https://www.ursinus.edu/live/profiles/184-">the Associate Dean for Academic Affairs</a>.  I am required to make this report in every occurrence, so it is best to speak with me first if there are any questions about the policy or expectations. You should feel free to have these conversations with me anytime prior to making your submission without fear of penalty. 
+											</p>
+											
+											<p>
+												On a more personal note, though a willful violation of academic honesty may seem merely transactional to a student, faculty take violations very personally, as they are disrespectful to the time and effort we put into our courses.  I would also like to emphasize that <b>your reputation is much more important than your grades</b>.  The recommendations we as faculty write go a long way, and we are much happier to write positive recommendations for students with lower grades who show grit and growth than we are to write recommendations for students with higher grades who have cheated.
+											</p>
+
+										<HR>
+											<h2><a name = "other">Other Resources / Policies</a></h2>
+
+											<h3><a name = "accommodations">Accommodations</a></h3>
+
+											<p>
+												In addition to our general awareness diversity, Ursinus College is also committed to providing reasonable accommodations to students with disabilities.  Students with a disability should contact the Directory of Disability Services ASAP.  Dolly Singley is located in the Center for Academic Support in the lower level of Myrin Library.  Visit <a href = "https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/">this link</a> for more information on the process.  I will do my best to accommodate your requests, and they will be kept completely confidential.
+											</p>
+
+											<h3><a name = "tutoring">One on One Tutoring</a></h3>
+											<p>
+												One on one tutoring for up to two hours per week is available through the institute for student success.  <a href = "https://ursinus.co1.qualtrics.com/jfe/form/SV_4MD0p25wtqMFL25">Click here</a> to fill out a Qualtrics survey if you'd like to take advantage of this.
+											</p>
+
+											<h3>Let's Talk</h3>
+											<p>
+												Mental health care is increasingly recognized as a crucial service for the undergraduate population.  Visit <a href = "https://www.ursinus.edu/offices/wellness-center/">this link</a> for more information about complementary counseling services provided by the college.  The Wellness Center has a virtual drop-in crisis hour at 2-3 pm each weekday, which is available for students in crisis who need to be seen immediately by a clinician.  If you are still hesitant to go, take me (Professor Tralie) as an example of someone who has benefited greatly from talk therapy and medication in the past.  I am happy to discuss this in student office hours in more detail.
+											</p>
+
+											<h3>Title IX</h3>
+											<p>
+												Title IX is a federal law, under which it is prohibited to discriminate on the basis of gender. The <a href = "https://www.ursinus.edu/offices/prevention-and-advocacy/title-ix/">Title IX Coordinator</a> is available to receive inquiries and to investigate allegations in this regard. 
+											</p>
+
+											<h3>Inclement Weather Policy (aka COVID Policy)</h3>
+											<p>
+												In the event that the College closes due to inclement weather or other circumstances (such as a COVID lockdown), our in-person class sessions, drop-in student office hours, or other meetings will not be held. I will contact you regarding our plan with regard to rescheduling the class or the material, any assignments that are outstanding, and how we can move forward with the material (for example, any readings or remote discussions that we can apply). If necessary, I may schedule online virtual sessions in lieu of class sessions, and will contact you with information about how to participate in those. I will communicate this plan to the department so that it can be posted on my office door if it is feasible to do so. This policy and procedure will also apply in the event that the College remains open but travel conditions are hazardous or not otherwise conducive to holding class as normal. Should another exigent circumstance arise (for example, illness), I will follow this policy and procedure as well. 
+											</p>
+	
+
+								</section>
+								
+
+
+						</div>
+					</div>
+
+				<!--LaTeX in Javascript!-->
+				<script src="../../../../jsMath/easy/load.js"></script>
+				<!--Syntax highlighting in Javascript!-->
+				<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
+				<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+				<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+				<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+				<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+				<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+				<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+                                        <li>
+											<span class="opener">General</span>
+											<ul>
+												<li><a href = "index.html#overview">Overview</a></li>
+												<li><a href = "index.html#logistics">Technology Logistics</a></li>
+												<li><a href = "index.html#homework">Homework</a></li>
+												<li><a href = "index.html#grading">Grading</a></li>
+												<li><a href = "index.html#environment">Classroom Environment</a></li>
+												<li><a href = "index.html#participation">Participation</a></li>
+												<li><a href = "index.html#collaboration">Collaboration Policy</a></li>
+												<li><a href = "index.html#other">Other Resources / Policies</a></li>
+											</ul>
+										</li>
+										<li><a href = "Software/index.html">Software</a></li>
+										<li><a href = "index.html#schedule">Schedule</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li>
+													<ul>
+														<li></li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Class Exercises</span>
+											<ul>
+												<li>
+													<ul>
+														<li></li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li><a href = "FinalProject/index.html">Final Project</a></li>
+									</ul>
+								</nav>
+
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; <a href = "http://www.ctralie.com">Christopher J. Tralie</a>. All rights reserved.  Contact chris.tralie@gmail.com. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+<!-- End Sidebar !-->
+
+<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+<!-- End Scripts -->
+	</body>
+<
