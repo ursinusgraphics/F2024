@@ -3,10 +3,6 @@ SECTION
 The course will start with an overview of some important mathematical concepts from linear algebra and vector geometry to get everyone on the same page.  These are the basic building blocks that will be used again and again in the rest of the course.  The pace at which we go through this section will adapt to the background knowledge of the students.  We will have two small individual programming assignments in this section to get everyone used to programming with geometry in Javascript.<p><b>Big Concepts And Questions:</b><ul><li>What is numerical geometry?</li><li>How does the quadratic formula help is with ray object intersections?</li><li>What trick can we use to incorporate both linear operations and translations into a single matrix?  Why do we want to do this?</li></ul></p>
 
 LECTURE
-Meet & Mingle / Q&A / First Day Evaluation
-
-
-LECTURE
 Javascript Practice: Catastrophes with Infinite Loops and COVID 19
 
 Javascript Resources<ul><li><a href = "https://github.com/Ursinus-CS476-F2020/Week1Exercises/archive/master.zip">Code for today</a></li><li><a href = "../ClassExercises/Week1Exercises/COVID.html">Social Distancing Simulation</a></li><li><a href = "http://www.cs.princeton.edu/courses/archive/spring19/cos426/precepts/01-precept.pdf">Princeton Javascript for Graphics Crash Course</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Javascript tutorial</a></li><li><a href = "https://google.github.io/styleguide/jsguide.html">Google Javascript Style Guide</a> (for what it's worth)</li></ul>
@@ -38,6 +34,74 @@ LECTURE
 Matrix Translations And Homogenous Coordinates, Combined Rotations/Translations
 
 <ul><li><a href = "https://ncase.me/matrix/">2D Homogenous Coordinates Reactive Demo</a></li><li><a href = "https://twitter.com/keenanisalive/status/1305074064575340544">Keenan Crane's animation of lifting and cone shearing</li></ul>
+SECTION
+<a name = "animation">3D Animation</a>
+In this section, we will cover some of the basics of 3D animation at a surface level.  This is an incredibly broad field, so we will focus primarily on the math underlying a subset of professional animation tools such as <a href = "https://www.blender.org/">Blender</a> and <a href = "https://www.autodesk.com/products/maya/overview">Maya</a>, rather than the tools themselves.  We will then end the unit by porting our animations over to a basic virtual reality system that we build on top of <a href = "https://github.com/ctralie/ggslac">ggslac</a> using a <a href = "https://arvr.google.com/cardboard/get-cardboard/">Google cardboard</a>, so that we can really get the motions that we develop to pop up out at us visually.  <p><b>Big Concepts And Questions:</b><ul><li>Explain why "inverse kinematics" are named as such</li></li><li>How does skinning work, and what are its shortcomings?</li><li>What is Gimbal Lock, and what animation scenarios does it adversely impact and how?</li></ul></p>
+
+LECTURE
+Animation Overview: The Animation Loop, Collision Detection
+
+
+LECTURE
+Collision Response, Convex Hulls/The Separating Axis Theorem, Begin Euler Angles
+
+
+LECTURE
+Finish Euler Angles, Rodrigues' Rotation Formula, Quaternions/SLERP 
+
+<ul><li><a href = "../Materials/SlerpViz">Quaternion SLERP Visualization App</a></li><li><a href = "http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/">Quaternions to euler angles and back: geometric explanations</a></li><li><a href = "https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Proof_of_the_quaternion_rotation_identity">Wikipedia Derivation of Quaternion Axis/Angle Identity</a></li></ul>
+LECTURE
+Character Animation: Inverse Kinematics, MOCAP, Skinning
+
+<ul><li><a href = "../Lectures/CharacterAnimation/FABRIK/forward.html">Forward Kinematics Demo</a></li><li><a href = "http://www.andreasaristidou.com/FABRIK.html">FABRIK Paper</a></li><li><a href = "../Lectures/CharacterAnimation/FABRIK">FABRIK Demo</a></li><li><a href = "https://twitter.com/i/status/1135929820603228161">Tentacle + cake...</a></li><li><a href = "https://www.shadertoy.com/view/XldSDn">Shadertoy dancing tentacle</a></li><li><a href = "http://mocap.cs.cmu.edu/">CMU MOCAP Database</li><li><a href = "https://twitter.com/TheRujiK/status/969581641680195585">Wonky salamander</a><li><a href = "../Materials/MOCAPViz">Javascript MOCAP Visualizer</a></li></ul>
+LECTURE
+Virtual Reality 1
+
+
+LECTURE
+Virtual Reality 2
+
+
+SECTION
+<a name = "shape">3D Shape Representations</a>
+Now that we are comfortable rendering basic shapes, we will discuss data structures for representing more complicated custom shapes, which form the backbone of modern CAD and 3D modeling applications.  The first of these is the triangle mesh, which is a discrete approximation of a smooth 2D manifold surface consisting of a collection of triangles connected to each other at a common edge.  We will then discuss continuous representations, including subdivision surfaces and splines.  We will conclude this unit with implicit surfaces, which are volumetric descriptions of surfaces which allow for easy boolean operations and natural design of neat shapes such as water drops.  And as we will see, implicit surfaces lead to a very particular, smooth aesthetic via "metaballs" (not "m<b>ea</b>tballs"!).<p><b>Big Concepts And Questions:</b><ul><li>What is the difference between a discrete and continuous data structure for surfaces?</li><li>What are geometric properties of a triangle mesh, and what are topological properties of a triangle mesh?</li><li>What are the strengths and limitations of different shape representations?</li><li>How many metaballs does one need to design a human head?</li></ul></p>
+
+LECTURE
+Triangle Mesh Topology: Manifold, Boundary, Euler Characteristic
+
+<a href = "https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley-dp-1568814690/dp/1568814690/ref=mt_hardcover?_encoding=UTF8&me=&qid=">S/M</a> 12.1.1 - 12.1.3
+LECTURE
+Mesh Orientation, Mesh Storage Requirements, Basic Mesh Data Structures
+
+<ul><li><a href = "https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley-dp-1568814690/dp/1568814690/ref=mt_hardcover?_encoding=UTF8&me=&qid=">S/M</a> 12.1.2 - 12.1.3</li><li><a href = "https://www.cc.gatech.edu/~jarek/courses/handouts/meshes.pdf">Additional Reading on Mesh Data Structures</a></li></ul>
+LECTURE
+Triangle Fans/Strips, Time Complexity of Queries on Basic Mesh Data Structures
+
+<ul><li><a href = "https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley-dp-1568814690/dp/1568814690/ref=mt_hardcover?_encoding=UTF8&me=&qid=">S/M</a> 12.1.2 - 12.1.3</li><li><a href = "https://www.cc.gatech.edu/~jarek/courses/handouts/meshes.pdf">Additional Reading on Mesh Data Structures</a></li></ul>
+LECTURE
+The Half Edge Data Structure 
+
+<ul><li><a href = "../Lectures/HalfEdgeMeshNotes.svg">Half-edge mesh notes from class</a></li><li><a href = "http://kaba.hilvi.org/homepage/blog/halfedge/halfedge.htm">Kalle Rutanen's Half Edge Tutorial</a></li></ul>
+LECTURE
+Half-Edge Boundaries, Per-Vertex Normals
+
+<ul><li><a href = "http://www.bytehazard.com/articles/vertnorm.html">Per-vertex normals notes</a></li></ul>
+LECTURE
+Subdivision Surfaces
+
+<ul><li><a href = "https://graphics.stanford.edu/~mdfisher/subdivision.html">Matt Fisher quick subdivision notes</a></li><li><a href = "https://mrl.nyu.edu/publications/subdiv-course2000/coursenotes00.pdf">SIGGRAPH 2000 Subdivision Surface Notes</a> (Long)</li><li><a href = "https://threejs.org/examples/webgl_modifier_subdivision.html">three.js subdivision demo</a></li></ul>
+LECTURE
+Implicit Surfaces/ Marching Cubes
+
+<ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/HeightmapEditor.html">Heightmap Editor</a></li><li><a href = "../ClassExercises/ImplicitSurfaces">Volumetric levelset editor</a></li><li><a href = "https://www.willusher.io/webgl-marching-cubes/#Skull">Will Usher real-time marching cubes</a></li><li><a href = "http://jamie-wong.com/2014/08/19/metaballs-and-marching-squares/">Jamie Wong Marching Squares Live Demo</a></li><li><a href = "http://paulbourke.net/geometry/polygonise/">Paul Bourke Polygonize Notes</a></li><li><a href = "https://youtu.be/941z56i7QJE?t=71">Implicit human minus ellipsoid</a></li></ul>
+LECTURE
+Thanksgiving Break (No Class: Splines Module Only)
+
+
+LECTURE
+Inflation/Smoothing, Surfaces of Revolution, Truncation, Edge Collapse Mesh Simplification
+
+
 SECTION
 <a name = "rendering">3D Rendering</a>
 In this part of the course, we discuss how to use a computer to generate images of 3D geometric scenes, a process known as "3D rendering."  The ultimate goal of such techniques is to make photorealistic images that look like what a camera might take in the real world, though, as we will see, this is quite challenging.  In the process of attempting to meet this goal, we will think about how light bounces around in the real world and how humans see that light, and we will discuss algorithms that attempt to mimic this.  To this end, students will start off implementing a <a href = "https://en.wikipedia.org/wiki/Ray_tracing_(graphics)">ray tracer</a>, which is a non-realtime rendering technique, but which allows for visually stunning effects with reflection, refraction, and shadows.  We will then talk about the more traditional rendering pipeline, which leads to visually inferior but interactive images.  Students will learn the basics of the <a href = "https://en.wikipedia.org/wiki/WebGL">WebGL</a> / <a href = "https://en.wikipedia.org/wiki/OpenGL_Shading_Language">GLSL</a> Javascript API, which implements this rendering pipeline.<p><b>Big Concepts And Questions:</b><ul><li>What are local coordinates, and what are world coordinates?</li><li>What are we modeling in a "scene" of 3D geometry?</li><li>What kinds of visual effects emerge as light bounces around?</li><li>What can be accomplished with ray tracing that's difficult to accomplish with real time rendering pipelines?</li><li>What kinds of approximations make WebGL rendering fast?</li><li>What challenges emerge in virtual reality compared to monocular rendering?</li></ul></p>
@@ -114,71 +178,3 @@ LECTURE
 Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps
 
 <ul><li><a href = "https://docs.google.com/presentation/d/1nN94a5gkN7BladB9E5SAcvvQCajF8xSdC_-sytOyh7E/edit?usp=sharing">Slides from today</a></li></ul>
-SECTION
-<a name = "shape">3D Shape Representations</a>
-Now that we are comfortable rendering basic shapes, we will discuss data structures for representing more complicated custom shapes, which form the backbone of modern CAD and 3D modeling applications.  The first of these is the triangle mesh, which is a discrete approximation of a smooth 2D manifold surface consisting of a collection of triangles connected to each other at a common edge.  We will then discuss continuous representations, including subdivision surfaces and splines.  We will conclude this unit with implicit surfaces, which are volumetric descriptions of surfaces which allow for easy boolean operations and natural design of neat shapes such as water drops.  And as we will see, implicit surfaces lead to a very particular, smooth aesthetic via "metaballs" (not "m<b>ea</b>tballs"!).<p><b>Big Concepts And Questions:</b><ul><li>What is the difference between a discrete and continuous data structure for surfaces?</li><li>What are geometric properties of a triangle mesh, and what are topological properties of a triangle mesh?</li><li>What are the strengths and limitations of different shape representations?</li><li>How many metaballs does one need to design a human head?</li></ul></p>
-
-LECTURE
-Triangle Mesh Topology: Manifold, Boundary, Euler Characteristic
-
-<a href = "https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley-dp-1568814690/dp/1568814690/ref=mt_hardcover?_encoding=UTF8&me=&qid=">S/M</a> 12.1.1 - 12.1.3
-LECTURE
-Mesh Orientation, Mesh Storage Requirements, Basic Mesh Data Structures
-
-<ul><li><a href = "https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley-dp-1568814690/dp/1568814690/ref=mt_hardcover?_encoding=UTF8&me=&qid=">S/M</a> 12.1.2 - 12.1.3</li><li><a href = "https://www.cc.gatech.edu/~jarek/courses/handouts/meshes.pdf">Additional Reading on Mesh Data Structures</a></li></ul>
-LECTURE
-Triangle Fans/Strips, Time Complexity of Queries on Basic Mesh Data Structures
-
-<ul><li><a href = "https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley-dp-1568814690/dp/1568814690/ref=mt_hardcover?_encoding=UTF8&me=&qid=">S/M</a> 12.1.2 - 12.1.3</li><li><a href = "https://www.cc.gatech.edu/~jarek/courses/handouts/meshes.pdf">Additional Reading on Mesh Data Structures</a></li></ul>
-LECTURE
-The Half Edge Data Structure 
-
-<ul><li><a href = "../Lectures/HalfEdgeMeshNotes.svg">Half-edge mesh notes from class</a></li><li><a href = "http://kaba.hilvi.org/homepage/blog/halfedge/halfedge.htm">Kalle Rutanen's Half Edge Tutorial</a></li></ul>
-LECTURE
-Half-Edge Boundaries, Per-Vertex Normals
-
-<ul><li><a href = "http://www.bytehazard.com/articles/vertnorm.html">Per-vertex normals notes</a></li></ul>
-LECTURE
-Subdivision Surfaces
-
-<ul><li><a href = "https://graphics.stanford.edu/~mdfisher/subdivision.html">Matt Fisher quick subdivision notes</a></li><li><a href = "https://mrl.nyu.edu/publications/subdiv-course2000/coursenotes00.pdf">SIGGRAPH 2000 Subdivision Surface Notes</a> (Long)</li><li><a href = "https://threejs.org/examples/webgl_modifier_subdivision.html">three.js subdivision demo</a></li></ul>
-LECTURE
-Implicit Surfaces/ Marching Cubes
-
-<ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/HeightmapEditor.html">Heightmap Editor</a></li><li><a href = "../ClassExercises/ImplicitSurfaces">Volumetric levelset editor</a></li><li><a href = "https://www.willusher.io/webgl-marching-cubes/#Skull">Will Usher real-time marching cubes</a></li><li><a href = "http://jamie-wong.com/2014/08/19/metaballs-and-marching-squares/">Jamie Wong Marching Squares Live Demo</a></li><li><a href = "http://paulbourke.net/geometry/polygonise/">Paul Bourke Polygonize Notes</a></li><li><a href = "https://youtu.be/941z56i7QJE?t=71">Implicit human minus ellipsoid</a></li></ul>
-LECTURE
-Thanksgiving Break (No Class: Splines Module Only)
-
-
-LECTURE
-Inflation/Smoothing, Surfaces of Revolution, Truncation, Edge Collapse Mesh Simplification
-
-
-SECTION
-<a name = "animation">3D Animation</a>
-In this section, we will cover some of the basics of 3D animation at a surface level.  This is an incredibly broad field, so we will focus primarily on the math underlying a subset of professional animation tools such as <a href = "https://www.blender.org/">Blender</a> and <a href = "https://www.autodesk.com/products/maya/overview">Maya</a>, rather than the tools themselves.  We will then end the unit by porting our animations over to a basic virtual reality system that we build on top of <a href = "https://github.com/ctralie/ggslac">ggslac</a> using a <a href = "https://arvr.google.com/cardboard/get-cardboard/">Google cardboard</a>, so that we can really get the motions that we develop to pop up out at us visually.  <p><b>Big Concepts And Questions:</b><ul><li>Explain why "inverse kinematics" are named as such</li></li><li>How does skinning work, and what are its shortcomings?</li><li>What is Gimbal Lock, and what animation scenarios does it adversely impact and how?</li></ul></p>
-
-LECTURE
-Animation Overview: The Animation Loop, Collision Detection
-
-
-LECTURE
-Collision Response, Convex Hulls/The Separating Axis Theorem, Begin Euler Angles
-
-
-LECTURE
-Finish Euler Angles, Rodrigues' Rotation Formula, Quaternions/SLERP 
-
-<ul><li><a href = "../Materials/SlerpViz">Quaternion SLERP Visualization App</a></li><li><a href = "http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/">Quaternions to euler angles and back: geometric explanations</a></li><li><a href = "https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Proof_of_the_quaternion_rotation_identity">Wikipedia Derivation of Quaternion Axis/Angle Identity</a></li></ul>
-LECTURE
-Character Animation: Inverse Kinematics, MOCAP, Skinning
-
-<ul><li><a href = "../Lectures/CharacterAnimation/FABRIK/forward.html">Forward Kinematics Demo</a></li><li><a href = "http://www.andreasaristidou.com/FABRIK.html">FABRIK Paper</a></li><li><a href = "../Lectures/CharacterAnimation/FABRIK">FABRIK Demo</a></li><li><a href = "https://twitter.com/i/status/1135929820603228161">Tentacle + cake...</a></li><li><a href = "https://www.shadertoy.com/view/XldSDn">Shadertoy dancing tentacle</a></li><li><a href = "http://mocap.cs.cmu.edu/">CMU MOCAP Database</li><li><a href = "https://twitter.com/TheRujiK/status/969581641680195585">Wonky salamander</a><li><a href = "../Materials/MOCAPViz">Javascript MOCAP Visualizer</a></li></ul>
-LECTURE
-Virtual Reality 1
-
-
-LECTURE
-Virtual Reality 2
-
-
