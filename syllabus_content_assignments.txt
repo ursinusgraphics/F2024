@@ -22,10 +22,10 @@ Assignment 1 Part 2 Due
 3D Transformations And Scene Trees Module Due Before Class
 
 2022-09-19
-<HR>Assignment 2: Scene Trees (Individual) Out
+<HR>Mini Assignment 2: Scene Trees (Individual) Out
 
 2022-09-19
-Assignment 2 Due
+Mini Assignment 2 Due
 
 2022-09-26
 <HR>Assignment 3: FABRIK And Skinning (Group) Out
