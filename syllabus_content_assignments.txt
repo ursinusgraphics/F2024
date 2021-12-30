@@ -1,51 +1,75 @@
 <a href = "https://ursinus.co1.qualtrics.com/jfe/form/SV_b8f6vIUU4KwTmcJ">Background Knowledge Assessment</a>
 
+2022-08-29
+<a href = "../Assignments/Indy0_SoftwareCheck/index.html">Assignment 0: Warmup</a> Due
+
 2022-08-31
-<a href = "../Assignments/Indy0_SoftwareCheck/index.html">Individual Assignment 0: Warmup</a> Due
+<HR>Javascript Module Due Before Class
 
-2022-09-01
-<a href = "../Assignments/Indy1_GeomPrimitives">Individual Assignment 1: Geometric Primitives</a> Out
+2022-08-31
+Vectors Module 1 Due Before Class
 
-2022-09-10
-<HR><a href = "../Assignments/Indy1_GeomPrimitives/index.html#part1">Individual Assignment 1: Geometric Primitives Part 1</a> Due
+2022-09-02
+<HR>Assignment 1: Geometric Primitives</a> (Individual) Out
 
-2022-09-18
-<HR><a href = "../Assignments/Indy1_GeomPrimitives/index.html#part2">Individual Assignment 1: Geometric Primitives Part 2</a> Due
+2022-09-02
+Assignment 1 Part 1 Due
 
-2022-09-25
-<HR><a href = "../Assignments/Indy2_SceneTrees">Individual Assignment 2: Scene Trees</a> Out
+2022-09-09
+Assignment 1 Part 2 Due
 
-2022-09-30
-<a href = "../Assignments/Assignment3_Shaders">Assignment 3: Shaders</a> Out
+2022-09-16
+3D Transformations And Scene Trees Module Due Before Class
 
-2022-10-07
-<a href = "../Assignments/Assignment3_Shaders">Assignment 3: Shaders</a> Due
+2022-09-19
+<HR>Assignment 2: Scene Trees (Individual) Out
 
-2022-10-19
-<HR><a href = "../Assignments/Indy2_SceneTrees">Individual Assignment 2: Scene Trees</a> Due
+2022-09-19
+Assignment 2 Due
+
+2022-09-26
+<HR>Assignment 3: FABRIK And Skinning (Group) Out
+
+2022-09-26
+Euler Angles Activity Due Before Class
+
+2022-10-03
+Assignment 3 Due
 
 2022-10-09
-<a href = "../Assignments/Assignment4_RayTracer">Assignment 4: Ray Tracer</a> out
+Mini Assignment 4: Implicit Surface Design (Individual) Out
 
-2022-10-18
-<a href = "../Assignments/Assignment4_RayTracer">Assignment 4: Ray Tracer</a> Check-In Due
+2022-10-10
+Mini Assignment 4 Due
 
-2022-10-28
-<a href = "../Assignments/Assignment4_RayTracer">Assignment 4: Ray Tracer</a> Final Submission Due
+2022-10-14
+Assignment 5: Triangle Mesh Processing (Group) Out
 
-2022-11-11
-<a href = "../Assignments/Assignment5_3DShapeModeling">Assignment 5: Polygon Mesh Processing</a> Out
+2022-10-19
+Assignment 5 Due
 
-2022-11-18
-<a href = "../Assignments/Assignment5_3DShapeModeling">Assignment 5: Polygon Mesh Processing</a> Part 1 due
+2022-11-03
+Mini Assignment 6: Shaders And Image Processing (Individual) Out
 
-2022-11-25
-<HR>Final Project Deadline #1
+2022-11-04
+Mini Assignment 6 Due
 
-2022-11-25
-<a href = "../Assignments/Assignment5_3DShapeModeling">Assignment 5: Polygon Mesh Processing</a> Part 2 due
+2022-11-13
+Assignment 7: Real Time Ray Tracing (Group) Out
+
+2022-11-14
+Assignment 7 Part 1 Due
+
+2022-11-28
+Assignment 7 Part 2 Due
+
+2022-12-08
+Final Project Proposal Due
+
+2022-11-21
+Final Project Checkpoint
 
 2022-12-09
-Final Project Deadline #2
+Cel Shading Art Contest
 
-2022-12-11
+2022-12-02
