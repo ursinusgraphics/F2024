@@ -80,7 +80,7 @@ Assignment 3 Work Session
 
 SECTION
 <a name = "shape">3D Shape Representations</a>
-Now that we know how to represent fundamental geometry numerically, we will discuss data structures for representing more complicated custom shapes, which form the backbone of modern CAD and 3D modeling applications.  The first of these is the triangle mesh, which is a discrete approximation of a smooth 2D manifold surface consisting of a collection of triangles connected to each other at a common edge.  We will then discuss continuous representations, including subdivision surfaces and splines.  We will conclude this unit with implicit surfaces, which are volumetric descriptions of surfaces which allow for easy boolean operations and natural design of neat shapes such as water drops.  And as we will see, implicit surfaces lead to a very particular, smooth aesthetic via "metaballs" (not "m<b>ea</b>tballs"!).<p><b>Big Concepts And Questions:</b><ul><li>What is the difference between a discrete and continuous data structure for surfaces?</li><li>What are geometric properties of a triangle mesh, and what are topological properties of a triangle mesh?</li><li>What are the strengths and limitations of different shape representations?</li><li>How many metaballs does one need to design a human head?</li></ul></p>
+Now that we know how to represent fundamental geometry numerically, we will discuss data structures for representing more complicated custom shapes, which form the backbone of modern CAD and 3D modeling applications.  The first of these is the triangle mesh, which is a discrete approximation of a smooth 2D manifold surface consisting of a collection of triangles connected to each other at a common edge.  We will then discuss continuous representations, including subdivision surfaces.  We will conclude this unit with implicit surfaces, which are volumetric descriptions of surfaces which allow for easy boolean operations and natural design of neat shapes such as water drops.  And as we will see, implicit surfaces lead to a very particular, smooth aesthetic via "metaballs" (not "m<b>ea</b>tballs"!).<p><b>Big Concepts And Questions:</b><ul><li>What is the difference between a discrete and continuous data structure for surfaces?</li><li>What are geometric properties of a triangle mesh, and what are topological properties of a triangle mesh?</li><li>What are the strengths and limitations of different shape representations?</li><li>How many metaballs does one need to design a human head?</li></ul></p>
 
 LECTURE
 Implicit Surfaces/ Marching Cubes
@@ -116,10 +116,6 @@ Truncation, Edge Collapse
 
 LECTURE
 Mesh Simplification
-
-
-LECTURE
-Splines
 
 
 SECTION
