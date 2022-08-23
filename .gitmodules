@@ -1,3 +1,12 @@
 [submodule "Materials/ggslac"]
 	path = Materials/ggslac
 	url = https://github.com/ctralie/ggslac.git
+[submodule "Materials/SlerpViz"]
+	path = Materials/SlerpViz
+	url = https://github.com/COMPSCI290-S2016/SlerpViz.git
+[submodule "Materials/MatrixTransformationsLive"]
+	path = Materials/MatrixTransformationsLive
+	url = https://github.com/ursinus-cs476-f2022/MatrixTransformationsLive.git
+[submodule "Materials/EulerAnglesViz"]
+	path = Materials/EulerAnglesViz
+	url = https://github.com/COMPSCI290-S2016/EulerAnglesViz.git
