@@ -7,13 +7,13 @@
 <a href = "https://ursinus.co1.qualtrics.com/jfe/form/SV_ekEo8qkqkLQXvWC">Survey</a> due
 
 2022-08-30
-<a href = "../Assignments/Indy0_SoftwareCheck/index.html">Assignment 0: Warmup</a> Due
+<a href = "https://ursinus.instructure.com/courses/14942/quizzes/19661">Syllabus Quiz</a> Due
+
+2022-08-30
+<a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Javascript1">Javascript Module</a> Due Before Class
 
 2022-08-31
-<HR>Javascript Module Due Before Class
-
-2022-08-31
-Vectors Module 1 Due Before Class
+<a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Vectors1">Vectors Module 1</a> Due Before Class
 
 2022-09-02
 <HR>Assignment 1: Geometric Primitives</a> (Individual) Out
