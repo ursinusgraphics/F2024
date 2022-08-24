@@ -10,3 +10,6 @@
 [submodule "Materials/EulerAnglesViz"]
 	path = Materials/EulerAnglesViz
 	url = https://github.com/COMPSCI290-S2016/EulerAnglesViz.git
+[submodule "Materials/JavaScript_MOCAP_Animation"]
+	path = Materials/JavaScript_MOCAP_Animation
+	url = https://github.com/ctralie/JavaScript_MOCAP_Animation.git

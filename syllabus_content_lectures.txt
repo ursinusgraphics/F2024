@@ -13,7 +13,7 @@ Javascript Practice: Catastrophes with Infinite Loops and COVID 19
 LECTURE
 Begin Vectors: Vector Addition, Dot Products
 
-Math Resources:<ul><li><a href = "../Lectures/2_VectorsIntro">Prof. Tralie's notes on vectors</a></li><li><a href = "https://www.youtube.com/watch?v=Jes5jwLl1q8&list=PL8erL0pXF3JYm7VaTdKDaWc8Q3FuP8Sa7">Calculus Blue</a> 4.1 - 4.3, 5.1 - 5.3, 6.1 - 6.3</li><li><a href = "https://demoman.net/?a=trig-for-games">Trig for games</a></li></ul>
+Math Resources:<ul><li><a href = "Lectures/2_VectorsIntro">Prof. Tralie's notes on vectors</a></li><li><a href = "https://www.youtube.com/watch?v=Jes5jwLl1q8&list=PL8erL0pXF3JYm7VaTdKDaWc8Q3FuP8Sa7">Calculus Blue</a> 4.1 - 4.3, 5.1 - 5.3, 6.1 - 6.3</li><li><a href = "https://demoman.net/?a=trig-for-games">Trig for games</a></li></ul>
 LECTURE
 Projection, Cross Products, Normals
 
@@ -21,7 +21,7 @@ Projection, Cross Products, Normals
 LECTURE
 Barycentric Coordinates, Triangle Interior Point Testing
 
-<ul><li><a href = "../ClassExercises/Week2_Barycentric/WeightedAverage.html">Weighted Average of Triangle Points Applet</a></li><li><a href = "../ClassExercises/Week2_Barycentric/BarycentricTriangles.html">Barycentric Coordinates via Area Ratios</a></li><li><a href = "https://github.com/Ursinus-CS476-F2020/Week2_CirclesIntersect/archive/master.zip">Circle Intersecting Exercise</a></li></ul>
+<ul><li><a href = "ClassExercises/Week2_Barycentric/WeightedAverage.html">Weighted Average of Triangle Points Applet</a></li><li><a href = "ClassExercises/Week2_Barycentric/BarycentricTriangles.html">Barycentric Coordinates via Area Ratios</a></li><li><a href = "https://github.com/Ursinus-CS476-F2020/Week2_CirclesIntersect/archive/master.zip">Circle Intersecting Exercise</a></li></ul>
 LECTURE
 Lines, Rays, And Planes
 
@@ -33,7 +33,7 @@ Ray Intersect Plane & Ray Intersect Sphere
 LECTURE
 2D Matrix Transformations, Composition of Transformations, Inverses
 
-<ul><li><a href = "../Lectures/Module6_2DMatrices/slides.pdf">Slides</a></li><li><a href = "../Materials/ggslac/viewers/MatrixAnim.html">Prof. Tralie's Matrix Transformation Demo Widget</a></li></ul>
+<ul><li><a href = "Lectures/Module6_2DMatrices/slides.pdf">Slides</a></li><li><a href = "Materials/ggslac/viewers/MatrixAnim.html">Prof. Tralie's Matrix Transformation Demo Widget</a></li></ul>
 LECTURE
 Matrix Translations And Homogenous Coordinates, Combined Rotations/Translations, Begin 3D Matrix Transformations
 
@@ -45,15 +45,15 @@ In this section, we will cover some of the basics of 3D animation at a surface l
 LECTURE
 JSON, Hierarchical Transformations, Scene Graphs
 
-<ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneViewer.html">Scene Viewer</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneEditor.html">Scene Editor</a></li><li><a href = "http://www.json.org/">http://www.json.org/</a></li><li><a href = "../Lectures/Module7/TableWithCone.json">TableWithCone.json</a></li></ul>
+<ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneViewer.html">Scene Viewer</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneEditor.html">Scene Editor</a></li><li><a href = "http://www.json.org/">http://www.json.org/</a></li><li><a href = "Lectures/Module7/TableWithCone.json">TableWithCone.json</a></li></ul>
 LECTURE
 Character Animation: MOCAP, Forward Kinematics
 
-<ul><li><a href = "../Lectures/CharacterAnimation/FABRIK/forward.html">Forward Kinematics Demo</a></li><li><a href = "../Materials/MOCAPViz">Javascript MOCAP Visualizer</a></li></ul>
+<ul><li><a href = "Lectures/CharacterAnimation/FABRIK/forward.html">Forward Kinematics Demo</a></li><li><a href = "Materials/MOCAPViz">Javascript MOCAP Visualizer</a></li></ul>
 LECTURE
 Inverse Kinematics, Forward And Backward Reaching Inverse Kinematics (FABRIK)
 
-<ul><li><a href = "http://www.andreasaristidou.com/FABRIK.html">FABRIK Paper</a></li><li><a href = "../Lectures/CharacterAnimation/FABRIK">FABRIK Demo</a></li><li><a href = "https://twitter.com/i/status/1135929820603228161">Tentacle + cake...</a></li><li><a href = "https://www.shadertoy.com/view/XldSDn">Shadertoy dancing tentacle</a></li><li><a href = "http://mocap.cs.cmu.edu/">CMU MOCAP Database</li><li><a href = "https://twitter.com/TheRujiK/status/969581641680195585">Wonky salamander</a></li></ul>
+<ul><li><a href = "http://www.andreasaristidou.com/FABRIK.html">FABRIK Paper</a></li><li><a href = "Lectures/CharacterAnimation/FABRIK">FABRIK Demo</a></li><li><a href = "https://twitter.com/i/status/1135929820603228161">Tentacle + cake...</a></li><li><a href = "https://www.shadertoy.com/view/XldSDn">Shadertoy dancing tentacle</a></li><li><a href = "http://mocap.cs.cmu.edu/">CMU MOCAP Database</li><li><a href = "https://twitter.com/TheRujiK/status/969581641680195585">Wonky salamander</a></li></ul>
 LECTURE
 Skinning
 
@@ -73,7 +73,7 @@ Finish Euler Angles, Rodrigues' Rotation Formula
 LECTURE
 Quaternions/SLERP 
 
-<ul><li><a href = "../Materials/SlerpViz">Quaternion SLERP Visualization App</a></li><li><a href = "http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/">Quaternions to euler angles and back: geometric explanations</a></li><li><a href = "https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Proof_of_the_quaternion_rotation_identity">Wikipedia Derivation of Quaternion Axis/Angle Identity</a></li></ul>
+<ul><li><a href = "Materials/SlerpViz">Quaternion SLERP Visualization App</a></li><li><a href = "http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/">Quaternions to euler angles and back: geometric explanations</a></li><li><a href = "https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Proof_of_the_quaternion_rotation_identity">Wikipedia Derivation of Quaternion Axis/Angle Identity</a></li></ul>
 LECTURE
 Assignment 3 Work Session
 
@@ -85,7 +85,7 @@ Now that we know how to represent fundamental geometry numerically, we will disc
 LECTURE
 Implicit Surfaces/ Marching Cubes
 
-<ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/HeightmapEditor.html">Heightmap Editor</a></li><li><a href = "../ClassExercises/ImplicitSurfaces">Volumetric levelset editor</a></li><li><a href = "https://www.willusher.io/webgl-marching-cubes/#Skull">Will Usher real-time marching cubes</a></li><li><a href = "http://jamie-wong.com/2014/08/19/metaballs-and-marching-squares/">Jamie Wong Marching Squares Live Demo</a></li><li><a href = "http://paulbourke.net/geometry/polygonise/">Paul Bourke Polygonize Notes</a></li><li><a href = "https://youtu.be/941z56i7QJE?t=71">Implicit human minus ellipsoid</a></li></ul>
+<ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/HeightmapEditor.html">Heightmap Editor</a></li><li><a href = "ClassExercises/ImplicitSurfaces">Volumetric levelset editor</a></li><li><a href = "https://www.willusher.io/webgl-marching-cubes/#Skull">Will Usher real-time marching cubes</a></li><li><a href = "http://jamie-wong.com/2014/08/19/metaballs-and-marching-squares/">Jamie Wong Marching Squares Live Demo</a></li><li><a href = "http://paulbourke.net/geometry/polygonise/">Paul Bourke Polygonize Notes</a></li><li><a href = "https://youtu.be/941z56i7QJE?t=71">Implicit human minus ellipsoid</a></li></ul>
 LECTURE
 Triangle Meshes, Triangle Mesh Topology: Manifold, Boundary, Euler Characteristic
 
@@ -125,15 +125,15 @@ In this part of the course, we discuss how to use a computer to generate images 
 LECTURE
 Shaders And GLSL: Attributes, Varying, Uniforms, Textures, Basic Image Processing
 
-<ul><li><a href = "../Lectures/Module8_Shaders/slides.pdf">Overview Slides</li><li><a href = "https://en.wikibooks.org/wiki/GLSL_Programming">GLSL Programming WikiBook</a></li><li><a href = "https://www.shadertoy.com/">shadertoy.com</a></li></ul>
+<ul><li><a href = "Lectures/Module8_Shaders/slides.pdf">Overview Slides</li><li><a href = "https://en.wikibooks.org/wiki/GLSL_Programming">GLSL Programming WikiBook</a></li><li><a href = "https://www.shadertoy.com/">shadertoy.com</a></li></ul>
 LECTURE
 Complex Numbers, Fractals, Julia Sets
 
-<ul><li><a href = "../ClassExercises/Week5_JuliaSets">Julia Sets Class Exercise</a></li><li><a href = "https://en.wikipedia.org/wiki/L-system">Wikipedia Page on L-Systems</li><li><a href = "https://www.cs.uic.edu/~jbell/CourseNotes/ComputerGraphics/SpecialTopics.html">John Bell's Notes on fractals in computer graphics</li></ul>
+<ul><li><a href = "ClassExercises/Week5_JuliaSets">Julia Sets Class Exercise</a></li><li><a href = "https://en.wikipedia.org/wiki/L-system">Wikipedia Page on L-Systems</li><li><a href = "https://www.cs.uic.edu/~jbell/CourseNotes/ComputerGraphics/SpecialTopics.html">John Bell's Notes on fractals in computer graphics</li></ul>
 LECTURE
 Textures, Basic Image Processing
 
-<ul><li><a href = "../ClassExercises/Week5_EmbossMedian">Embossing And Median Filtering Class Exercise</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Mozilla developer notes on WebGL Texture Mapping</li><li><a href = "https://webglfundamentals.org/webgl/lessons/webgl-3d-textures.html">WebGL Fundamentals Notes on Texture Maps And Mipmapping</a></li></ul>
+<ul><li><a href = "ClassExercises/Week5_EmbossMedian">Embossing And Median Filtering Class Exercise</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Mozilla developer notes on WebGL Texture Mapping</li><li><a href = "https://webglfundamentals.org/webgl/lessons/webgl-3d-textures.html">WebGL Fundamentals Notes on Texture Maps And Mipmapping</a></li></ul>
 LECTURE
 Local Illumination: Lambertian/Phong Illumination, Gouraud/Per-Fragment Shading
 
@@ -165,7 +165,7 @@ Object-first rendering: The Camera Matrix, Perspective/Viewing matrices, Depth S
 LECTURE
 Cel Shading / Toon Shading, Hidden Surface Removal/Culling
 
-<ul><li><a href = "../ClassExercises/Week9_CelShading/CelShading.zip">Cel shading code from class</a></li><li><a href = "https://en.wikipedia.org/wiki/Cel_shading">Wikipedia Page on Cel Shading</a></li><li><a href = "https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S17/final_projects/amy_toshi.pdf">RPI Final Project on Ray Tracing Cel Shading</a></li></ul>
+<ul><li><a href = "ClassExercises/Week9_CelShading/CelShading.zip">Cel shading code from class</a></li><li><a href = "https://en.wikipedia.org/wiki/Cel_shading">Wikipedia Page on Cel Shading</a></li><li><a href = "https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S17/final_projects/amy_toshi.pdf">RPI Final Project on Ray Tracing Cel Shading</a></li></ul>
 LECTURE
 Object-First Rendering: Bump Maps, Displacement Maps
 
