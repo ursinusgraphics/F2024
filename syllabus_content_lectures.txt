@@ -5,11 +5,11 @@ The course will start with an overview of some important mathematical concepts f
 LECTURE
 Course Overview, Intro To Javascript
 
-Javascript Resources<ul><li><a href = "https://github.com/Ursinus-CS476-F2020/Week1Exercises/archive/master.zip">Code for today</a></li><li><a href = "../ClassExercises/Week1Exercises/COVID.html">Social Distancing Simulation</a></li><li><a href = "http://www.cs.princeton.edu/courses/archive/spring19/cos426/precepts/01-precept.pdf">Princeton Javascript for Graphics Crash Course</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Javascript tutorial</a></li><li><a href = "https://google.github.io/styleguide/jsguide.html">Google Javascript Style Guide</a> (for what it's worth)</li></ul>
+Javascript Resources<ul><li><a href = "http://www.cs.princeton.edu/courses/archive/spring19/cos426/precepts/01-precept.pdf">Princeton Javascript for Graphics Crash Course</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Javascript tutorial</a></li><li><a href = "https://google.github.io/styleguide/jsguide.html">Google Javascript Style Guide</a> (for what it's worth)</li></ul>
 LECTURE
 Javascript Practice: Catastrophes with Infinite Loops and COVID 19
 
-
+<ul><li><a href = "https://github.com/ursinus-cs476-f2022/Week1Exercises/archive/refs/heads/master.zip">Code for today</a></li><li><a href = "ClassExercises/Week1Exercises/COVID.html">Social Distancing Simulation</a></li></ul>
 LECTURE
 Begin Vectors: Vector Addition, Dot Products
 
@@ -85,7 +85,7 @@ Now that we know how to represent fundamental geometry numerically, we will disc
 LECTURE
 Implicit Surfaces/ Marching Cubes
 
-<ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/HeightmapEditor.html">Heightmap Editor</a></li><li><a href = "ClassExercises/ImplicitSurfaces">Volumetric levelset editor</a></li><li><a href = "https://www.willusher.io/webgl-marching-cubes/#Skull">Will Usher real-time marching cubes</a></li><li><a href = "http://jamie-wong.com/2014/08/19/metaballs-and-marching-squares/">Jamie Wong Marching Squares Live Demo</a></li><li><a href = "http://paulbourke.net/geometry/polygonise/">Paul Bourke Polygonize Notes</a></li><li><a href = "https://youtu.be/941z56i7QJE?t=71">Implicit human minus ellipsoid</a></li></ul>
+<ul><li><a href = "../Modules/assets/js/ggslac/viewers/HeightmapEditor.html">Heightmap Editor</a></li><li><a href = "ClassExercises/ImplicitSurfaces">Volumetric levelset editor</a></li><li><a href = "https://www.willusher.io/webgl-marching-cubes/#Skull">Will Usher real-time marching cubes</a></li><li><a href = "http://jamie-wong.com/2014/08/19/metaballs-and-marching-squares/">Jamie Wong Marching Squares Live Demo</a></li><li><a href = "http://paulbourke.net/geometry/polygonise/">Paul Bourke Polygonize Notes</a></li><li><a href = "https://youtu.be/941z56i7QJE?t=71">Implicit human minus cylinder</a></li></ul>
 LECTURE
 Triangle Meshes, Triangle Mesh Topology: Manifold, Boundary, Euler Characteristic
 

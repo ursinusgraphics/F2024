@@ -353,19 +353,55 @@
 											</p>
 
 	
-											<h3><a name = "discord">Discord</a></h3>
+											
+											<h3><a name = "discord">Discord / Anonymous Questions</a></h3>
 											<p>
-												To facilitate informal, class-wide discussions about the class, we will have a Discord channel for the class.  My goal is for this to turn into a flourishing area to work through <a href = "#confusion">confusion</a> and to share ideas as a group.  All questions are welcome! <b>We will also keep the CS 476 Discord channel open during class for polling and for general questions for students who are shy about speaking up verbally in front of their peers.</b>
+												To facilitate informal, class-wide discussions about the class, as well as <a href = "#buddy">buddy group coding</a> with screen sharing, we will have a Discord channel for the class.  My goal is for this to turn into a flourishing area to work through <a href = "#confusion">confusion</a> and to share ideas as a group.  
 											</p>
+
+											<h4>Voltaire Anonymous Questions</h4>
+											<p>
+												All questions are welcome!  To help break down the barrier of asking questions, we will be using the chat bot <a href = "https://nminchow.github.io/VoltaireWeb/">Voltaire</a> so students can ask questions anonymously.  This has worked very well in the past.  To use Voltaire, send a <b>direct message</b> to the Voltaire bot with the following syntax:
+											</p>
+
+											<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+												!volt send_server "CS 476 Fall 2022" channel_name message]]></script>  
+
+											<p>
+												where <code>channel_name</code> is the name of the channel you want to post to, and <code>message</code> is the text you want to send.  Below is an example:
+											</p>
+											<img src = "Voltaire.png" width="70%">
+
+											<p>
+												<b>Answer:</b>
+												<div width="200">
+													<h4>
+														\[ u \cdot v = |u| |v| \cos(\theta) \]
+													</h4>
+												</div>
+
+											</p>
+
+											<p></p>
+
+											<h4>In Class Anonymous Questions</h4>
+											<p>
+												In addition to Voltaire, I'll be running a bot during class that accepts questions to help quieter student who want to participate anonymously to do so.  I've found this sort of thing to be particularly helpful with students from underrepresented groups.  To ask a question during class, visit <a href = "http://mathcs.ursinus.edu/question">http://mathcs.ursinus.edu/question</a>.
+											</p>
+
+											<h4>Office Hours</h4>
 											<p>
 												In addition to the regular channel, we will be holding drop-in student office hours on Tuesdays on the Ursinus ACM Discord channel, since student office hours are joint between my classes.  You can find it under the "Chit Chat" Category, as shown below
 											</p>
 											<p>
 												<img src = "OfficeHours.png">
 											</p>
+
+											<h4>Other Rules</h4>
 											<p>
-												Please <b>do not</b> send me direct messages or anything of a sensitive nature (e.g. grades) over Discord.  Instead, use <a href = "#teams">Microsoft Teams</a> or e-mail for that, since those transactions are locked down better under Ursinus control.
+												<b>Do not</b> send me direct messages or anything of a sensitive nature (e.g. grades) over Discord.  Instead, use <a href = "#teams">Microsoft Teams</a> or e-mail for that, since those transactions are locked down better under Ursinus control.
 											</p>
+
 
 											
 	
@@ -470,11 +506,11 @@
 
 <!-- Begin Schedule -->
 <tr><td colspan = "5"><h2><b><a name = "primitives">Geometric Primitives</a></b></h2><p>The course will start with an overview of some important mathematical concepts from linear algebra and vector geometry to get everyone on the same page.  These are the basic building blocks that will be used again and again in the rest of the course.  The pace at which we go through this section will adapt to the background knowledge of the students.  We will have two small individual programming assignments in this section to get everyone used to programming with geometry in Javascript.<p><b>Big Concepts And Questions:</b><ul><li>What is numerical geometry?</li><li>How does the quadratic formula help is with ray object intersections?</li><li>What trick can we use to incorporate both linear operations and translations into a single matrix?  Why do we want to do this?</li></ul></p></p></td></tr>
-<tr><td>1</td><td>Mon 8/29/2022</td><td>Course Overview, Intro To Javascript</td><td>Javascript Resources<ul><li><a href = "https://github.com/Ursinus-CS476-F2020/Week1Exercises/archive/master.zip">Code for today</a></li><li><a href = "../ClassExercises/Week1Exercises/COVID.html">Social Distancing Simulation</a></li><li><a href = "http://www.cs.princeton.edu/courses/archive/spring19/cos426/precepts/01-precept.pdf">Princeton Javascript for Graphics Crash Course</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Javascript tutorial</a></li><li><a href = "https://google.github.io/styleguide/jsguide.html">Google Javascript Style Guide</a> (for what it's worth)</li></ul></td><td bgcolor=#f4e6e7><a href = "https://ursinus.co1.qualtrics.com/jfe/form/SV_b8f6vIUU4KwTmcJ">Background Knowledge Assessment</a>
+<tr><td>1</td><td>Mon 8/29/2022</td><td>Course Overview, Intro To Javascript</td><td>Javascript Resources<ul><li><a href = "http://www.cs.princeton.edu/courses/archive/spring19/cos426/precepts/01-precept.pdf">Princeton Javascript for Graphics Crash Course</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Javascript tutorial</a></li><li><a href = "https://google.github.io/styleguide/jsguide.html">Google Javascript Style Guide</a> (for what it's worth)</li></ul></td><td bgcolor=#f4e6e7><a href = "https://ursinus.co1.qualtrics.com/jfe/form/SV_b8f6vIUU4KwTmcJ">Background Knowledge Assessment</a>
 </td></tr>
 <tr><td></td><td>Tue 8/30/2022</td><td></td><td></td><td bgcolor=#f4e6e7><a href = "https://ursinus.instructure.com/courses/14942/assignments/152699">Software Environment Configuration</a> Due
 </td></tr><tr><td></td><td>Tue 8/30/2022</td><td></td><td></td><td bgcolor=#f4e6e7><a href = "https://ursinus.co1.qualtrics.com/jfe/form/SV_ekEo8qkqkLQXvWC">Survey</a> due
-</td></tr><tr><td>2</td><td>Wed 8/31/2022</td><td>Javascript Practice: Catastrophes with Infinite Loops and COVID 19</td><td></td><td bgcolor=#f4e6e7><a href = "../Assignments/Indy0_SoftwareCheck/index.html">Assignment 0: Warmup</a> Due
+</td></tr><tr><td>2</td><td>Wed 8/31/2022</td><td>Javascript Practice: Catastrophes with Infinite Loops and COVID 19</td><td><ul><li><a href = "https://github.com/ursinus-cs476-f2022/Week1Exercises/archive/refs/heads/master.zip">Code for today</a></li><li><a href = "ClassExercises/Week1Exercises/COVID.html">Social Distancing Simulation</a></li></ul></td><td bgcolor=#f4e6e7><a href = "../Assignments/Indy0_SoftwareCheck/index.html">Assignment 0: Warmup</a> Due
 <HR>Javascript Module Due Before Class
 </td></tr>
 <tr><td>3</td><td>Fri 9/2/2022</td><td>Begin Vectors: Vector Addition, Dot Products</td><td>Math Resources:<ul><li><a href = "Lectures/2_VectorsIntro">Prof. Tralie's notes on vectors</a></li><li><a href = "https://www.youtube.com/watch?v=Jes5jwLl1q8&list=PL8erL0pXF3JYm7VaTdKDaWc8Q3FuP8Sa7">Calculus Blue</a> 4.1 - 4.3, 5.1 - 5.3, 6.1 - 6.3</li><li><a href = "https://demoman.net/?a=trig-for-games">Trig for games</a></li></ul></td><td bgcolor=#f4e6e7>Vectors Module 1 Due Before Class
@@ -929,7 +965,7 @@
 					</div>
 
 				<!--LaTeX in Javascript!-->
-				<script src="../../../../jsMath/easy/load.js"></script>
+				<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 				<!--Syntax highlighting in Javascript!-->
 				<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
 				<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
