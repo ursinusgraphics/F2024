@@ -1,0 +1,454 @@
+<!-- Start of Header Code -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="../../main.css" />
+<link rel="icon" href="../../../favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon"/>
+<!--LaTeX in Javascript!-->
+<script src="../../../../jsMath/easy/load.js"></script>
+<!--Syntax highlighting in Javascript!-->
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<title>COMPSCI/MATH 290: Digital 3D Geometry Spring 2016</title>
+<script src = "GeomPrimitives.js"></script>
+<script src= "gl-matrix-min.js"></script>
+<script src = "plotly.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+
+<div id="menu-bar">
+<center><h1>COMPSCI/MATH 290: Spring 2016</h1></center>
+<ul class="menus-level0">
+<li><a href="../../index.html">General</a></li>
+<li><a href = "../../syllabus.html">Syllabus</a></li>
+<li><a href = "../../assignments.html">Assignments</a></li>
+<li><a href = "../../finalproject.html">Final Project</a></li>
+<li><a href = "../../raffle.html">Raffle</a></li>
+</ul>
+</div>
+<!-- End of Header Code -->
+
+<div id="page-content">
+<h1><center>Lecture 2: Vectors, Dot Products, Projections</center></h1>
+
+<ul>
+<li><a href = "#vectorsmags">Vectors and Magnitudes</a></li>
+<li><a href = "#addsub">Vector Addition, Subtraction, and Scalar Multiplication</a></li>
+<li><a href = "#dot">Dot Products</a></li>
+<li><a href = "#proj">Projections</a>
+<ul>
+<li><a href = "#projdemo">Live demo</a></li>
+</ul>
+</li>
+<li><a href = "#cross">Cross Product</a></li>
+</ul>
+
+<p>
+Today we went over some fundamental concepts in vector math.  Below I will write down the definitions we went over and also present a proof of the dot product equation that I didn't have time to cover in class
+</p>
+
+
+<h1><a name = "vectorsmags">Vectors and Magnitudes</a></h1>
+<p>
+For those who really delve into math, a vector is a surprisingly general concept.  Vectors can be anything from a 3D arrow, to a function, or even something <a href = "https://en.wikipedia.org/wiki/Homology_%28mathematics%29">describing "holes" in a space</a>.  For the purposes of this class, we'll be dealing with <b>Euclidean Vectors</b>.  These are mathematical objects which have a <i>magnitude</i> and a <i>direction</i>.
+</p>
+
+<div id="definition">
+<h3><u>Definition 1: Euclidean Vector</u></h3>
+A Euclidean vector
+<h2>
+\[ \vec{u} \]
+</h2>
+in a d-dimensional space is an ordered pair of numbers 
+
+<h3>(x_1, x_2, ..., x_d)</h3>
+
+equipped with the "Euclidean norm."  That is, the <b>magnitude</b> of the vector is
+<h2>
+\[ || \vec{u} || = \sqrt{ \sum_{i = 1}^d x_i^2 } \]
+</h2>
+
+Each one of the numbers in the ordered pair is called a <b>component</b>.  Note that the formula for the magnitude is just the <a href = "https://en.wikipedia.org/wiki/Pythagorean_theorem">Pythagorean Theorem</a>.
+</div><BR><BR>
+
+For example, the 2D Euclidean vector <b>(a, b)</b>, with x component <b>a</b> and y component <b>b</b> in 2D can be drawn as follows:<BR><BR>
+<img src = "Vector2D.svg"><BR><BR>
+
+and it has magnitude \[ \sqrt{a^2 + b^2} \]<BR><BR>
+
+For a 3D Euclidean vector <b>(a, b, c)</b>, the drawing looks like this:<BR><BR>
+
+<img src = "Vector3D.svg"><BR><BR>
+
+and it has magnitude \[ \sqrt{a^2 + b^2 + c^2} \]
+
+Notice how in the coordinate system as drawn, <b>X</b> is to the right, <b>Y</b> is up, and <b>Z</b> is "out of the page."  This is a common choice of coordinate systems for graphics programs, since for 2D graphics <b>X</b> is usually to the right and <b>Y</b> is up.  Then, to keep it a <i>right handed coordinate system</i>, Z needs to point out of the computer screen towards the viewer.  
+
+<BR><BR><a href = "https://en.wikipedia.org/wiki/Cartesian_coordinate_system#In_three_dimensions">Click here</a> if the concept of a right handed coordinate system is new to you.  We will be using right handed coordinate systems in this course.  <i>If you ever get a negative sign and you don't know why, go back and check your code carefully and <b>don't just flip it!</b>.  This is usually a sign that you put in a left handed coordinate system by accident</i>.<BR><BR>
+
+<b>NOTE:</b> Usually in equations, I will write a vector with an arrow over it as above.  Sometimes in HTML, it's more convenient to simply write it as a bold letter.  I will switch back and forth between these notations.  Also, I will try to keep vectors as lower case letters.  Upper case bolded letters are reserved for matrices.
+
+<BR><BR><HR>
+<h1><a name = "addsub">Vector Addition, Subtraction, and Scalar Multiplication</a></h1>
+
+Algebraically, adding two vectors is simply adding them component by component.  That is
+
+<h2>
+\[ (\vec{v_1} + \vec{v_2})_i = {\vec{v_1}}_i + {\vec{v_2}}_i \] 
+</h2>
+<BR>
+In 2D, 
+<h2>
+\[ (a, b) + (c, d) = (a + c, b + d) \]
+</h2>
+
+The picture below shows a geometric interpretation of vector addition:<BR><BR>
+
+<img src = "VectorAdd.svg"><BR>
+
+<p>
+To figure out the vector sum, take the first vector and slide it up so that it starts at the tip of the second vector (red dotted vector in the above picture).  The new vector is the magenta arrow from the origin the point you get after following both arrows.  This is called the <b>tip to tail method</b>.  Alternatively, take the second vector and slide it up so that it starts at the tip of the first vector.  These will both give the same answer, and when plotted on top of each other they create a parallelogram.  This is why a geometric interpretation of vector addition is sometimes called the <b>parallelogram method</b>.
+</p>
+
+<p>
+Algebraically, vector subtraction exactly the same as vector addition.  For 2D vectors, for example, 
+<h2>
+\[ (a, b) - (c, d) = (a-c, b-d) \]
+</h2>
+
+Geometrically, subtracting the vector <b>u</b> from the vector <b>v</b> results in a direction vector from the tip of <b>u</b> to the tip of <b>v</b>, which we write as <b>uv</b>.  That is
+
+<h2>
+\[ \vec{uv} = \vec{v} - \vec{u} \]
+</h2>
+
+This might look a little backwards at first because it's <b>v</b> - <b>u</b> but resulting vector starts at the tip of u.  But when you write it out and do a few examples it makes sense.  The picture below also illustrates this concept, with the red dot on the resulting vector indicating that it's measured at the start of the tip of the blue vector, not the origin:<BR><BR>
+
+<img src = "VectorSub.svg"><BR><BR>
+
+As a sanity check, note that in this example a is greater than c, so the vector should be pointing up<BR><BR>
+
+Lastly, we define <b>scalar multiplication</b> of a vector <b>v</b> by a <b>scalar</b> s as 
+<h2> \[ s\vec{v} = (sv_1, sv_2, ..., sv_d) \] </h2>
+
+That is, the multiplication of a vector by a real number s involves simply scaling each component of the vector by s.<BR><BR>
+
+One very important scalar for every vector is its <b>norm</b>, or its magnitude.  Scalar multiplying a vector by the multiplicative inverse of its norm will always give a vector with magnitude 1, which is called a <b>unit vector</b>.  That is, this scalar multiplication written two different ways (the second way is more succinct)
+
+<h2>
+\[ \frac{1}{||\vec{u}||} \vec{u} = \frac{\vec{u}}{||\vec{u}||} \]
+</h2>
+
+always has magnitude 1.  This is a very useful operation to do if you only care about direction and not magnitude for a particular application.
+
+</p>
+
+<BR><BR><HR>
+<h1><a name = "dot">Dot Products</a></h1>
+
+Now we know enough to introduce a truly remarkable property of Euclidean vectors.  First, we define something called a <b>dot product</b><BR><BR>
+
+
+<div id = "definition">
+<h3><u>Definition 2: Vector Dot Product</u></h3>
+Given a Euclidean vector <b>u</b> and a vector <b>v</b>, both in <b>d</b> dimensions, the <b>dot product</b> between <b>u</b> and <b>v</b> is
+
+<H2>
+\[ \vec{u} \cdot \vec{v} = \sum_{i = 1}^d u_iv_i \]
+</H2>
+</div>
+
+So in 3D, the dot product between vectors <code>(a, b, c)</code> and <code>(d, e, f)</code> is 
+
+<h3>
+\[ (a, b, c) \cdot (d, e, f) = ad + be + cf \]
+</h3>
+
+Now we state a truly remarkable fact about dot products
+
+<div id = "theorem">
+<h3><u>Theorem 1:</u></h3>
+Given a vector <b>u</b> and a vector <b>v</b>, their dot product satisfies the following equation:<BR><BR>
+
+<h2>
+\[ \vec{u} \cdot \vec{v} = ||\vec{u}|| ||\vec{v}|| \cos(\theta)\]
+</h2>
+
+Where theta is the angle between the two vectors, as shown in the image below:<BR><BR>
+<img src = "angleBetween.svg">
+</div>
+<BR><BR>
+
+Note that, among other things, this implies that the <i>dot product between two perpendicular vectors is always zero</i>, since the cosine of 90 degrees is zero.  The proof of this is fairly straightforward and it uses the law of cosines.  Recall that the law of cosines states that for any triangle with side lengths A, B, and C as oriented below (A is opposite the angle in question):<BR><BR>
+
+<img src = "lawOfCosines.svg"><BR><BR>
+
+<h2>
+\[ A^2 = B^2 + C^2 - 2BC \cos(\theta) \]
+</h2>
+
+Note that this is a generalization of the Pythagorean theorem, because if theta is 90 degrees then we have a right triangle, and the cosine term drops out.<BR><BR>
+
+Now let's apply the law of cosines to two vectors that are rooted at the same point, as in the following picture
+<BR><BR>
+<img src = "angleBetweenWDifference.svg">
+<BR><BR>
+In this case, 
+<ul>
+<li><h3>\[ A = ||\vec{u} - \vec{v}|| \]</h3></li>
+<li><h3>\[ B = ||\vec{u}|| \]</h3></li>
+<li><h3>\[ C = ||\vec{v}|| \]</h3></li>
+</ul>
+
+Plugging these values into the law of cosines, we get
+
+<h2>
+\[ ||\vec{(u-v)}||^2 = ||\vec{u}||^2 + ||\vec{v}||^2 - 2||\vec{u}|| ||\vec{v}|| \cos(\theta) \]
+</h2>
+
+The square of the magnitude of a vector is simply the dot product of the vector with itself, so make that substitution every time the square of the magnitude pops up
+
+<h2>
+\[ \vec{(u-v)} \cdot \vec{(u-v)} = \vec{u} \cdot \vec{u} + \vec{v} \cdot \vec{v} - 2||\vec{u}|| ||\vec{v}|| \cos(\theta) \]
+</h2>
+
+Now if you look back at the definition of the dot product, you'll notice that it satisfies the <a href = "https://en.wikipedia.org/wiki/Distributive_property">distributive property</a>.  Therefore, we can rewrite the above equation as
+
+<h2>
+\[ \vec{u} \cdot \vec{u} - 2 \vec{u} \cdot \vec{v} + \vec{v} \cdot \vec{v} = \vec{u} \cdot \vec{u} + \vec{v} \cdot \vec{v} - 2||\vec{u}|| ||\vec{v}|| \cos(\theta) \]
+</h2>
+
+
+Now cancel the dot product of <b>u</b> with itself and the dot product of <b>v</b> with itself from both sides and divide by -2.  What remains is
+
+<h2>
+\[  \vec{u} \cdot \vec{v}  = ||\vec{u}|| ||\vec{v}|| \cos(\theta) \]
+</h2>
+
+<h2>QED</h2>
+
+<p>
+<b>Note:</b> It is possible to start out defining Euclidean geometry using the dot product and then showing that the law of cosines follows.  I've done it the opposite way above, assuming axioms about Euclidean geometry that led to the law of cosines and proving the dot product, because people are usually exposed to the law of cosines first and that's historically how it was developed.  But both definitions are equivalent
+</p>
+
+<BR><BR><HR>
+<h1><a name = "proj">Projections</a></h1>
+
+Because of the form of the dot product, we can use it to perform parallel projections from one vector onto another.  You can think of a parallel projection as a shadow cast from one vector onto another.  First, recall a basic fact from trigonometry about projections.  If a vector <b>u</b> makes an angle of <i>theta</i> with a vector <b>v</b>, then the projection of <b>u</b> onto <b>v</b> is in the direction of <b>v</b> with magnitude 
+
+<h2>\[ ||\vec{u}|| \cos (\theta) \]</h2>
+
+The image below shows the projection in magenta:<BR><BR>
+<img src = "projection.svg"><BR><BR>
+
+Written mathematically, the parallel projection of <b>u</b> onto <b>v</b> is
+
+<h2>
+\[ \left( ||\vec{u}||\cos(\theta) \right) \frac{\vec{v}}{||\vec{v}||} \]
+</h2>
+
+Note how we are multiplying by a unit vector on the right after normalizing <b>v</b>.  This is because we want a vector of magnitude <b>||v||cos(theta)</b> in the <i>direction</i> of <b>v</b> but if <b>v</b> is not unit norm than multiplying straight by <b>v</b> on the right hand side will scale the magnitude by the magnitude of <b>v</b>.<BR><BR>
+
+Now, note that by theorem 1, <b>||u||cos(theta)</b> is simply the dot product of <b>u</b> and <b>v</b> divided by the magnitude of <b>v</b>.  Thus, we can rewrite the projection as
+
+<h2>
+\[ \left( \frac{\vec{u} \cdot \vec{v}}{||\vec{v}||} \right)  \frac{\vec{v}}{||\vec{v}||} = \left( \frac{\vec{u} \cdot \vec{v}}{||\vec{v}||^2} \right) \vec{v} \]
+</h2>
+
+Now, using the same fact that we used in the proof using the law of cosines that the magnitude of a vector squared is the dot product with itself, we get the final form of the projection, which is
+
+<h2>
+\[ \left(  \frac{\vec{u} \cdot \vec{v}}{\vec{v} \cdot \vec{v}}  \right) \vec{v} \]
+</h2>
+<b>This is the magic formula</b><BR><BR>
+
+To appreciate how truly remarkable this formula is, note that somehow there's a cosine wrapped into the original formula for projecting one vector onto another, which is a <a href = "https://en.wikipedia.org/wiki/Transcendental_function">transcendental function</a> that is very expensive to approximate with <a href = "../../../taylor">Taylor Series</a> or <a href = "https://en.wikipedia.org/wiki/Newton's_method">Newton methods</a>.  But somehow we've avoided that entirely and are left with a few additions, multiplications, and divisions.  We don't even have to do a square root (which is also expensive).  This is an extremely useful and fast computation that is one of the most fundamental operations in computational geometry<BR><BR>
+
+<h3>Some code</h3>
+Now is the first time in the course where we're going to start looking at some code.  Most of the assignments are in Javascript, so let's look at an example of how to project one vector onto another using the <code><a href = "http://glmatrix.net/docs/2.2.0/symbols/vec3.html">vec3</a></code> class in the <code><a href = "http://glmatrix.net/">glMatrix library</a></code>.  Below is a Javascript function using those libraries which does this:<BR><BR>
+
+<script type="syntaxhighlighter" class="brush: javascript"><![CDATA[
+//Purpose: Project vector u onto vector v using the glMatrix library
+//Inputs: u (vec3), v (vec3)
+//Returns: projv (vec3), the projection of u onto v
+function projVector(u, v) {
+    var scale = (vec3.dot(u, v)/vec3.dot(v, v));//The scale in front of v is (u dot v) / (v dot v)
+    var projv = vec3.create(); //Allocate a vector to hold the output
+    vec3.scale(projv, v, scale); //Scale v by "scale" and return the result into projv
+    return projv; //Return the result
+}
+]]></script>
+
+<p>
+Note how the syntax of Javascript is very similar to the syntax of Java, but there are a few key differences as we will see.  First of all, there are no types; there are simply numerical values and objects (and arrays and strings which are really just objects...see <a href = "http://www.json.org/">http://www.json.org/</a>).  In that regard it is more like Python.  In this example, <code>vec3</code> happens to be an object, and the scale that we scale it by is a numerical value.  <code>vec3</code> has something like a static method that accepts three variables: a variable that will hold the result of the vector scale, the original vector object, and the numerical scalar value.  Note that we have to allocate space for the object that holds the result before passing it on by calling <code>vec3.create()</code>.  Most of the functions in the <code>glMatrix</code> library follow this pattern, where the first argument is an object that will hold the result of the operation.
+</p>
+
+<p>
+Below is a live demo running this code with a 3D plotter for the vectors.  Input the coordinates of two 3D vectors and click "compute projection of u onto v" to see the result.
+</p>
+
+
+<div id = "demo">
+<h2><a name = "projdemo">Vector Projection Demo</a></h2>
+<table>
+<tr>
+<td>
+<!--Input Region!-->
+<table>
+<tr>
+<td><h2><font color = "#0000ff">u:</u> </h2></td>
+<td><h1>(</h1></td><td><input type="text" id = "ux_1" size="1"></input></td><td><h1>,</h1></td>
+<td><input type="text" id = "uy_1" size="1"></input></td><td><h1>,</h1></td>
+<td><input type="text" id = "uz_1" size="1"></input></td>
+<td><h1>)</h1></td>
+</tr>
+<tr>
+<td><h2><font color = "#ff0000">v:</font> </h2></td>
+<td><h1>(</h1></td><td><input type="text" id = "vx_1" size="1"></input></td><td><h1>,</h1></td>
+<td><input type="text" id = "vy_1" size="1"></input></td><td><h1>,</h1></td>
+<td><input type="text" id = "vz_1" size="1"></input></td>
+<td><h1>)</h1></td>
+</tr>
+</table>
+</td>
+<td>
+<!--Visualization Region!-->
+<table border = "1" width = 500 height = 500>
+<tr><td>
+<div id = "projVis">Visualization goes here once you compute the projection</div>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+
+<button type = "button" onclick = "callProjVector()">Compute Projection of u onto v</button>
+<BR><BR>
+
+<table>
+<tr><td><h2><font color = "#ff00ff"><u>Projection u onto v:</u> </h2></td><td><input type="text" id="projAnswer" size="10"> </input></td></tr>
+<tr><td><h2><font color = "#00ffff"><u>Perpendicular projection u onto v:</u> </h2></td><td><input type="text" id="projPerpAnswer" size="10"> </input></td></tr>
+</table>
+</div>
+
+
+<script>
+//This function extracts the components of two different vectors from text
+//fields in the web page and outputs the results in text and in a GUI
+function callProjVector() {
+    var ux = parseFloat(document.getElementById("ux_1").value);
+    var uy = parseFloat(document.getElementById("uy_1").value);
+    var uz = parseFloat(document.getElementById("uz_1").value);
+    u = vec3.fromValues(ux, uy, uz);
+    
+    var vx = parseFloat(document.getElementById("vx_1").value);
+    var vy = parseFloat(document.getElementById("vy_1").value);
+    var vz = parseFloat(document.getElementById("vz_1").value);
+    v = vec3.fromValues(vx, vy, vz);
+    
+    //Log the vec3 objects to the console to make sure everything was parsed correctly
+    console.log("Computing projection of " + vec3.str(u) + " onto " + vec3.str(v));
+    
+    //Perform the projection
+    var proj = projVector(u, v);
+    var projPerp = projPerpVector(u, v);
+    //Output result to two decimal places
+    document.getElementById("projAnswer").value = "(" + proj[0].toFixed(2) + ", " + proj[1].toFixed(2) + ", " + proj[2].toFixed(2) + ")";
+    document.getElementById("projPerpAnswer").value = "(" + projPerp[0].toFixed(2) + ", " + projPerp[1].toFixed(2) + ", " + projPerp[2].toFixed(2) + ")";
+    
+    
+    //Plot u, v, and the parallel/perpendicular projections using plot.ly
+    var uviz = { x: [0, ux], y: [0, uy], z: [0, uz],
+      mode: 'markers+lines', line: {color: '#0000ff', width: 10},
+      type: 'scatter3d', name: 'u',
+      marker: {color: '#0000ff', size: 4, symbol: 'circle'}
+    };
+    var vviz = { x: [0, vx], y: [0, vy], z: [0, vz],
+      mode: 'markers+lines', line: {color: '#ff0000', width: 10},
+      type: 'scatter3d', name:'v',
+      marker: {color: '#ff0000', size: 4, symbol: 'circle'}
+    };
+    var projviz = { x: [0, proj[0]], y: [0, proj[1]], z: [0, proj[2]],
+      mode: 'markers+lines', line: {color: '#ff00ff', width: 10},
+      type: 'scatter3d', name:'proj',
+      marker: {color: '#ff00ff', size: 4, symbol: 'circle'}
+    };
+    var projperpviz = { x: [0, projPerp[0]], y: [0, projPerp[1]], z: [0, projPerp[2]],
+      mode: 'markers+lines', line: {color: '#00ffff', width: 10, arrowhead:7},
+      type: 'scatter3d', name:'projperp',
+      marker: {color: '#00ffff', size: 4, symbol: 'circle'}
+    };
+    var axes = getAxesEqual([u, v, proj, projPerp]);
+    var data = [uviz, vviz, projviz, projperpviz, axes.x, axes.y, axes.z];
+    var layout = {
+      autosize: false, width: 500, height: 500,
+      margin: { l: 0, r: 0, b: 0, t: 65 }
+    };
+    Plotly.newPlot('projVis', data, layout);
+}
+</script>
+
+<BR><BR>
+I included one extra feature here which is the <b>perpendicular projection</b>.  This is simply what's left over after subtracting the parallel projection of <b>u</b> onto <b>v</b> from <b>u</b>.
+
+<BR><BR><HR>
+<h1><a name = "cross">Cross Product</a></h1>
+
+The last topic we covered very briefly today was the cross product.<BR><BR>
+
+<div id = "definition">
+<h3><u>Definition 3: Vector Cross Product</u></h3>
+Given two 3D Euclidean vectors <b>u</b> and <b>v</b> the cross product between <b>u</b> and <b>v</b> is a vector whose magnitude is equal to 
+
+<h2>
+\[ ||\vec{u}|| ||\vec{v}|| \sin(\theta) \]
+</h2>
+
+and whose direction is perpendicular to both <b>u</b> and <b>v</b>, with orientation determined by the right hand rule.<BR><BR>
+
+For a vector <code><b>u</b> = (a, b, c)</code> and a vector <code><b>v</b> = (d, e, f)</code>, the cross product is defined precisely as the vector
+
+<h2>
+\[ (bf-ce, cd-af, ae-db) \]
+</h2>
+</div>
+<BR><BR>
+
+Here are several things to note:
+<ul>
+<li>If you take the dot product of <code>(bf-ce, cd-af, ae-db)</code> with <code>(a, b, c)</code> or <code>(d, e, f)</code>, everything drops out and you get 0, which is a sanity check that this vector is indeed perpendicular to the original two<BR><BR></li>
+<li>Notice that the magnitude is equal to the area of the parallelogram spanned by the two vectors, <a href = "#addsub">as shown previously</a>.  This makes it a nifty way to compute the area of a triangle without having to explicitly compute any angles, base lengths, or heights; simply take the cross product of two vectors which represent two sides of a triangle, and the area is half of the resulting vector's magnitude.  This is the second question on the <a href = "../../Assignments/Mini1_GeometricPrimitives">first mini assignment</a>.<BR><BR></li>
+
+<li>Notice that if you reverse the order of the vectors, you get a vector whose components are negated, meaning that the vector points in the opposite direction.  <b>This means the vector cross product is not commutative</b>.  The order is extremely important.  Based on the formula above, the direction is always determined by the <b>right hand rule</b> with respect to the order; that is, open up your hand, orient the fingers of your right hand towards the first vector, and have your palm points towards the second vector.  Now stick your thumb up, and that's the direction of the resulting vector</li>
+</ul>
+
+For the purposes of this course, that's all we really need to know.  The <a href = "http://glmatrix.net/docs/2.2.0/symbols/vec3.html">vec3</a> class has an implementation of the cross product that we can use.  For more information, visit <a href = "https://en.wikipedia.org/wiki/Cross_product">Wikipedia</a>.  
+
+</div>
+
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=7309088; 
+var sc_invisible=1; 
+var sc_security="f655b56d"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="free hit counter"
+href="http://statcounter.com/" target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/7309088/0/f655b56d/1/" alt="free hit
+counter"></a></div></noscript>
+<!-- End of StatCounter Code -->
+
+</body>
+</html>
+
+
+
