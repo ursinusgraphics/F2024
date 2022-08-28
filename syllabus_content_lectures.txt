@@ -3,13 +3,13 @@ SECTION
 The course will start with an overview of some important mathematical concepts from linear algebra and vector geometry to get everyone on the same page.  These are the basic building blocks that will be used again and again in the rest of the course.  The pace at which we go through this section will adapt to the background knowledge of the students.  We will have two small individual programming assignments in this section to get everyone used to programming with geometry in Javascript.<p><b>Big Concepts And Questions:</b><ul><li>What is numerical geometry?</li><li>How does the quadratic formula help is with ray object intersections?</li><li>What trick can we use to incorporate both linear operations and translations into a single matrix?  Why do we want to do this?</li></ul></p>
 
 LECTURE
-Course Overview, Intro To Javascript
+Course Overview, Intro To Javascript, Scoping And Infinite Loops in Javascript
 
-Javascript Resources<ul><li><a href = "http://www.cs.princeton.edu/courses/archive/spring19/cos426/precepts/01-precept.pdf">Princeton Javascript for Graphics Crash Course</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Javascript tutorial</a></li><li><a href = "https://google.github.io/styleguide/jsguide.html">Google Javascript Style Guide</a> (for what it's worth)</li></ul>
+<ul><li><a href = "https://github.com/ursinus-cs476-f2022/Week1Exercises/archive/refs/heads/master.zip">Code for today</a></li></ul>Javascript Resources<ul><li><a href = "http://www.cs.princeton.edu/courses/archive/spring19/cos426/precepts/01-precept.pdf">Princeton Javascript for Graphics Crash Course</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Javascript tutorial</a></li><li><a href = "https://google.github.io/styleguide/jsguide.html">Google Javascript Style Guide</a> (for what it's worth)</li></ul>
 LECTURE
-Javascript Practice: Catastrophes with Infinite Loops and COVID 19
+Complex Numbers And Julia Sets in Javascript, Social Distance Simulation (for those who finish early)
 
-<ul><li><a href = "https://github.com/ursinus-cs476-f2022/Week1Exercises/archive/refs/heads/master.zip">Code for today</a></li><li><a href = "ClassExercises/Week1Exercises/COVID.html">Social Distancing Simulation</a></li></ul>
+<ul><li><a href = "ClassExercises/Week1Exercises/COVID.html">Social Distancing Simulation</a></li></ul>
 LECTURE
 Begin Vectors: Vector Addition, Dot Products
 
@@ -49,7 +49,7 @@ JSON, Hierarchical Transformations, Scene Graphs
 LECTURE
 Character Animation: MOCAP, Forward Kinematics
 
-<ul><li><a href = "Lectures/CharacterAnimation/FABRIK/forward.html">Forward Kinematics Demo</a></li><li><a href = "Materials/MOCAPViz">Javascript MOCAP Visualizer</a></li></ul>
+<ul><li><a href = "Lectures/CharacterAnimation/FABRIK/forward.html">Forward Kinematics Demo</a></li><li><a href = "Materials/JavaScript_MOCAP_Animation">Javascript MOCAP Visualizer</a></li></ul>
 LECTURE
 Inverse Kinematics, Forward And Backward Reaching Inverse Kinematics (FABRIK)
 
