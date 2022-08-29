@@ -5,11 +5,11 @@ The course will start with an overview of some important mathematical concepts f
 LECTURE
 Course Overview, Intro To Javascript, Scoping And Infinite Loops in Javascript
 
-<ul><li><a href = "https://github.com/ursinus-cs476-f2022/Week1Exercises/archive/refs/heads/master.zip">Code for today</a></li></ul>Javascript Resources<ul><li><a href = "http://www.cs.princeton.edu/courses/archive/spring19/cos426/precepts/01-precept.pdf">Princeton Javascript for Graphics Crash Course</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Javascript tutorial</a></li><li><a href = "https://google.github.io/styleguide/jsguide.html">Google Javascript Style Guide</a> (for what it's worth)</li></ul>
+<ul><li><a href = "https://docs.google.com/presentation/d/1xpbmQAQubVon2P1I3ewM0oop7sopkaLenqa6I19siZc/edit?usp=sharing">Slides from today</a></li></ul>Javascript Resources<ul><li><a href = "http://www.cs.princeton.edu/courses/archive/spring19/cos426/precepts/01-precept.pdf">Princeton Javascript for Graphics Crash Course</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Javascript tutorial</a></li><li><a href = "https://google.github.io/styleguide/jsguide.html">Google Javascript Style Guide</a> (for what it's worth)</li></ul>
 LECTURE
 Complex Numbers And Julia Sets in Javascript, Social Distance Simulation (for those who finish early)
 
-<ul><li><a href = "ClassExercises/Week1Exercises/COVID.html">Social Distancing Simulation</a></li></ul>
+<ul><li><a href = "https://github.com/ursinus-cs476-f2022/Week1Exercises/archive/refs/heads/master.zip">Code for today</a></li><li><a href = "ClassExercises/Week1Exercises/COVID.html">Social Distancing Simulation</a></li></ul>
 LECTURE
 Begin Vectors: Vector Addition, Dot Products
 
