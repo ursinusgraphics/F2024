@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<!-- Header !-->
+	<head>
+		<title>Ursinus CS 476: Computer Graphics, Fall 2022</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../../assets/css/ie8.css" /><![endif]-->
+        <style>
+        .image_off, #home:hover .image_on{
+           display:none
+        }
+        .image_on, #home:hover .image_off{
+           display:block
+        }
+        </style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><strong>Ursinus CS 476: Computer Graphics, Fall 2022</strong></a>
+								</header>
+<!-- End Header !-->
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h2>Mini Assignment 1: Geometric Primitives (44 Points)</h2>
+									</header>
+
+									<div id="page-content">
+										<h3>
+											<ul>
+												<li><a href = "#overview">Overview</a></li>
+												<li><a href = "#submission">Submission Instructions</a></li>
+											</ul>
+										</h3>
+										<h3><a href = "#part1">Part 1</a></h3>
+										<h3>
+											<ul>
+												<li><a href = "#angle">Task 1: Angle Computation</a> (<b>5 Points</b>)</li>
+												<li><a href = "#projection">Task 2: Vector Projection</a> (<b>5 Points</b>)</li>
+												<li><a href = "#area">Task 3: Triangle Area computation</a> (<b>5 Points</b>)</li>
+												<li><a href = "#pointinfront">Task 4: Point Above Or Below Plane?</a> (<b>5 Points</b>)</li>
+											</ul>
+										</h3>
+										<h3><a href = "#part2">Part 2</a></h3>
+										<h3>
+											<ul>
+												<li><a href = "#barycentric">Task 5: Barycentric Coordinates</a> (<b>8 Points</b>)</li>
+												<li><a href = "#raytriangle">Task 6: Ray Intersect Triangle</a> (<b>8 Points</b>)</li>
+												<li><a href = "#raysphere">Task 7: Ray Intersect Sphere</a> (<b>8 Points</b>)</li>
+											</ul>
+										</h3>
+										
+										<h2><a name = "overview">Overview</a></h2>
+										<p>
+											The purpose of this assignment is to get students hands on practice with fundamental concepts from vector math and also to introduce them to Javascript and the <a href = "http://glmatrix.net/">glmatrix library</a> (version 3.1), and particularly the <a href = "http://glmatrix.net/docs/module-vec3.html">vec3</a> class.  Students will implement a series of mini algorithms using vector concepts that are commonly used in larger geometry systems.  These are real world primitive operations that pop up all the time in graphics, robotics, and physics simulations, to name a few of the many application areas.  For a large number students, this will serve as an introduction to translating mathematics into code, which is an extremely useful but sometimes underrepresented skill.
+										</p>
+										
+										<p>
+											This assignment is split up into two parts to keep everyone on track.  You will have five days to complete each part.  It is highly recommended that you move onto the second part as soon as you finish the first part, as the second part is conceptually trickier.
+										</p>
+										
+										<h3>Getting Started</h3>
+										<p>
+											To get started, check out or download the code in the github repository at <a href = "https://github.com/Ursinus-CS476-F2020/Indy1_GeomPrimitives">this link</a>.
+											You will be editing code in the file <code><b>geomprimitives.js</b></code>. I have included a <a href = "https://en.wikipedia.org/wiki/Minification_%28programming%29">minified</a> version of the <a href = "http://glmatrix.net/">glmatrix</a> library which contains the <code>vec3</code> class for manipulating 3D vectors, as well as a minified version of the <a href = "https://plot.ly/javascript/">plot.ly</a> library for 3D plotting, which I used to help create some GUI visualizations to help you debug.
+										</p>
+										
+										<p>
+											I have also provided a series of unit tests in the <code>UnitTests.html</code> file.  To run them, open this file in your browser or using the live server in VS Code. You should make sure that you can pass all of the tests for a particular task when you complete it.  If you fail some cases, you may want to check them in the GUI front end debugging tools (e.g. angle.html for the <a href = "#angle">getAngle()</a> task).  
+										</p>
+
+										
+										<h3>Collaboration</h3>
+										
+										<p>
+											This is an <a href = "../../index.html#collaboration">individual assignment</a>, so all code must be completely your own.  However, feel free to post questions on Discord and to work with each other on the conceptual math part.  Also, if you need help debugging, it is fine to show each other Javascript code that you develop for that purpose (just not code that you write for the actual implementations in <code>geomprimitives.js</code>).  If you are unsure if something is allowed, please ask.
+										</p>
+										
+										<div id = "tips">
+										<h3>Tips</h3>
+										<ul>
+										<li>
+										Be sure to carefully reference the documentation of the <a href = "http://glmatrix.net/docs/module-vec3.html">vec3</a> class as you go along.  Be sure to allocate new vector objects with <code>vec3.create()</code> or <code>vec3.fromValues()</code> before storing results in them or using them in any way.<BR><BR>
+										</li>
+										<li>
+										Since this is our first Javascript assignment, don't forget to hit <code>F12</code> to bring up the powerful debugging suite, including the console and the ability to set breakpoints.  Use logging in the console with <code>console.log("Test strings" + x + whatever)</code> to output intermediate values to the debug console.<BR><BR>
+										</li>
+										
+										<li>
+										Ask questions on Discord as you are going along and get stuck.  Javascript is very "loose" with declarations and types, so there are many things that can happen that wouldn't happen in other languages.  One of the most common errors I have personally made is accidentally re-using variable names.  This is particularly bad when the original variable was an object and the new variable is a numerical value, and then I try to use the numerical value as if it were an object.  This will commonly manifest itself as some kind of "undefined" variable if you log it to the console.  Using <code>let</code> religiously will help to guard against this.
+										</li>
+										</div>
+										
+										</ul>
+										
+										<h2><a name = "submission">Submission Instructions</a></h2>
+										
+										You will submit two versions of <b><code>GeometricPrimitives.js</code></b> to Canvas when you are finished.  The first version will contain implementations of tasks 1-4 (<b>due Friday 9/18 at 11:59PM</b>), and the second version will contain implementations of tasks 5, 6, and 7 (<b>due Friday 9/25</b>).  Please also submit a <b><code>README.txt</code></b> file with both submissions with the following information each time:
+										<ol>
+										<li>Your name<BR><BR></li>
+										<li>Approximately how many hours it took you to finish this assignment (<i>I will not judge you for this at all...I am simply using it to gauge if the assignments are too easy or hard</i>)<BR><BR></li>
+										<li>Your overall impression of the assignment.  Did you love it, hate it, or were you neutral?  One word answers are fine, but if you have any suggestions for the future let me know.<BR><BR></li>
+										
+										<li>Any other concerns that you have.  For instance, if you have a bug that you were unable to solve but you made progress, write that here.  The more you articulate the problem the more partial credit you will receive (fine to leave this blank)</li>
+										</ol>
+										
+										If you are in a situation where you are unable to debug your code fully before the deadline, you will get more partial credit if you also submit debugging tools (HTML files, etc) with descriptions of what you tried and what the problem is.  In this case, please briefly describe all extra files in the README.<BR><BR>
+										
+										
+										Study this code carefully and post on Discord if you have any questions
+										
+										<BR><BR><HR>
+										<h2><a name = "part1">Part 1</a> (Due Friday 9/18 at 11:59PM)</h2>
+
+
+										<h2><a name = "angle">Task 1: Angle Computation (5 points)</a></h2>
+										
+										Given points <b>a</b>, <b>b</b> and <b>c</b>, compute the angle <b>in degrees</b> between <b>b</b> and <b>c</b> with respect to <b>a</b>, as shown in the picture below<BR><BR>
+										<img src = "angleSketch.svg" width=200><BR><BR>
+										<p>
+											As a corner case, if one or both of the vectors have magnitude 0, you should return <code>-1</code>
+										</p>
+
+										
+										<u>Code to write:</u> Fill in <b><code>getAngle(a, b, c)</code></b> in <b><code>geomprimitives.js</code></b><BR><BR>
+										
+										<u>Gui Tester:</u> <b><code>angle.html</code></b><BR><BR>
+										
+									
+
+										<h2><a name = "projection">Task 2: Vector Projection (5 Points)</a></h2>
+									
+										Write functions to use the dot product formulas to perform vector projection, using the <a href = "http://glmatrix.net/docs/2.2.0/symbols/vec3.html">vec3</a> class.  You will write on function for parallel projection and one function for perpendicular projection of vectors (what's left over after parallel projection)<BR><BR>
+										
+										
+										
+										<u>Code to write:</u> <b><code>projVector(u, v)</code></b> and <b><code>projPerpVector(u, v)</code></b> in <b><code>geomprimitives.js</code></b><BR><BR>
+										
+										<u>Gui Tester:</u> <b><code>projection.html</code></b><BR><BR>
+
+										<div id = "tips">
+											<b>Tips:</b>
+											<ul>
+											<li>Write the code for parallel projection first, then see if you can call that function to help with perpendicular projection.</li>
+											</ul>
+										</div>
+
+										<h2><a name = "area">Task 3: Triangle Area Computation (5 points)</a></h2>
+										
+										Use the fact that the magnitude of the cross product of two vectors is the area of the parallelogram spanned by those two vectors to compute the area of a triangle enclosed by three points in 3D.<BR><BR>
+										Alternatively, you can use the dot product and the fact that 
+										<h3>\[ \sin(\theta) = \sqrt{ 1 - \cos^2(\theta) } \]</h3>
+										(this is simply the pythagorean theorem on unit triangles)
+										<BR><BR>
+										
+										<u>Code to write:</u> Fill in <b><code>getTriangleArea(a, b, c)</code></b> in <b><code>geomprimitives.js</code></b><BR><BR>
+										
+										<u>Gui Tester:</u> <b><code>area.html</code></b><BR><BR>
+										
+										<div id = "tips">
+										<b>Tips:</b>
+										<ul>
+										<li>Test this with some examples you know in the plane (z=0) where you can apply the formula (1/2*base*height) to make sure it makes sense</li>
+										</ul>
+										</div>
+										
+										<h2><a name = "pointinfront">Task 4: Point Above Or Below Plane? (5 points)</a></h2>
+										Given three points <b>a</b>, <b>b</b>, and <b>c</b>, determine if the point <b>d</b> is above or below the plane determined by the triangle <b><u>/\abc</u></b>, with the plane normal determined by the right hand rule traversing the points counter-clockwise.  Return <code>+1</code> if the point is above, <code>-1</code> if the point is below, or <code>0</code> if the point lies on the plane.  As a corner case, if the three points determining the plane are collinear, return <code>-2</code><BR><BR>
+										
+										In the picture below, point <b>d</b> is above the plane determined by <b>abc</b> in counter-clockwise order using the right hand rule:<BR><BR>
+										<img src = "pointAbovePlaneSketch.svg" width=350>
+										<BR><BR>
+										
+										<u>Code to write:</u> Fill in <b><code>getAboveOrBelow(a, b, c, d)</code></b> in <b><code>geomprimitives.js</code></b><BR><BR>
+										
+										<u>Gui Tester:</u> <b><code>aboveOrBelow.html</code></b><BR><BR>
+										
+										<div id = "tips">
+										<b>Tips:</b>
+										<ul>
+										<li>
+										<i>Hint: Use the cross product between two vectors to determine the plane normal, and verify conceptually with the right hand rule to make sure it points in the direction consistent with counter-clockwise specification of <b>abc</b> before you write your code.  Then use the sign of the dot product between that normal and some other vector that involves <b>d</b></i>
+										</li>
+										</ul>
+										</div>
+										
+										<BR><BR><HR>
+										<h2><a name = "part2">Part 2 (Due Friday 9/25 11:59PM)</a> </h2>
+										
+										<p>
+										This part of the assignment will get you to warm up with some very important tasks that you will re-implement in GLSL when you go to do your ray tracer.  <a href = "https://github.com/Ursinus-CS476-F2019/Mini1_GeometricPrimitives_Part2">Click here</a> to visit the repository that has the skeleton code for this part.
+										</p>
+										
+										<p>
+										<b>Note:</b> Unit tests have shipped with this part of the assignment.  Some of the default outputs actually make it look like you're passing, but be careful; the default output is actually what you're supposed to do for some of the corner cases.
+										</p>
+
+
+
+										<h2><a name = "barycentric">Task 5: Barycentric Coordinates (8 points)</a></h2>
+										
+										<p>
+										Given three vertices <code><b>a, b, c</b></code> on a triangle and another point <code><b>p</b></code>, determine the 3 barycentric coordinates of <code><b>p</b></code> with respect to <code><b>a, b, c</b></code> (see API comments for more details on return types and corner cases).
+										</p>
+
+										<p>
+										<u>Code to write:</u> Fill in <b><code>getBarycentricCoords(a, b, c, p)</code></b> in <b><code>geomprimitives.js</code></b>
+										</p>
+										
+										<p>
+										<u>Gui Tester:</u> <b><code>Barycentric.html</code></b> for 2D only (you should look at the unit tests for 3D cases).  A screenshot of the GUI on a working implementation is shown below:
+										<BR><BR>
+											<img src = "barycenterGUI.png">
+										
+										</p>
+										
+										<div id = "tips">
+										<b>Tips:</b>
+										<ul>
+										<li>
+										Hint: Use the area ratio method, it is by far the easiest technique, and it relies on code you already wrote to compute the area of a 3D triangle!
+										</li>
+										<li>
+											When using the area ratio method, you should allow some tolerance when determining if a point is inside the triangle.  So it's OK if the area is 1+epsilon, where epsilon is a small number.  This helps to mitigate against numerical precision issues.
+										</li>
+										</ul>
+										</div>
+
+										<h2><a name = "raytriangle">Task 6: Ray Intersect Triangle (8 points)</a></h2>
+										
+										<p>
+										Given a vector described by \[\vec{p_0} + t\vec{v} \]
+
+										and a triangle determined by three vertices <code>a, b, c</code>, determine the intersection point of the ray and the triangle, if it exists (see API comments for more details on return types and corner cases).
+										</p>
+
+										<p>
+										<u>Code to write:</u> Fill in <b><code>rayIntersectTriangle(p0, v, a, b, c)</code></b> in <b><code>geomprimitives.js</code></b>
+										</p>
+										
+										<p>
+										<u>Gui Tester:</u> <b><code>rayTriangle.html</code>.  A screenshot of the GUI on a working implementation is shown below: </b> 
+										<BR>
+											<img src = "rayIntersectTriangleGUI.png"><BR><BR>
+										</p>
+										
+										<div id = "tips">
+										<b>Tips:</b>
+										<ul>
+										<li>Hint: Figure out the intersection point on the plane spanned by the triangle first (using "implicit form type 2" that we talked about in class), and then use a technique very similar to computing barycentric coordinates to figure out of that point is actually in the triangle.</li>
+										<li>
+										Hint: The <code>vec3.scaleAndAdd</code> function in <code>vec3</code> may save you time when you go to perform an operation <code>p0 + tv</code>
+										</li>
+										</ul>
+										</div>
+
+
+
+										<h2><a name = "raysphere">Task 7: Ray Intersect Sphere (8 points)</a></h2>
+										
+										<p>
+										Given a vector described by \[\vec{p_0} + t\vec{v} \]
+
+										and a sphere defined by a center vector <code>c</code> and a radius <b>r</b>, determine the intersection point of the ray and the sphere, if it exists (see API comments for more details on return types and corner cases).
+										</p>
+
+										<p>
+										<u>Code to write:</u> Fill in <b><code>rayIntersectSphere(p0, v, c, r)</code></b> in <b><code>geomprimitives.js</code></b>
+										</p>
+										
+										<p>
+										<u>Gui Tester:</u> <b><code>rayCircle.html</code> </b> for 2D only (you should look at the unit tests for 3D cases).  A screenshot of the GUI on a working implementation is shown below:
+										<BR>
+											<img src = "rayIntersectSphereGUI.png"><BR><BR>
+										</p>
+										
+										<div id = "tips">
+										<b>Tips:</b>
+										<ul>
+										<li>
+										Hint: The <code>vec3.scaleAndAdd</code> function in <code>vec3</code> may save you time when you go to perform an operation <code>p0 + tv</code>
+										</li>
+										</ul>
+										</div>
+
+
+
+
+                                    </div>
+						</div>
+					</div>
+
+					<!--LaTeX in Javascript!-->
+					<script src="../../../../jsMath/easy/load.js"></script>
+					<!--Syntax highlighting in Javascript!-->
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
+					<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+					<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+					<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+                                        <li>
+											<span class="opener">General</span>
+											<ul>
+												<li><a href = "../../index.html#overview">Overview</a></li>
+												<li><a href = "../../index.html#logistics">Technology Logistics</a></li>
+												<li><a href = "../../index.html#deliverables">Deliverables</a>
+													<ul>
+														<li><a href = "../../index.html#debugging">Debugging Principles</a></li>
+													</ul>
+												</li>
+												<li><a href = "../../index.html#grading">Grading</a></li>
+												<li><a href = "../../index.html#environment">Classroom Environment</a></li>
+												<li><a href = "../../index.html#participation">Participation</a></li>
+												<li><a href = "../../index.html#collaboration">Collaboration Policy</a></li>
+												<li><a href = "../../index.html#other">Other Resources / Policies</a></li>
+											</ul>
+										</li>
+										<li><a href = "../../Software/index.html">Software</a></li>
+										<li><a href = "../../index.html#schedule">Schedule</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li>
+													<ul>
+														<li></li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Class Exercises</span>
+											<ul>
+												<li>
+													<ul>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Javascript1">Week 1: Javascript Module</a>
+														</li>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Vectors1">Week 1: Vector Basics And Dot Product Module</a>
+														</li>
+														<li><a href = "../../Lectures/2_VectorsIntro/index.html">Week 1: Class Notes on Euclidean Vectors</a></li>
+														<li><a href = "../../ClassExercises/Week1_JuliaSets/index.html">Week 1: Julia Sets Exercise</a></li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Optional Fall 2020 Modules</span>
+											<ul>
+												<li>
+													<ul>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Overview">Module 1: Javascript</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Vectors1">Module 2: Vectors And Dot Products</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/Vectors1">Module 3: Projections, Cross Product, Normals</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/LinesAndPlanes1">Module 4: Lines, Rays, And Planes</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module5/RayIntersectPlane">Module 5: Ray Intersect Plane/Triangle/Sphere</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module6/Video1">Module 6: 2D Matrices Definition, Composition, And Inverses</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module7/Video1">Module 7: 3D Transformations And Scene Trees</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module8/Video1">Module 8: GLSL And Shaders</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module9/Video1">Module 9: Blobby Shaders, Complex Numbers, Fractals</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/Video1">Module 10: Local Illumination via Gouraud Shading</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module11/Video1">Module 11: Ray Casting</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module12/Video1">Module 12: Global Illumination Part 1</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module13/Video1">Module 13: Object-First Viewing Projections</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module14/Video1">Module 14: Topological Properties of Manifold Meshes</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module15/Video1">Module 15: Heightmaps, Levelsets, And Marching Squares</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><a href = "../../FinalProject/index.html">Final Project</a></li>
+									</ul>
+								</nav>
+
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; <a href = "http://www.ctralie.com">Christopher J. Tralie</a>. All rights reserved.  Contact chris.tralie@gmail.com. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+<!-- End Sidebar !-->
+
+<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/skel.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../../assets/js/main.js"></script>
+<!-- End Scripts -->
+	</body>
+</html>

@@ -16,3 +16,6 @@
 [submodule "ClassExercises/Week1Exercises"]
 	path = ClassExercises/Week1Exercises
 	url = https://github.com/ursinus-cs476-f2022/Week1Exercises.git
+[submodule "Assignments/HW1_GeomPrimitives/HW1_GeomPrimitives"]
+	path = Assignments/HW1_GeomPrimitives/HW1_GeomPrimitives
+	url = https://github.com/ursinus-cs476-f2022/HW1_GeomPrimitives.git
