@@ -16,7 +16,7 @@
 <a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Vectors1">Vectors Module 1</a> Due Before Class
 
 2022-09-02
-<HR>Assignment 1: Geometric Primitives</a> (Individual) Out
+<HR><a href = "Assignments/HW1_GeomPrimitives">Assignment 1: Geometric Primitives</a> (Individual) Out
 
 2022-09-02
 Assignment 1 Part 1 Due
