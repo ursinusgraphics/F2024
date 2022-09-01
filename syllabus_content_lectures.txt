@@ -17,7 +17,7 @@ Math Resources:<ul><li><a href = "Lectures/2_VectorsIntro">Prof. Tralie's notes 
 LECTURE
 Projection, Cross Products, Normals
 
-<ul><li><a href = "http://glmatrix.net/docs/">glMatrix library documentation</a></li></ul>
+<ul><li><a href = "http://glmatrix.net/docs/">glMatrix library documentation</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/Vectors1">Fall 2020 video module+notes on projection, cross products, normals</a></li></ul>
 LECTURE
 Barycentric Coordinates, Triangle Interior Point Testing
 
