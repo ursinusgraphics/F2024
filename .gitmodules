@@ -19,3 +19,6 @@
 [submodule "Assignments/HW1_GeomPrimitives/HW1_GeomPrimitives"]
 	path = Assignments/HW1_GeomPrimitives/HW1_GeomPrimitives
 	url = https://github.com/ursinus-cs476-f2022/HW1_GeomPrimitives.git
+[submodule "Materials/BarycentricExploration"]
+	path = Materials/BarycentricExploration
+	url = https://github.com/ursinus-cs476-f2022/BarycentricExploration.git
