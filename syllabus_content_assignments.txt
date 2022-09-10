@@ -22,6 +22,9 @@
 Assignment 1 Part 1 Due
 
 2022-09-09
+<a href = "https://ursinus-cs476-f2022.github.io/Modules/LinesAndPlanes/Video1">Lines And Planes</a> Module Due Before Class
+
+2022-09-12
 Assignment 1 Part 2 Due
 
 2022-09-16
