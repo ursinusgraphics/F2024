@@ -25,11 +25,11 @@ Barycentric Coordinates, Triangle Interior Point Testing, Normals
 LECTURE
 Lines, Rays, And Planes
 
-<a href = "https://www.youtube.com/watch?v=a06KMRNe6V4">Calculus Blue Parameterized Lines in 3D</a>
+
 LECTURE
 Ray Intersect Plane & Ray Intersect Sphere
 
-
+<ul><li><a href = "ClassExercises/Week3_RayIntersections">Week 3: Ray Intersection Class Notes</a></li></ul>
 LECTURE
 2D Matrix Transformations, Composition of Transformations, Inverses
 
