@@ -31,10 +31,10 @@ Assignment 1 Part 2 Due
 <a href = "https://ursinus-cs476-f2022.github.io/Modules/Scenes/Video1">3D Transformations And Scene Trees Module</a> Due Before Class
 
 2022-09-19
-<HR>Mini Assignment 2: Scene Trees (Individual) Out
+<HR><a href = "Assignments/HW2_SceneTrees">HW2: Scene Trees</a> Out
 
 2022-09-19
-Mini Assignment 2 Due
+HW2 Due Due
 
 2022-09-26
 <HR>Assignment 3: FABRIK And Skinning (Group) Out
