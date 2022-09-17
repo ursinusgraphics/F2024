@@ -46,8 +46,66 @@
 									</header>
 
 									<div id="page-content">
-									
+										<h3>Ray Intersect Plane</h3>
+
+
+										<img src = "plane.svg" width="50%">  
+
+
+										<div style="width:100px;">
+											<h3>
+												\[ (\vec{p} - \vec{a}) \cdot  \vec{n} = 0  \]
+											</h3>
+										</div>
+
+										<img src = "rayintersectplane.svg" width="50%">  
+
+										<p>
+											Plug in p0 + tv as p in the plane equation
+										</p>
+
+										<div style="width:100px;">
+											<h3>
+												\[ (\vec{p_0} + t\vec{v} - \vec{a}) \cdot  \vec{n} = 0  \]
+											</h3>
+										</div>
+
+										<p>
+											Rearrange and put all of the constants together
+										</p>
+
+										<div style="width:100px;">
+											<h3>
+												\[ ( (\vec{p_0} - \vec{a}) + t\vec{v} ) \cdot \vec{n} = 0  \]
+											</h3>
+										</div>
+
+										<p>
+											Distribute the dot product and solve for t
+										</p>
+
+										<div style="width:100px;">
+											<h3>
+												\[ t (\vec{v} \cdot \vec{n}) = - (\vec{p_0} - \vec{a}) \cdot \vec{n}  \]
+											</h3>
+										</div>
+
+										<p>
+											Distribute the negative through on the right side and divide by <b>v . n</b> to get the final equation
+										</p>
+
+										<div style="width:100px;">
+											<h3>
+												\[ t  = \frac{ (\vec{a} - \vec{p_0}) \cdot \vec{n} } {\vec{v} \cdot \vec{n}}  \]
+											</h3>
+										</div>
+
+										<HR>
+										<h3>Ray Intersect Triangle</h3>
+
+
 										
+<HR>
 										<h3>Ray Intersect Sphere</h3>
                                         
 										Recall that the parametric form for a ray is 
@@ -304,6 +362,11 @@
 												<li>
 													<ul>
 														<li><a href = "../../Assignments/HW1_GeomPrimitives/index.html">HW1: Geometric Primitives</a></li>
+                                                    </ul>
+												</li>
+												<li>
+													<ul>
+														<li><a href = "../../Assignments/HW2_SceneTrees/index.html">HW2: Scene Trees</a></li>
                                                     </ul>
 												</li>
 											</ul>

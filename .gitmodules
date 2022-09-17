@@ -22,3 +22,6 @@
 [submodule "Materials/BarycentricExploration"]
 	path = Materials/BarycentricExploration
 	url = https://github.com/ursinus-cs476-f2022/BarycentricExploration.git
+[submodule "Assignments/HW2_SceneTrees/ArtContest/ggslac"]
+	path = Assignments/HW2_SceneTrees/ArtContest/ggslac
+	url = https://github.com/ctralie/ggslac.git
