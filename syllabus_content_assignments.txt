@@ -28,7 +28,7 @@ Assignment 1 Part 1 Due
 Assignment 1 Part 2 Due
 
 2022-09-16
-3D Transformations And Scene Trees Module Due Before Class
+<a href = "https://ursinus-cs476-f2022.github.io/Modules/Scenes/Video1">3D Transformations And Scene Trees Module</a> Due Before Class
 
 2022-09-19
 <HR>Mini Assignment 2: Scene Trees (Individual) Out
