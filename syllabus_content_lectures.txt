@@ -33,7 +33,7 @@ Ray Intersect Plane & Ray Intersect Sphere
 LECTURE
 2D Matrix Transformations, Composition of Transformations, Inverses
 
-<ul><li><a href = "Lectures/Module6_2DMatrices/slides.pdf">Slides</a></li><li><a href = "Materials/ggslac/viewers/MatrixAnim.html">Prof. Tralie's Matrix Transformation Demo Widget</a></li></ul>
+<ul><li><a href = "../Modules/slides/2DMatrix.pdf">Slides</a></li><li><a href = "Materials/ggslac/viewers/MatrixAnim.html">Prof. Tralie's Matrix Transformation Demo Widget</a></li></ul>
 LECTURE
 Matrix Translations And Homogenous Coordinates, Combined Rotations/Translations, Begin 3D Matrix Transformations
 
