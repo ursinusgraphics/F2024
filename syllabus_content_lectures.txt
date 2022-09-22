@@ -47,13 +47,13 @@ JSON, Hierarchical Transformations, Scene Graphs
 
 <ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneViewer.html">Scene Viewer</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneEditor.html">Scene Editor</a></li><li><a href = "http://www.json.org/">http://www.json.org/</a></li><li><a href = "Lectures/Module7/TableWithCone.json">TableWithCone.json</a></li></ul>
 LECTURE
-Character Animation: MOCAP, Forward Kinematics
+Scene Graphs Continued
 
-<ul><li><a href = "Lectures/CharacterAnimation/FABRIK/forward.html">Forward Kinematics Demo</a></li><li><a href = "Materials/JavaScript_MOCAP_Animation">Javascript MOCAP Visualizer</a></li></ul>
+<ul><li><a href = "ClassExercises/Week4_Scenes/kevinstable.html">Kevin's rotated table</a></li></ul>
 LECTURE
-Inverse Kinematics, Forward And Backward Reaching Inverse Kinematics (FABRIK)
+MOCAP, Forward And Backward Reaching Inverse Kinematics (FABRIK)
 
-<ul><li><a href = "http://www.andreasaristidou.com/FABRIK.html">FABRIK Paper</a></li><li><a href = "Lectures/CharacterAnimation/FABRIK">FABRIK Demo</a></li><li><a href = "https://twitter.com/i/status/1135929820603228161">Tentacle + cake...</a></li><li><a href = "https://www.shadertoy.com/view/XldSDn">Shadertoy dancing tentacle</a></li><li><a href = "http://mocap.cs.cmu.edu/">CMU MOCAP Database</li><li><a href = "https://twitter.com/TheRujiK/status/969581641680195585">Wonky salamander</a></li></ul>
+<ul><li><a href = "Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation/forward.html">Forward Kinematics Demo</a></li><li><a href = "http://www.andreasaristidou.com/FABRIK.html">FABRIK Paper</a></li><li><a href = "Materials/JavaScript_MOCAP_Animation">Javascript MOCAP Visualizer</a></li><li><a href = "http://mocap.cs.cmu.edu/">CMU MOCAP Database</li></ul><ul><li><a href = "https://twitter.com/TheRujiK/status/969581641680195585">Wonky salamander</a></li><li><a href = "https://twitter.com/i/status/1135929820603228161">Tentacle + cake...</a></li><li><a href = "https://www.shadertoy.com/view/XldSDn">Shadertoy dancing tentacle</a></li></ul>
 LECTURE
 Skinning
 

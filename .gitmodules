@@ -25,3 +25,6 @@
 [submodule "Assignments/HW2_SceneTrees/ArtContest/ggslac"]
 	path = Assignments/HW2_SceneTrees/ArtContest/ggslac
 	url = https://github.com/ctralie/ggslac.git
+[submodule "Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation"]
+	path = Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation
+	url = https://github.com/ursinus-cs476-f2022/HW3_CharacterAnimation.git
