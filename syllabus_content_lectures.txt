@@ -55,29 +55,25 @@ MOCAP, Forward And Backward Reaching Inverse Kinematics (FABRIK)
 
 <ul><li><a href = "Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation/forward.html">Forward Kinematics Demo</a></li><li><a href = "http://www.andreasaristidou.com/FABRIK.html">FABRIK Paper</a></li><li><a href = "Materials/JavaScript_MOCAP_Animation">Javascript MOCAP Visualizer</a></li><li><a href = "http://mocap.cs.cmu.edu/">CMU MOCAP Database</li></ul><ul><li><a href = "https://twitter.com/TheRujiK/status/969581641680195585">Wonky salamander</a></li><li><a href = "https://twitter.com/i/status/1135929820603228161">Tentacle + cake...</a></li><li><a href = "https://www.shadertoy.com/view/XldSDn">Shadertoy dancing tentacle</a></li></ul>
 LECTURE
-Skinning
+The Animation Loop, Basic Physics, Basic Collision Detection And Response
 
 
 LECTURE
-The Animation Loop, Collision Detection
+Convex Hulls/The Separating Axis Theorem, Skinning
 
 
 LECTURE
-Collision Response, Convex Hulls/The Separating Axis Theorem, Begin Euler Angles
+Euler Angles, Gimbal Lock
 
-
+<ul><li><a href = "https://www.youtube.com/watch?v=zc8b2Jo7mno">Excellent youtube video on gimbal lock</a></li><li><a href = "https://www.youtube.com/watch?v=cJ9qdGAE8L8">Houston, we have a problem</a></li></ul>
 LECTURE
-Finish Euler Angles, Rodrigues' Rotation Formula
+Rodrigues' Rotation Formula, Begin Quaternions
 
 
 LECTURE
 Quaternions/SLERP 
 
 <ul><li><a href = "Materials/SlerpViz">Quaternion SLERP Visualization App</a></li><li><a href = "http://www.euclideanspace.com/maths/geometry/rotations/conversions/quaternionToEuler/">Quaternions to euler angles and back: geometric explanations</a></li><li><a href = "https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Proof_of_the_quaternion_rotation_identity">Wikipedia Derivation of Quaternion Axis/Angle Identity</a></li></ul>
-LECTURE
-Assignment 3 Work Session
-
-
 SECTION
 <a name = "shape">3D Shape Representations</a>
 Now that we know how to represent fundamental geometry numerically, we will discuss data structures for representing more complicated custom shapes, which form the backbone of modern CAD and 3D modeling applications.  The first of these is the triangle mesh, which is a discrete approximation of a smooth 2D manifold surface consisting of a collection of triangles connected to each other at a common edge.  We will then discuss continuous representations, including subdivision surfaces.  We will conclude this unit with implicit surfaces, which are volumetric descriptions of surfaces which allow for easy boolean operations and natural design of neat shapes such as water drops.  And as we will see, implicit surfaces lead to a very particular, smooth aesthetic via "metaballs" (not "m<b>ea</b>tballs"!).<p><b>Big Concepts And Questions:</b><ul><li>What is the difference between a discrete and continuous data structure for surfaces?</li><li>What are geometric properties of a triangle mesh, and what are topological properties of a triangle mesh?</li><li>What are the strengths and limitations of different shape representations?</li><li>How many metaballs does one need to design a human head?</li></ul></p>

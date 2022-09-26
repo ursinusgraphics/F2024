@@ -28,3 +28,6 @@
 [submodule "Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation"]
 	path = Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation
 	url = https://github.com/ursinus-cs476-f2022/HW3_CharacterAnimation.git
+[submodule "ClassExercises/Week5_Animation/RigidBodyAnim"]
+	path = ClassExercises/Week5_Animation/RigidBodyAnim
+	url = https://github.com/ursinus-cs476-f2022/RigidBodyAnim.git
