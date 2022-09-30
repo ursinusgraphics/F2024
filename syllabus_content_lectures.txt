@@ -55,7 +55,7 @@ MOCAP, Forward And Backward Reaching Inverse Kinematics (FABRIK)
 
 <ul><li><a href = "Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation/forward.html">Forward Kinematics Demo</a></li><li><a href = "http://www.andreasaristidou.com/FABRIK.html">FABRIK Paper</a></li><li><a href = "Materials/JavaScript_MOCAP_Animation">Javascript MOCAP Visualizer</a></li><li><a href = "http://mocap.cs.cmu.edu/">CMU MOCAP Database</li></ul><ul><li><a href = "https://twitter.com/TheRujiK/status/969581641680195585">Wonky salamander</a></li><li><a href = "https://twitter.com/i/status/1135929820603228161">Tentacle + cake...</a></li><li><a href = "https://www.shadertoy.com/view/XldSDn">Shadertoy dancing tentacle</a></li></ul>
 LECTURE
-The Animation Loop, Basic Physics, Basic Collision Detection And Response
+The Animation Loop, Basic Physics
 
 
 LECTURE
@@ -63,7 +63,7 @@ Rigging/Skinning
 
 
 LECTURE
-Convex Hulls/The Separating Axis Theorem, Skinning
+Basic Collision Detection And Response, Convex Hulls/The Separating Axis Theorem
 
 
 LECTURE
