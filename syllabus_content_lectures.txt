@@ -59,17 +59,17 @@ The Animation Loop, Basic Physics, Basic Collision Detection And Response
 
 
 LECTURE
+Rigging/Skinning
+
+
+LECTURE
 Convex Hulls/The Separating Axis Theorem, Skinning
 
 
 LECTURE
-Euler Angles, Gimbal Lock
+Euler Angles, Gimbal Lock, Rodrigues' Rotation Formula
 
 <ul><li><a href = "https://www.youtube.com/watch?v=zc8b2Jo7mno">Excellent youtube video on gimbal lock</a></li><li><a href = "https://www.youtube.com/watch?v=cJ9qdGAE8L8">Houston, we have a problem</a></li></ul>
-LECTURE
-Rodrigues' Rotation Formula, Begin Quaternions
-
-
 LECTURE
 Quaternions/SLERP 
 

@@ -38,91 +38,83 @@
 								</header>
 <!-- End Header !-->
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-                                        <h2>Week 1 Complex Numbers Exercise: Julia Sets</h2>
-										<h3>Chris Tralie</h3>
-									</header>
+    <section>
+        <header class="main">
+            <h2>HW 3a: Euler Angles Visualization (15 Points)</h2>
+        </header>
 
-									<div id="page-content">
-									
-										
-										<h3>Getting Started</h3>
-                                        
-										<p>
-											<a href = "https://github.com/ursinus-cs476-f2022/Week1Exercises/archive/refs/heads/master.zip">Click here</a> to download the repository of skeleton code for this exercise.  You will be editing the file <code>juliaset.js</code>, and you will run <code>juliaset.html</code> to view the results
-										</p>
+        <p>
+        In this short assignment you will visually explore one common representation of rotations in 3D with three numbers, also known as <i>Euler Angles</i>. 
+        <h3><a href = "../../Materials/EulerAnglesViz">Click here</a> to launch the GUI that you will use in this assignment.</h3>  The GUI consists of a set of <a href = "https://en.wikipedia.org/wiki/Gimbal">gimbals</a>, which are motorized spinning rings which can be used to realize Euler Angles.
+        </p>
 
-										
-                                        <h3>Overview</h3>
-                                        <p>
-                                            A <a href = "https://en.wikipedia.org/wiki/Fractal">fractal</a> is an object which is "self-similar," or made up of smaller copies of itself.
-                                        </p>
-                                            One kind of fractal emerges when we consider the behavior of the following iterative equation over complex variables
+        <p>
+        <b><u>Submit a brief writeup on canvas with the answers to the questions below</u></b>
+        </p>
 
-                                            <h3>
-                                                \[ z_{n+1} = z_n^2 + c \]
-                                            </h3>
+        <p>
+        <a name = "question1"><h3>Question 1: (<b>5 Points</b>)</h3></a>
+        Take a moment to play around with the GUI and familiarize yourself with gimbals.  In this particular example, the outer ring is yaw (rotation about the y-axis), the middle ring connected to it is pitch (rotation about the x-axis), and the inner ring connected to the pitch ring is roll (rotation about the z-axis).  As described in class, the rotation matrices about the individual axes can be described as follows:
+        </p>
 
-                                            where <b>c</b> is a constant, and we specify some initial <b>z<SUB>0</SUB></b>.  For a fixed <b>c</b>, we can try different initial conditions and see how long it takes them to "escape," or move beyond a certain radius from the origin.
-                                        </p>
+        <table style="width:60%;">
+        <tr>
+        <td>Pitch (Rotation About X by gamma)</td>
+        <td><h3><div id="rotXEq"></div></h3></td>
+        </tr>
+        <tr>
+        <td>Yaw (Rotation About Y by beta)</td>
+        <td><h3><div id="rotYEq"></div></h3></td>
+        </tr>
+        <tr>
+        <td>Roll (Rotation About Z by alpha)</td> 
+        <td>
+        <h3>
+        <div id="rotZEq"></div>
+        </h3>
+        </td>
+        </tr>
+        </table>
+        <p>
+        <b>NOTE:</b> The coordinate system assumed here is a right handed coordinate system where (+X) is to the right, (+Y) is up, and (+Z) is out of the monitor, as shown below, and <i>this convention for roll/pitch/yaw may be slightly different than others you see on the web (though it's consistent with the way we've been defining our coordinate system)</i>:
+        </p>
+        <img src = "CoordinateSystem.svg"><BR>
 
-                                        <p>
-                                        Your task will be to implement a program in pure Javascript to draw the Julia Set given different parameters, based on the following variables
-                                        <ul>
+        <u><b>Question:</b></u> In terms of <h3>\[ R_X(\gamma), R_Y(\beta), \text{and } R_Z(\alpha) \]</h3>
 
-                                            <li>
-                                                <code>CRe</code>, <code>CIm</code>: The real and imaginary components of the constant complex number that's added at each iteration.
-                                            </li>
-                                            <li>
-                                                <code>uEscape:</code> The escape radius of the equation.  We consider a point escaped when \[ \text{real}^2 + \text{imag}^2 > \text{uEscape}^2 \]
-                                            </li>
+        <p>
+        Write down the matrix product <b>R<SUB>Final</SUB> = ABC</b> that performs the overall rotation of the gimbal system.  That is, find an <b>R</b> that gets the airplane to its final orientation after composing all gimbals in the order that they are arranged in the app, assuming that each point on the airplane is a column vector which is multiplied on the left by <b>R</b>.  No need to expand the product; simply indicate which order those three matrices go in (i.e. which one is <b>A</b>, which one is <b>B</b>, and which one is <b>C</b> in the above product?).
+        </p>
 
-                                            <li>
-                                                <code>MaxIters</code>: This defines how many iterations you should check before giving up and capping the escape number as MaxIters.
-                                            </li>
-                                        </ul>
-                                        </p>
+        <a name = "question2"><h3>Question 2: (<b>5 Points</b>)</h3></a>
 
-										<p>
-											Every pixel is a different initial condition.  You should color pixels according to how long they take to escape.  It's up to you how you color them, but you should use the <code>drawPixel</code> method
-										</p>
+        <p>
+        In the app, set the pitch to 270 degrees.  Now move the yaw around by itself, and move the roll around by itself.  What can you say about the effect of doing yaw and the effect of doing roll when the pitch is in this position that makes it different from when pitch is in most other positions?  Can you find another pitch for which a similar phenomenon happens?
+        </p>
 
-										<p>
-											<code>this.drawPixel(x, y, R, G, B);</code>
-										</p>
+        <a name = "question3"><h3>Question 3: (<b>5 Points</b>)</h3></a>
+        <p>
+        Now you will examine an animation that results when gimbals are used to move from one orientation to another.  For orientation 1, set the pitch to be something less than 270 degrees and for orientation 2, set the pitch to be something greater than 270 degrees.  Set the yaws and rolls to be different values before and after also (but it doesn't matter what they are).  Now click "animate."  What do you notice when the pitch passes through 270 degrees?  No need for any rigorous explanation, just describe what you see.  How about if you design an animation which passes through the other angle that you selected in question 2?
+        </p>
 
-										<p>
-											Where R, G, and B are the red, green, and blue components of the color, respectively.  See the widget below:
-										</p>
+        <script src = "Equations.js"></script>
+    </section>
 
-										<iframe src = "color.html" width="200" height="100"></iframe>
 
-										<p>
-											You might want to start with grayscale, but you can make the colors more sophisticated as you go on.
-										</p>
 
-										<h3>Possible Extensions</h3>
-										<ul>
-											<li>Add the capability to zoom in or move the center</li>
-											<li>Use a more complicated <a href = "https://matplotlib.org/2.0.2/users/colormaps.html">colormap</a> to make the colors pop</li>
-										</ul>
+</div>
+</div>
 
-                                    </div>
-						</div>
-					</div>
-
-					<!--LaTeX in Javascript!-->
-					<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-					<!--Syntax highlighting in Javascript!-->
-					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
-					<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
-					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
-					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
-					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
-					<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
-					<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!--LaTeX in Javascript!-->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!--Syntax highlighting in Javascript!-->
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
 
 <!-- Sidebar -->
 					<div id="sidebar">
@@ -239,5 +231,5 @@
 			<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../../assets/js/main.js"></script>
 <!-- End Scripts -->
-	</body>
+</body>
 </html>
