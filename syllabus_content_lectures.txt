@@ -135,9 +135,9 @@ Local Illumination: Lambertian/Phong Illumination, Gouraud/Per-Fragment Shading
 
 <ul><li><a href = "http://www.cs.toronto.edu/~jacobson/phong-demo/">Alec Jacobson's WebGL Illumination/Shading Demo</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/ClassExercise">Phong Shading Class Exercise</a></li></ul>
 LECTURE
-3D Perspectives, Ray Casting, Sphere Normals
+Intro To Ray Tracing: 3D Perspectives, Ray Casting, Sphere Normals
 
-<ul><li><a href = "http://adrianlarsson.com/stuff/gw2rtgi">Guild Wars 2 Raytraced</a></li></ul>
+<ul><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
 LECTURE
 Ray Instancing, Normal Matrices
 

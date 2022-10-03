@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<!-- Header !-->
+	<head>
+		<title>Ursinus CS 476: Computer Graphics, Fall 2022</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../../assets/css/ie8.css" /><![endif]-->
+        <style>
+        .image_off, #home:hover .image_on{
+           display:none
+        }
+        .image_on, #home:hover .image_off{
+           display:block
+        }
+        </style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><strong>Ursinus CS 476: Computer Graphics, Fall 2022</strong></a>
+								</header>
+<!-- End Header !-->
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+                                        <h2>Assignment 3: Character Animation</h2>
+									</header>
+
+									<div id="page-content">
+										<h3>
+											<ul>
+												<li><a href = "#overview">Overview</a></li>
+                                                <li><a href = "#submission">Submission Instructions</a></li>
+											</ul>
+										</h3>
+										
+										<h2><a name = "overview">Overview</a></h2>
+										<p>
+											The purpose of this assignment is to create a "thin slice" through a character animation pipeline completely from scratch.  By the end of the assignment, students will be able to warp a mesh automatically into a pose simply by moving one point
+										</p>
+										
+										<h3>Getting Started</h3>
+										<p>
+											<a href = "HW3_CharacterAnimation.zip">Click here</a> to download the starter code for this assignment.  The entry point for running things is the file <code>skin.html</code>.  You'll mainly be editing the files <code>skin.js</code> and <code>skindebugplots.js</code>
+                                        </p>
+
+										<p>
+											When you're finished, submit <code>skin.js</code> and <code>skindebugplots.js</code>
+										</p>
+                                        
+                                        <HR>
+                                        <h2>Part 1: FABRIK</h2>
+                                        <p>
+                                            For the first part, you'll implement the FABRIK algorithm that we discussed in class (more info at <a href = "http://www.andreasaristidou.com/FABRIK.html">this link</a>).
+                                        </p>
+										
+
+                                            
+
+                                    </div>
+						</div>
+					</div>
+
+					<!--LaTeX in Javascript!-->
+					<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+					<!--Syntax highlighting in Javascript!-->
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
+					<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+					<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+					<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+                                        <li>
+											<span class="opener">General</span>
+											<ul>
+												<li><a href = "../../index.html#overview">Overview</a></li>
+												<li><a href = "../../index.html#logistics">Technology Logistics</a></li>
+												<li><a href = "../../index.html#deliverables">Deliverables</a>
+													<ul>
+														<li><a href = "../../index.html#debugging">Debugging Principles</a></li>
+													</ul>
+												</li>
+												<li><a href = "../../index.html#grading">Grading</a></li>
+												<li><a href = "../../index.html#environment">Classroom Environment</a></li>
+												<li><a href = "../../index.html#participation">Participation</a></li>
+												<li><a href = "../../index.html#collaboration">Collaboration Policy</a></li>
+												<li><a href = "../../index.html#other">Other Resources / Policies</a></li>
+											</ul>
+										</li>
+										<li><a href = "../../Software/index.html">Software</a></li>
+										<li><a href = "../../index.html#schedule">Schedule</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li>
+													<li><a href = "../../Assignments/HW1_GeomPrimitives/index.html">HW1: Geometric Primitives</a></li>
+													<ul>
+														
+                                                    </ul>
+												</li>
+												<li><a href = "../../Assignments/HW2_SceneTrees/index.html">HW2: Scene Trees</a></li>
+												<li>
+													<a href = "../../Assignments/HW3a_EulerAngles/index.html">HW3a: Euler Angles</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Class Exercises</span>
+											<ul>
+												<li>
+													<ul>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Javascript1">Week 1: Javascript Module</a>
+														</li>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Vectors1">Week 1: Vector Basics And Dot Product Module</a>
+														</li>
+														<li><a href = "../../Lectures/2_VectorsIntro/index.html">Week 1: Class Notes on Euclidean Vectors</a></li>
+														<li><a href = "../../ClassExercises/Week1_JuliaSets/index.html">Week 1: Julia Sets Exercise</a></li>
+														<li><a href = "../../Materials/BarycentricExploration/WeightedAverage.html">Week 2: Barycentric Etch-A-Sketch</a></li>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/LinesAndPlanes/Video1">Week 2: Lines And Planes Module</a>
+														</li>
+														<li><a href = "../../ClassExercises/Week3_RayIntersections/index.html">Week 3: Ray Intersection Notes</a></li>
+														<li><a href = "../../Materials/ggslac/viewers/MatrixAnim.html">Week 3: Matrix Multiplications And Compositions Widget</a></li>
+														<li><a href = "https://ursinus-cs476-f2022.github.io/Modules/Scenes/Video1">Week 4: 3D Transformations And Scenes Module</a></li>
+														<li><a href = "../../Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation/forward.html">Week 4: Forward Kinematics Demo</a></li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Optional Fall 2020 Modules</span>
+											<ul>
+												<li>
+													<ul>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Overview">Module 1: Javascript</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Vectors1">Module 2: Vectors And Dot Products</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/Vectors1">Module 3: Projections, Cross Product, Normals</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/LinesAndPlanes1">Module 4: Lines, Rays, And Planes</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module5/RayIntersectPlane">Module 5: Ray Intersect Plane/Triangle/Sphere</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module6/Video1">Module 6: 2D Matrices Definition, Composition, And Inverses</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module7/Video1">Module 7: 3D Transformations And Scene Trees</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module8/Video1">Module 8: GLSL And Shaders</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module9/Video1">Module 9: Blobby Shaders, Complex Numbers, Fractals</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/Video1">Module 10: Local Illumination via Gouraud Shading</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module11/Video1">Module 11: Ray Casting</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module12/Video1">Module 12: Global Illumination Part 1</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module13/Video1">Module 13: Object-First Viewing Projections</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module14/Video1">Module 14: Topological Properties of Manifold Meshes</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module15/Video1">Module 15: Heightmaps, Levelsets, And Marching Squares</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><a href = "../../FinalProject/index.html">Final Project</a></li>
+									</ul>
+								</nav>
+
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; <a href = "http://www.ctralie.com">Christopher J. Tralie</a>. All rights reserved.  Contact chris.tralie@gmail.com. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+<!-- End Sidebar !-->
+
+<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/skel.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../../assets/js/main.js"></script>
+<!-- End Scripts -->
+	</body>
+</html>
