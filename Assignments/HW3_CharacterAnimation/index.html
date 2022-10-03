@@ -41,39 +41,253 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-                                        <h2>Assignment 3: Character Animation</h2>
+                                        <h2>Assignment 3: Character Animation (65 Points)</h2>
+										<h3><a href = "https://www.ctralie.com">Chris Tralie</a></h3>
 									</header>
 
 									<div id="page-content">
 										<h3>
 											<ul>
 												<li><a href = "#overview">Overview</a></li>
-                                                <li><a href = "#submission">Submission Instructions</a></li>
+												<li><a href = "#gettingstarted">Getting Started</a></li>
+												<li><a href = "#timeline">Suggested Timeline</a></li>
+												<li>
+													<a href = "#part1">Part 1: Data Structure Initialization And FABRIK</a>
+													<ul>
+														<li><a href = "#createtree">Create And Plot Skeleton Tree (10 Points)</a></li>
+														<li><a href = "#leafnodes">Identify Leaf Nodes / Create Chains (7 Points)</a></li>
+														<li><a href = "#fabrik">FABRIK (10 Points)</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href = "#skinning">Part 2: Skinning And Animation</a>
+													<ul>
+														<li><a href = "#bones">Bones And Local Coordinate Systems (10 Points)</a></li>
+														<li><a href = "#nearestneighbors">Nearest Neighbors (8 Points)</a></li>
+														<li><a href = "#localcoords">Local Coordinates of Skin (10 Points)</a></li>
+														<li><a href = "#animation">Animation (10 Points)</a></li>
+													</ul>
+												</li>
 											</ul>
 										</h3>
 										
+										<HR>
 										<h2><a name = "overview">Overview</a></h2>
 										<p>
-											The purpose of this assignment is to create a "thin slice" through a character animation pipeline completely from scratch.  By the end of the assignment, students will be able to warp a mesh automatically into a pose simply by moving one point
+											The purpose of this assignment is to create a "thin slice" through a character animation pipeline completely from scratch.  Students will implement the FABRIK algorithm to reorient sequences of joints to reach towards targets.  They will then implement a simple rigging/skinning algorithm to move a surrounding triangle mesh of <a href = "https://simpsons.fandom.com/wiki/Homer_Simpson">Homer Simpson</a> along with the bones.
+										</p>
+
+										<h3>What To Submit</h3>
+										<p>
+											When you're finished, submit <code>skin.js</code> and <code>skindebugplots.js</code> to canvas.
 										</p>
 										
-										<h3>Getting Started</h3>
+										<HR>
+										<h2><a name = "gettingstarted">Getting Started</a></h2>
 										<p>
 											<a href = "HW3_CharacterAnimation.zip">Click here</a> to download the starter code for this assignment.  The entry point for running things is the file <code>skin.html</code>.  You'll mainly be editing the files <code>skin.js</code> and <code>skindebugplots.js</code>
                                         </p>
 
 										<p>
-											When you're finished, submit <code>skin.js</code> and <code>skindebugplots.js</code>
+											You can start by editing code in the <code>main</code> method of <code>skin.js</code>.  Right now, the code plots the joints as a point cloud in the debugging area at the bottom of <code>skin.html</code>, using the <code><a href = "https://github.com/ursinus-cs476-f2022/HW3_CharacterAnimation/blob/589d28c6fdf8bbbd5e952478eaba02a4b4027dc2/skindebugplots.js#L34">plotJoints</a></code> method in <code>skindebugplots.js</code>, as shown below:  
 										</p>
+										<img src="Images/GivenPlot.gif" width="25%">
+										<p>
+											This code uses the <a href = "https://plotly.com/javascript/">plotly library</a>.  You should study this example closely, because it will help you to debug as you go along.
+										</p>
+
+										<p>
+											I've provided a method <code>plotSkin</code> for another example.  If you uncomment the line <code>plotSkin(X);</code> in main, it will plot the dense point cloud of all of the skin vertices on the homer mesh colored from front to back, as shown below
+										</p>
+
+										<img src = "Images/homerSkin.png" width="20%">
+
+										<p>
+											Eventually, you'll update the full surface mesh of homer by providing specific information to the mesh class:
+										</p>
+											<img src = "Images/homerMeshOrig.png" width="20%">
+										<p>
+											but you should plot a lot of stuff in the debugging area as you go along to check incrementally to make sure each step is working as you expect (some tasks will require you to make methods to do this).
+										</p>
+
+										<HR>
+										<h2><a name = "timeline">Suggested Timeline</a></h2>
+										<ul>
+											<li>
+												Create and plot skeleton by <b>Wed 10/5</b>
+											</li>
+											<li>
+												Leaf nodes / chains / FABRIK by <b>Fri 10/7 / Sat 10/8</b>
+											</li>
+											<li>
+												Local coordinate systems by <b>Mon 10/10</b>
+											</li>
+											<li>
+												Nearest neighbors and local coordinates by <b>Wed 10/12</b>
+											</li>
+											<li>
+												Animation by <b>Fri 10/14</b> (final deadline!)
+											</li>
+										</ul>
+
+										
                                         
                                         <HR>
-                                        <h2>Part 1: FABRIK</h2>
+                                        <h2><a name = "part1">Part 1: Data Structure Initialization And FABRIK</a></h2>
                                         <p>
-                                            For the first part, you'll implement the FABRIK algorithm that we discussed in class (more info at <a href = "http://www.andreasaristidou.com/FABRIK.html">this link</a>).
+                                            For the first part, you'll implement the FABRIK algorithm that we discussed in class, treating leaf nodes of a skeleton tree as end effectors.  You can find more info about the FABRIK algorithm at <a href = "http://www.andreasaristidou.com/FABRIK.html">this link</a>
                                         </p>
 										
+										<h3><a name = "createtree">Create And Plot Skeleton Tree (10 Points)</a></h3>
+										<p>
+											I've provided a skeleton for the homer mesh that I made in <a href = "https://www.blender.org/">blender</a> in a file called <a href = "HW3_CharacterAnimation/rigs/homerskel.json"><code>rigs/homerskel.json</code></a>, which is passed into the main via a variable called <code>skeleton</code>.  This has all of the information to build the skeleton, but it's not in the most convenient format to perform FABRIK.  Your first task is to drill through this object it into a data structure more amenable to traversal.  
+										</p>
 
+										<h4>Your Task</h4>
+										<p>
+											Create data structures for your tree, and initialize the tree with information from <code>skeleton</code>.  Then, create a method in <code>plotSkeleton</code> that takes your skeleton as a parameter and plots.  Below is an example of what such a plot might look like: 
+										</p>
+
+										<img src = "Images/SkeletonPlot.gif" width="25%">
+
+										<h4>Hints/Suggestions</h4>
+										<p>
+											
+											I started you off with a class called <code>Joint</code> that you can use to store each joint, though you can feel free to modify this.  The easiest way to setup your tree for quick querying later is to store an object of joints whose keys are the name of the joints.
+										</p>
+
+
+										<h3><a name = "leafnodes">Identify Leaf Nodes / Create Chains (7 Points)</a></h3>
+
+										<p>
+											Your next task is to mark the leaf nodes in the joint tree if you haven't already, and to make a method <code>getChain</code> that extracts a list of joints starting at a chosen leaf node and ending at a <b>subbase</b>, or a joint with more than one child.  Also create a method <code>plotChain</code> in <code>skindebugplots.js</code> that plots a chain in red on top of the skeleton.  Below are a few examples:
+										</p>
+
+										<table>
+											<tr>
+												<td>
+													<h3>Right_Forearm</h3>
+												</td>
+												<td>
+													<h3>Left_Shin</h3>
+												</td>
+												<td>
+													<h3>Head</h3>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img src = "Images/chain_Right_Forearm.png" width="50%">
+												</td>
+												<td>
+													<img src = "Images/chain_Left_Shin.png" width="50%">
+												</td>
+												<td>
+													<img src = "Images/chain_Head.png" width="50%">
+												</td>
+											</tr>
+										</table>
+
+									<h3><a name = "fabrik">FABRIK (10 Points)</a></h3>
+									<p>
+										Implement the FABRIK algorithm to move a chain that you've created above to reach towards a particular target.  Below are a couple of examples
+									</p>
+
+									<table style="width:80%">
+										<tr>
+											<td>
+												<h3>Right_Forearm</h3>
+												Moved to a point 0.2 units above where it currently is
+											</td>
+											<td>
+												<h3>Left_Shin</h3>
+												Moved to a point 0.2 units to the left and 0.1 units above where it currently is
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src = "Images/fabrik_Right_Forearm_y0.02.png" width="50%">
+											</td>
+											<td>
+												<img src = "Images/fabrik_Left_Shin_x-0.2_y0.1.png" width="50%">
+											</td>
+										</tr>
+									</table>
+
+									<h4>Your Task</h4>
+									<p>
+										Create a method <code>fabrik</code> which takes as a parameter a chain that you created above, as well as a target <code>vec3</code> and a number of iterations to go through.
+									</p>
+
+									<h4>Hints/Suggestions</h4>
+									<ul>
+										<li>
+											It's probably easier to make a single method for both forward and backward iterations, and to pass it the reverse of the chain for the backwards iterations
+										</li>
+										<li>
+											You'll have to be very careful with references here.  For instance, if you make the target in terms of one of the leaf joints, you'll probably want to make a deep copy that leaf joint first.
+										</li>
+									</ul>
+
+									<HR>
+									<h2><a name = "skinning">Part 2: Skinning And Animation</a></h2>
+
+									<p>
+										In this part, you will make the "skin" (mesh vertices) move along with the bones 
+									</p>
+
+									<h3><a name = "bones">Bones And Local Coordinate Systems (10 Points)</a></h3>
+
+									<p>
+										Create a class for bones and initialize all the bones in the skeleton.  In the constructor, setup a matrix in the constructor that transforms from bone coordinates to world coordinates.
+									</p>
+									
+
+									<h3><a name = "nearestneighbors">Nearest Neighbors (8 Points)</a></h3>
+									<p>
+										Compute the nearest bone to each point on the skin.
+									</p>
+
+									<p>
+										If you've done this properly and you plot the bone IDs as the color label, using the <code>'Picnic'</code> colorscale, you should see something like the following:
+									</p>
+
+									<img src = "Images/boneIDs.png" width="30%">
+
+
+									<h3><a name = "localcoords">Local Coordinates of Skin (10 Points)</a></h3>
+									<p>
+										Create a list of vec3 <code>Y</code> that's all of the points in the mesh in the local coordinate system of their bones.  Also implement a method that returns an updated transformation matrix
+									</p>
+
+									<p>
+										If you've done this properly and plot all of the points in their local coordinate system, you'll see something quite bizarre looking, as shown below:
+									</p>
+
+									<p>
+										<img src = "Images/LocalCoords.png" width="35%">
+									</p>
+									<p>
+										<img src = "Images/LocalCoordsMesh.png" width="35%">
+									</p>
                                             
+
+									<p>
+										But the mesh should render the same
+									</p>
+
+									<h3><a name = "animation">Animation (10 Points)</a></h3>
+									<p>
+										Make an animation with at least two joints moving.  The example below shows just the <code>Right_Forearm</code>'s y coordinate changing with the equation
+									</p>
+
+									<div style="width:50px;">
+										<h3>
+											\[  0.1(1+\cos(t)) \]
+										</h3>
+									</div>
+
+									<img src = "Images/homerWave.gif" width="50%">
 
                                     </div>
 						</div>
@@ -130,6 +344,9 @@
 												<li><a href = "../../Assignments/HW2_SceneTrees/index.html">HW2: Scene Trees</a></li>
 												<li>
 													<a href = "../../Assignments/HW3a_EulerAngles/index.html">HW3a: Euler Angles</a>
+												</li>
+												<li>
+													<a href = "../../Assignments/HW3_CharacterAnimation/index.html">HW3: Character Animation</a>
 												</li>
 											</ul>
 										</li>

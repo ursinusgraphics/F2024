@@ -91,6 +91,10 @@ Mesh Orientation, Mesh Storage Requirements, Basic Mesh Data Structures
 
 <ul><li><a href = "https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley-dp-1568814690/dp/1568814690/ref=mt_hardcover?_encoding=UTF8&me=&qid=">S/M</a> 12.1.2 - 12.1.3</li><li><a href = "https://www.cc.gatech.edu/~jarek/courses/handouts/meshes.pdf">Additional Reading on Mesh Data Structures</a></li></ul>
 LECTURE
+<a href = \"https://ursinus.edu/live/news/6481-introducing-robyn-hannigan-ursinus-colleges-19th\">Robyn Hannigan</a> Inauguration (No Class)
+
+
+LECTURE
 The Half Edge Data Structure 
 
 <ul><li><a href = "http://kaba.hilvi.org/homepage/blog/halfedge/halfedge.htm">Kalle Rutanen's Half Edge Tutorial</a></li></ul>
