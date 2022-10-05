@@ -73,7 +73,7 @@ Euler Angles, Gimbal Lock
 LECTURE
 Rodrigues' Rotation Formula, Begin Quaternions
 
-
+<ul><li><a href = "https://github.com/ursinus-cs476-f2022/Week6_AxisAngle/archive/refs/heads/main.zip">Class Programming Exercise on Axis-Angle Rotation</li></ul>
 LECTURE
 Quaternions/SLERP 
 

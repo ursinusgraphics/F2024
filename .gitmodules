@@ -31,3 +31,6 @@
 [submodule "ClassExercises/Week5_Animation/RigidBodyAnim"]
 	path = ClassExercises/Week5_Animation/RigidBodyAnim
 	url = https://github.com/ursinus-cs476-f2022/RigidBodyAnim.git
+[submodule "ClassExercises/Week6_AxisAngle/Week6_AxisAngle"]
+	path = ClassExercises/Week6_AxisAngle/Week6_AxisAngle
+	url = https://github.com/ursinus-cs476-f2022/Week6_AxisAngle.git
