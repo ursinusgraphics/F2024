@@ -67,9 +67,13 @@ Basic Collision Detection And Response, Convex Hulls/The Separating Axis Theorem
 
 
 LECTURE
-Euler Angles, Gimbal Lock, Rodrigues' Rotation Formula
+Euler Angles, Gimbal Lock
 
 <ul><li><a href = "https://www.youtube.com/watch?v=zc8b2Jo7mno">Excellent youtube video on gimbal lock</a></li><li><a href = "https://www.youtube.com/watch?v=cJ9qdGAE8L8">Houston, we have a problem</a></li></ul>
+LECTURE
+Rodrigues' Rotation Formula, Begin Quaternions
+
+
 LECTURE
 Quaternions/SLERP 
 
