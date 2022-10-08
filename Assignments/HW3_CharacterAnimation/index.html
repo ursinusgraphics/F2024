@@ -81,6 +81,14 @@
 										<p>
 											When you're finished, submit <code>skin.js</code> and <code>skindebugplots.js</code> to canvas.
 										</p>
+
+										<h3>Learning Goals</h3>
+										<ul>
+											<li>Manipulate dynamic objects in Javascript</li>
+											<li>Implement the FABRIK algorithm</li>
+											<li>Implement skinning</li>
+											<li>Create coordinate frames to describe the orientation/position of objects</li>
+										</ul>
 										
 										<HR>
 										<h2><a name = "gettingstarted">Getting Started</a></h2>
@@ -239,14 +247,60 @@
 									<h3><a name = "bones">Bones And Local Coordinate Systems (10 Points)</a></h3>
 
 									<p>
-										Create a class for bones and initialize all the bones in the skeleton.  In the constructor, setup a matrix in the constructor that transforms from bone coordinates to world coordinates.
+										Create a class for bones and initialize all the bones in the skeleton in a list of bones.  In the constructor, setup and store a <a href = "https://glmatrix.net/docs/module-mat4.html">glMatrix.mat4</a> matrix that transforms from bone coordinates to world coordinates.  To do this, let <b>a</b> and <b>b</b> be the positions of the bones, and let <b>wLast</b> be the vector that comes into this bone from its parent bone.  Then, create the following four vectors
 									</p>
+									<ul>
+										<li><b>c</b>: The center of the bone (the average of <b>a</b> and <b>b</b>)</li>
+										<li><b>w</b>: A normalized vector from <b>a</b> to <b>b</b></li>
+										<li><b>v</b>: The normalized perpendicular projector of <b>wLast</b> onto <b>w</b></li>
+										<li><b>u</b>: The cross product <b>v x w</b></li>
+									</ul>
+
+									<p>
+										as shown in the picture below:
+									</p>
+
+									<img src = "bonecoordsystem.svg" width="60%">
+
+									<p>
+										The transformation matrix <b>T</b> from bone coordinates to world coordinates should then be
+									</p>
+
+									<div style="width:100px;">
+									<h3>
+										\[ T = \left[ \begin{array}{cccc} u_x & v_x & w_x & c_x \\ u_y & v_y & w_y & c_y \\ u_z & v_z & w_z & c_z \\ 0 & 0 & 0 & 1 \end{array} \right] \]
+									</h3>
+									</div>
+
+
+									<h4>Hints</h4>
+									<ul>
+										<li>
+											The easiest way to implement this is with recursion starting from the root and branching out, passing along <b>w</b> as <b>wLast</b> to a child bone
+										</li>
+										<li>
+											If you use the <code>mat4.fromValues</code> method, be mindful that it accepts parameters in <b>column major</b> order.  This means that your first 5 elements should be ux, uy, uz, 0, vx ...
+										</li>
+										<li>
+											You won't be able to fully test this until you get to the <a href = "#localcoords">local coordinates</a> task, so you may need to return to this laster if your mesh seems wonky
+										</li>
+									</ul>
+
+
 									
 
 									<h3><a name = "nearestneighbors">Nearest Neighbors (8 Points)</a></h3>
 									<p>
-										Compute the nearest bone to each point on the skin.
+										For each point <b>p</b> on the skin, compute index of the nearest bone in your list of bones.  For this, treat a bone like a line segment with endpoints <b>a</b> and <b>b</b>, and compute the length of the perpendicular projection of <b>p</b> onto <b>ab</b>, as shown below:
 									</p>
+
+									<img src = "projline1.svg" width="20%">
+
+									<p>
+										If the perpendicular projection is outside of the line segment, then compute the distance to the nearest point.  The example below shows where the nearest point is <b>b</b> 
+									</p>
+
+									<img src = "projline2.svg" width="25%">
 
 									<p>
 										If you've done this properly and you plot the bone IDs as the color label, using the <code>'Picnic'</code> colorscale, you should see something like the following:
@@ -257,7 +311,7 @@
 
 									<h3><a name = "localcoords">Local Coordinates of Skin (10 Points)</a></h3>
 									<p>
-										Create a list of vec3 <code>Y</code> that's all of the points in the mesh in the local coordinate system of their bones.  Also implement a method that returns an updated transformation matrix
+										Create a list of vec3 <code>Y</code> that contains all of the points in the mesh in the local coordinate system of their bones.  In other words, transform the skin points <b>from world coordinates into bone coordinates</b>.  This means that you will have to multiply each point by the <b>inverse</b> of the <a href = "#bones">transformation matrix you created</a> before (the <code>transformMat4</code> of the <code>vec3</code> class should come in handy here).  
 									</p>
 
 									<p>
@@ -273,12 +327,41 @@
                                             
 
 									<p>
-										But the mesh should render the same
+										Once this is working, make a call to the provided method <code>mesh.updateRig(Y, boneIDs, transformations);</code>
 									</p>
+
+									<p>
+										where <code>Y</code>, <code>boneIDs</code>, and <code>transformations</code> are 3 arrays with the following info:
+									</p>
+
+									<ul>
+										<li><code>Y</code> is the list of skin points in their bone coordinates that you created above</li>
+										<li>boneIDs is a list parallel to <code>Y</code> which holds the bone index each point on the skin is associated to.  This indexes into <code>transformations</code></li>
+										<li><code>transformations</code> is a list of the transformations from bone coordinates to world coordinates for each bone</li>
+									</ul>
+
+									<p>
+										If you've done this properly, the mesh should render back as homer again, as I've created a shader to apply the transformations to the local coordinates you sent in
+									</p>
+
+									<img src = "Images/homerMeshOrig.png" width="20%">
+									
 
 									<h3><a name = "animation">Animation (10 Points)</a></h3>
 									<p>
-										Make an animation with at least two joints moving.  The example below shows just the <code>Right_Forearm</code>'s y coordinate changing with the equation
+										Now that you have the rig loaded, you can move the bones around by applying FABRIK and changing the positions of the joints.  You can then send an updated list of transformations to the <code>mesh.updateBoneTransforms</code> method.  For instance, here's what you should see if you move the y coordinate of the <code>Right_Forearm</code> up by 0.2
+									</p>
+
+									<img src = "rightForearm.png" width="35%">
+
+									<p>
+										And here's what you should see if you move the <code>Left_Shin</code> to the left by 0.2 and up by 0.1
+									</p>
+
+									<img src = "leftShin.png" width="35%">
+
+									<p>
+										Finally, create an animation with at least two joint chains moving.  The example below shows just the <code>Right_Forearm</code>'s y coordinate changing with the equation
 									</p>
 
 									<div style="width:50px;">
@@ -288,6 +371,40 @@
 									</div>
 
 									<img src = "Images/homerWave.gif" width="50%">
+
+									<p>
+										As you can see, it's far from perfect, but not bad for doing this completely from scratch!
+									</p>
+
+									<p>
+										The final code you hand in should show the animation running, which proves that you've completed all of the tasks
+									</p>
+
+									<p>
+										To help get you started with the animation, here is a code snippet you can use that keeps track of elapsed time in an animation loop:
+									</p>
+
+									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+										class Animation {
+											constructor(mesh) { // TODO: Add parameters
+												this.mesh = mesh;
+												this.startTime = (new Date()).getTime();
+												// TODO: Add more stuff
+											}
+											
+											animate() {
+												let thisTime = (new Date()).getTime();
+												let t = (thisTime - this.startTime)/1000.0; // Change in time in seconds
+												
+												// TODO: Fill this in
+
+												this.mesh.render(this.mesh.canvas);
+												requestAnimationFrame(this.animate.bind(this));
+											}
+										}
+									</script>
+
+									
 
                                     </div>
 						</div>
