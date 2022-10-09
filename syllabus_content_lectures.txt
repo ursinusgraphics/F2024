@@ -177,7 +177,7 @@ Object-First Rendering: Bump Maps, Displacement Maps
 LECTURE
 Shadow Maps
 
-
+<ul><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo</a></li></ul>
 LECTURE
 Virtual Reality, Augmented Reality
 
