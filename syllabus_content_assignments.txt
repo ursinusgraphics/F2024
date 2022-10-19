@@ -49,28 +49,28 @@ Assignment 3a Due
 Assignment 3 Due
 
 2022-10-14
-Assignment 5: Triangle Mesh Processing (Group) Out
+Assignment 4: Polygon Mesh Processing (Group) Out
 
-2022-10-19
+2022-10-21
 Last day to drop courses with a "W"
 
 2022-10-26
-Assignment 5 Due
+Assignment 4 Due
 
-2022-11-03
-Mini Assignment 6: Shaders And Image Processing (Individual) Out
+2022-11-06
+Mini Assignment 5: Shaders And Image Processing (Individual) Out
 
-2022-11-04
-Mini Assignment 6 Due
+2022-11-07
+Mini Assignment 5 Due
 
 2022-11-13
-Assignment 7: Real Time Ray Tracing (Group) Out
+Assignment 6: Real Time Ray Tracing (Group) Out
 
 2022-11-14
-Assignment 7 Part 1 Due
+Assignment 6 Part 1 Due
 
 2022-11-28
-Assignment 7 Part 2 Due
+Assignment 6 Part 2 Due
 
 2022-12-08
 Final Project Proposal Due
