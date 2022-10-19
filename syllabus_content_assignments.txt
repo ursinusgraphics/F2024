@@ -48,8 +48,11 @@ Assignment 3a Due
 2022-10-02
 Assignment 3 Due
 
-2022-10-14
-Assignment 4: Polygon Mesh Processing (Group) Out
+2022-10-19
+<a href = "https://ursinus-cs476-f2022.github.io/Modules/OrientationModule/Video">Orientation Module</a> due before class
+
+2022-10-21
+<HR>Assignment 4: Polygon Mesh Processing (Group) Out
 
 2022-10-21
 Last day to drop courses with a "W"
