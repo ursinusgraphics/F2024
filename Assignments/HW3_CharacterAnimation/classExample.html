@@ -1,0 +1,36 @@
+<Html>
+    <body>
+
+<script>
+
+class Bone {
+    constructor(joint1, joint2) {
+        this.joint1 = joint1; // Remember member variables
+        this.joint2 = joint2;
+    }
+    getBoneAvg() {
+        return [0.5*(this.joint1[0]+this.joint2[0]),
+        0.5*(this.joint1[1]+this.joint2[1]),
+        0.5*(this.joint1[2]+this.joint2[2])]
+    }
+}
+
+let joint1 = [0, 1, 2];
+let joint2 = [1, 2, 3];
+let bone = new Bone(joint1, joint2);
+
+console.log(bone.getBoneAvg());
+joint2[0] = 10;
+// Note that this changes!  joint1 and joint2 were
+// passed by reference, so any change I make will impact
+// what happens in the bone.  That helps us to update 
+// things in the bone after the joints update without 
+// having to reconstruct it
+console.log(bone.getBoneAvg()); 
+
+
+</script>
+
+
+    </body>
+</Html>
