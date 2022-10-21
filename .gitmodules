@@ -34,3 +34,6 @@
 [submodule "ClassExercises/Week6_AxisAngle/Week6_AxisAngle"]
 	path = ClassExercises/Week6_AxisAngle/Week6_AxisAngle
 	url = https://github.com/ursinus-cs476-f2022/Week6_AxisAngle.git
+[submodule "Assignments/HW4_PolygonMeshProcessing/HW4_PolygonMeshProcessing"]
+	path = Assignments/HW4_PolygonMeshProcessing/HW4_PolygonMeshProcessing
+	url = https://github.com/ursinus-cs476-f2022/HW4_PolygonMeshProcessing.git
