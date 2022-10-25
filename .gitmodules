@@ -37,3 +37,6 @@
 [submodule "Assignments/HW4_PolygonMeshProcessing/HW4_PolygonMeshProcessing"]
 	path = Assignments/HW4_PolygonMeshProcessing/HW4_PolygonMeshProcessing
 	url = https://github.com/ursinus-cs476-f2022/HW4_PolygonMeshProcessing.git
+[submodule "ClassExercises/Week9_Subdivision/CurveSubdivision"]
+	path = ClassExercises/Week9_Subdivision/CurveSubdivision
+	url = https://github.com/ursinus-cs476-f2022/CurveSubdivision.git
