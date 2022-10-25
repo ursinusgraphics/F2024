@@ -107,15 +107,11 @@ Half-Edge Boundaries, Per-Vertex Normals
 
 <ul><li><a href = "http://www.bytehazard.com/articles/vertnorm.html">Per-vertex normals notes</a></li></ul>
 LECTURE
-Subdivision Surfaces
+Algorithm To Consistently Orient Meshes, Begin Subdivision Surfaces
 
 <ul><li><a href = "https://graphics.stanford.edu/~mdfisher/subdivision.html">Matt Fisher quick subdivision notes</a></li><li><a href = "https://mrl.nyu.edu/publications/subdiv-course2000/coursenotes00.pdf">SIGGRAPH 2000 Subdivision Surface Notes</a> (Long)</li><li><a href = "https://threejs.org/examples/webgl_modifier_subdivision.html">three.js subdivision demo</a></li></ul>
 LECTURE
-Inflation/Smoothing, Surfaces of Revolution
-
-
-LECTURE
-Truncation, Edge Collapse
+Finish Subdivision Surfaces, Edge Collapse
 
 
 LECTURE
@@ -131,7 +127,7 @@ SECTION
 In this part of the course, we discuss how to use a computer to generate images of 3D geometric scenes, a process known as "3D rendering."  The ultimate goal of such techniques is to make photorealistic images that look like what a camera might take in the real world, though, as we will see, this is quite challenging.  In the process of attempting to meet this goal, we will think about how light bounces around in the real world and how humans see that light, and we will discuss algorithms that attempt to mimic this.  To this end, students will start off implementing a <a href = "https://en.wikipedia.org/wiki/Ray_tracing_(graphics)">ray tracer</a>, which is a non-realtime rendering technique, but which allows for visually stunning effects with reflection, refraction, and shadows.  We will then talk about the more traditional rendering pipeline, which leads to visually inferior but interactive images.  Students will learn the basics of the <a href = "https://en.wikipedia.org/wiki/WebGL">WebGL</a> / <a href = "https://en.wikipedia.org/wiki/OpenGL_Shading_Language">GLSL</a> Javascript API, which implements this rendering pipeline.<p><b>Big Concepts And Questions:</b><ul><li>What is object-first rendering, and what is pixel first rendering?  What are the pros and cons of each?</li><li>What kinds of visual effects emerge as light bounces around?</li><li>What can be accomplished with ray tracing that's difficult to accomplish with real time rendering pipelines?</li><li>What kinds of approximations make WebGL rendering fast?</li><li>What technical aspects of virtual reality make it more computationally expensive?</li></ul></p>
 
 LECTURE
-Shaders And GLSL: Attributes, Varying, Uniforms, Textures, Basic Image Processing
+Shaders And GLSL: Attributes, Varying, Uniforms
 
 <ul><li><a href = "Lectures/Module8_Shaders/slides.pdf">Overview Slides</li><li><a href = "https://en.wikibooks.org/wiki/GLSL_Programming">GLSL Programming WikiBook</a></li><li><a href = "https://www.shadertoy.com/">shadertoy.com</a></li></ul>
 LECTURE
@@ -139,9 +135,9 @@ Textures, Basic Image Processing
 
 <ul><li><a href = "ClassExercises/Week5_EmbossMedian">Embossing And Median Filtering Class Exercise</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Mozilla developer notes on WebGL Texture Mapping</li><li><a href = "https://webglfundamentals.org/webgl/lessons/webgl-3d-textures.html">WebGL Fundamentals Notes on Texture Maps And Mipmapping</a></li></ul>
 LECTURE
-Local Illumination: Lambertian/Phong Illumination, Gouraud/Per-Fragment Shading
+Class Exercise: Julia Sets with Shaders
 
-<ul><li><a href = "http://www.cs.toronto.edu/~jacobson/phong-demo/">Alec Jacobson's WebGL Illumination/Shading Demo</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/ClassExercise">Phong Shading Class Exercise</a></li></ul>
+
 LECTURE
 Intro To Ray Tracing: 3D Perspectives, Ray Casting, Sphere Normals
 
@@ -150,6 +146,10 @@ LECTURE
 Ray Instancing, Normal Matrices
 
 
+LECTURE
+Local Illumination: Lambertian/Phong Illumination, Gouraud/Per-Fragment Shading
+
+<ul><li><a href = "http://www.cs.toronto.edu/~jacobson/phong-demo/">Alec Jacobson's WebGL Illumination/Shading Demo</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/ClassExercise">Phong Shading Class Exercise</a></li></ul>
 LECTURE
 Global Illumination: Multiple Lights, Shadows
 
