@@ -61,6 +61,9 @@ Last day to drop courses with a "W"
 Assignment 4 Required Tasks Due
 
 2022-10-27
+<a href = "https://ursinus-cs476-f2022.github.io/Modules/Levelset/Video1">Heighmaps and levelsets module</a> due before class
+
+2022-11-02
 Assignment 4 Final Submission Deadline
 
 2022-11-06

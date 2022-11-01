@@ -109,7 +109,7 @@ Half-Edge Boundaries, Per-Vertex Normals
 LECTURE
 Algorithm To Consistently Orient Meshes, Begin Subdivision Surfaces
 
-<ul><li><a href = "ClassExercises/Week9_MeshOrientation/orientability.zip">Orient class exercise code</a></li><li><a href = "https://github.com/ursinus-cs476-f2022/CurveSubdivision/archive/refs/heads/main.zip">CurveSubdivision class exercise</a></li><li><a href = "https://ursinus-cs477-f2021.github.io/CoursePage/Materials/MazeExplorer/">CS 477 Graph Search Algorithms</a></li><li><a href = "https://graphics.stanford.edu/~mdfisher/subdivision.html">Matt Fisher quick subdivision notes</a></li><li><a href = "https://mrl.nyu.edu/publications/subdiv-course2000/coursenotes00.pdf">SIGGRAPH 2000 Subdivision Surface Notes</a> (Long)</li><li><a href = "https://threejs.org/examples/webgl_modifier_subdivision.html">three.js subdivision demo</a></li></ul>
+<ul><li><a href = "ClassExercises/Week9_MeshOrientation/orientability.zip">Orient class exercise code</a></li><li><a href = "../CurveSubdivision">CurveSubdivision class exercise</a></li><li><a href = "https://ursinus-cs477-f2021.github.io/CoursePage/Materials/MazeExplorer/">CS 477 Graph Search Algorithms</a></li><li><a href = "https://graphics.stanford.edu/~mdfisher/subdivision.html">Matt Fisher quick subdivision notes</a></li><li><a href = "https://mrl.nyu.edu/publications/subdiv-course2000/coursenotes00.pdf">SIGGRAPH 2000 Subdivision Surface Notes</a> (Long)</li><li><a href = "https://threejs.org/examples/webgl_modifier_subdivision.html">three.js subdivision demo</a></li></ul>
 LECTURE
 Finish Subdivision Surfaces, Edge Collapse
 
