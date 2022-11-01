@@ -71,7 +71,6 @@
     let sceneLoc = getParameterByName('sceneLoc');
     // Load the sample scene as a default
     $.get(sceneLoc, function(scene) {
-        console.log(scene);
         try {
             canvas.setupScene(scene, glcanvas.clientWidth, glcanvas.clientHeight);
         }

@@ -1,0 +1,27 @@
+{
+    "name":"boxes_scene",
+    "materials":{
+        "white":{
+            "kd":[1.0, 1.0, 1.0]
+        }
+    },
+    "children":[
+        {
+            "transform":[100000, 0, 0, 0,
+                          0, 0.1, 0, -0.05,
+                          0, 0, 100000, 0,
+                          0, 0, 0, 1], 
+        
+            "shapes":[
+                {
+                    "type": "box",
+                    "width": 1,
+                    "height": 1,
+                    "length": 1,
+                    "center": [0, 0, 0],
+                    "material": "white"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+  "name": "barrier",
+  "materials": {
+    "green": {
+      "ka": [0.05, 0.05, 0.05],
+      "kd": [0.0, 1.0, 0.0],
+      "ks": [0.8, 0.0, 0.0]
+    },
+    "red": {
+      "kd": [1.0, 0.0, 0.0]
+    }
+  },
+
+  "lights": [
+    {
+      "pos": [0, 2, 0],
+      "color": [1, 1, 1]
+    },
+    {
+      "pos": [0, 2, -3],
+      "color": [1, 1, 1]
+    }
+  ],
+
+  "cameras": [
+    {
+      "pos": [0.21, 2.81, 16.28],
+      "rot": [0.0, 0.02, 0.0, 0.01],
+      "fovy": 1.0
+    },
+    {
+      "pos": [0.0, 1.5, -5.0],
+      "rot": [0.0, 1.0, 0.0, 0.0],
+      "fovy": 1.0
+    }
+  ],
+
+  "children": [
+    {
+      "transform": [10, 0, 0, 0, 0, 10, 0, 0, 0, 0, 10, 0, 0, 0, 0, 1],
+      "shapes": [
+        {
+          "type": "mesh",
+          "filename": "ggslac/meshes/square.off",
+          "material": "green"
+        }
+      ]
+    },
+
+    {
+      "shapes": [
+        {
+          "type": "cylinder",
+          "radius": 0.5,
+          "height": 3,
+          "center": [-4, 1.5, -4],
+          "material": "red"
+        },
+        {
+          "type": "cylinder",
+          "radius": 0.5,
+          "height": 3,
+          "center": [4, 1.5, -4],
+          "material": "red"
+        },
+        {
+          "type": "cylinder",
+          "radius": 0.5,
+          "height": 3,
+          "center": [-4, 1.5, 4],
+          "material": "red"
+        },
+        {
+          "type": "cylinder",
+          "radius": 0.5,
+          "height": 3,
+          "center": [4, 1.5, 4],
+          "material": "red"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+    "name":"boxes_scene",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "red":{
+            "kd":[1.0, 0.0, 0.0]
+        },
+        "white":{
+            "kd":[1.0, 1.0, 1.0]
+        },
+        "brown":{
+            "ka":[0.078431, 0.0666, 0.027451],
+            "kd":[0.105882, 0.0666, 0.007843],
+            "ks":[0.164706,0.05098,0]
+        },
+        "abrown":{
+            "ka":[0.1, 0.05, 0.03],
+            "kd":[0.8, 0.6, 0.1],
+            "ks":[0.164706,0.05098,0]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 2, -3],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 2, 3],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[-3, 2, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[3, 2, 0],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [4 , 6, 4],
+            "rot": [0.3, -0.3, 0, 1],
+            "fovy": 1.0
+        }
+    ],
+    
+    "children":[
+        {
+            "transform":[1, 0, 0, 0.0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                          0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type": "scene",
+                    "filename": "../scenes/floor.json"
+                }
+            ]
+
+        },
+        {
+            "transform":[1, 0, 0, 0.0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+
+            "shapes":[
+                {
+                    "type": "box",
+                    "width": 1,
+                    "height": 5,
+                    "length": 1,
+                    "center": [0, 2.5, 0],
+                    "material":"brown"
+                },
+                {
+                    "type": "box",
+                    "width": 1.5,
+                    "height": 4,
+                    "length": 1,
+                    "center": [1.5, 2, 0],
+                    "material":"brown"
+                },
+                {
+                    "type": "box",
+                    "width": 2,
+                    "height": 3,
+                    "length": 1,
+                    "center": [-1.75, 1.5, 0],
+                    "material":"abrown"
+                },
+                {
+                    "type": "box",
+                    "width": 0.5,
+                    "height": 6,
+                    "length": 1,
+                    "center": [2.75, 3, 0],
+                    "material":"abrown"
+                },
+                {
+                    "type": "box",
+                    "width": 3,
+                    "height": 2,
+                    "length": 1,
+                    "center": [4.75, 1, 0],
+                    "material":"brown"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0.0,
+                        0, 1, -0.75, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type": "box",
+                    "width": 1,
+                    "height": 1.5,
+                    "length": 0.5,
+                    "center": [-1.75, 3, 0],
+                    "material":"white"
+                }
+            ]
+        },
+        {
+            "transform":[0.5, 0, 0, 0.0,
+                        0, 0.5, 0, 2.5,
+                        0, 0, 0.5, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type": "sphere",
+                    "radius": 2,
+                    "center": [0, 5, 0],
+                    "material":"white"
+                }
+            ]
+        },
+        {
+            "transform":[0, -1, 0, 4.75,
+                        1, 0, 0, 2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type": "cylinder",
+                    "radius": 0.5,
+                    "height": 3,
+                    "center": [0, 0, 0],
+                    "material":"red"
+                }
+            ]
+        }
+    ]
+}
