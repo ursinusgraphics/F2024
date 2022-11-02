@@ -121,7 +121,7 @@
             "shapes":[
                 {
                     "type":"scene",
-                    "filename":"../scenes/top.json"
+                    "filename":"top.json"
                 }
 
             ]
