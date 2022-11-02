@@ -40,3 +40,6 @@
 [submodule "ClassExercises/Week9_Subdivision/CurveSubdivision"]
 	path = ClassExercises/Week9_Subdivision/CurveSubdivision
 	url = https://github.com/ursinus-cs476-f2022/CurveSubdivision.git
+[submodule "ClassExercises/Week10_ImplicitSurfaces/Week10_ImplicitSurfaces"]
+	path = ClassExercises/Week10_ImplicitSurfaces/Week10_ImplicitSurfaces
+	url = https://github.com/ursinus-cs476-f2022/Week10_ImplicitSurfaces.git
