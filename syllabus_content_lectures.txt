@@ -129,7 +129,7 @@ In this part of the course, we discuss how to use a computer to generate images 
 LECTURE
 Shaders And GLSL: Attributes, Varying, Uniforms
 
-<ul><li><a href = "Lectures/Module8_Shaders/slides.pdf">Overview Slides</li><li><a href = "https://en.wikibooks.org/wiki/GLSL_Programming">GLSL Programming WikiBook</a></li><li><a href = "https://www.shadertoy.com/">shadertoy.com</a></li></ul>
+<ul><li><a href = "ClassExercises/Week10_Shaders/slides.pdf">Overview Slides</li><li><a href = "https://en.wikibooks.org/wiki/GLSL_Programming">GLSL Programming WikiBook</a></li><li><a href = "https://www.shadertoy.com/">shadertoy.com</a></li></ul>
 LECTURE
 Textures, Basic Image Processing
 

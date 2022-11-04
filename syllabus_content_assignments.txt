@@ -67,13 +67,13 @@ Assignment 4 Required Tasks Due
 Assignment 4 Final Submission Deadline
 
 2022-11-06
-Mini Assignment 5: Shaders And Image Processing (Individual) Out
+<a href = "Assignments/HW5_Shaders">Assignment 5: Shaders And Image Processing</a> Out
 
 2022-11-07
 Mini Assignment 5 Due
 
 2022-11-13
-Assignment 6: Real Time Ray Tracing (Group) Out
+Assignment 6: Real Time Ray Tracing Out
 
 2022-11-14
 Assignment 6 Part 1 Due
