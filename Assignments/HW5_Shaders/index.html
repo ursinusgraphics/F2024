@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<!-- Header !-->
+	<head>
+		<title>Ursinus CS 476: Computer Graphics, Fall 2022</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../../assets/css/ie8.css" /><![endif]-->
+        <style>
+        .image_off, #home:hover .image_on{
+           display:none
+        }
+        .image_on, #home:hover .image_off{
+           display:block
+        }
+        </style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><strong>Ursinus CS 476: Computer Graphics, Fall 2022</strong></a>
+								</header>
+<!-- End Header !-->
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h2>Assignment 5: Shaders (40 Points)</h2>
+									</header>
+
+									<div id="page-content">
+										<h3>
+											<ul>
+												<li><a href = "#overview">Overview</a></li>
+                                                <li><a href = "#submission">Submission Instructions</a></li>
+                                                <li><a href = "#tasks">Tasks</a>
+                                                    <ul>
+                                                        <li><a href = "#risenshine">Task 1: Rise N' Shine (10 pts)</a></li>
+                                                        <li><a href = "#bilateral">Task 2: Bilateral Filtering (10 pts)</a></li>
+                                                        <li><a href = "#newton">Task 3: Newton Fractals (15 pts)</a></li>
+                                                        <li><a href = "#artcontest">Task 4: Art Contest (5 pts)</a></li>
+                                                    </ul>
+                                                </li>
+											</ul>
+										</h3>
+										
+										<h2><a name = "overview">Overview</a></h2>
+										<p>
+										The purpose of this assignment is to familiarize students with the the GLSL programming paradigms, particularly vertex and fragment shaders.  This will warm students up for the final assignment on ray tracing.
+										</p>
+										
+										<h3>Getting Started</h3>
+                                        <a href = "https://github.com/ursinus-cs476-f2022/HW5_Shaders/archive/refs/heads/master.zip">Click here</a> to download the repository of skeleton code for this assignment.
+
+										
+										<h2><a name = "submission">Submission Instructions</a></h2>
+										
+										You will submit all of your fragment shaders to Canvas when you are finished.  Also let me know what your name/pseudonym is for the art contest
+                                        
+                                        
+										<HR>
+
+                                            <h3>General Tips:</h3>
+                                            <ul>
+                                                <li><b>Write your shaders one step at a time!</b>  Debugging is very difficult because the only output is a color per pixel.  Try to use the colors to help you debug.</li>
+                                                <li>
+                                                    If your shader doesn't compile, drop into the debugging console to see why.  Syntax error messages will be printed there with line numbers in the shader.
+                                                </li>
+                                                <li>
+                                                    If you get an error like the following
+                                                    <p>
+                                                        <code>
+                                                        ERROR: 0:15: '+' : wrong operand types - no operation '+' exists that takes a left-hand operand of type 'const int' and a right operand of type 'mediump float' (or there is no acceptable conversion)
+                                                        </code>
+                                                    </p>
+                                                    Then it probably means you need to write a number as a decimal.  There is no explicit casting, so when GLSL sees <code>10</code>, for instance, it assumes it's an integer.  So you would need to write <code>10.0</code>
+                                                </li>
+
+                                            </ul>
+                                            
+
+                                            
+
+										<HR>
+
+                                        <h2><a name = "risenshine">Task 1: Rise N' Shine (10 Points)</a></h2>
+                                        
+                                        <p>
+                                            Create an animation of a sun that starts on the left hand side of the screen and moves in a semicircular arc across the screen to the right hand side.  When it's at the left or right side, the background should be dark.  When it reaches its peak at the center of the screen, it should be lighter.  When it reaches its minimum at the right hand side of the screen, it should restart on the left.  More specifically:
+                                            <ul>
+                                                <li>The uniform variable <code>uTime</code> holds the elapsed time since the beginning of the simulation.  You should make a circle with sines and cosines of this variable.</li>
+                                                <li>The green channel of the output pixel should be <h2> \[ e^{-dR^2/r^2} \] </h2> where <code>dR</code> is the distance of the pixel to the center of the disc, and <code>r</code> is the radius of the disc.</li>
+
+                                                <li>The red channel should be a sine wave that starts at zero and reaches its peak at 1, and then ends at zero before it's reset.</li>
+                                            </ul>
+                                        </p>
+                                        
+                                        
+                                        
+                                        <u>Code to write:</u> You only need to edit <b><code>circle.frag</code></b> for this task.  You do not need to touch the vertex shader or HTML file<BR><BR>
+                                        
+                                        <u>Gui Tester:</u> <b><code>circle.html</code></b><BR><BR>
+
+                                        <div id = "tips">
+                                            <b>Tips:</b>
+                                            <ul>
+                                            <li>The function for raising <code>e</code> to a power in GLSL is <code>exp</code></li>
+
+                                            <li>
+
+                                                    Be careful when defining vector in GLSL.  This is a valid line of code
+
+                                                    <BR>
+                                                        <code>
+                                                            vec2 x = vec2(1.0, 3.0);
+                                                        </code>
+                                                    <BR>
+
+                                                    This is not a valid line of code
+                                                    
+                                                    <BR>
+                                                        <code>
+                                                            vec2 x = (1.0, 3.0);
+                                                        </code>
+                                                    <BR>
+
+                                                    You will get some confusing error messages at compile time if you do the latter.
+
+
+                                            </li>
+
+                                            <li>Since you're only going through a semicircle and it resets each time, you will need to set a variable that's equal to the remainder of the uniform time divided by PI.  Since the modulus % operator doesn't exist, one way you can tackle this is to use the <code>floor()</code> function instead.  Though students last year came up with a variety of workarounds.</li>
+                                            </ul>
+                                        </div>
+
+                                        <h3>Screenshots of A Working Implementation</h3>
+
+                                        <table>
+                                            <tr>
+                                                <td><img src = "results/Shine1.png"></td>
+                                                <td><img src = "results/Shine2.png"></td>
+                                                <td><img src = "results/Shine3.png"></td>
+                                            </tr>
+                                        </table>
+
+
+
+
+
+                                        <h2><a name = "bilateral">Task 2: Bilateral Filter</a></h2>
+
+                                        <p>
+                                            We saw how taking an average of pixels nearby in a square window leads to a blurred version of an image.  Below is an example
+                                        </p>
+
+                                        <h3>Original</h3>
+                                        <img src = "results/RockyMountain.png">
+
+                                        <h3>Mean in a 13x13 Window</h3>
+                                        <img src = "results/RockyMountainMean.png">
+
+                                        <p>
+                                            One drawback of this in certain applications is that it blurs everything uniformly.  Particularly in applications where we want to get rid of certain types of random noise, this is not the best choice, as it removes the noise but also important high frequency image properties like edges.  For example, notice how blurry the edges between the mountains and the sky are.
+                                        </p>
+
+                                        <p>
+                                            It is possible to do a smarter, edge-aware blurring by doing a special kind of <i>weighted average</i> instead of a uniform average.  Let <b>x, y</b> be the location of a pixel that we want to blur, and <b>x2, y2</b> be the coordinates of another point nearby.  Let <code>I(x, y)</code> and <code>I(x2, y2)</code> be the RGB vectors of each of these pixels, and let <b>&#963<SUB>d</SUB></b> and <b>&#963<SUB>r</SUB></b> be two scale parameters.  Then the weight for the point at location <b>(x2, y2)</b> is as follows.
+                                        </p>
+
+                                        <h2>
+
+                                            \[ w(x_2, y_2) = e^{- \left( \frac{(x_2-x)^2 + (y_2-y)^2}{2 \sigma_d^2} \right) } * e^{- \left( \frac{||I(x, y) - I(x_2, y_2)||^2}{2 \sigma_r^2} \right) }  \]
+										</h2>
+										
+										<p>
+											To perform a bilateral filter, simply multiply each pixel <b>I(x2, y2)</b> by these weights over all (x2, y2) in some window, and then divide by the sum of the weights.  Below is an example of a bilateral filter with <b>&#963<SUB>d</SUB> = 0.05</b> and <b>&#963<SUB>r</SUB> = 0.2</b>.
+										</p>
+										<img src = "results/RockyMountainBilateral.png">
+
+										<p>
+											Notice how all of the edges (mountain/mountain boundaries, mountain/sky boundaries, road boundaries) are intact, but the finer details have been smoothed out.  This is precisely what the bilateral filter was meant to accomplish.  Not only can this help get rid of noise, but you see it also has an interesting cartoon-like aesthetic, so it can be used for artistic purposes as well.
+										</p>
+
+                                        <u>Code to write:</u> You only need to edit <b><code>bilateral.frag</code></b> for this task.  You do not need to touch the vertex shader or HTML file. The uniform <code>uSigmar</code> holds <b>&#963<SUB>r</SUB></b>, and the uniform <code>uSigmad</code> holds <b>&#963<SUB>d</SUB></b><BR><BR>
+                                        
+										<u>Gui Tester:</u> <b><code>bilateral.html</code></b><BR><BR>
+											
+
+
+										<div id = "tips">
+											<b>Tips:</b>
+											<ul>
+												<li>Recall that <b>||v||</b> is the magnitude of a vector <b>v</b>, and <b>||v||<SUP>2</SUP></b> is the squared magnitude of a vector <b>v</b>.  Also, recall that  <b>||v||<SUP>2</SUP></b> can be obtained as the dot product of <b>v</b> and itself.</li>
+												<li>
+													You should definitely declare at least two accumulator variables outside of your loop: one which stores the weighted vectors sum of the pixels in a neighborhood, and the other which stores the sum of the weights, which you should divide by after the loop.
+												</li>
+											</ul>
+										</div>
+
+										<b>NOTE for the curious:</b>
+										<p>
+											Shaders are particularly helpful for this filter is because, unlike embossing, the laplacian, and a weighted average whose weights only depend on location, the bilateral filter is <i>nonlinear</i>.  What this means is, unlike those other filters, it's not possible to apply a <a href = "https://en.wikipedia.org/wiki/Convolution_theorem">Fourier transform trick</a> to speed the bilateral filter up, so we're stuck actually slogging through the weighted mean calculation.  So it's very nice to be able to do this in parallel.
+										</p>
+
+
+                                        <h2><a name = "newton">Task 3: Newton Fractals (15 Points)</a></h2>
+                                        
+                                        <p>
+                                            A <a href = "https://en.wikipedia.org/wiki/Fractal">fractal</a> is an object which is "self-similar," possibly across an infinite amount of rescaling.  Roughly, what this means is if we zoom in on the shape, we will see the shape repeated.  Or in other words, the shape is made up of itself.  We saw in class that looking at iterations of the equation below from different initial complex numbers <code>z<SUB>0</SUB></code> 
+
+                                            <h3>
+                                                \[ z_{n+1} = z_n^2 + c \]
+											</h3>
+											
+											allowed us to generate a very fancy, beautiful fractal called the <a href = "../../ClassExercises/Week5_JuliaSets">Julia Set</a>.  In this exercise, you will explore another type of fractal known as a <a href = "https://en.wikipedia.org/wiki/Newton_fractal#/">Newton Fractal</a>.  
+										</p>
+
+										<p>
+											
+											Recall that the <a href = "https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra">fundamental theorem of algebra</a> states that every non-zero polynomial <b>f(z)</b> of degree <b>n</b> in a single complex variable has <b>n</b> complex roots, or numbers <b>z</b> where <b>f(z) = 0</b>.  For example, the polynomial
+
+											<h3>
+												\[ f(z) = z^3 - 1 \]
+											</h3>
+
+											Is of degree 3, and so it has 3 roots.  They happen to be as below (you can check with complex multiplication that these numbers indeed give 0 when you plug them in)
+
+												\[ z = \left\{ 1, -\frac{1}{2} + \frac{\sqrt{3}}{2} i, -\frac{1}{2} - \frac{\sqrt{3}}{2} i \right\} \]
+
+											But in general, it's pretty tough to figure out what the roots are.  That's where <a href = "https://en.wikipedia.org/wiki/Newton's_method">Newton's method</a> comes in.  If you have an initial guess <b>z0</b> of what a root might be, then you can perform iterations to update your guess, and it will get closer and closer to a true root if you are within a "basin of attraction."  In particular, the update rules for a polynomial equation <b>f(z)</b> are
+
+											<h3>
+												\[ z_{n+1} = z_n - \frac{f(z_n)}{f'(z_n)} \]
+											</h3>
+
+											where <b>f'</b> is the derivative of <b>f</b>, and the division is <a href = "https://mathworld.wolfram.com/ComplexDivision.html">complex division</a>.  What's really strange about the above procedure, however, is that which root you converge to can be <i>extremely</i> sensitive to your initial starting point in some places.  In particular, if you plot the roots in different colors at their starting point, then it will form a fractal!  Below are a few examples
+										</p>
+
+										<h3>z<SUP>3</SUP>-1</h3>
+										<img src = "results/zcube-1.gif">
+
+										<h3>z<SUP>10</SUP>-1</h3>
+										<img src = "results/z10-1.gif">
+
+										<h3>2z<SUP>7</SUP>-z<SUP>6</SUP>-1</h3>
+										<img src = "results/2z7-z6-1.gif">
+
+										<p>
+											Your job will be to implement Newton's method and to draw a pixel with a color according to the root it converges to.  The starting point at each pixel has been provided to you as <code>z</code>.  The coefficients of the polynomial you're solving are represented in the uniform array <code>uCoeffs</code>.
+										</p>
+
+										<p>
+											This is a task that you should definitely do in stages.  You will be editing the file <code>newton.frag</code> and viewing the results in <code>newton.html</code>.  A series of skeleton methods and comments have been provided to guide you through this.  As you're going along, recall that the number of iterations of the loop needs to be known at compile time, so you'll often want to loop up to the constant <code>MAX_DEGREE</code>, even if you're nowhere near that degree for what you're doing.
+										</p>
+
+										<h3>Step 1: Implement complex powers</h3>
+										<p>
+											The first thing you should do is fill in the method <code>pow</code> which raises a complex number <b>z</b> to a power of <b>n</b>.  Then, if you let 
+										</p>
+										<p>
+											<code>zret = pow(z, n)</code>
+										</p>
+										
+										<p>
+										and you color as 
+										</p>
+
+										<p>
+											<code>gl_FragColor = vec4(zret[0], zret[1], 0.5*(zret[0]+zret[1]), 1.0);</code>
+										</p>
+
+										<p>
+											Then you should get the following images for different powers.
+										</p>
+
+										<table>
+											<tr>
+												<td><h3>z<SUP>2</SUP></h3></td>
+												<td><h3>z<SUP>3</SUP></h3></td>
+												<td><h3>z<SUP>4</SUP></h3></td>
+											</tr>
+											<tr>
+												<td><img src = "results/z2.png"></td>
+												<td><img src = "results/z3.png"></td>
+												<td><img src = "results/z4.png"></td>
+											</tr>
+										</table>
+
+										<p>
+											<b>Do not proceed until these images look right!</b> 
+										</p>
+
+										<h3>Step 2: Implement <code>polynomial</code> and <code>polynomialDeriv</code> methods</h3>
+										<p>
+											Now that you have the <code>pow</code> method implemented for complex powers, you can evaluate a complex polynomial by adding to together all of its powers scaled by the appropriate coefficients.  You can also evaluate its derivative according to the <a href = "https://en.wikipedia.org/wiki/Power_rule">power rule</a>.  More information is provided in the comments.
+										</p>
+
+										<h3>Step 3: Complex Division</h3>
+										<p>
+											Fill in the <code>complexDiv</code> function to perform the division of two complex numbers.  Have a look at the <a href = "https://mathworld.wolfram.com/ComplexDivision.html">formula on Wolfram Mathworld</a>.
+										</p>
+
+										<h3>Step 4: Putting It All Together</h3>
+										<p>
+											Now you're ready to write newton's method finally.  Replace the line <code>z = pow(z, 2)</code> instead with a loop that applies <code>MAX_ITERS</code> iterations of Newton's method, using the functions that you wrote above
+										</p>
+
+										<h3>
+											\[ z_{n+1} = z_n - \frac{f(z_n)}{f'(z_n)} \]
+										</h3>
+
+										<p>
+											You can color the root you come up with using the code provided:
+										</p>
+
+										<code>
+											z = (z + 1.0)/2.0;
+										</code><BR>
+										<code>
+											gl_FragColor = vec4(z[0], z[1], 0.5*(z[0]+z[1]), 1.0);
+										</code>
+
+										<p>
+											Have fun, and enjoy the beautiful pictures!
+										</p>
+                                        
+
+
+                                    <h2><a name = "artcontest">Task 4: Art Contest (5 Points)</a></h2>        
+
+                                        <p>
+                                            Do something creative with shaders!  The sky is the limit here!  For instance, think about how you might combine textures with some of the other effects we saw.  Animations would be particularly cool.  The winner will receive 5 extra credit points.  You may do a buddy submission for the art contest as well, but I will judge them a little bit harder.
+                                        </p>
+
+                                    </div>
+						</div>
+					</div>
+
+					<!--LaTeX in Javascript!-->
+					<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+					<!--Syntax highlighting in Javascript!-->
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
+					<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+					<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+					<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+                                        <li>
+											<span class="opener">General</span>
+											<ul>
+												<li><a href = "../../index.html#overview">Overview</a></li>
+												<li><a href = "../../index.html#logistics">Technology Logistics</a></li>
+												<li><a href = "../../index.html#deliverables">Deliverables</a>
+													<ul>
+														<li><a href = "../../index.html#debugging">Debugging Principles</a></li>
+													</ul>
+												</li>
+												<li><a href = "../../index.html#grading">Grading</a></li>
+												<li><a href = "../../index.html#environment">Classroom Environment</a></li>
+												<li><a href = "../../index.html#participation">Participation</a></li>
+												<li><a href = "../../index.html#collaboration">Collaboration Policy</a></li>
+												<li><a href = "../../index.html#other">Other Resources / Policies</a></li>
+											</ul>
+										</li>
+										<li><a href = "../../Software/index.html">Software</a></li>
+										<li><a href = "../../index.html#schedule">Schedule</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li>
+													<li><a href = "../../Assignments/HW1_GeomPrimitives/index.html">HW1: Geometric Primitives</a></li>
+													<ul>
+														
+                                                    </ul>
+												</li>
+												<li><a href = "../../Assignments/HW2_SceneTrees/index.html">HW2: Scene Trees</a>
+												<ul>
+													<li>
+														<a href = "../../Assignments/HW2_SceneTrees/ArtContest/index.html">Art Contest</a>
+													</li>
+												</ul></li>
+												<li>
+													<a href = "../../Assignments/HW3a_EulerAngles/index.html">HW3a: Euler Angles</a>
+												</li>
+												<li>
+													<a href = "../../Assignments/HW3_CharacterAnimation/index.html">HW3: Character Animation</a>
+												</li>
+												<li>
+													<a href = "../../Assignments/HW4_PolygonMeshProcessing/index.html">HW4: Polygon Mesh Processing</a>
+												</li>
+												<li>
+													<a href = "../../Assignments/HW5_Shaders/index.html">HW5: Shaders And Image Processing</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Class Exercises</span>
+											<ul>
+												<li>
+													<ul>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Javascript1">Week 1: Javascript Module</a>
+														</li>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Vectors1">Week 1: Vector Basics And Dot Product Module</a>
+														</li>
+														<li><a href = "../../Lectures/2_VectorsIntro/index.html">Week 1: Class Notes on Euclidean Vectors</a></li>
+														<li><a href = "../../ClassExercises/Week1_JuliaSets/index.html">Week 1: Julia Sets Exercise</a></li>
+														<li><a href = "../../Materials/BarycentricExploration/WeightedAverage.html">Week 2: Barycentric Etch-A-Sketch</a></li>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/LinesAndPlanes/Video1">Week 2: Lines And Planes Module</a>
+														</li>
+														<li><a href = "../../ClassExercises/Week3_RayIntersections/index.html">Week 3: Ray Intersection Notes</a></li>
+														<li><a href = "../../Materials/ggslac/viewers/MatrixAnim.html">Week 3: Matrix Multiplications And Compositions Widget</a></li>
+														<li><a href = "https://ursinus-cs476-f2022.github.io/Modules/Scenes/Video1">Week 4: 3D Transformations And Scenes Module</a></li>
+														<li><a href = "../../Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation/forward.html">Week 4: Forward Kinematics Demo</a></li>
+														<li><a href = "https://ursinus-cs476-f2022.github.io/Modules/OrientationModule/Video">Week 8: Orientation Module</a></li>
+														<li>
+															<a href = "../../../CurveSubdivision">Week 9: Curve Subdivision</a>
+														</li>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Levelset/Video1">Week 10: Heightmaps And Levelsets Module</a>
+														</li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Optional Fall 2020 Modules</span>
+											<ul>
+												<li>
+													<ul>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Overview">Module 1: Javascript</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Vectors1">Module 2: Vectors And Dot Products</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/Vectors1">Module 3: Projections, Cross Product, Normals</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/LinesAndPlanes1">Module 4: Lines, Rays, And Planes</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module5/RayIntersectPlane">Module 5: Ray Intersect Plane/Triangle/Sphere</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module6/Video1">Module 6: 2D Matrices Definition, Composition, And Inverses</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module7/Video1">Module 7: 3D Transformations And Scene Trees</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module8/Video1">Module 8: GLSL And Shaders</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module9/Video1">Module 9: Blobby Shaders, Complex Numbers, Fractals</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/Video1">Module 10: Local Illumination via Gouraud Shading</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module11/Video1">Module 11: Ray Casting</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module12/Video1">Module 12: Global Illumination Part 1</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module13/Video1">Module 13: Object-First Viewing Projections</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module14/Video1">Module 14: Topological Properties of Manifold Meshes</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module15/Video1">Module 15: Heightmaps, Levelsets, And Marching Squares</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><a href = "../../FinalProject/index.html">Final Project</a></li>
+									</ul>
+								</nav>
+
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; <a href = "http://www.ctralie.com">Christopher J. Tralie</a>. All rights reserved.  Contact chris.tralie@gmail.com. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+<!-- End Sidebar !-->
+
+<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/skel.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../../assets/js/main.js"></script>
+<!-- End Scripts -->
+	</body>
+</html>
