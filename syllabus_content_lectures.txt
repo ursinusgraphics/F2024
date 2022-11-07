@@ -133,7 +133,7 @@ Shaders And GLSL: Attributes, Varying, Uniforms
 LECTURE
 Textures, Basic Image Processing
 
-<ul><li><a href = "ClassExercises/Week5_EmbossMedian">Embossing And Median Filtering Class Exercise</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Mozilla developer notes on WebGL Texture Mapping</li><li><a href = "https://webglfundamentals.org/webgl/lessons/webgl-3d-textures.html">WebGL Fundamentals Notes on Texture Maps And Mipmapping</a></li></ul>
+<ul><li><a href = "ClassExercises/Week11_EmbossMedian">Embossing And Median Filtering Class Exercise</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Mozilla developer notes on WebGL Texture Mapping</li><li><a href = "https://webglfundamentals.org/webgl/lessons/webgl-3d-textures.html">WebGL Fundamentals Notes on Texture Maps And Mipmapping</a></li></ul>
 LECTURE
 Class Exercise: Julia Sets with Shaders
 
