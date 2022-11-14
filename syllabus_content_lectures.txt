@@ -131,17 +131,21 @@ Shaders And GLSL: Attributes, Varying, Uniforms
 
 <ul><li><a href = "ClassExercises/Week10_Shaders/slides.pdf">Overview Slides</li><li><a href = "https://en.wikibooks.org/wiki/GLSL_Programming">GLSL Programming WikiBook</a></li><li><a href = "https://www.shadertoy.com/">shadertoy.com</a></li></ul>
 LECTURE
-Textures, Basic Image Processing
+Animations with Shaders, Textures
 
-<ul><li><a href = "ClassExercises/Week11_EmbossMedian">Embossing And Median Filtering Class Exercise</a></li><li><a href = "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Mozilla developer notes on WebGL Texture Mapping</li><li><a href = "https://webglfundamentals.org/webgl/lessons/webgl-3d-textures.html">WebGL Fundamentals Notes on Texture Maps And Mipmapping</a></li></ul>
+<ul><li><a href = "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Mozilla developer notes on WebGL Texture Mapping</li><li><a href = "https://webglfundamentals.org/webgl/lessons/webgl-3d-textures.html">WebGL Fundamentals Notes on Texture Maps And Mipmapping</a></li></ul>
 LECTURE
-Class Exercise: Julia Sets with Shaders
+Image Processing with Shaders
 
+<ul><li><a href = "ClassExercises/Week11_EmbossMedian">Embossing And Median Filtering Class Exercise</a></li></ul>
+LECTURE
+Complex Numbers And Shaders: Julia Sets And Mandelbrot Sets
 
+<ul><li><a href = "ClassExercises/Week11_JuliaSets">Julia Sets Class Exercise</a></li></ul>
 LECTURE
 Intro To Ray Tracing: 3D Perspectives, Ray Casting, Sphere Normals
 
-<ul><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
+
 LECTURE
 Ray Instancing, Normal Matrices
 
@@ -161,7 +165,7 @@ Global Illumination: Specular Reflections, Refraction/Transmission
 LECTURE
 Monte Carlo Path Tracing
 
-
+<ul><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
 LECTURE
 Object-first rendering: The Camera Matrix, Perspective/Viewing matrices, Depth Sorting
 
@@ -171,13 +175,9 @@ Cel Shading / Toon Shading, Hidden Surface Removal/Culling
 
 <ul><li><a href = "ClassExercises/Week9_CelShading/CelShading.zip">Cel shading code from class</a></li><li><a href = "https://en.wikipedia.org/wiki/Cel_shading">Wikipedia Page on Cel Shading</a></li><li><a href = "https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S17/final_projects/amy_toshi.pdf">RPI Final Project on Ray Tracing Cel Shading</a></li></ul>
 LECTURE
-Object-First Rendering: Bump Maps, Displacement Maps
+Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps
 
-<ul><li><a href = "https://docs.google.com/presentation/d/1nN94a5gkN7BladB9E5SAcvvQCajF8xSdC_-sytOyh7E/edit?usp=sharing">Slides from today</a></li></ul>
-LECTURE
-Shadow Maps
-
-<ul><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo</a></li></ul>
+<ul><li><a href = "https://docs.google.com/presentation/d/1nN94a5gkN7BladB9E5SAcvvQCajF8xSdC_-sytOyh7E/edit?usp=sharing">Slides from today</a></li><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo</a></li></ul>
 LECTURE
 Virtual Reality, Augmented Reality
 
