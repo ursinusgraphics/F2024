@@ -73,16 +73,13 @@ Assignment 4 Final Submission Deadline
 Assignment 5 Due
 
 2022-11-15
-Assignment 6: Real Time Ray Tracing Out
-
-2022-11-15
 <a href = "https://ursinus-cs476-f2022.github.io/Modules/RayCasting/Video1">Ray Casting Module</a> Due Before Class
 
 2022-11-16
-Assignment 6 Part 1 Due
+<HR><a href = "Assignments/HW6_RayTracer">Assignment 6: Real Time Ray Tracing</a> Out
 
-2022-11-28
-Assignment 6 Part 2 Due
+2022-11-16
+Assignment 6 Due
 
 2022-12-08
 Final Project Proposal Due

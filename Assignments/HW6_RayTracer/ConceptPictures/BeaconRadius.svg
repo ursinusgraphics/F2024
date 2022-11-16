@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="172.62057mm"
+   height="166.69431mm"
+   viewBox="0 0 172.62057 166.69431"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="BeaconRadius.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker940"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path938"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker904"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path902" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker923"
+       style="overflow:visible;"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path921"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="301.0114"
+     inkscape:cy="343.43085"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1647"
+     inkscape:window-height="809"
+     inkscape:window-x="2069"
+     inkscape:window-y="129"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-15.88259,-6.7361863)">
+    <ellipse
+       style="fill:none;fill-opacity:0.47058824;stroke:#000000;stroke-width:1.20029473;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path815"
+       cx="42.257019"
+       cy="72.738953"
+       rx="18.17078"
+       ry="17.00246" />
+    <rect
+       style="fill:none;fill-opacity:0.47058824;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect817"
+       width="18.520834"
+       height="16.252975"
+       x="58.62429"
+       y="108.3755" />
+    <circle
+       style="fill:none;fill-opacity:0.47058824;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path819"
+       cx="74.428879"
+       cy="164.04314"
+       r="2.8348215" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 44.757753,173.30355 116.95121,152.13688"
+       id="path821"
+       inkscape:connector-curvature="0" />
+    <circle
+       style="fill:#000000;fill-opacity:0.47058824;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path819-1"
+       cx="41.426777"
+       cy="73.028137"
+       r="2.8348215" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="36.883194"
+       y="78.640793"
+       id="text844"><tspan
+         sodipodi:role="line"
+         id="tspan842"
+         x="36.883194"
+         y="78.640793"
+         style="stroke-width:0.26458332">light.pos</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.78237152px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.36139822"
+       x="20.257523"
+       y="31.362061"
+       id="text850"
+       transform="scale(0.98734948,1.0128126)"><tspan
+         sodipodi:role="line"
+         id="tspan848"
+         x="20.257523"
+         y="31.362061"
+         style="stroke-width:0.36139822">dv = (dvx, dvy, dvz)</tspan><tspan
+         sodipodi:role="line"
+         x="20.257523"
+         y="38.590027"
+         style="stroke-width:0.36139822"
+         id="tspan852">dv = beaconRadius*normalize(dv)</tspan><tspan
+         sodipodi:role="line"
+         x="20.257523"
+         y="45.817989"
+         style="stroke-width:0.36139822"
+         id="tspan860">dv = dv*(random number between 0 and 1)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.84783554px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.36548972"
+       x="19.660982"
+       y="53.236443"
+       id="text856"
+       transform="scale(0.99278228,1.0072702)"><tspan
+         sodipodi:role="line"
+         id="tspan854"
+         x="19.660982"
+         y="53.236443"
+         style="stroke-width:0.36548972">lightPerturbPos = light.pos + dv</tspan></text>
+    <circle
+       style="fill:#000000;fill-opacity:0.47058824;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path819-1-7"
+       cx="30.936445"
+       cy="71.424515"
+       r="2.8348215" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.82553005px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.36409563"
+       x="14.999403"
+       y="11.485231"
+       id="text918"
+       transform="scale(1.0479511,0.95424299)"><tspan
+         sodipodi:role="line"
+         id="tspan916"
+         x="14.999403"
+         y="11.485231"
+         style="stroke-width:0.36409563">Randomly sampling points on the sphere, assuming that</tspan><tspan
+         sodipodi:role="line"
+         x="14.999403"
+         y="18.767143"
+         style="stroke-width:0.36409563"
+         id="tspan920">the light is a sphere, gives soft shadows</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="34.056923"
+       y="68.594025"
+       id="text840"><tspan
+         sodipodi:role="line"
+         id="tspan838"
+         x="34.056923"
+         y="68.594025"
+         style="stroke-width:0.26458332">dv</tspan></text>
+    <circle
+       style="fill:#000000;fill-opacity:0.47058824;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path819-1-7-9"
+       cx="51.563072"
+       cy="70.063995"
+       r="2.8348215" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker923);stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 75.750963,164.87786 56.507559,70.531722"
+       id="path913"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.47467089px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.40466693"
+       x="90.733543"
+       y="83.059853"
+       id="text963"
+       transform="scale(0.92561037,1.0803682)"><tspan
+         sodipodi:role="line"
+         id="tspan961"
+         x="90.733543"
+         y="83.059853"
+         style="stroke-width:0.40466693">v = light.pos + dv - intersect.p</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:3.8;stroke-dasharray:none;marker-end:url(#marker904)"
+       d="M 40.805473,73.338052 30.916501,72.135341"
+       id="path894"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker940)"
+       d="m 42.141821,73.204419 9.421252,-3.87541"
+       id="path930"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

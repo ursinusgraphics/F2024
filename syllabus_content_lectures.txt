@@ -147,7 +147,7 @@ Intro To Ray Tracing: 3D Perspectives, Ray Casting, Sphere Normals
 
 
 LECTURE
-Ray Instancing, Normal Matrices
+rayIntersectScene, Ray Instancing, Normal Matrices
 
 
 LECTURE

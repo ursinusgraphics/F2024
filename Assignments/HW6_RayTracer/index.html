@@ -1,0 +1,893 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<!-- Header !-->
+	<head>
+		<title>Ursinus CS 476: Computer Graphics, Fall 2022</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../../assets/css/ie8.css" /><![endif]-->
+        <style>
+        .image_off, #home:hover .image_on{
+           display:none
+        }
+        .image_on, #home:hover .image_off{
+           display:block
+        }
+        </style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><strong>Ursinus CS 476: Computer Graphics, Fall 2022</strong></a>
+								</header>
+<!-- End Header !-->
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+                                        <h2>Assignment 6: Ray Tracing (120 Points)</h2>
+                                        <h3>Due Wednesday 11/11/2020 at 11:59PM</h3>
+                                        <h3>You may work with a <a href = "../../index.html#buddy">buddy</a> on this assignment</h3>
+                                    </header>
+
+									<div id="page-content">
+										<h3>
+											<ul>
+												<li><a href = "#overview">Overview</a></li>
+                                                <li><a href = "#submission">Submission Instructions</a></li>
+                                                <li><a href = "#part1">Part 1: Ray Casting / Ray Object Intersections: Required Tasks</a>
+                                                    <ul>
+                                                        <li><a href = "#perspective">Perspective Ray Casting (10 Points)</a></li>
+                                                        <li><a href = "#raytriangle">Ray Intersect Triangle (10 pts)</a></li>
+                                                        <li><a href = "#raysphere">Ray Intersect Sphere (10 pts)</a></li>
+                                                        <li><a href = "#raybox">Ray Intersect Axis-Aligned Box (10 pts)</a></li>
+                                                        <li><a href = "#instancing">Ray Instancing for Transformations (10 Points)</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href = "#part1optional">Part 1: Ray Casting / Ray Object Intersections: Optional Tasks</a>
+                                                    <ul>
+                                                        <li><a href = "#orthographic">Orthographic Ray Casting (5 pts)</a></li>
+                                                        <li><a href = "#raycylinder">Ray Intersect Cylinder (10 pts)</a></li>
+                                                        <li><a href = "#raycone">Ray Intersect Cone (10 pts)</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href = "#part2">Part 2: Illumination/Materials: Required Tasks</a>
+                                                    <ul>
+                                                        <li><a href = "#blinnphong">Blinn-Phong Shading (15 Points)</a></li>
+                                                        <li><a href = "#shadows">Point Light Shadows (10 Points)</a></li>
+                                                        <li><a href = "#reflections">Mirror Material Reflections (10 Points)</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href = "#part2optional">Part 2: Illumination/Materials: Optional Tasks</a>
+                                                    <ul>
+                                                        <li><a href = "#spotlights">Spot Lights (10 Points)</a></li>
+                                                        <li><a href = "#boxcheckerboard">Box Checkerboard Pattern (10 Points)</a></li>
+                                                        <li><a href = "#spherecheckerboard">Sphere Checkerboard Pattern (10 Points)</a></li>
+                                                        <li><a href = "#softshadows">Soft Shadows (15 Points)</a></li>
+                                                        <li><a href = "#refraction">Transmission with Refraction (20 Points)</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href = "#part3">Part 3: Other Optinal Tasks</a>
+                                                    <ul>
+                                                        <li><a href = "#antialiasing">Antialiasing (15 Points)</a></li>
+                                                        <li><a href = "#somethingelse">Something Else (5-20 Points)</a></li>
+                                                        <li><a href = "#artcontest">Art Contest Submission (5 Points)</a></li>
+                                                    </ul>
+                                                </li>
+											</ul>
+										</h3>
+										
+										<h2><a name = "overview">Overview</a></h2>
+										<p>
+										This assignment will walk students through the construction of a real time ray tracer using a mix of Javascript and GLSL.  All of the assignments we have done so far have built up to this point!  Since we are using GLSL, all rays are traced in parallel, which makes this <i>substantially faster</i> than a CPU implementation of ray tracing. (NOTE: This was heavily inspired by a <a href = "https://www.cs.princeton.edu/courses/archive/spring19/cos426/assign/A3/">recent assignment</a> in Princeton's computer graphics class, which is a modern version of the assignment I did a decade ago in the same class).  You should expect this assignment to be very challenging and painful at times, but it is also <i>incredibly</i> rewarding.  So stick with it!
+                                        </p>
+                                        
+                                        <h3>Scoring</h3>
+                                        <p>
+                                            This assignment is out of <b>120 points</b>.  85 of these points are <b>required tasks</b> that everyone has to do.  Beyond that, there are 100 points up for grabs which you can choose from to pursue your interests and "make the assignment your own."  Any points that you get beyond 35 will apply to extra credit at a rate of 1 point, 4/5 points, 4/5^2 points, 4/5^3 points, etc.  The required points and the optional points will be graded independently.  So, for instance, if you get an 80/85 on the required points and you earn 50 optional points, then your final score will be <b>80 + 35 + 4.8 = 119.8/120</b> points, which is quite a formidable score!
+                                        </p>
+
+                                        <h3><a name = "collaboration">Collaboration</a></h3>
+                                        <p>
+                                            Since this is a very intense assignment, you are allowed to work very closely with other students in the class in a <a href = "../../index.html#buddy">buddy</a> capacity, and that permits looking at each others' code as you're debugging.  <b>But I expect each student to submit their own code.</b>  Please indicate to me on your README who your buddies were.
+                                        </p>
+
+										<h3>Getting Started</h3>
+										<p>
+										
+                                        </p>
+                                        
+                                        <ol>
+                                            <li>
+                                                <a href = "RayTracerSkeleton.zip">Click here</a> to download the skeleton code for this assignment.
+                                                <p>
+                                                <b>NOTE:</b>  You will only need to edit <code>raytracer.frag</code> to complete all of the tasks in the assignment.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                You should definitely work on this using the live web server in VS Code.  The entry point is the file <code><a href = "Assignment4_RayTracer/RayViewer.html">RayViewer.html</a></code>
+                                            </li>
+                                        </ol>
+
+
+                                        <h3>Debugging GUI</h3>
+                                        <p>
+                                        The main file where you view the results of your ray tracer is <code><a href = "Assignment4_RayTracer/RayViewer.html">RayViewer.html</a></code>.  In this file, you can switch back between your ray tracer and the standard object-first shader with Lambertian and specular Blinn-Phong shading.  You can use the object-first view to help you debug.  The GUI also allows you to change the positions and colors of lights and cameras real time.  Use this to your advantage to probe your program as you're debugging and to generate the most aesthetically pleasing scene if you plan to submit to the art contest.  Below is a screenshot of the object-first view.
+                                        </p>
+                                            
+                                            <img src = "ObjectFirstView.png">
+                                        
+                                        <p>
+                                        And below is an example of a ray tracer with all of the required tasks and some of the optional tasks:</p>
+                                            <img src = "RayTracingView.png">
+                                        
+                                            
+                                            <h3>Scene Graphs:</h3>
+                                            <p>
+                                            This assignment uses JSON scene graphs to specify virtual worlds.  Please refer to <a href = "../HW2_SceneTrees/">assignment 2</a> for more details on the syntax.  By default, the scene graph <code>sample-scene.json</code> (pictured above) is the scene that's loaded.  This has all features that you would want to show across all required tasks, and most features you would want to show for the optional tasks (except for cylinders and cones).  Have a look at that file for example syntax.  Note that can also edit the parameters of the lights and materials real time in the debugging GUI.
+    
+                                            
+
+                                            </p>
+
+
+
+                                                <h3>General Tips:</h3>
+                                                <ul>
+                                                    <li><b>Write your shaders one step at a time!</b>  Debugging is very difficult because the only output is a color per pixel.  Try to use the colors to help you debug.  Some more specific suggestions will be provided in each task.</li>
+                                                    <li>
+                                                        If your shader doesn't compile, drop into the debugging console to see why.  Syntax error messages will be printed there with line numbers in the shader.  Step 1 is definitely just getting things to compile!
+                                                    </li>
+                                                    <li>
+                                                        As your shader gets longer, the compile time may increase.  This will be particularly noticeable when you use more reflections.  So keep the number of reflections to a minimum when you start off.
+                                                    </li>
+                                                    <li>
+                                                        If your shader doesn't update, you may need to do a "hard refresh" and reset your cache.  This seems to happen particularly in Google Chrome.  The keyboard shortcut for this is <code>CTRL+SHIFT+R</code>
+                                                    </li>
+                                                    <li>
+                                                        When you write a loop, you cannot have a variable number of iterations.  So you will have to have a maximum number of iterations, and then <code>break</code> when appropriate (you can use break here!).  I have tried to take care of most of these kinds of loops for you, but if you decide to do loops in one of the tasks, be mindful of this.
+                                                    </li>
+                                                    <li>
+                                                        If you get an error like the following
+                                                        <p>
+                                                            <code>
+                                                            ERROR: 0:15: '+' : wrong operand types - no operation '+' exists that takes a left-hand operand of type 'const int' and a right operand of type 'mediump float' (or there is no acceptable conversion)
+                                                            </code>
+                                                        </p>
+                                                        Then it probably means you need to write a number as a decimal.  There is no explicit casting, so when GLSL sees <code>10</code>, for instance, it assumes it's an integer.  So you would need to write <code>10.0</code>
+                                                    </li>
+    
+                                                </ul>
+
+										<h2><a name = "submission">Submission Instructions</a></h2>
+										
+										<p>
+                                            You will submit all of your <code>raytracer.frag</code> code to Canvas when you are finished, along with any screenshots or videos for the art contest if you did that. Let me know a title and your name/pseudonym for the art contest.
+                                        </p> 
+                                            
+
+                                            
+
+										<HR>
+                                        <h2><a name = "part1">Part 1: Ray Casting / Ray Object Intersections: Required Tasks</a></h2>
+
+                                        <p>
+                                            <b>NOTE: </b> By default, once you finish these tasks, the shapes whose intersects you implement properly should show up as pixels colored by the normal of the intersection.  You will do more advanced shading based on lights, shadows, reflections, and transmissions in <a href = "#part2">part 2</a>.  But you can compare the normals here to the normals you get in the object-first viewer by switching to the normal shader there.
+                                        </p>
+
+                                        <h3><a name = "perspective">Perspective Ray Casting (10 Points)</a></h3>
+                                        
+                                        <p>
+                                            Given the uniform variables below that describe the camera and the attribute <code>vec2 v_position</code>, construct a ray through the scene corresponding to this fragment, assuming a perspective camera
+                                        <p>
+
+                                        <p>
+                                            <u>Camera Uniforms Passed from RayViewer.html:</u>
+
+                                            <ul>
+                                                <li><code>vec3 eye</code>: The origin of the camera</li>
+                                                <li><code>vec3 right</code>: The right direction of the camera</li>
+                                                <li><code>vec3 up</code>: The up direction of the camera</li>
+                                                <li><code>float fovx</code>: The field of view in the right/towards plane</li>
+                                                <li><code>float fovy</code>: The field of view in the up/towards plane</li>
+                                            </ul>
+                                        </p>
+                                        
+                                        
+                                        <p>
+                                        <h4>Code To Write</h4> You should fill in the appropriate section of the <code>getRay()</code> function.
+                                        </p>
+
+
+										<div id = "tips">
+											<h4>Tips</h4>
+											<ul>
+                                            <li>You are given the <code>right</code> vector and the <code>up</code> vector.  Use an appropriate cross product (the <code><a href = "https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/cross.xhtml">cross</a></code> function in GLSL) to get the <code>towards</code> vector, via the right hand rule.  You will know very quickly if you got it backwards...</li>
+                                            
+                                            <li>Once you start to intersect rays with objects in the scene, things will be drawn to the ray canvas.  At this point, if you've done this task correctly, <i>the shapes should show up at exactly the same positions on the screen as they do on the object-first canvas</i>.  So if you made a mistake, you will see the shapes move when you switch back and forth between the two canvases.</li>
+											</ul>
+										</div>
+
+
+
+                                        <BR><BR><h3><a name = "raytriangle">Ray Intersect Triangle (10 Points)</a></h3>
+                                        
+                                        <p>
+                                        Given a ray and three points spanning a triangle, find the intersection point and normal of the intersection of the ray with that triangle
+                                        </p>
+
+                                        <p>
+                                            <b>NOTE: </b> In the default scene, there are two square that are drawn.  Every polygon in a scene is divided up into triangles via a <a href = "https://en.wikipedia.org/wiki/Triangle_fan">triangle fan</a>, so these squares will show up once you finish this task.
+                                        </p>
+                                        
+                                        <p>
+                                        <h4>Code To Write</h4> You should fill in the appropriate section of the <code>rayIntersectTriangle(...)</code> function.  You will return <code>t</code>, the ray parameter of intersection.  You will also return the intersection point and normal by reference (an "out" variable in GLSL).  See the parameters for more details.  You only need to use <code>MInv</code> and <code>N</code> when you get to the <a href = "#instancing">transformation instancing task</a>.
+                                        </p>
+
+
+										<div id = "tips">
+                                            <h4>Tips</h4>
+                                            <ul>
+                                            <li>A function to intersect a ray with a plane, <code>rayIntersectPlane(...)</code> is provided to you as an example, and you should definitely make use of this as a subroutine in your implementation.</li>
+                                            
+                                            <li>It might be helpful to make a function that returns the area of a triangle spanned by three points, and to use the area ratio method you implemented in <a href = "../Indy1_GeomPrimitives/index.html#barycentric">mini assignment 1</a> to check that the plane intersection point is inside of the triangle.</li>
+                                            </ul>
+                                        </div>
+
+                                        <p>
+                                            Below are some screenshots from a working implementation, using color by normal (there are 4 triangles in view: two for each rectangle)<BR>
+
+                                            <table>
+                                                <tr><td><h3>Object-First View</h3></td></tr>
+                                                <tr><td><img src = "ObjectFirstTriangle.png"></td></tr>
+                                                <tr><td><h3>Ray View with color by normal</h3></td></tr>
+                                                <tr><td><img src = "RayTracingTriangle.png"></td></tr>
+                                            </table>
+                                        </p>
+
+
+
+                                        <BR><BR><h3><a name = "raysphere">Ray Intersect Sphere (10 Points)</a></h3>
+                                        
+                                            <p>
+                                            Given a ray and a sphere, find the intersection point and normal of the intersection of the ray with that sphere
+                                            </p>
+                                            
+                                            <p>
+                                            <h4>Code To Write</h4> You should fill in the appropriate section of the <code>rayIntersectSphere(...)</code> function.  You will return <code>t</code>, the ray parameter of intersection.  You will also return the intersection point and normal by reference (an "out" variable in GLSL).  See the parameters for more details.  You only need to use <code>MInv</code> and <code>N</code> when you get to the <a href = "#instancing">transformation instancing task</a>.
+                                            </p>
+    
+    
+                                            <div id = "tips">
+                                                <h4>Tips</h4>
+                                                <ul>
+                                                <li>This is exactly the same as the <a href = "#raysphere">ray intersect sphere task from mini assignment 1</a>.  The only difference is that you also need to return the normal of the intersection, and you're only ever returning one point of intersection, which is the closest (so the nonnegative root with the smallest <b>t</b> value.</li>
+                                                </ul>
+                                            </div>
+
+                                            <p>
+                                                Below are some screenshots from a working implementation, using color by normal (NOTE: <a href = "#instancing">instancing</a> has also been implemented for the left and middle spheres)</a><BR>
+    
+                                                <table>
+                                                    <tr><td><h3>Object-First View</h3></td></tr>
+                                                    <tr><td><img src = "ObjectFirstSphere.png"></td></tr>
+                                                    <tr><td><h3>Ray View with color by normal</h3></td></tr>
+                                                    <tr><td><img src = "RayTracingSphere.png"></td></tr>
+                                                </table>
+                                            </p>
+
+
+                                            <BR><BR><h3><a name = "raybox">Ray Intersect Axis-Aligned Box (10 Points)</a></h3>
+                                        
+                                                <p>
+                                                Given a ray and an axis-aligned box with a particular center/length/width/height, find the intersection point and normal of the intersection of the ray with that box
+                                                </p>
+                                                
+                                                <p>
+                                                <h4>Code To Write</h4> You should fill in the appropriate section of the <code>rayIntersectBox(...)</code> function.  You will return <code>t</code>, the ray parameter of intersection.  You will also return the intersection point and normal by reference (an "out" variable in GLSL).  See the parameters for more details.  You only need to use <code>MInv</code> and <code>N</code> when you get to the <a href = "#instancing">transformation instancing task</a>.
+                                                </p>
+        
+        
+                                                <div id = "tips">
+                                                    <h4>Tips</h4>
+                                                    <ul>
+                                                    <li>The fact that this is intersecting a ray with an <i>axis-aligned</i> box makes this much easier.  You should intersect with the 6 faces.  You can use the <code>rayIntersectPlane</code> function to help if you'd like.</li>
+                                                    <li>It may be easy to add code to handle one face at a time.  You will then see the box come into view one piece at a time.</li>
+                                                    <li>
+                                                            Since this is a convex 3D surface, a ray may intersect two faces.  Make sure you're returning the intersection of the closest face to the ray.  
+                                                    </li>
+                                                    </ul>
+                                                </div>
+
+
+                                                <p>
+                                                        Below are some screenshots from a working implementation, using color by normal (NOTE: <a href = "#instancing">instancing</a> has been implemented for the right box, since it has been rotated and is no longer axis-aligned)<BR>
+            
+                                                        <table>
+                                                            <tr><td><h3>Object-First View</h3></td></tr>
+                                                            <tr><td><img src = "ObjectFirstBox.png"></td></tr>
+                                                            <tr><td><h3>Ray View with color by normal</h3></td></tr>
+                                                            <tr><td><img src = "RayTracingBox.png"></td></tr>
+                                                        </table>
+                                                    </p>
+
+
+                                                <BR><BR><h3><a name = "instancing">Ray Instancing for Transformations (10 Points)</a></h3>
+                                        
+                                                    <p>
+                                                    Take into consideration a transformation matrix <b>M</b> that should be applied to an object before viewing.  In every <code>rayIntersectX(...)</code> function, a 4x4 matrix <b>MInv</b> (the inverse of <b>M</b>) and a 3x3 normal matrix <b>N</b> are passed along, which you can use to do this task.  For full credit, you should apply this to all the shapes for which you've written intersect code
+                                                    </p>
+                                                    
+                                                    <p>
+                                                    <h4>Code To Write</h4> You should add some code to each <code>rayIntersectX(...)</code> function to deal with this, where <b>X</b> can be triangle/sphere/box/cone/cylinder.
+                                                    </p>
+            
+            
+                                                    <div id = "tips">
+                                                        <h4>Tips</h4>
+                                                        <ul>
+                                                        <li>Transform the ray <b>(p0, v)</b> so that the new endpoint of the ray is <b>MInv*vec4(p0, 1.0)</b> and the new direction is <b>MInv*vec4(v, 0.0)</b> (i.e. only apply the translational part of <b>MInv</b> to <b>p</b>, <b>not</b> to <b>v</b>).  You can then use this <b>t</b> on the original endpoint and direction to obtain the final intersection point.  You will still have to apply the normal transformation <b>N</b> to the normal you get.</li>
+                                                        <li>Refer to <b>Chapter 13.2</b> for more information about this process</li>
+                                                        </ul>
+                                                    </div>
+
+
+										<HR>
+                                            <h2><a name = "part1optional">Part 1: Ray Casting / Ray Object Intersections: Optional Tasks</a></h2>
+                                        <BR><BR><h3><a name = "orthographic">Orthographic Ray Casting (5 Points)</a></h3>
+                                        
+                                        <p>
+                                            Cast rays all with the direction <code>v</code> = <code>towards</code>, and change the eye to move along the <code>right</code> and <code>up</code> directions, as discussed in class
+                                        </p>
+                                        
+                                        
+                                        <p>
+                                        <h4>Code To Write</h4> You should fill in the appropriate section of the <code>getRay()</code> function.
+                                        </p>
+
+                                        <div id = "tips">
+                                            <h4>Tips</h4>
+                                            <ul>
+                                            <li>You can toggle orthographic viewing in the "ray tracing options" menu in the debugging GUI.</li>
+                                            </ul>
+                                        </div>
+
+
+                                        <BR><BR><h3><a name = "raycylinder">Ray Intersect Cylinder (10 Points)</a></h3>
+                                        
+                                            <p>
+                                            Given a ray and an axis-aligned cylinder with a particular radius, height, and center, find the intersection and normal of the ray.  The center coincides with the center of the circular cross section halfway up the cylinder.
+                                            </p>
+                                            
+                                            <p>
+                                            <h4>Code To Write</h4> You should fill in the appropriate section of the <code>rayIntersectCylinder(...)</code> function.  You will return <code>t</code>, the ray parameter of intersection.  You will also return the intersection point and normal by reference (an "out" variable in GLSL).  See the parameters for more details.
+                                            </p>
+    
+    
+                                            <div id = "tips">
+                                                <h4>Tips</h4>
+                                                <ul>
+                                                <li>Have a look at <a href = "../../../../PrincetonUGRAD/Projects/COS426/Assignment3/part1.html#raycylinder">some notes I wrote</a> 10 years ago when I was working on my first ray tracing assignment.</li>
+                                                </ul>
+                                            </div>
+
+                                            <BR><BR><h3><a name = "raycone">Ray Intersect Cone (10 Points)</a></h3>
+                                        
+                                                <p>
+                                                Given a ray and an axis-aligned cone with a particular radius, height, and center, find the intersection and normal of the ray.  The center of the base coincides with the center.
+                                                </p>
+                                                
+                                                <p>
+                                                <h4>Code To Write</h4> You should fill in the appropriate section of the <code>rayIntersectCone(...)</code> function.  You will return <code>t</code>, the ray parameter of intersection.  You will also return the intersection point and normal by reference (an "out" variable in GLSL).  See the parameters for more details.
+                                                </p>
+        
+        
+                                                <div id = "tips">
+                                                    <h4>Tips</h4>
+                                                    <ul>
+                                                    <li>Have a look at <a href = "../../../../PrincetonUGRAD/Projects/COS426/Assignment3/part1.html#raycone">some notes I wrote</a> 10 years ago when I was working on my first ray tracing assignment.</li>
+                                                    </ul>
+                                                </div>
+
+
+                                                <BR><BR><HR><h2><a name = "part2">Part 2: Illumination/Materials: Required Tasks</a></h2>
+                                                <BR><BR><h3><a name = "blinnphong">Blinn-Phong Shading (15 Points)</a></h3>
+                                                
+                                                <p>
+                                                    Given a ray, an intersection point/normal, material properties of the intersected object, and a set of lights in the scene, add the Blinn-Phong contribution (diffuse + specular) of each light.  The basic equation of the final color <b>C</b> at the fragment for <b>L</b> lights is below
+
+                                                    <h3>
+                                                    \[ C = \sum_{i = 1}^L c_i \left(  k_d(\vec{N} \cdot \vec{\ell_i^N}) + k_s(-\vec{v} \cdot \vec{h_i})^s \right) \]
+                                                    </h3>
+
+                                                    And the equation for a light with attenuation is
+                                                    <h3>
+                                                        \[ c_i = \frac{I_0}{c_a + \ell_a d + q_a d^2} \]
+                                                    </h3>
+                                                    where 
+                                                    <ul>
+                                                        <li>
+                                                            <b>I<SUB>0</SUB></b> is the original color of the light (the <code>color</code> field of the <code>Light</code> struct)
+                                                        </li>
+                                                        <li>
+                                                            <b>d</b> is the distance of the light to the point of intersection (the position of the light is the <code>pos</code> field of the <code>Light</code> struct)
+                                                        </li>
+                                                        <li>
+                                                            <b>c<SUB>a</SUB></b>, <b>l<SUB>a</SUB></b>, and <b>q<SUB>a</SUB></b> are constants (found as the x, y, and z components, respectively, of the <code>atten</code> field of the <code>Light</code> struct).
+                                                        </li>
+                                                    </ul>
+                                                    and
+                                                    <ul>                                                  <li>The diffuse coefficient <code>kd</code> and the specular coefficient <code>ks</code> can be found as fields of the material struct <code>m</code> that's passed into the function</li>
+                                                        <li>
+                                                            The <code>eye</code> position is passed in as a vec3 to the function
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                                
+                                                
+                                                <p>
+                                                <h4>Code To Write</h4> You should fill in code in the <code>getPhongColor(...)</code> function.  
+                                                </p>
+        
+                                                <div id = "tips">
+                                                    <h4>Tips</h4>
+                                                    <ul>
+
+                                                        <li>You should have a loop up to <code>MAX_LIGHTS</code> and index into the uniform list <code>lights</code>, but break out of the loop before you reach <code>numLights</code> (this is the weird way we have to loop in GLSL).</li>
+
+                                                        <li>You may want to refer back to <a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/Exercise2">Module 11</a> where we did Phong Shading for a single light in the object-first shader.  The code will actually be very similar, but you'll have to put it in a loop</li>
+                                                    </ul>
+                                                </div>
+
+                                                <p>
+                                                    Below are some screenshots from a working implementation.
+        
+                                                    <table>
+                                                        <tr><td><h3>Ray View</h3></td></tr>
+                                                        <tr><td><img src = "RayTracingPhong.png"></td></tr>
+                                                    </table>
+                                                </p>
+
+
+
+
+                                            <BR><BR><h3><a name = "shadows">Point Light Shadows (10 Points)</a></h3>
+                                        
+                                                <p>
+                                                When applying <a href = "#blinnphong">Blinn-Phong shading</a>, only include a light if it is not blocked by an object in the scene.  You can accomplish this by tracing a new ray from the point of intersection of the material towards the light (using <code>rayIntersectScene</code>), and seeing if it hits anything before it gets to the light.
+                                                </p>
+                                                
+                                                <p>
+                                                <h4>Code To Write</h4> You should fill in the <code>pointInShadow(...)</code> function.  You should then call this function from the appropriate place within <code>getPhong(...)</code>
+                                                </p>
+        
+        
+                                                <div id = "tips">
+                                                    <h4>Tips</h4>
+                                                    <ul>
+                                                        <li><p>The easiest way to do this is if you use the direction vector of the ray as the non-normalized vector from the point of intersection VPos to the light.  Then, a t of 1 in rayIntersectScene is exactly at the light, and any t &lt 1 means there's something it hits before that.  The image below shows this</p><img src = "Shadow.svg"></li>
+                                                    <li>Be sure to add <code>EPS</code> times the direction to the initial point on the ray before shooting it towards the light.  This is an effective hack to prevent the first object from being intersected as the object we're illuminating!  Below is a screenshot of the kind of bug you will get if you forget to do this:<BR><BR>
+                                                    <img src = "ShadowEps.png"> </li>
+                                                    </ul>
+                                                </div>
+
+
+                                                <p>
+                                                    Below are some screenshots from a working implementation.
+                                                </p>
+                                                <table>
+                                                        <tr><td><h3>Object-First View</h3></td></tr>
+                                                        <tr><td><img src = "ObjectFirstShadow.png"></td></tr>
+                                                        <tr><td><h3>Ray View</h3></td></tr>
+                                                        <tr><td><img src = "RayTracingShadow.png"></td></tr>
+                                                    </table>
+
+
+
+
+                                                    <BR><BR><h3><a name = "reflections">Mirror Material Reflections (10 Points)</a></h3>
+                                        
+                                                        <p>
+                                                        If a ray hits a material with a nonzero <code>ks</code> term, reflect the incoming ray at the perfect angle about the normal, and continue tracing the ray through the scene.  In addition to the Phong light of the material, you should accumulate any light that makes it back from this reflected ray, scaled down by the <code>ks</code> term.
+                                                        </p>
+                                                        
+                                                        <p>
+                                                        <h4>Code To Write</h4> Fill in appropriate parts of the "recursive" loop in the <code>main()</code> function.  You should accumulate a weight term as a product of <code>ks</code> terms as you go along.  this weight term gets multiplied as an additional factor on front of Phong colors at each iteration.</code>
+                                                        </p>
+                
+                
+                                                        <div id = "tips">
+                                                            <h4>Tips</h4>
+                                                            <ul>
+                                                                <li>You should increase the <code>MAX_RECURSION</code> macro to include multiple bounces.  But be warned, the compile time increases substantially as you increase this number.  So start it off around 2 as you're debugging, so you at least get one reflection</li>
+                                                            <li>The <a href = "https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/reflect.xhtml">reflect</a> function in GLSL may come in handy in this task</li>
+                                                            <li>As with the shadows, be sure to add <code>EPS</code> times the direction to the initial point on the ray before shooting it at the perfect angle out. </li>
+                                                            </ul>
+                                                        </div>
+        
+        
+                                                        <p>
+                                                            Below are some screenshots from a working implementation with <code>MAX_RECURSION</code> as 3 (up to second order reflections), with the purple "looking glass" sphere that's placed at the top of the scene.  The reflection of objects off of the rectangular mirror and again off of the sphere are visible.
+                                                        </p>
+                                                        <table>
+                                                                <tr><td><h3>Object-First View</h3></td></tr>
+                                                                <tr><td><img src ="ObjectFirstReflect.png"></td></tr>
+                                                                <tr><td><h3>Ray View</h3></td></tr>
+                                                                <tr><td><img src = "RayTracingReflect.png"></td></tr>
+                                                            </table>
+        
+
+                                <BR><BR><HR><h2><a name = "part2optional">Part 2: Illumination/Materials: Optional Tasks</a></h2>
+                                    <BR><BR><h3><a name = "spotlights">Spot Lights (10 Points)</a></h3>
+                                    
+                                    <p>
+                                        In addition to the shadow term, also restrict a light so that it only illuminates parts of the scene that are within a cone determined by a direction vector and a maximum angle that light rays are allowed to make with that vector.
+
+                                    </p>
+                                    
+                                    
+                                    <p>
+                                    <h4>Code To Write</h4> Add some code inside the light loop in the <code>getPhongColor(...)</code> function that checks the angle that the light ray makes with the <code>towards</code> field of the light struct, and compares it with the <code>angle</code> of the light struct.  To test this, you should add a spotlight to your scene.  The code below would add a green spotlight, for example
+                                    </p>
+                                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                        {
+                                            "pos":[3.7, 7.2, 9],
+                                            "color":[0, 1, 0],
+                                            "atten":[1, 0, 0],
+                                            "towards":[0, -1, 0],
+                                            "angle":0.3
+                                        }
+                                    ]]></script>
+
+                                    <p>
+                                        Below is a screenshot from a working ray tracer implementing with three spotlights of different colors.  Note the pattern of their overlap as the colors blend together 
+                                    </p>
+                                    <img src = "RayTracingSpotLights.png">
+
+
+                                    <BR><BR><h3><a name = "boxcheckerboard">Box Checkerboard Pattern (10 Points)</a></h3>
+                                    
+                                        <p>
+                                            Create a checkerboard pattern on a box if the <code>special</code> field of its material is activated.
+    
+                                        </p>
+                                        
+                                        
+                                        <p>
+                                        <h4>Code To Write</h4> Add some code inside the the <code>rayIntersectBox(...)</code> to record a number between 0 and 1 which gets added on as a term in front of the diffuse term <code>kd</code>.  Store this number in the <code>sCoeff</code> field of the <code>intersect</code> term.  Then use this term in the <code>getPhongColor(...)</code> function in front of the diffusion coefficient if the <code>special</code> flag of the material is 1.
+                                        </p>
+    
+                
+                                        <div id = "tips">
+                                                <h4>Tips</h4>
+                                                <ul>
+                                                    <li>The function \[ cos(x)cos(y) \] over two different coordinates <b>x</b> and <b>y</b> gives an "egg carton" pattern.  You simply need to threshold this so that <code>sCoeff</code> gets a 0 if this product is negative, or a 1 if this product is positive.  See below:<BR><BR>
+                                                    <img src = "Checkerboard.png"></li>
+                                                </ul>
+                                        </div>
+
+                                        <p>
+                                            Below is a screenshot of a box with the special material enabled. 
+                                            <BR><BR>
+                                                <img src = "BoxCheckerboard.png">
+                                        </p>
+    
+
+
+                                        <BR><BR><h3><a name = "spherecheckerboard">Sphere Checkerboard Pattern (10 Points)</a></h3>
+                                    
+                                            <p>
+                                                Create a checkerboard pattern on a sphere if the <code>special</code> field of its material is activated.
+        
+                                            </p>
+                                            
+                                            
+                                            <p>
+                                            <h4>Code To Write</h4> Add some code inside the light loop in the <code>rayIntersectSphere(...)</code> to record a number between 0 and 1 which gets added on as a term in front of the diffuse term <code>kd</code>.  Store this number in the <code>sCoeff</code> field of the <code>intersect</code> term.  Then use this term in the <code>getPhongColor(...)</code> function in front of the diffusion coefficient if the <code>special</code> flag of the material is 1.
+                                            </p>
+        
+                    
+                                            <div id = "tips">
+                                                    <h4>Tips</h4>
+                                                    <ul>
+                                                        <li>You can use the spherical coordinates of the intersection point to help you.  Let the normal be as such: \[ \vec{n} = (n_x, n_y, n_z) \]
+                                                            Then let
+                                                            \[ \phi = \cos^{-1}(n_z) \]
+                                                            and 
+                                                            \[ \theta = \tan^{-1}(n_y/n_x) \]
+                                                        
+                                                        Then you can take \[ \cos(n\phi) \cos(n \theta) \]
+
+                                                        for some integer <b>n</b> to wrap the checkerboard around the sphere <b>n</b> times along the azimuth and elevation.  (Actually, you should call <code>atan(n.y, n.x) to compute theta</code>)
+                                                        </li>
+                                                    </ul>
+                                            </div>
+    
+                                            <p>
+                                                Below is a screenshot of a sphere with the special material enabled. 
+                                                <BR><BR>
+                                                    <img src = "SphereCheckerboard.png">
+                                            </p>
+        
+
+                                                <BR><BR><h3><a name = "softshadows">Soft Shadows (15 Points)</a></h3>
+                                    
+                                                    <p>
+                                                        Implement soft shadows based on area lights by randomly sampling rays from the point of intersection to a spherical neighborhood around the light location.  You can use the uniform <code>beaconRadius</code> as the radius of the sphere, since that's the radius with which the lights are rendered in the GUI.
+                                                    </p>
+                                                    
+                                                    
+                                                
+                                                    <p>
+                                                        <h4>Code To Write</h4> You should write something like <code>pointInShadow(...)</code> function, but which returns a floating point value between 0 and 1 instead of a boolean.  You should then call this function from the appropriate place within <code>getPhong(...)</code> and scale the light color by this value.
+                                                    </p>
+                
+                            
+                                                    <div id = "tips">
+                                                            <h4>Tips</h4>
+                                                            <ul>
+
+                                                                <li>One of the trickiest parts about this task is randomly sampling.  GLSL has no random functions in it, so you'll have to do something <a href = "https://www.geeksforgeeks.org/pseudo-random-number-generator-prng/">like this</a> or <a href = "https://thebookofshaders.com/10/">like this</a>.</li>
+
+                                                                <li>
+                                                                    The shadows will look better the more random samples you take, but the rendering engine will slow down substantially once you exceed 20 or so samples.  So you might want to position your camera with a lower number of samples, save it in the scene, and then reload the scene using a higher number of samples for the art contest.
+                                                                </li>
+                                                            </ul>
+                                                    </div>
+
+                                                    <p>
+                                                        Below is a GIF of a working implementation of soft shadows using <a href = "https://www.geeksforgeeks.org/pseudo-random-number-generator-prng/">the first</a> random sampling technique, with an increasing number of random samples per pixel
+                                                        <BR><BR>
+                                                            <img src = "SoftShadowSampling.gif">
+                                                    </p>
+
+
+                                                    <BR><BR><h3><a name = "refraction">Transmission with Refraction (20 Points)</a></h3>
+                                    
+                                                        <p>
+                                                            If any of the components of the transmission coefficient <code>kt</code> of a material are greater than zero, then perform a transmission <i>instead of</i> a reflection (since we can only do tail recursion in GLSL); that is, shoot a ray through the material in a direction determined by Snell's law
+        
+                                                            \[ \nu_i \sin(\theta_i) = \nu_j \sin(\theta_j) \]
+        
+                                                            where <b>theta<sub>i</sub></b> is the incident angle, and <b>theta<sub>j</sub></b> is the transmitted angle on the other side.  You can assume that the refraction index <b>nu</b> outside of the material is 1, and the refraction index inside of the material is the <code>refraction</code> field of the material struct.
+                    
+                                                        </p>
+                                                        
+                                                        
+                                                        <p>
+                                                        <h4>Code To Write</h4> Fill in appropriate parts of the "recursive" loop in the <code>main()</code> function.  You will be adding something in addition to the code you have to do reflections, and you will be doing one or the other (so have an if statement to do either reflection or refraction).  You should accumulate a weight term as a product of <code>ks</code> <i>and</i> <code>kt</code> terms as you go along, depending on whether you decide to reflect or refract, respectively.
+                                                        </p>
+
+                                                        <p>
+                                                            You can use the implementation of WebGL's <a href = "https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/refract.xhtml">refract</a> function to help you.  They use a trick with the <a href = "https://en.wikipedia.org/wiki/Pythagorean_trigonometric_identity">Pythagorean trig identity</a> (sin(x) = sqrt(1 - cos<SUP>2</SUP>(x)) ) so that it's possible to calculate the sin using dot products.  There is one major difference that you'll need in your implementation for full credit, however.  If they find that there is no real solution to the equation, they return the zero vector.  But at that point, you should instead return the reflection.  This simulates what's known as <a href = "https://en.wikipedia.org/wiki/Total_internal_reflection">total internal reflection</a>, and it's what gives the "bubble effect" when the index of refraction in the sphere is less than 1.  So you can start with their code but tweak it a bit.
+                                                        </p>
+
+                                                        <p>
+                                                            The animation below shows a working implementation.  Note how when the index of refraction inside the sphere is 1, it's simply a transparent object.  On the other hand, when the index is greater than 1, it reflects a warped version of what's in front of it upside down.  And when the index of refraction is less than 1, it looks like a bubble (since this is what would happen with air having a smaller index of refraction relative to the water that surrounds it).
+                                                        </p>
+
+                                                        <img src = "Refraction.gif">
+                    
+                                
+                                                        <div id = "tips">
+                                                                <h4>Tips</h4>
+                                                                <ul>
+                                                                    <li>
+                                                                        Remember that the indexes of refraction flip when you're on the inside or the outside, so be sure to pay attention to the <code>insideObj</code> flag in the reflection/transmission loop.
+                                                                    </li>
+                                                                </ul>
+                                                        </div>
+
+
+                                    <BR><BR><HR><h2><a name = "part32">Part 3: Other Optional Tasks</a></h2>
+
+
+
+                                    <BR><BR><h3><a name = "antialiasing">Antialiasing (15 Points)</a></h3>
+                                
+                                        <p>
+                                            Implement antialiasing to get rid of the "jaggies" that occur on boundaries of objects, by randomly sampling rays with some "jitter" around the initial ray.
+                                        </p>
+                                        
+                                        
+                                    
+                                        <p>
+                                            <h4>Code To Write</h4> You should replace the single <code>rayIntersectScene(...)</code> call in the <code>main()</code> function with multiple calls to rayIntersectScene.  So you will want a nested loop inside of the recursion loop.
+                                        </p>
+    
+                
+                                        <div id = "tips">
+                                                <h4>Tips</h4>
+                                                <ul>
+                                                    <li>This is similar to <a href = "#softshadows">soft shadows</a> task in many ways, since you have to generate many random rays per pixel.</li>
+                                                </ul>
+                                        </div>
+
+                                <BR><BR><h3><a name = "somethingelse">Something Else (5-20 Points)</a></h3>
+
+                                    <p>
+                                        Implement something I hadn't thought of!  Possible ideas include a fisheye lens, depth of field effects, or some material other than a checkerboard, such as a solid noise (11.1.3) or a turbulent material (11.1.4).
+                                    </p>
+
+                                    <h3><a name = "artcontest">Art Contest Submission (5 Points)</a></h3>        
+
+                                        <p>
+                                            You just created an amazing rendering engine.  Do something creative with it!  The winner will get 5 points of extra credit tacked onto the end of their final score.  You should submit an appropriate scene file along with your submission, as well as several screenshots of your scene from different angles that really show it off.
+                                        </p>
+
+                                    </div>
+						</div>
+					</div>
+
+					<!--LaTeX in Javascript!-->
+					<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+					<!--Syntax highlighting in Javascript!-->
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shCore.js"></script>
+					<script type="text/javascript" src="../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+					<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+					<link type="text/css" rel="stylesheet" href="../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+					<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+                                        <li>
+											<span class="opener">General</span>
+											<ul>
+												<li><a href = "../../index.html#overview">Overview</a></li>
+												<li><a href = "../../index.html#logistics">Technology Logistics</a></li>
+												<li><a href = "../../index.html#deliverables">Deliverables</a>
+													<ul>
+														<li><a href = "../../index.html#debugging">Debugging Principles</a></li>
+													</ul>
+												</li>
+												<li><a href = "../../index.html#grading">Grading</a></li>
+												<li><a href = "../../index.html#environment">Classroom Environment</a></li>
+												<li><a href = "../../index.html#participation">Participation</a></li>
+												<li><a href = "../../index.html#collaboration">Collaboration Policy</a></li>
+												<li><a href = "../../index.html#other">Other Resources / Policies</a></li>
+											</ul>
+										</li>
+										<li><a href = "../../Software/index.html">Software</a></li>
+										<li><a href = "../../index.html#schedule">Schedule</a></li>
+										<li>
+											<span class="opener">Assignments</span>
+											<ul>
+												<li>
+													<li><a href = "../../Assignments/HW1_GeomPrimitives/index.html">HW1: Geometric Primitives</a></li>
+													<ul>
+														
+                                                    </ul>
+												</li>
+												<li><a href = "../../Assignments/HW2_SceneTrees/index.html">HW2: Scene Trees</a>
+												<ul>
+													<li>
+														<a href = "../../Assignments/HW2_SceneTrees/ArtContest/index.html">Art Contest</a>
+													</li>
+												</ul></li>
+												<li>
+													<a href = "../../Assignments/HW3a_EulerAngles/index.html">HW3a: Euler Angles</a>
+												</li>
+												<li>
+													<a href = "../../Assignments/HW3_CharacterAnimation/index.html">HW3: Character Animation</a>
+												</li>
+												<li>
+													<a href = "../../Assignments/HW4_PolygonMeshProcessing/index.html">HW4: Polygon Mesh Processing</a>
+												</li>
+												<li>
+													<a href = "../../Assignments/HW5_Shaders/index.html">HW5: Shaders And Image Processing</a>
+												</li>
+												<li>
+													<a href = "../../Assignments/HW6_RayTracer/index.html">HW6: Ray Tracer</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Class Exercises</span>
+											<ul>
+												<li>
+													<ul>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Javascript1">Week 1: Javascript Module</a>
+														</li>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Vectors1">Week 1: Vector Basics And Dot Product Module</a>
+														</li>
+														<li><a href = "../../Lectures/2_VectorsIntro/index.html">Week 1: Class Notes on Euclidean Vectors</a></li>
+														<li><a href = "../../ClassExercises/Week1_JuliaSets/index.html">Week 1: Julia Sets Exercise</a></li>
+														<li><a href = "../../Materials/BarycentricExploration/WeightedAverage.html">Week 2: Barycentric Etch-A-Sketch</a></li>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/LinesAndPlanes/Video1">Week 2: Lines And Planes Module</a>
+														</li>
+														<li><a href = "../../ClassExercises/Week3_RayIntersections/index.html">Week 3: Ray Intersection Notes</a></li>
+														<li><a href = "../../Materials/ggslac/viewers/MatrixAnim.html">Week 3: Matrix Multiplications And Compositions Widget</a></li>
+														<li><a href = "https://ursinus-cs476-f2022.github.io/Modules/Scenes/Video1">Week 4: 3D Transformations And Scenes Module</a></li>
+														<li><a href = "../../Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation/forward.html">Week 4: Forward Kinematics Demo</a></li>
+														<li><a href = "https://ursinus-cs476-f2022.github.io/Modules/OrientationModule/Video">Week 8: Orientation Module</a></li>
+														<li>
+															<a href = "../../../CurveSubdivision">Week 9: Curve Subdivision</a>
+														</li>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Levelset/Video1">Week 10: Heightmaps And Levelsets Module</a>
+														</li>
+														<li><a href = "../../ClassExercises/Week11_EmbossMedian/index.html">Week 11: Image Processing Exercises</a></li>
+														<li>
+															<a href = "https://ursinus-cs476-f2022.github.io/Modules/RayCasting/Video1">Week 12: Ray Casting Module</a>
+														</li>
+                                                    </ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Optional Fall 2020 Modules</span>
+											<ul>
+												<li>
+													<ul>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Overview">Module 1: Javascript</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Vectors1">Module 2: Vectors And Dot Products</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/Vectors1">Module 3: Projections, Cross Product, Normals</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/LinesAndPlanes1">Module 4: Lines, Rays, And Planes</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module5/RayIntersectPlane">Module 5: Ray Intersect Plane/Triangle/Sphere</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module6/Video1">Module 6: 2D Matrices Definition, Composition, And Inverses</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module7/Video1">Module 7: 3D Transformations And Scene Trees</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module8/Video1">Module 8: GLSL And Shaders</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module9/Video1">Module 9: Blobby Shaders, Complex Numbers, Fractals</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/Video1">Module 10: Local Illumination via Gouraud Shading</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module11/Video1">Module 11: Ray Casting</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module12/Video1">Module 12: Global Illumination Part 1</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module13/Video1">Module 13: Object-First Viewing Projections</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module14/Video1">Module 14: Topological Properties of Manifold Meshes</a></li>
+														<li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Module15/Video1">Module 15: Heightmaps, Levelsets, And Marching Squares</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><a href = "../../FinalProject/index.html">Final Project</a></li>
+									</ul>
+								</nav>
+
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; <a href = "http://www.ctralie.com">Christopher J. Tralie</a>. All rights reserved.  Contact chris.tralie@gmail.com. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+<!-- End Sidebar !-->
+
+<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/skel.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../../assets/js/main.js"></script>
+<!-- End Scripts -->
+	</body>
+</htm
