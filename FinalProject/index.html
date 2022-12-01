@@ -123,15 +123,20 @@
 										The first step is to take a bunch of pictures of the building that you're scanning, and then to use photogrammetry software to stitch them together.  I highly recommend using the open source program <a href = "https://meshroom-manual.readthedocs.io/en/latest/first-steps/install/index.html">meshroom</a> to do the reconstruction.  They have an official tutorial at <a href = "https://meshroom-manual.readthedocs.io/en/latest/tutorials/sketchfab/sketchfab.html">this link</a>, and there are many videos on youtube about how to do this (such as <a href = "https://www.youtube.com/watch?v=R0PDCp0QF1o">this one</a>).  It may take some time to run, and you may find that you need to take more pictures to fill in certain areas and to tweak some of the parameters a bit.  But overall, this is one of the most user friendly programs I have seen.
 									</p>
 
-									<h3>Step 2: Geometry simplification (20%)</h3>
+									<h3>Step 2: Geometry simplification (15%)</h3>
 									<p>
 										You will notice that the geometry on your model can be quite messy, and that there are a lot of vertices.  This is a drawback when making things interactive in the browser over a network, particularly on mobile devices using mobile data.  We should start by simplifying the geometry as much as possible so it's quick to load and render.  <a href = "https://github.com/wjakob/instant-meshes">Instant meshes</a> is an excellent tool to do this.  You can read a tutorial about it at <a href = "https://styly.cc/tips/jp-instant-meshes/">this link</a>.  Unfortunately, it does not also apply the existing texture.  For this, we have one more step to do, as explained next
 									</p>
 
-									<h3>Step 3: Baking high resolution texture onto low resolution model (30%)</h3>
+									<h3>Step 3: Baking high resolution texture onto low resolution model (25%)</h3>
 
 									<p>
 										Now that we have a lower resolution module, we need to create a texture for it.  We can do this by lining it up with the original model and "baking" the old texture onto it (we're basically rendering it on).  <a href = "https://styly.cc/tips/retopology_bake/">Click here</a> to read a tutorial about how to do this using Blender.
+									</p>
+
+									<h3>Narrated Video (10%)</h3>
+									<p>
+										Show a flythrough/walkthrough of your final model
 									</p>
 
 									
