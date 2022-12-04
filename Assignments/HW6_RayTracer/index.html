@@ -246,7 +246,7 @@
                                             <ul>
                                             <li>A function to intersect a ray with a plane, <code>rayIntersectPlane(...)</code> is provided to you as an example, and you should definitely make use of this as a subroutine in your implementation.</li>
                                             
-                                            <li>It might be helpful to make a function that returns the area of a triangle spanned by three points, and to use the area ratio method you implemented in <a href = "../Indy1_GeomPrimitives/index.html#barycentric">mini assignment 1</a> to check that the plane intersection point is inside of the triangle.</li>
+                                            <li>It might be helpful to make a function that returns the area of a triangle spanned by three points, and to use the area ratio method you implemented in <a href = "../HW1_GeomPrimitives/">assignment 1</a> to check that the plane intersection point is inside of the triangle.</li>
                                             </ul>
                                         </div>
 
@@ -277,7 +277,7 @@
                                             <div id = "tips">
                                                 <h4>Tips</h4>
                                                 <ul>
-                                                <li>This is exactly the same as the <a href = "#raysphere">ray intersect sphere task from mini assignment 1</a>.  The only difference is that you also need to return the normal of the intersection, and you're only ever returning one point of intersection, which is the closest (so the nonnegative root with the smallest <b>t</b> value.</li>
+                                                <li>This is exactly the same as the <a href = "../HW1_GeomPrimitives/#raysphere">ray intersect sphere task from assignment 1</a>.  The only difference is that you also need to return the normal of the intersection, and you're only ever returning one point of intersection, which is the closest (so the nonnegative root with the smallest <b>t</b> value.</li>
                                                 </ul>
                                             </div>
 
@@ -343,7 +343,6 @@
                                                         <h4>Tips</h4>
                                                         <ul>
                                                         <li>Transform the ray <b>(p0, v)</b> so that the new endpoint of the ray is <b>MInv*vec4(p0, 1.0)</b> and the new direction is <b>MInv*vec4(v, 0.0)</b> (i.e. only apply the translational part of <b>MInv</b> to <b>p</b>, <b>not</b> to <b>v</b>).  You can then use this <b>t</b> on the original endpoint and direction to obtain the final intersection point.  You will still have to apply the normal transformation <b>N</b> to the normal you get.</li>
-                                                        <li>Refer to <b>Chapter 13.2</b> for more information about this process</li>
                                                         </ul>
                                                     </div>
 
