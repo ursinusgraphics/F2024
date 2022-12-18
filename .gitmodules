@@ -46,3 +46,6 @@
 [submodule "Assignments/HW5_Shaders/HW5_Shaders"]
 	path = Assignments/HW5_Shaders/HW5_Shaders
 	url = https://github.com/ursinus-cs476-f2022/HW5_Shaders.git
+[submodule "Assignments/HW4_PolygonMeshProcessing/ArtContest/ggslac"]
+	path = Assignments/HW4_PolygonMeshProcessing/ArtContest/ggslac
+	url = https://github.com/ctralie/ggslac.git
