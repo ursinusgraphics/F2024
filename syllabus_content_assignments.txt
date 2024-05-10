@@ -1,93 +1,93 @@
 <a href = "https://ursinus.co1.qualtrics.com/jfe/form/SV_b8f6vIUU4KwTmcJ">Background Knowledge Assessment</a>
 
-2022-08-29
+2024-08-26
 <a href = "https://ursinus.instructure.com/courses/14942/assignments/152699">Software Environment Configuration</a> Due
 
-2022-08-30
+2024-08-27
 <a href = "https://ursinus.co1.qualtrics.com/jfe/form/SV_ekEo8qkqkLQXvWC">Survey</a> due
 
-2022-08-30
+2024-08-27
 <a href = "https://ursinus.instructure.com/courses/14942/quizzes/19661">Syllabus Quiz</a> Due
 
-2022-08-30
+2024-08-27
 <a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Javascript1">Javascript Module</a> Due Before Class
 
-2022-08-31
+2024-08-28
 <a href = "https://ursinus-cs476-f2022.github.io/Modules/Week1/Vectors1">Vectors Module 1</a> Due Before Class
 
-2022-09-02
+2024-08-30
 <HR><a href = "Assignments/HW1_GeomPrimitives">Assignment 1: Geometric Primitives</a> (Individual) Out
 
-2022-09-02
+2024-08-30
 Assignment 1 Part 1 Due
 
-2022-09-09
+2024-09-06
 <a href = "https://ursinus-cs476-f2022.github.io/Modules/LinesAndPlanes/Video1">Lines And Planes</a> Module Due Before Class
 
-2022-09-12
+2024-09-09
 Assignment 1 Part 2 Due
 
-2022-09-16
+2024-09-13
 <a href = "https://ursinus-cs476-f2022.github.io/Modules/Scenes/Video1">3D Transformations And Scene Trees Module</a> Due Before Class
 
-2022-09-19
+2024-09-16
 <HR><a href = "Assignments/HW2_SceneTrees">HW2: Scene Trees</a> Out
 
-2022-09-19
+2024-09-16
 HW2 Due Due
 
-2022-09-26
+2024-09-23
 <a href = "Assignments/HW3a_EulerAngles">Assignment 3a: Euler Angles</a> Out
 
-2022-09-29
+2024-09-26
 Assignment 3a Due
 
-2022-10-02
+2024-09-29
 <a href = "Assignments/HW3_CharacterAnimation">Assignment 3: Character Animation (Group)</a> Out
 
-2022-10-02
+2024-09-29
 Assignment 3 Due
 
-2022-10-19
+2024-10-16
 <a href = "https://ursinus-cs476-f2022.github.io/Modules/OrientationModule/Video">Orientation Module</a> due before class
 
-2022-10-21
+2024-10-18
 <HR><a href = "Assignments/HW4_PolygonMeshProcessing">Assignment 4: Polygon Mesh Processing (Group)</a> Out
 
-2022-10-21
+2024-10-18
 Last day to drop courses with a "W"
 
-2022-10-26
+2024-10-23
 Assignment 4 Required Tasks Due
 
-2022-10-27
+2024-10-24
 <a href = "https://ursinus-cs476-f2022.github.io/Modules/Levelset/Video1">Heighmaps and levelsets module</a> due before class
 
-2022-11-02
+2024-10-30
 Assignment 4 Final Submission Deadline
 
-2022-11-07
+2024-11-04
 <HR><a href = "Assignments/HW5_Shaders">Assignment 5: Shaders And Image Processing</a> Out
 
-2022-11-07
+2024-11-04
 Assignment 5 Due
 
-2022-11-15
+2024-11-12
 <a href = "https://ursinus-cs476-f2022.github.io/Modules/RayCasting/Video1">Ray Casting Module</a> Due Before Class
 
-2022-11-16
+2024-11-13
 <HR><a href = "Assignments/HW6_RayTracer">Assignment 6: Real Time Ray Tracing</a> Out
 
-2022-11-16
+2024-11-13
 Assignment 6 Due
 
-2022-12-08
+2024-12-05
 Final Project Proposal Due
 
-2022-11-21
+2024-11-18
 Final Project Checkpoint
 
-2022-12-09
+2024-12-06
 Cel Shading Art Contest
 
-2022-12-02
+2024-11-29

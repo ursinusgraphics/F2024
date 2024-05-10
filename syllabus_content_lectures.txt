@@ -91,10 +91,6 @@ HW3 Work Session, Connected Sums
 
 
 LECTURE
-<a href = \"https://ursinus.edu/live/news/6481-introducing-robyn-hannigan-ursinus-colleges-19th\">Robyn Hannigan</a> Inauguration (No Class)
-
-
-LECTURE
 Mesh Orientation, Mesh Storage Requirements, Basic Mesh Data Structures
 
 <ul><li><a href = "https://ursinus.instructure.com/courses/14942/files?preview=1712663">Shirley / Manscher</a> 12.1.2 - 12.1.3</li><li><a href = "https://www.cc.gatech.edu/~jarek/courses/handouts/meshes.pdf">Additional Reading on Mesh Data Structures</a></li></ul>
@@ -167,6 +163,10 @@ Monte Carlo Path Tracing
 
 <ul><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
 LECTURE
+Virtual Reality, Augmented Reality
+
+
+LECTURE
 Object-first rendering: The Camera Matrix, Perspective/Viewing matrices, Depth Sorting
 
 <ul><li><a href = "https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/gluLookAt.xml">gluLookAt</a> documentation</li></ul>
@@ -179,7 +179,6 @@ Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps
 
 <ul><li><a href = "https://docs.google.com/presentation/d/1nN94a5gkN7BladB9E5SAcvvQCajF8xSdC_-sytOyh7E/edit?usp=sharing">Slides from today</a></li><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo</a></li></ul>
 LECTURE
-Virtual Reality, Augmented Reality
-
+Bonus Topic: Dynamic 3D Gaussians
 
 
