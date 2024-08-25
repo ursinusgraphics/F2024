@@ -28,31 +28,31 @@ HW2 Due Due
 Assignment 3a Due
 
 2024-09-29
-<a href = "Assignments/HW3_CharacterAnimation">Assignment 3: Character Animation (Group)</a> Out
+Assignment 3: Character Animation (Group) Out <!--<a href = "Assignments/HW3_CharacterAnimation">Assignment 3: Character Animation (Group)</a> Out !-->
 
 2024-09-29
 Assignment 3 Due
 
 2024-10-16
-<HR><a href = "Assignments/HW4_PolygonMeshProcessing">Assignment 4: Polygon Mesh Processing (Group)</a> Out
+<HR>Assignment 4: Polygon Mesh Processing (Group) Out <!--<a href = "Assignments/HW4_PolygonMeshProcessing">Assignment 4: Polygon Mesh Processing (Group)</a> Out!-->
 
 2024-10-18
 Last day to drop courses with a "W"
 
-2024-10-23
+2024-12-09
 Assignment 4 Required Tasks Due
 
 2024-10-24
 Assignment 4 Final Submission Deadline
 
 2024-11-04
-<HR><a href = "Assignments/HW5_Shaders">Assignment 5: Shaders And Image Processing</a> Out
+<HR>Assignment 5: Shaders And Image Processing Out<!--<a href = "Assignments/HW5_Shaders">Assignment 5: Shaders And Image Processing</a> Out!-->
 
 2024-11-04
 Assignment 5 Due
 
 2024-11-12
-<HR><a href = "Assignments/HW6_RayTracer">Assignment 6: Real Time Ray Tracing</a> Out
+<HR><a href = "Assignments/HW6_RayTracer">Assignment 6: Real Time Ray Tracing Out<!--<a href = "Assignments/HW6_RayTracer">Assignment 6: Real Time Ray Tracing</a> Out!-->
 
 2024-11-13
 Assignment 6 Due
@@ -88,27 +88,3 @@ Cel Shading Art Contest
 <a href = "https://ursinus-cs476-f2020.github.io/Modules/Module7/Video1">Module 7: 3D Transformations And Scene Graphs</a> due before class
 
 2024-09-18
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module8/Video1">Module 8: GLSL And Shaders</a> due before class
-
-2024-09-25
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module9/Video1">Module 9: Blobby Shaders, Complex Numbers, And Fractals</a> due before class
-
-2024-09-27
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/Video1">Module 10: Local Illumination via Gouraud Shading</a> due before class
-
-2024-10-02
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module11/Video1">Module 11: Ray Casting</a> due before class
-
-2024-10-04
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module12/Video1">Module 12: Global Illumination Part 1</a> due before class
-
-2024-10-11
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module13/Video1">Module 13: Object-First Projection Matrices</a> due before class
-
-2024-10-23
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module14/Video1">Module 14: Topological Properties of Manifold Meshes</a> due before class
-
-2024-11-01
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module15/Video1">Module 15: Heightmaps, Levelsets, and Marching Squares</a> due before class
-
-2024-11-11
