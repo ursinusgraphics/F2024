@@ -1,0 +1,18 @@
+[submodule "Materials/ggslac"]
+	path = Materials/ggslac
+	url = https://github.com/ursinusgraphics/ggslac.git
+[submodule "Materials/JavaScript_MOCAP_Animation"]
+	path = Materials/JavaScript_MOCAP_Animation
+	url = https://github.com/ursinusgraphics/JavaScript_MOCAP_Animation.git
+[submodule "Materials/EulerAnglesViz"]
+	path = Materials/EulerAnglesViz
+	url = https://github.com/ursinusgraphics/EulerAnglesViz.git
+[submodule "Materials/MatrixTransformationsLive"]
+	path = Materials/MatrixTransformationsLive
+	url = https://github.com/ursinusgraphics/MatrixTransformationsLive.git
+[submodule "Materials/BarycentricExploration"]
+	path = Materials/BarycentricExploration
+	url = https://github.com/ursinusgraphics/BarycentricExploration.git
+[submodule "Assignments/HW1_GeomPrimitives/HW1_GeomPrimitives"]
+	path = Assignments/HW1_GeomPrimitives/HW1_GeomPrimitives
+	url = https://github.com/ursinusgraphics/HW1_GeomPrimitives.git
