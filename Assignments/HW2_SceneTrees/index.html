@@ -71,7 +71,7 @@
 										
 										<h3>Getting Started</h3>
 										<p>
-										You will be writing a series of JSON scene files in this assignment.  It is possible to everything (except for possibly the art contest) by writing and uploading your scene files to <a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneViewer.html">the scene viewer</a> from the course web site.  You can also use the live <a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneEditor.html">the scene editor</a> to play around with things in a more interactive manner before creating your final submissions.  However, for the art contest, you should open the <a href = "https://github.com/ctralie/ggslac">ggslac repository</a> in VisualStudio Code and launch the viewer, as described below:
+										You will be writing a series of JSON scene files in this assignment.  It is possible to everything (except for possibly the art contest) by writing and uploading your scene files to <a href = "../../../Modules/assets/js/ggslac/viewers/SceneViewer.html">the scene viewer</a> from the course web site.  You can also use the live <a href = "../../../Modules/assets/js/ggslac/viewers/SceneEditor.html">the scene editor</a> to play around with things in a more interactive manner before creating your final submissions.  However, for the art contest, you should open the <a href = "https://github.com/ctralie/ggslac">ggslac repository</a> in VisualStudio Code and launch the viewer, as described below:
                                         </p>
                                         
                                         <ol>
@@ -153,7 +153,7 @@
 
                                             </ol>
                                             
-                                            The <a href = "https://github.com/ctralie/ggslac/blob/master/scenes/sample-scene.json">sample.scene.json</a> file bundled with ggslac is a fairly comprehensive example of the possibilities, including optional light, material, and camera specifications.  An annotated screenshot of the code is shown below, with the resulting scene tree superimposed on the right.  We make the following observations about this example:
+                                            The <a href = "../../../Modules/assets/js/ggslac/scenes/sample-scene.json">sample.scene.json</a> file bundled with ggslac is a fairly comprehensive example of the possibilities, including optional light, material, and camera specifications.  An annotated screenshot of the code is shown below, with the resulting scene tree superimposed on the right.  We make the following observations about this example:
                                             
                                             <ul>
                                                 <li>Node 2 is a "dummy node," as it has no shapes associated to it; it only has a transformation (45 degree rotation about y and a translation by 2 in the +x direction).  So it is merely used to transform the shapes below it, not to include any shapes of its own.</li>
@@ -201,7 +201,7 @@
 										<h2><a name = "positioning">Task 1: Positioning Camera (2 pts)</a></h2>
                                         
                                         <p>
-                                            Modify the first camera in <a href = "../../Materials/ggslac/scenes/sample-scene.json">sample.scene.json</a> so that it is looking from overhead by default when loaded.  Make it so that the cylinder and cone are to the left, the two boxes are to the right, and nothing else is in view, as shown below (no need to get it exact, but get as close as you can).  Save as a file called <code>overhead.json</code>, which you will submit. (<b>Hint: </b> expand the cameras menu to see the position and rotation of the camera)
+                                            Modify the first camera in <a href = "../../../Modules/assets/js/ggslac/scenes/sample-scene.json">sample.scene.json</a> so that it is looking from overhead by default when loaded.  Make it so that the cylinder and cone are to the left, the two boxes are to the right, and nothing else is in view, as shown below (no need to get it exact, but get as close as you can).  Save as a file called <code>overhead.json</code>, which you will submit. (<b>Hint: </b> expand the cameras menu to see the position and rotation of the camera)
                                         </p>
                                         <img src = "Overhead.png">
 
@@ -209,7 +209,7 @@
                                         <h2><a name = "recursive">Scene 2: Recursive Inclusion (3 pts)</a></h2>
 
                                         <p>
-                                        Create a scene file called <code>recursive.json</code> that recursively includes <code>sample-scene.json</code> twice: once at its original position, and another time at exactly 20 units above its original position.  <i>Be sure that the path to <code>sample-scene.json</code> is relative to where <code>SceneViewer.html</code> is being run</i>!  In particular, if you don't move SceneViewer.html, and/or if you use the <a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneEditor.html">interactive editor</a>, then the path should be <code>../scenes/sample-scene.json</code>.</p>
+                                        Create a scene file called <code>recursive.json</code> that recursively includes <code>sample-scene.json</code> twice: once at its original position, and another time at exactly 20 units above its original position.  <i>Be sure that the path to <code>sample-scene.json</code> is relative to where <code>SceneViewer.html</code> is being run</i>!  In particular, if you don't move SceneViewer.html, and/or if you use the <a href = "../../../Modules/assets/js/ggslac/viewers/SceneEditor.html">interactive editor</a>, then the path should be <code>../scenes/sample-scene.json</code>.</p>
 
                                         <p>
                                             In this engine, lights in recursively included scenes are ignored.  Also, you can't interactively change any of the material properties of recursively included scenes.  So if you use them in the <a href = "#artcontest">art contest</a>, you should work on them individually before you recursively include them, and you should setup lights in the parent scene file.  If you've done this correctly and setup white lights at positions (0, 200, 0), (-5, 2, -10), and (5, 2, 10), then your scene should look something like this:
@@ -271,7 +271,7 @@
                                             </p>
                                             <img src = "DinoDanceCircle.gif">
                                             <p>
-                                                  Of course, you could manually type out each dino, but that would be very tedious, so you should make code that sets up the JSON object.  To help you out, <a href = "https://github.com/ursinus-cs476-f2022/DinoDanceCircle/archive/refs/heads/master.zip">click here</a> to download some starter code.  You should edit the file <code>dino.js</code>, and then run the file <code>makeDino.html</code> to display your programmatically generated code, which you can paste into a file or into the live editor to try out.  I've started you off in <code>dino.js</code> with the beginning of the scene, including the dino at the center and a few lights.  You'll have to add to the children of the <code>scene</code> JSON object that I started you with using a loop.  The position of the dinos in a circle can be placed in the XZ plane as
+                                                  Of course, you could manually type out each dino, but that would be very tedious, so you should make code that sets up the JSON object.  To help you out, <a href = "https://github.com/ursinusgraphics/DinoDanceCircle/archive/refs/heads/master.zip">click here</a> to download some starter code.  You should edit the file <code>dino.js</code>, and then run the file <code>makeDino.html</code> to display your programmatically generated code, which you can paste into a file or into the live editor to try out.  I've started you off in <code>dino.js</code> with the beginning of the scene, including the dino at the center and a few lights.  You'll have to add to the children of the <code>scene</code> JSON object that I started you with using a loop.  The position of the dinos in a circle can be placed in the XZ plane as
 
                                                 <h3>
                                                     \[ x = R \cos(\theta), z = R \sin(\theta) \]

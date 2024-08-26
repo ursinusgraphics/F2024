@@ -19,13 +19,13 @@
 <a href = "https://ursinus-cs476-f2020.github.io/Modules/Module7/Video1">Module 7: 3D Transformations And Scene Graphs</a> due before class
 
 2024-09-18
-<a href = "https://ursinus.instructure.com/courses/14942/assignments/152699">Software Environment Configuration</a> Due
+<a href = "https://ursinus.instructure.com/courses/18079/assignments/207797">Software Environment Configuration</a> Due
 
 2024-08-27
-<a href = "https://ursinus.co1.qualtrics.com/jfe/form/SV_ekEo8qkqkLQXvWC">Survey</a> due
+<a href = "https://ursinus.instructure.com/courses/18079/assignments/214028">Survey / Discord Post</a> due
 
 2024-08-27
-<a href = "https://ursinus.instructure.com/courses/14942/quizzes/19661">Syllabus Quiz</a> Due
+<a href = "https://ursinus.instructure.com/courses/18079/quizzes/27746">Syllabus Quiz</a> Due
 
 2024-08-27
 <HR><a href = "Assignments/HW1_GeomPrimitives">Assignment 1: Geometric Primitives</a> (Individual) Out
