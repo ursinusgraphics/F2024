@@ -9,7 +9,7 @@ Course Overview, Intro To Javascript, Scoping And Infinite Loops in Javascript
 LECTURE
 Basic Rasterization and Javascript
 
-
+<ul><li><a href = "ClassExercises/Week1_Drawing">Drawing in Javascript Exercise</a></li></ul>
 LECTURE
 Begin Vectors: Vector Addition, Dot Products
 

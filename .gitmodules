@@ -16,3 +16,6 @@
 [submodule "Assignments/HW1_GeomPrimitives/HW1_GeomPrimitives"]
 	path = Assignments/HW1_GeomPrimitives/HW1_GeomPrimitives
 	url = https://github.com/ursinusgraphics/HW1_GeomPrimitives.git
+[submodule "ClassExercises/Week1_Drawing/Week1Drawing"]
+	path = ClassExercises/Week1_Drawing/Week1Drawing
+	url = https://github.com/ursinusgraphics/Week1Drawing.git
