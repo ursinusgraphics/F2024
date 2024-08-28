@@ -1,22 +1,22 @@
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Overview">Module 1: Javascript</a> Due Before Class
+<a href = "../Modules/Week1/Overview">Module 1: Javascript</a> Due Before Class
 
 2024-08-28
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Week1/Vectors1">Module 2: Vectors And Dot Products</a> Due Before Class
+<a href = "../Modules/Week1/Vectors1">Module 2: Vectors And Dot Products</a> Due Before Class
 
 2024-08-30
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/Vectors1">Module 3: Projections, Cross Product, Normals</a> Due Before Class
+Module 3: Projections, Cross Product, Normals Due Before Class
 
 2024-09-02
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/LinesAndPlanes1">Module 4: Lines/Rays/Planes</a> Due Before Class
+Module 4: Lines/Rays/Planes Due Before Class
 
 2024-09-06
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module5/RayIntersectPlane">Module 5: Ray Intersect Plane/Triangle/Sphere</a> Due Before Class
+Module 5: Ray Intersect Plane/Triangle/Sphere Due Before Class
 
 2024-09-09
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module6/Video1">Module 6: 2D Matrices Definition, Composition, And Inverses</a> due before class
+Module 6: 2D Matrices Definition, Composition, And Inverses due before class
 
 2024-09-13
-<a href = "https://ursinus-cs476-f2020.github.io/Modules/Module7/Video1">Module 7: 3D Transformations And Scene Graphs</a> due before class
+Module 7: 3D Transformations And Scene Graphs due before class
 
 2024-09-18
 <a href = "https://ursinus.instructure.com/courses/18079/assignments/207797">Software Environment Configuration</a> Due
