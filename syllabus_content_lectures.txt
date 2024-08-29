@@ -15,13 +15,13 @@ Begin Vectors: Vector Addition, Dot Products
 
 Math Resources:<ul><li><a href = "Lectures/2_VectorsIntro">Prof. Tralie's notes on vectors</a></li><li><a href = "https://www.youtube.com/watch?v=Jes5jwLl1q8&list=PL8erL0pXF3JYm7VaTdKDaWc8Q3FuP8Sa7">Calculus Blue</a> 4.1 - 4.3, 5.1 - 5.3, 6.1 - 6.3</li><li><a href = "https://demoman.net/?a=trig-for-games">Trig for games</a></li></ul>
 LECTURE
-Projection, Cross Products
+Projection, Cross Products, Intersecting Circles
 
-<ul><li><a href = "http://glmatrix.net/docs/">glMatrix library documentation</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/Week2/Vectors1">Fall 2020 video module+notes on projection, cross products, normals</a></li></ul>
+<ul><li><a href = "http://glmatrix.net/docs/">glMatrix library documentation</a></li><li><a href = "hhttps://github.com/ursinusgraphics/Week2_CirclesIntersect/archive/refs/heads/master.zip">Circle Intersecting Exercise</a></li></ul>
 LECTURE
 Barycentric Coordinates, Triangle Interior Point Testing, Normals
 
-<ul><li><a href = "Materials/BarycentricExploration/WeightedAverage.html">Weighted Average of Triangle Points Applet</a></li><li><a href = "Materials/BarycentricExploration/BarycentricTriangles.html">Barycentric Coordinates via Area Ratios</a></li><li><a href = "https://github.com/ursinus-cs476-f2022/Week2_CirclesIntersect/archive/refs/heads/master.zip">Circle Intersecting Exercise</a></li></ul>
+<ul><li><a href = "Materials/BarycentricExploration/WeightedAverage.html">Weighted Average of Triangle Points Applet</a></li><li><a href = "Materials/BarycentricExploration/BarycentricTriangles.html">Barycentric Coordinates via Area Ratios</a></li></ul>
 LECTURE
 Lines, Rays, And Planes
 

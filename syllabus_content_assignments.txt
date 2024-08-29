@@ -4,7 +4,7 @@
 <a href = "../Modules/Week1/Vectors1">Module 2: Vectors And Dot Products</a> Due Before Class
 
 2024-08-30
-Module 3: Projections, Cross Product, Normals Due Before Class
+<a href = "../Modules/Week2/Vectors1">Module 3: Projections, Cross Product, Normals</a> Due Before Class
 
 2024-09-02
 Module 4: Lines/Rays/Planes Due Before Class
