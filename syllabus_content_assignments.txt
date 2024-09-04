@@ -13,9 +13,9 @@
 <a href = "../Modules/Module5/RayIntersectPlane">Module 5: Ray Intersect Plane/Triangle/Sphere</a> Due Before Class
 
 2024-09-09
-Module 6: 2D Matrices Definition, Composition, And Inverses due before class
+<a href = "../Modules/Module6/Video1">Module 6: 2D Matrices Definition, Composition, And Inverses</a> due before class
 
-2024-09-13
+2024-09-11
 Module 7: 3D Transformations And Scene Graphs due before class
 
 2024-09-18
