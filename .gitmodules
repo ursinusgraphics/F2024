@@ -19,3 +19,6 @@
 [submodule "ClassExercises/Week1_Drawing/Week1Drawing"]
 	path = ClassExercises/Week1_Drawing/Week1Drawing
 	url = https://github.com/ursinusgraphics/Week1Drawing.git
+[submodule "ClassExercises/Week3_Reflections/RayReflections2D"]
+	path = ClassExercises/Week3_Reflections/RayReflections2D
+	url = https://github.com/ursinusgraphics/RayReflections2D.git

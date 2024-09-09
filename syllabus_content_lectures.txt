@@ -29,7 +29,7 @@ Lines, Rays, And Planes
 LECTURE
 Ray Intersect Plane & Ray Intersect Sphere
 
-<ul><li><a href = "ClassExercises/Week3_RayIntersections">Week 3: Ray Intersection Class Notes</a></li></ul>
+<ul><li><a href = "ClassExercises/Week3_Reflections">Week 3: Ray Reflection Class Exercise</a></li><li><a href = "ClassExercises/Week3_RayIntersections">Week 3: Ray Intersection Class Notes</a></li></ul>
 LECTURE
 2D Matrix Transformations, Composition of Transformations, Inverses
 
