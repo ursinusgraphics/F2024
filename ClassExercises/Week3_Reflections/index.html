@@ -62,6 +62,74 @@
 										</p>
 										<img src = "concept.png">
 
+										<HR>
+										<h3>Solution</h3>
+
+										<p>
+											Below is a video that covers this
+										</p>
+
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/-4U8oLgrE9U?si=4Ue6JvQTIGlu5MTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+										<P>
+											And below are some notes to go along with the video
+										</P>
+										<img src = "ReflectionNotes.svg" width="100%">
+
+										<p>
+											Finally, below is code with a working implementation using the <a href = "https://glmatrix.net/">glMatrix library</a>:
+										</p>
+
+
+										<script type="syntaxhighlighter" class="brush: js"><![CDATA[
+
+											/**
+											* Compute the ray that results from the reflection of the ray
+											* p0 + t*v
+											* with the line segment (a, b)
+											* 
+											* @param {vec2} p0 Endpoint of ray
+											* @param {vec2} v Direction of ray
+											* @param {vec2} a Left endpoint of line segment
+											* @param {vec2} b Right endpoint of line segment
+											*/
+										   function rayReflect(p0, v, a, b) {
+											   let reflected = {"p0":null, "v":null};
+										   
+											   let ab = vec2.sub(vec2.create(), b, a);
+											   let n = vec2.fromValues(ab[1], -ab[0]);
+											   let p0a = vec2.sub(vec2.create(), a, p0);
+											   let num = vec2.dot(p0a, n);
+											   let denom = vec2.dot(v, n);
+											   if (denom != 0) { // Check to make sure the ray isn't parallel
+												   let t = num/denom;
+												   let p = vec2.scaleAndAdd(vec2.create(), p0, v, t);
+												   if (t >= 0) { // Make sure the intersection is in front of the ray! (I forgot this in the video!)
+													   let abLen = vec2.length(ab);
+													   let apLen = vec2.length(vec2.sub(vec2.create(), p, a));
+													   let bpLen = vec2.length(vec2.sub(vec2.create(), p, b));
+													   if (apLen <= abLen && bpLen <= abLen) { // Make sure we're on the inside of ab
+														   reflected.p0 = p;
+														   let p0p = vec2.sub(vec2.create(), p, p0);
+														   vec2.normalize(n, n);
+														   let scale = vec2.dot(p0p, n);
+														   let proj = vec2.scale(vec2.create(), n, scale);
+														   reflected.v = vec2.scaleAndAdd(vec2.create(), p0p, proj, -2);
+													   }
+												   }
+										   
+											   }
+											   return reflected;
+										   }
+										</script>
+
+										<p>
+											And below is a working implementation for you to play with:
+										</p>
+
+										<iframe src="rayReflect.html" width="100%" height="1500"></iframe>
+
+
                                     </div>
 						</div>
 					</div>
