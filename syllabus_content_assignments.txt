@@ -18,7 +18,7 @@
 2024-09-11
 Module 7: 3D Transformations And Scene Graphs due before class
 
-2024-09-18
+2024-09-16
 <a href = "https://ursinus.instructure.com/courses/18079/assignments/207797">Software Environment Configuration</a> Due
 
 2024-08-27
