@@ -16,7 +16,7 @@
 <a href = "../Modules/Module6/Video1">Module 6: 2D Matrices Definition, Composition, And Inverses</a> due before class
 
 2024-09-11
-Module 7: 3D Transformations And Scene Graphs due before class
+<a href = "%s../Modules/Module7/Video0">Module 7: Homogeneous Coordinates, 3D Transformations, And Scene Trees</a> due before class
 
 2024-09-16
 <a href = "https://ursinus.instructure.com/courses/18079/assignments/207797">Software Environment Configuration</a> Due
