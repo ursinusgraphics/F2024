@@ -22,3 +22,6 @@
 [submodule "ClassExercises/Week3_Reflections/RayReflections2D"]
 	path = ClassExercises/Week3_Reflections/RayReflections2D
 	url = https://github.com/ursinusgraphics/RayReflections2D.git
+[submodule "ClassExercises/Week3_RotateAroundPoint/Week3_RotateAroundPoint"]
+	path = ClassExercises/Week3_RotateAroundPoint/Week3_RotateAroundPoint
+	url = https://github.com/ursinusgraphics/Week3_RotateAroundPoint.git

@@ -31,7 +31,7 @@
 <HR><a href = "Assignments/HW1_GeomPrimitives">Assignment 1: Geometric Primitives</a> (Individual) Out
 
 2024-08-30
-<HR>Assignment 1 Part 1 Due
+Assignment 1 Part 1 Due
 
 2024-09-06
 <HR>Assignment 1 Part 2 Due

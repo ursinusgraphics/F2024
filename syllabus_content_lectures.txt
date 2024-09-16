@@ -45,11 +45,11 @@ In this section, we will cover some of the basics of 3D animation at a surface l
 LECTURE
 JSON, Hierarchical Transformations, Scene Graphs
 
-<ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneViewer.html">Scene Viewer</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneEditor.html">Scene Editor</a></li><li><a href = "http://www.json.org/">http://www.json.org/</a></li><li><a href = "Lectures/Module7/TableWithCone.json">TableWithCone.json</a></li></ul>
+<ul><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneViewer.html">Scene Viewer</a></li><li><a href = "https://ursinus-cs476-f2020.github.io/Modules/assets/js/ggslac/viewers/SceneEditor.html">Scene Editor</a></li><li><a href = "http://www.json.org/">http://www.json.org/</a></li><!--<li><a href = "Lectures/Module7/TableWithCone.json">TableWithCone.json</a></li>!--></ul>
 LECTURE
 Scene Graphs Continued
 
-<ul><li><a href = "ClassExercises/Week4_Scenes/kevinstable.html">Kevin's rotated table</a></li></ul>
+<!--<ul><li><a href = "ClassExercises/Week4_Scenes/kevinstable.html">Kevin's rotated table</a></li></ul>!-->
 LECTURE
 The Animation Loop, Basic Physics
 
