@@ -19,6 +19,9 @@
 <a href = "%s../Modules/Module7/Video0">Module 7: Homogeneous Coordinates, 3D Transformations, And Scene Trees</a> due before class
 
 2024-09-16
+Module 8: Axis-Angle Rotation And Quaternions Due Before Class
+
+2024-09-27
 <a href = "https://ursinus.instructure.com/courses/18079/assignments/207797">Software Environment Configuration</a> Due
 
 2024-08-27
@@ -37,21 +40,18 @@ Assignment 1 Part 1 Due
 <HR>Assignment 1 Part 2 Due
 
 2024-09-13
-<HR><a href = "Assignments/HW2_SceneTrees">HW2: Scene Trees</a> Out
+<HR><a href = "Assignments/HW2a_EulerAngles">HW2a: Euler Angles</a> and <a href = "Assignments/HW2_SceneTrees">HW2: Scene Trees</a> Out
 
 2024-09-16
-HW2 Due Due
+HW2a Due
 
-2024-09-23
-<a href = "Assignments/HW3a_EulerAngles">Assignment 3a: Euler Angles</a> Out
+2024-09-22
+HW2 Due
 
-2024-09-26
-Assignment 3a Due
-
-2024-09-29
+2024-09-27
 Assignment 3: Character Animation (Group) Out <!--<a href = "Assignments/HW3_CharacterAnimation">Assignment 3: Character Animation (Group)</a> Out !-->
 
-2024-09-29
+2024-09-30
 Assignment 3 Due
 
 2024-10-16

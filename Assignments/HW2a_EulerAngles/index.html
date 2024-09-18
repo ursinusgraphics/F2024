@@ -40,20 +40,18 @@
 
     <section>
         <header class="main">
-            <h2>HW 3a: Euler Angles Visualization (15 Points)</h2>
+            <h2>HW 2a: Euler Angles Visualization (16 Points)</h2>
         </header>
 
         <p>
-        In this short assignment you will visually explore one common representation of rotations in 3D with three numbers, also known as <i>Euler Angles</i>. 
+        In this short assignment you will visually explore one common representation of rotations in 3D with three numbers, also known as <i>Euler Angles</i>.  Before you dive into it, you should review how 3D rotations work with matrics at <a href = "../../../Modules/Module7/Video2">this link</a>.
         <h3><a href = "../../Materials/EulerAnglesViz">Click here</a> to launch the GUI that you will use in this assignment.</h3>  The GUI consists of a set of <a href = "https://en.wikipedia.org/wiki/Gimbal">gimbals</a>, which are motorized spinning rings which can be used to realize Euler Angles.
         </p>
 
-        <p>
-        <b><u>Submit a brief writeup on canvas with the answers to the questions below</u></b>
-        </p>
+
 
         <p>
-        <a name = "question1"><h3>Question 1: (<b>5 Points</b>)</h3></a>
+        
         Take a moment to play around with the GUI and familiarize yourself with gimbals.  In this particular example, the outer ring is yaw (rotation about the y-axis), the middle ring connected to it is pitch (rotation about the x-axis), and the inner ring connected to the pitch ring is roll (rotation about the z-axis).  As described in class, the rotation matrices about the individual axes can be described as follows:
         </p>
 
@@ -79,20 +77,33 @@
         <b>NOTE:</b> The coordinate system assumed here is a right handed coordinate system where (+X) is to the right, (+Y) is up, and (+Z) is out of the monitor, as shown below, and <i>this convention for roll/pitch/yaw may be slightly different than others you see on the web (though it's consistent with the way we've been defining our coordinate system)</i>:
         </p>
         <img src = "CoordinateSystem.svg"><BR>
+		<p></p>
 
-        <u><b>Question:</b></u> In terms of <h3>\[ R_X(\gamma), R_Y(\beta), \text{and } R_Z(\alpha) \]</h3>
+		<HR>
+		<a name = "question1"><h3>Question 1</a> (4 Points)</h3> 
+		<p>
+			Draw a scene graph that represents the gimbal system, with the plane at the bottom.
+		</p>
+
+
+		<a name = "question2"><h3>Question 2: (<b>4 points</b>)</h3></a>
+
+        In terms of <h3>\[ R_X(\gamma), R_Y(\beta), \text{and } R_Z(\alpha) \]</h3>
 
         <p>
         Write down the matrix product <b>R<SUB>Final</SUB> = ABC</b> that performs the overall rotation of the gimbal system.  That is, find an <b>R</b> that gets the airplane to its final orientation after composing all gimbals in the order that they are arranged in the app, assuming that each point on the airplane is a column vector which is multiplied on the left by <b>R</b>.  No need to expand the product; simply indicate which order those three matrices go in (i.e. which one is <b>A</b>, which one is <b>B</b>, and which one is <b>C</b> in the above product?).
         </p>
+		<p>
+			<b>Hint:</b> Use your scene graph to help you; what's the matrix that takes the airplane (at the bottom of the scene graphs) all the way up to <b>world coordinates</b>?
+		</p>
 
-        <a name = "question2"><h3>Question 2: (<b>5 Points</b>)</h3></a>
+        <a name = "question3"><h3>Question 3: (<b>4 points</b>)</h3></a>
 
         <p>
         In the app, set the pitch to 270 degrees.  Now move the yaw around by itself, and move the roll around by itself.  What can you say about the effect of doing yaw and the effect of doing roll when the pitch is in this position that makes it different from when pitch is in most other positions?  Can you find another pitch for which a similar phenomenon happens?
         </p>
 
-        <a name = "question3"><h3>Question 3: (<b>5 Points</b>)</h3></a>
+        <a name = "question4"><h3>Question 4: (<b>4 points</b>)</h3></a>
         <p>
         Now you will examine an animation that results when gimbals are used to move from one orientation to another.  For orientation 1, set the pitch to be something less than 270 degrees and for orientation 2, set the pitch to be something greater than 270 degrees.  Set the yaws and rolls to be different values before and after also (but it doesn't matter what they are).  Now click "animate."  What do you notice when the pitch passes through 270 degrees?  No need for any rigorous explanation, just describe what you see.  How about if you design an animation which passes through the other angle that you selected in question 2?
         </p>
@@ -157,7 +168,8 @@
 														
                                                     </ul>
 												</li>
-												<li><a href = "../../Assignments/HW2_SceneTrees/index.html">HW2: Scene Trees</a>
+												<li><a href = "../../Assignments/HW2_SceneTrees/index.html">HW2a: Scene Trees</a>
+												<li><a href = "../../Assignments/HW2_SceneTrees/index.html">HW2b: Scene Trees</a>
 												<!--
 												<ul>
 													
