@@ -37,18 +37,18 @@ Module 8: Axis-Angle Rotation And Quaternions Due Before Class
 Assignment 1 Part 1 Due
 
 2024-09-06
-<HR>Assignment 1 Part 2 Due
+Assignment 1 Part 2 Due
 
 2024-09-13
 <HR><a href = "Assignments/HW2a_EulerAngles">HW2a: Euler Angles</a> and <a href = "Assignments/HW2_SceneTrees">HW2: Scene Trees</a> Out
 
 2024-09-16
-HW2a Due
+HW2a: Euler Angles Due
 
 2024-09-22
-HW2 Due
+HW2: Scene Graphs Due
 
-2024-09-27
+2024-09-29
 Assignment 3: Character Animation (Group) Out <!--<a href = "Assignments/HW3_CharacterAnimation">Assignment 3: Character Animation (Group)</a> Out !-->
 
 2024-09-30
