@@ -25,3 +25,6 @@
 [submodule "ClassExercises/Week3_RotateAroundPoint/Week3_RotateAroundPoint"]
 	path = ClassExercises/Week3_RotateAroundPoint/Week3_RotateAroundPoint
 	url = https://github.com/ursinusgraphics/Week3_RotateAroundPoint.git
+[submodule "ClassExercises/RigidBodyAnim"]
+	path = ClassExercises/RigidBodyAnim
+	url = https://github.com/ursinusgraphics/RigidBodyAnim.git
