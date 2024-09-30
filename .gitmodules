@@ -28,3 +28,9 @@
 [submodule "ClassExercises/RigidBodyAnim"]
 	path = ClassExercises/RigidBodyAnim
 	url = https://github.com/ursinusgraphics/RigidBodyAnim.git
+[submodule "Materials/SlerpViz"]
+	path = Materials/SlerpViz
+	url = https://github.com/ursinusgraphics/SlerpViz.git
+[submodule "Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation"]
+	path = Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation
+	url = https://github.com/ursinusgraphics/HW3_CharacterAnimation.git
