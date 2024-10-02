@@ -41,7 +41,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-                                        <h2>Assignment 3: Character Animation (65 Points)</h2>
+                                        <h2>Assignment 3: Character Animation </h2>
 										<h3><a href = "https://www.ctralie.com">Chris Tralie</a></h3>
 									</header>
 
@@ -50,23 +50,26 @@
 											<ul>
 												<li><a href = "#overview">Overview</a></li>
 												<li><a href = "#gettingstarted">Getting Started</a></li>
-												<li><a href = "#timeline">Suggested Timeline</a></li>
 												<li>
-													<a href = "#part1">Part 1: Data Structure Initialization And FABRIK</a>
+													<a href = "#part1">Part 1: Data Structure Initialization And FABRIK (25 Points)</a>
 													<ul>
-														<li><a href = "#createtree">Create And Plot Skeleton Tree (10 Points)</a></li>
-														<li><a href = "#leafnodes">Identify Leaf Nodes / Create Chains (7 Points)</a></li>
+														<li><a href = "#plottree">Task 1: Plot Skeleton Tree (7 Points)</a></li>
+														<li><a href = "#leafnodes">Task 2: Create And Plot Chains (8 Points)</a></li>
 														<li><a href = "#fabrik">FABRIK (10 Points)</a></li>
 													</ul>
 												</li>
 												<li>
 													<a href = "#skinning">Part 2: Skinning And Animation</a>
-													<ul>
+													<!--<ul>
 														<li><a href = "#bones">Bones And Local Coordinate Systems (10 Points)</a></li>
 														<li><a href = "#nearestneighbors">Nearest Neighbors (8 Points)</a></li>
 														<li><a href = "#localcoords">Local Coordinates of Skin (10 Points)</a></li>
 														<li><a href = "#animation">Animation (10 Points)</a></li>
 													</ul>
+													!-->
+													<p>
+														Coming soon...
+													</p>
 												</li>
 											</ul>
 										</h3>
@@ -93,7 +96,7 @@
 										<HR>
 										<h2><a name = "gettingstarted">Getting Started</a></h2>
 										<p>
-											<a href = "HW3_CharacterAnimation.zip">Click here</a> to download the starter code for this assignment.  The entry point for running things is the file <code>skin.html</code>.  You'll mainly be editing the files <code>skin.js</code> and <code>skindebugplots.js</code>
+											<a href = "HW3_CharacterAnimation.zip">Click here</a> to download the starter code for this assignment.  The entry point for running things is the file <code>skin.html</code>.  You'll be editing the files <code>skin.js</code> and <code>skindebugplots.js</code>
                                         </p>
 
 										<p>
@@ -118,26 +121,6 @@
 											but you should plot a lot of stuff in the debugging area as you go along to check incrementally to make sure each step is working as you expect (some tasks will require you to make methods to do this).
 										</p>
 
-										<HR>
-										<h2><a name = "timeline">Suggested Timeline</a></h2>
-										<ul>
-											<li>
-												Create and plot skeleton by <b>Wed 10/5</b>
-											</li>
-											<li>
-												Leaf nodes / chains / FABRIK by <b>Fri 10/7 / Sat 10/8</b>
-											</li>
-											<li>
-												Local coordinate systems by <b>Mon 10/10</b>
-											</li>
-											<li>
-												Nearest neighbors and local coordinates by <b>Wed 10/12</b>
-											</li>
-											<li>
-												Animation by <b>Fri 10/14</b> (final deadline!)
-											</li>
-										</ul>
-
 										
                                         
                                         <HR>
@@ -146,41 +129,61 @@
                                             For the first part, you'll implement the FABRIK algorithm that we discussed in class, treating leaf nodes of a skeleton tree as end effectors.  You can find more info about the FABRIK algorithm at <a href = "http://www.andreasaristidou.com/FABRIK.html">this link</a>
                                         </p>
 										
-										<h3><a name = "createtree">Create And Plot Skeleton Tree (10 Points)</a></h3>
+										<h3><a name = "plottree">Task 1: Plot Skeleton Tree (10 Points)</a></h3>
 										<p>
-											I've provided a skeleton for the homer mesh that I made in <a href = "https://www.blender.org/">blender</a> in a file called <a href = "HW3_CharacterAnimation/rigs/homerskel.json"><code>rigs/homerskel.json</code></a>, which is passed into the main via a variable called <code>skeleton</code>.  This has all of the information to build the skeleton, but it's not in the most convenient format to perform FABRIK.  Your first task is to drill through this object it into a data structure more amenable to traversal.  
+											I've provided a skeleton for the homer mesh that I made in <a href = "https://www.blender.org/">blender</a> in a file called <a href = "HW3_CharacterAnimation/rigs/homerskel.json"><code>rigs/homerskel.json</code></a>, which is passed into the main via an object called <code>skeleton</code>.  This has all of the information to build the skeleton.
 										</p>
 
 										<h4>Your Task</h4>
 										<p>
-											Create data structures for your tree, and initialize the tree with information from <code>skeleton</code>.  Then, create a method called <code>plotSkeleton</code> in the file <code>skindebugplots.js</code> that takes your skeleton as a parameter and plots all of the bones.  Below is an example of what such a plot might look like: 
+											Create a method called <code>plotSkeleton</code> in <code>skindebugplots.js</code> that takes <code>skeleton</code> as a parameter and plots all of the bones.  Below is an example of what such a plot might look like: 
 										</p>
 
 										<img src = "Images/SkeletonPlot.gif" width="25%">
 
+
 										<h4>Hints/Suggestions</h4>
 										<p>
 											
-											I started you off with a class called <code>Joint</code> that you can use to store each joint, though you can feel free to modify this.  The easiest way to setup your tree for quick querying later is to store an object of joints whose keys are the name of the joints.
+											Study <code>plotJoints</code> to see how I plotted a scatter point of points using <a href = "https://plotly.com/javascript/">plotly</a>.  I show there how to plot points.  To plot a line segment between points <code>(x1, y1, z2)</code> and <code>(x2, y2, z2)</code>, you can use code like this:
 										</p>
 
 
-										<h3><a name = "leafnodes">Identify Leaf Nodes / Create Chains (7 Points)</a></h3>
+										<script type="syntaxhighlighter" class="brush: js"><![CDATA[
+											data.push(
+												{
+												  x:[x1, x2], y:[y1, y2], z:[z1, z2], mode:'lines', line: {color: '#000000', width: 10},
+												  type: 'scatter3d', marker: {color: '#000000', size: 2}
+												}
+											  );
+										</script>
 
+
+
+
+										<h3><a name = "leafnodes">Task 2: Create And Plot Chains (8 Points)</a></h3>
 										<p>
-											Your next task is to mark the leaf nodes in the joint tree if you haven't already, and to make a method <code>getChain</code> that extracts a list of joints starting at a chosen leaf node and ending at a <b>subbase</b>, or a joint with more than one child.  Also create a method <code>plotChain</code> in <code>skindebugplots.js</code> that plots a chain in red on top of the skeleton.  Below are a few examples:
+											We're now going to do some preprocessing to identify chains that we can do FABRIK on
+										</p>
+
+										<h4>Your Task</h4>
+										<p>
+											Create a method <code>getChain(skeleton, string)</code> in <code>skin.js</code> that returns a list of joints, starting an <b>end effector</b> specified by a string, and ending at a <b>subbase</b>, or a joint with more than one child.    
+										</p>
+										<p>
+											Also, for debugging, add a <code>chain</code> parameter to your <code>plotSkeleton</code> method in <code>skindebugplots.js</code> that draws chain in red on top of the skeleton, if it's provided. Below are a few examples:
 										</p>
 
 										<table>
 											<tr>
 												<td>
-													<h3>Right_Forearm</h3>
+													<code>getChain(skeleton, "Right_Forearm")</code>
 												</td>
 												<td>
-													<h3>Left_Shin</h3>
+													<code>getChain(skeleton, "Left_Shin")</code>
 												</td>
 												<td>
-													<h3>Head</h3>
+													<code>getChain(skeleton, "Head")</code>
 												</td>
 											</tr>
 											<tr>
@@ -196,10 +199,38 @@
 											</tr>
 										</table>
 
+									<h4>Hints/Suggestions</h4>
+									<ul>
+										<li>
+											It's probably helpful if you loop through the skeleton and add a <code>parent</code> field to each joint to make it easier to walk backwards.
+										</li>
+										<li>
+											To access the value associated to <code>key</code> in an object <code>obj</code>, you can say <code>obj[key]</code>
+										</li>
+									</ul>
+
+
 									<h3><a name = "fabrik">FABRIK (10 Points)</a></h3>
 									<p>
-										Implement the FABRIK algorithm to move a chain that you've created above to reach towards a particular target.  Below are a couple of examples
+										We're now ready to implement FABRIK to reach a limb towards a target!
 									</p>
+
+									
+
+									<h4>Your Task</h4>
+									<p>
+										Create a method <code>fabrik(chain, target, nIters)</code> in <code>skin.js</code> which takes as a parameter a chain, as well as a target <code>vec3</code> and a number of iterations to go through.  The method should update the appropriate positions in the skeleton as a side effect.
+									</p>
+
+									<h4>Hints/Suggestions</h4>
+									<ul>
+										<li>
+											It's probably easier to make a single method for both forward and backward iterations, and to pass it the reverse of the chain for the backwards iterations
+										</li>
+										<li>
+											You'll have to be very careful with references here.  For instance, if you make the target the position of the subbase, you'll need to make a deep copy that position.
+										</li>
+									</ul>
 
 									<table style="width:80%">
 										<tr>
@@ -214,7 +245,7 @@
 										</tr>
 										<tr>
 											<td>
-												<img src = "Images/fabrik_Right_Forearm_y0.02.png" width="50%">
+												<img src = "Images/fabrik_Right_Forearm_y0.02.png" width="75%">
 											</td>
 											<td>
 												<img src = "Images/fabrik_Left_Shin_x-0.2_y0.1.png" width="50%">
@@ -222,24 +253,14 @@
 										</tr>
 									</table>
 
-									<h4>Your Task</h4>
-									<p>
-										Create a method <code>fabrik</code> which takes as a parameter a chain that you created above, as well as a target <code>vec3</code> and a number of iterations to go through.
-									</p>
-
-									<h4>Hints/Suggestions</h4>
-									<ul>
-										<li>
-											It's probably easier to make a single method for both forward and backward iterations, and to pass it the reverse of the chain for the backwards iterations
-										</li>
-										<li>
-											You'll have to be very careful with references here.  For instance, if you make the target in terms of one of the leaf joints, you'll probably want to make a deep copy that leaf joint first.
-										</li>
-									</ul>
-
 									<HR>
 									<h2><a name = "skinning">Part 2: Skinning And Animation</a></h2>
-
+									
+										<P>
+											Coming soon...
+										</P>
+									
+									<!--
 									<p>
 										In this part, you will make the "skin" (mesh vertices) move along with the bones 
 									</p>
@@ -404,7 +425,7 @@
 										}
 									</script>
 
-									
+									-->
 
                                     </div>
 						</div>
@@ -474,21 +495,18 @@
 												</ul>
 												-->
 												</li>
-												<!--
-												<li>
-													<a href = "../../Assignments/HW3a_EulerAngles/index.html">HW3a: Euler Angles</a>
-												</li>
 												<li>
 													<a href = "../../Assignments/HW3_CharacterAnimation/index.html">HW3: Character Animation</a>
 												</li>
 												<li>
 													<a href = "../../Assignments/HW4_PolygonMeshProcessing/index.html">HW4: Polygon Mesh Processing</a>
-													<ul>
+													<!--<ul>
 														<li>
 															<a href = "../../Assignments/HW4_PolygonMeshProcessing/ArtContest/index.html">Art Contest</a>
 														</li>
-													</ul>
+													</ul>!-->
 												</li>
+												<!--
 												<li>
 													<a href = "../../Assignments/HW5_Shaders/index.html">HW5: Shaders And Image Processing</a>
 													<ul>
@@ -556,6 +574,8 @@
 														<li><a href = "../../Materials/ggslac/viewers/MatrixAnim.html">Week 3: Matrix Multiplications And Compositions Widget</a></li>
 														
 														<li><a href = "../../Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation/forward.html">Week 4: Forward Kinematics Demo</a></li>
+
+														<li><a href = "../../../RollPitchYaw">Week 5: Roll/Pitch/Yaw Interactive Demo</a></li>
 														
 														<!--
 														<li>

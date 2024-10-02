@@ -41,9 +41,9 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-                                        <h2>Assignment 4: Polygon Mesh Processing (85 Points)</h2>
-                                        <h3>Due Date #1: Thursday 10/27/2022 at 11:59 PM</h3>
-                                        <h3>Due Date #2: Sunday 11/6/2022 at 11:59 PM</h3>
+                                        <h2>Assignment 4: Polygon Mesh Processing (70 Points)</h2>
+                                        <h3>Due Date #1 (Required Tasks): Thursday 10/28/2024 at 11:59 PM</h3>
+                                        <h3>Due Date #2 (Your Chosen Tasks): Sunday 11/4/2022 at 11:59 PM</h3>
                                         <h3><a href = "ArtContest">Click here</a> to see the art contest results!</h3>
                                     </header>
 
@@ -51,28 +51,28 @@
 										<h3>
 											<ul>
                                                 <li><a href = "#overview">Overview</a></li>
-                                                <li><a href = "#traversal">Mesh Traversal (20 Points)</a>
+                                                <li><a href = "#traversal">Mesh Traversal</a>
                                                     <ul>
-                                                        <li>REQUIRED: <a href = "#facegetEdges">face.getEdges() (6 Points)</a></li>
-                                                        <li>REQUIRED: <a href = "#vertexgetVertexNeighbors">vertex.getVertexNeighbors (7 Points)</a></li>
-                                                        <li>REQUIRED: <a href = "#vertexgetAttachedFaces">vertex.getAttachedFaces (7 Points)</a></li>
+                                                        <li><span style="color:red;">REQUIRED:</span> <a href = "#facegetEdges">face.getEdges() (6 Points)</a></li>
+                                                        <li><span style="color:red;">REQUIRED:</span> <a href = "#vertexgetVertexNeighbors">vertex.getVertexNeighbors (7 Points)</a></li>
+                                                        <li><span style="color:red;">REQUIRED:</span> <a href = "#vertexgetAttachedFaces">vertex.getAttachedFaces (7 Points)</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href = "#geometric">Geometric Tasks (15 Points Required)</a>
+                                                <li><a href = "#geometric">Geometric Tasks</a>
                                                     <ul>
-                                                        <li>REQUIRED: <a href = "#facegetArea">face.getArea() (5 Points)</a></li>
-                                                        <li>REQUIRED: <a href = "#vertexgetNormal">vertex.getNormal() (10 Points)</a></li>
+                                                        <li><span style="color:red;">REQUIRED:</span> <a href = "#facegetArea">face.getArea() (5 Points)</a></li>
+                                                        <li><span style="color:red;">REQUIRED:</span> <a href = "#vertexgetNormal">vertex.getNormal() (10 Points)</a></li>
                                                         <li><a href = "#inflateDeflate">Inflate/Deflate (10 Points)</a></li>
                                                         <li><a href = "#smoothsharpen">Laplacian Smooth/Sharpen (10 Points)</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href = "#topological">Topological Tasks (5 Points Required)</a>
+                                                <li><a href = "#topological">Topological Tasks</a>
                                                 <ul>
                                                     <li><a href = "#boundaryCycles">Find Boundary Cycles (10 Points)</a></li>
                                                     <li><a href = "#genus">Genus of A Watertight Mesh (5 Points)</a></li>
                                                 </ul>
                                                 </li>
-                                                <li><a href = "#meshcreation">Mesh Creation Tasks</a> (15 Points Required)
+                                                <li><a href = "#meshcreation">Mesh Creation Tasks</a>
                                                 <ul>
                                                     <li><a href = "#surfaceofrevolution">Surface of Revolution (10 Points)</a></li>
                                                     <li><a href = "#toposubdivision">Topological Subdivision (15 Points)</a></li>
@@ -93,20 +93,19 @@
                                         
                                         <h3>Scoring</h3>
                                         <p>
-                                            This assignment is out of <b>85 points</b>, but you can "choose your own adventure"; there are only 5 tasks that you are required to do, and then you can choose what other tasks to do, as long as you reach the minimum points in each category, and as long as you reach at least 85 points total.  Assuming you've hit the minimum in each category, any extra points you get beyond the required 85 will be added as extra credit at a rate of 1 point, 4/5 points, 4/5^2 points, 4/5^3 points, etc.
+                                            This assignment is out of <b>70 points</b>, split into two parts.  The first half is on 5 required tasks.  In the second "choose your own adventure" part, you can choose whatever other tasks you want to do, as long as you reach 35 points among them.  Assuming you've hit 35, any extra credit points you earn will be applied at a discounted rate of 1 point, 4/5 points, 4/5^2 points, 4/5^3 points, etc.
                                         </p>
 
                                         <p>
-                                            As an example, let's suppose you did the required tasks (35 points), then inflate/deflate (10 points), then boundary cycles (5 Points), then topological subdivision (15 Points), then truncate (20 points), then the art contest (5 points).  Each of these hits the minimum in each category, so no points lost there.  But we have a total of 5 extra points.  So the final score would be 85+1+4/5+(4/5)<SUP>2</SUP>+(4/5)<SUP>3</SUP>+(4/5)<SUP>4</SUP>, or <b>88.3616</b>
-                                        </p>
-
-                                        <p>
-                                            As another example, let's suppose you did all of the required tasks (35 points), then everything in the geometric tasks (35 points total), then surface of revolution (10 points) and truncate (20 points).  This adds up to 100 points, but there is a 5 point deduction for not doing any of the topological tasks.  So we start at 80/85, then we add the 20 points left over as extra credit at 1 + (4/5) + (4/5)<SUP>2</SUP> + ... + (4/5)<SUP>19</SUP> &approx; 4.94.  So the total score would be <b>84.94</b>
+                                            As an example, let's suppose you did the required tasks (35 points), then inflate/deflate (10 points), then boundary cycles (5 Points), then truncation (20 points), then the art contest (5 points).  So the final score would be 35 on the first part, then 35+1+4/5+(4/5)<SUP>2</SUP>+(4/5)<SUP>3</SUP>+(4/5)<SUP>4</SUP>, or <b>73.3616</b>
                                         </p>
 
                                         <h3>Deadlines</h3>
                                         <p>
                                             The first deadline will encompass all of the required tasks (face.getEdges(), vertex.getVertexNeighbors(), vertex.getAttachedFaces(), face.getArea(), vertex.getNormal())
+                                        </p>
+                                        <p>
+                                            The second deadline will be for the tasks you've chosen.
                                         </p>
 
                                         <h3><a name = "collaboration">Collaboration</a></h3>
@@ -124,7 +123,7 @@
                                                 <a href = "HW4_PolygonMeshProcessing.zip">Click here</a> to download the repository of skeleton code for this assignment.  If you have git installed on your computer, you can simply type
                                                 <p>
                                                     <code>
-                                                            git clone --recursive https://github.com/ursinus-cs476-f2022/HW4_PolygonMeshProcessing.git
+                                                            git clone --recursive https://github.com/ursinusgraphics/HW4_PolygonMeshProcessing.git
                                                     </code>
                                                 </p>
                                                 <p>
@@ -194,32 +193,7 @@
 
 										<h2><a name = "submission">Submission Instructions</a></h2>
 										
-										You will submit your <code>halfedge.js</code> code to Canvas when you are finished, along with screenshots and .off files for the art contest, if you choose to submit something.  Please also submit a <b><code>README.txt</code></b> file with both submissions with the following information:
-										<ol>
-                                        <li>Your name<BR><BR></li>
-                                        <li>The "buddies" you worked with (see <a href = "#collaboration">collaboration</a> above)</li>
-                                        <li>A list of tasks that you implemented, and how many points you believe you earned.</li>
-                                        <li>A description of your art contest submission if you have one, as well as:
-                                        <ul>
-                                                <li>One of the two statements below
-                                                        <ol>
-                                                            <li>
-                                                                "I consent to have my art contest submission posted publicly on the class web site.  My name/pseudonym for public display is <u>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp.</u>
-                                                            </li>
-                                                            <li>
-                                                                "I do not wish to post my art contest submission publicly"
-                                                            </li>
-                                                        </ol>
-            
-                                                    </li>
-                                        </ul>
-                                        </li>
-
-										<li>Approximately how many hours it took you to finish this assignment (<i>I will not judge you for this at all...I am simply using it to gauge if the assignments are too easy or hard</i>)<BR><BR></li>
-										<li>Your overall impression of the assignment.  Did you love it, hate it, or were you neutral?  One word answers are fine, but if you have any suggestions for the future let me know.<BR><BR></li>
-										
-										<li>Any other concerns that you have.</li>
-										</ol>
+										You will submit your <code>halfedge.js</code> code to Canvas when you are finished, along with screenshots and .off files for the art contest, if you choose to submit something.
                                         
                                             
 

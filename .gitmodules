@@ -34,3 +34,6 @@
 [submodule "Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation"]
 	path = Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation
 	url = https://github.com/ursinusgraphics/HW3_CharacterAnimation.git
+[submodule "Assignments/HW4_PolygonMeshProcessing/HW4_PolygonMeshProcessing"]
+	path = Assignments/HW4_PolygonMeshProcessing/HW4_PolygonMeshProcessing
+	url = https://github.com/ursinusgraphics/HW4_PolygonMeshProcessing.git

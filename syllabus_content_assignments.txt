@@ -49,21 +49,24 @@ HW2a: Euler Angles Due
 HW2: Scene Graphs Due
 
 2024-09-29
-Assignment 3: Character Animation (Group) Out <!--<a href = "Assignments/HW3_CharacterAnimation">Assignment 3: Character Animation (Group)</a> Out !-->
+<a href = "Assignments/HW3_CharacterAnimation">Assignment 3: Character Animation (Group)</a>
 
 2024-09-30
-Assignment 3 Due
+Assignment 3 Part 1 Due
 
-2024-10-16
-<HR>Assignment 4: Polygon Mesh Processing (Group) Out <!--<a href = "Assignments/HW4_PolygonMeshProcessing">Assignment 4: Polygon Mesh Processing (Group)</a> Out!-->
+2024-10-8
+Assignment 3 Part 2 Due
 
-2024-10-18
+2024-10-21
+<HR><a href = "Assignments/HW4_PolygonMeshProcessing">Assignment 4: Polygon Mesh Processing (Group)</a> Out
+
+2024-10-21
 Last day to drop courses with a "W"
 
 2024-12-09
 Assignment 4 Required Tasks Due
 
-2024-10-24
+2024-10-28
 Assignment 4 Final Submission Deadline
 
 2024-11-04
