@@ -54,7 +54,10 @@ HW2: Scene Graphs Due
 2024-09-30
 Assignment 3 Part 1 Due
 
-2024-10-8
+2024-10-9
+Assignment 3: Bones And Local Coordinate Systems Due
+
+2024-10-11
 Assignment 3 Part 2 Due
 
 2024-10-21

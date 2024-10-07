@@ -71,6 +71,10 @@ MOCAP, Forward And Backward Reaching Inverse Kinematics (FABRIK)
 
 <ul><li><a href = "Assignments/HW3_CharacterAnimation/HW3_CharacterAnimation/forward.html">Forward Kinematics Demo</a></li><li><a href = "http://www.andreasaristidou.com/FABRIK.html">FABRIK Paper</a></li><li><a href = "Materials/JavaScript_MOCAP_Animation">Javascript MOCAP Visualizer</a></li><li><a href = "http://mocap.cs.cmu.edu/">CMU MOCAP Database</li></ul><ul><li><a href = "https://twitter.com/TheRujiK/status/969581641680195585">Wonky salamander</a></li><li><a href = "https://twitter.com/i/status/1135929820603228161">Tentacle + cake...</a></li><li><a href = "https://www.shadertoy.com/view/XldSDn">Shadertoy dancing tentacle</a></li></ul>
 LECTURE
+Catchup Day
+
+
+LECTURE
 Rigging/Skinning
 
 
@@ -178,7 +182,3 @@ LECTURE
 Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps
 
 <ul><li><a href = "https://docs.google.com/presentation/d/1nN94a5gkN7BladB9E5SAcvvQCajF8xSdC_-sytOyh7E/edit?usp=sharing">Slides from today</a></li><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo</a></li></ul>
-LECTURE
-Bonus Topic: Dynamic 3D Gaussians
-
-

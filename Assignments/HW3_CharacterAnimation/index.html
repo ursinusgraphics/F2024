@@ -59,18 +59,16 @@
 													</ul>
 												</li>
 												<li>
-													<a href = "#skinning">Part 2: Skinning And Animation</a>
-													<!--<ul>
+													<a href = "#skinning">Part 2: Skinning And Animation (35 Points)</a>
+													<ul>
 														<li><a href = "#bones">Bones And Local Coordinate Systems (10 Points)</a></li>
-														<li><a href = "#nearestneighbors">Nearest Neighbors (8 Points)</a></li>
-														<li><a href = "#localcoords">Local Coordinates of Skin (10 Points)</a></li>
-														<li><a href = "#animation">Animation (10 Points)</a></li>
+														<li><a href = "#localcoords">Setup Rig: Local Coordinates of Skin And Weights (10 Points)</a></li>
+														<li><a href = "#updatingTransforms">Updating Transforms (10 Points)</a></li>
+														<li><a href = "#artcontest">Animation Art Contest (5 Points)</a></li>
+
 													</ul>
-													!-->
-													<p>
-														Coming soon...
-													</p>
 												</li>
+												<li><a href = "#other">Other Ideas (For The Bored)</a></li>
 											</ul>
 										</h3>
 										
@@ -82,7 +80,10 @@
 
 										<h3>What To Submit</h3>
 										<p>
-											When you're finished, submit <code>skin.js</code> and <code>skindebugplots.js</code> to canvas.
+											When you're finished, submit <code>skin.js</code> and <code>skindebugplots.js</code> to canvas.  
+										</p>
+										<p>
+											If you're skinning your own mesh for the art contest, you should also submit the .off file for that mesh, as well as the .json file for the skeleton and binding weights (see <a href = "https://www.youtube.com/watch?v=EXhumIDK6n4">this video</a> and <a href = "https://www.youtube.com/watch?v=RUJGmZBOtac">this video</a>).
 										</p>
 
 										<h3>Learning Goals</h3>
@@ -100,9 +101,9 @@
                                         </p>
 
 										<p>
-											You can start by editing code in the <code>main</code> method of <code>skin.js</code>.  Right now, the code plots the joints as a point cloud in the debugging area at the bottom of <code>skin.html</code>, using the <code><a href = "https://github.com/ursinus-cs476-f2022/HW3_CharacterAnimation/blob/589d28c6fdf8bbbd5e952478eaba02a4b4027dc2/skindebugplots.js#L34">plotJoints</a></code> method in <code>skindebugplots.js</code>, as shown below:  
+											You can start by editing code in the <code>main</code> method of <code>skin.js</code>.  Right now, the code plots the joints as a point cloud in the debugging area at the bottom of <code>skin.html</code>, using the <code><a href = "https://github.com/ursinusgraphics/HW3_CharacterAnimation/blob/4ad0ff930e2b5012660c9a59480a9edc3abef94d/skindebugplots.js#L34">plotJoints</a></code> method in <code>skindebugplots.js</code>, as shown below:  
 										</p>
-										<img src="Images/GivenPlot.gif" width="25%">
+										<img src="Images/GivenPlot.svg" width="25%">
 										<p>
 											This code uses the <a href = "https://plotly.com/javascript/">plotly library</a>.  You should study this example closely, because it will help you to debug as you go along.
 										</p>
@@ -126,8 +127,11 @@
                                         <HR>
                                         <h2><a name = "part1">Part 1: Data Structure Initialization And FABRIK</a></h2>
                                         <p>
-                                            For the first part, you'll implement the FABRIK algorithm that we discussed in class, treating leaf nodes of a skeleton tree as end effectors.  You can find more info about the FABRIK algorithm at <a href = "http://www.andreasaristidou.com/FABRIK.html">this link</a>
+                                            For the first part, you'll implement the FABRIK algorithm that we discussed in class, treating leaf nodes of a skeleton tree as end effectors.  Below is a video where I explain the FABRIK algorithm:
                                         </p>
+
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/DOR0kO-UXsI?si=Is2igPB3jtR5lRvK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+										<p></p>
 										
 										<h3><a name = "plottree">Task 1: Plot Skeleton Tree (10 Points)</a></h3>
 										<p>
@@ -139,7 +143,7 @@
 											Create a method called <code>plotSkeleton</code> in <code>skindebugplots.js</code> that takes <code>skeleton</code> as a parameter and plots all of the bones.  Below is an example of what such a plot might look like: 
 										</p>
 
-										<img src = "Images/SkeletonPlot.gif" width="25%">
+										<img src = "Images/SkeletonPlot.png" width="25%">
 
 
 										<h4>Hints/Suggestions</h4>
@@ -149,7 +153,7 @@
 										</p>
 
 
-										<script type="syntaxhighlighter" class="brush: js"><![CDATA[
+										<script type="syntaxhighlighter" class="brush: python"><![CDATA[
 											data.push(
 												{
 												  x:[x1, x2], y:[y1, y2], z:[z1, z2], mode:'lines', line: {color: '#000000', width: 10},
@@ -177,10 +181,10 @@
 										<table>
 											<tr>
 												<td>
-													<code>getChain(skeleton, "Right_Forearm")</code>
+													<code>getChain(skeleton, "Wrist.R")</code>
 												</td>
 												<td>
-													<code>getChain(skeleton, "Left_Shin")</code>
+													<code>getChain(skeleton, "Ankle.L")</code>
 												</td>
 												<td>
 													<code>getChain(skeleton, "Head")</code>
@@ -188,13 +192,13 @@
 											</tr>
 											<tr>
 												<td>
-													<img src = "Images/chain_Right_Forearm.png" width="50%">
+													<img src = "Images/Chain_WristR.png" width="50%">
 												</td>
 												<td>
-													<img src = "Images/chain_Left_Shin.png" width="50%">
+													<img src = "Images/Chain_AnkleL.png" width="50%">
 												</td>
 												<td>
-													<img src = "Images/chain_Head.png" width="50%">
+													<img src = "Images/Chain_Head.png" width="50%">
 												</td>
 											</tr>
 										</table>
@@ -235,45 +239,73 @@
 									<table style="width:80%">
 										<tr>
 											<td>
-												<h3>Right_Forearm</h3>
+												<h3>Wrist.R</h3>
 												Moved to a point 0.2 units above where it currently is
 											</td>
 											<td>
-												<h3>Left_Shin</h3>
-												Moved to a point 0.2 units to the left and 0.1 units above where it currently is
+												<h3>Ankle.L</h3>
+												Moved to a point 0.2 units to the right and 0.1 units above where it currently is (this is anatomically questionable...)
 											</td>
 										</tr>
 										<tr>
 											<td>
-												<img src = "Images/fabrik_Right_Forearm_y0.02.png" width="75%">
+												<img src = "Images/FABRIK_WristR.png" width="100%">
 											</td>
 											<td>
-												<img src = "Images/fabrik_Left_Shin_x-0.2_y0.1.png" width="50%">
+												<img src = "Images/FABRIK_AnkleL.png" width="45%">
 											</td>
 										</tr>
 									</table>
 
 									<HR>
 									<h2><a name = "skinning">Part 2: Skinning And Animation</a></h2>
-									
-										<P>
-											Coming soon...
-										</P>
-									
-									<!--
 									<p>
 										In this part, you will make the "skin" (mesh vertices) move along with the bones 
 									</p>
 
-									<h3><a name = "bones">Bones And Local Coordinate Systems (10 Points)</a></h3>
+									<h3><a name = "bones">Bones And Local Coordinate Systems (10 Points)</a></h3>	
+									<p>
+										First, we're going to setup coordinate systems for each bone.  These coordinates systems will change as the bones move around, and we'll eventually get the skin to move with them.
+									</p>
+
+									<h4>Your Task</h4>
 
 									<p>
-										Create a class for bones and initialize all the bones in the skeleton in a list of bones.  In the constructor, setup and store a <a href = "https://glmatrix.net/docs/module-mat4.html">glMatrix.mat4</a> matrix that transforms from bone coordinates to world coordinates.  To do this, let <b>a</b> and <b>b</b> be the positions of the bones, and let <b>wLast</b> be the vector that comes into this bone from its parent bone.  Then, create the following four vectors
+										Create a class for bones and initialize all the bones in the skeleton in a list of bones; there should be a bone between a joint and each of its children.  The code below could get you started, but you'll also need to make a recursive method to initialize all of the bones in a list
+									</p>
+
+									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+										class Bone {
+											/**
+											 * 
+											 * @param {object} joint1 First joint on bone
+											 * @param {object} joint2 Second joint on bone
+											 */
+											constructor(joint1, joint2) {
+											  this.joint1 = joint1;
+											  this.joint2 = joint2;
+											}
+										  
+											/**
+											* Initialize and store a matrix that transforms
+											* points from bone coordinates to world coordinates
+											* 
+											* @param {vec3} wLast W axis from the last bone
+											*/
+											initMatrix(wLast) {
+											  // TODO: Fill this in
+											}
+											
+										  }
+									</script>
+										
+									<p>
+										During initialization, set up and store a <a href = "https://glmatrix.net/docs/module-mat4.html">glMatrix.mat4</a> matrix that transforms each bone from bone coordinates to world coordinates.  To do this, let <b>a</b> and <b>b</b> be the positions of the the two joints on either end of the bone, and let <b>wLast</b> be the vector that comes into this bone from its parent bone.  Then, create the following four vectors
 									</p>
 									<ul>
 										<li><b>c</b>: The center of the bone (the average of <b>a</b> and <b>b</b>)</li>
 										<li><b>w</b>: A normalized vector from <b>a</b> to <b>b</b></li>
-										<li><b>v</b>: The normalized perpendicular projector of <b>wLast</b> onto <b>w</b></li>
+										<li><b>v</b>: The normalized perpendicular projection of <b>wLast</b> onto <b>w</b></li>
 										<li><b>u</b>: The cross product <b>v x w</b></li>
 									</ul>
 
@@ -293,6 +325,15 @@
 									</h3>
 									</div>
 
+									<p>
+										Store <b>c</b>, <b>w</b>, <b>u</b>, <b>v</b>, and <b>T</b> as an instance variable for further use.
+									</p>
+									<p>
+										To check to make sure you've done this correctly, plot the coordinate systems centered at each point <b>c</b>.  Below is what this looks like if you plot the x axis in blue, y axis in green, and z axis in red, each with a length of 0.05:
+									</p>
+
+									<img src = "Images/CoordSystems.png" width="25%">
+
 
 									<h4>Hints</h4>
 									<ul>
@@ -302,96 +343,234 @@
 										<li>
 											If you use the <code>mat4.fromValues</code> method, be mindful that it accepts parameters in <b>column major</b> order.  This means that your first 5 elements should be ux, uy, uz, 0, vx ...
 										</li>
+									</ul>
+
+									<h3><a name = "localcoords">Setup Rig: Local Coordinates of Skin And Weights (10 Points)</a></h3>
+
+									<p>
+										You're now going to send the engine I made all of the information it needs to bind the skin to the bones.  Before you do this, it might be helpful to watch this video about how I created the <code>skeleton</code> object in Blender:
+									</p>
+
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/RUJGmZBOtac?si=qJz2f-l0aQ7eIMx2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+									<p>
+										Optionally, you might also want to watch <a href = "https://www.youtube.com/watch?v=EXhumIDK6n4">this video</a> about how I made the skeleton in the first place, especially if you want to skin your own mesh for the <a href = "#artcontest">art contest</a>.
+									</p>
+
+									<p>
+										TL;DR, the important thing to know is that the weights of the bones are stored in the joint objects in <code>skeleton</code>, and each joint stores the weights of <b>the bone that has this joint as a <u>tail</u></b> (that is, the child of another bone).  For example, the weights stored in <code>Elbow.R</code> correspond to vertices bound to the bone from <code>Shoulder.R</code> to <code>Elbow.R</code>:
+									</p>
+									<img src = "Images/JSONWeights.png" width="45%">
+									<p>
+										The weights are a dictionary/object whose keys are indices int he mesh that are bound to this bone, and whose values are the weights of this bone.  You can loop through them with a loop like this:
+									</p>
+
+									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+										for (const [i, w] of Object.entries(weights)) {
+											// ... do something with the weight..
+										}
+									</script>
+
+									
+
+
+									<h4>Your Task</h4>
+									<p>
+										First, gather the transformations of all of the bones in a list called <code>transformations</code>.  Then, gather the coordinates of the <b>numPoints</b> points in the mesh:
+									</p>
+									
+									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+										let X = getMeshVertices(mesh); // A list of [[x0, y0, z0], [x1, y1, z1], ...]
+									</script>
+										
+									<p>
+										Now, gather information about the <i>top 3 weight bones</i> for each vertex in the mesh.  To do this, create three parallel lists:
+									</p>
+									<ol>
 										<li>
-											You won't be able to fully test this until you get to the <a href = "#localcoords">local coordinates</a> task, so you may need to return to this later if your mesh seems wonky
+											<code>weights</code>: Each element is a list that has <b>numPoints</b> weights, which are parallel to the mesh vertices <code>X</code>.  The first list holds the top weights, the second list holds the second largest weights, and the third list holds the third largest weights.  For example, <code>weights[1][100]</code> holds the second largest weight for the mesh vertex at index 100.
+											
+											<p>
+												Once you've determined what the three largest weights are for each vertex, you should <b>normalize</b> the weights for that vertex; that is, divide each weight for each vertex by the sum of the three weights for that vertex.</code>
+											</p>
+											<p></p>
+										</li>
+										
+
+										<li>
+											<code>boneIDs</code>: Each element is a list that has <b>numPoints</b> indices into the bones, using indices corresponding to the order of the bones in your <code>transformations</code> list.  These lists are parallel to <code>weights</code>.  For instance, if the largest weight for vertex at index 476 is associated to the bone whose transform is at index 10, then <code>weights[0][476]</code> would be 10.
+
+											<p>As another example, if the third largest weight of vertex 123 is associated to the bone whose transform is at index 5, then <code>weights[2][12]</code> would be 5.</p>
+											<p></p>
+										</li>
+
+										<li>
+											<code>Ys:</code> Each element is a list that has <code>nPoints</code> points in <b>local coordinates</b> of the bones they're associated to.  So, for instance, if the top weight bone for vertex 2024 is at index 6 in transforms, then <code>Ys[0][2024]</code> would contain <code>X[2024]</code> transformed by the <b>inverse</b> of <code>transforms[6]</code>, since we're pulling the coordinates back from world coordinates to bone coordinates.
+										</li>
+
+									</li>
+									</ol>
+
+									<p>
+										<b>NOTE:</b> If there are fewer than 3 bones bound to a particular vertex, then pad the weights, bone indices, and Y's with 0's up to 3.  So, for instance, if only one bone is bound to vertex 1337, then 
+										
+										<ul>
+											<li>
+												<code>weights[1][1337] = 0</code>
+											</li>
+											<li>
+												<code>weights[2][1337] = 0</code>
+											</li>
+											<li>
+												<code>boneIDs[1][1337] = 0</code>
+											</li>
+											<li>
+												<code>boneIDs[2][1337] = 0</code> 
+											</li>
+											<li>
+												<code>Ys[1][1337] = [0, 0, 0]</code>
+											</li>
+											<li>
+												<code>Ys[2][1337] = [0, 0, 0]</code> 
+											</li>
+										</ul>
+									</p>
+
+									<p>
+										Once you have all of this data, pass it along to the mesh and plot the mesh with the following code:
+									</p>
+
+									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+										mesh.updateRig(rig.Ys, rig.boneIDs, rig.weights, transformations);
+										mesh.render(mesh.canvas);
+									</script>
+
+									<p>
+										If you've done everything properly, homer should show up in his original pose!
+									</p>
+
+									<img src = "Images/homerMeshOrig.png" width="25%">
+
+
+
+
+									<h4>Hints/Suggestions</h4>
+									<ul>
+										<li>
+											<p>
+												The easiest way to start is to fill in <code>weights</code> and <code>boneIDs</code> first, which you can do with a loop that goes through all of the bones, with a nested loop that goes through all of the weights of that bone.  Then, you can normalize the weights, and you can apply the transforms to fill in <code>Ys</code> based on <code>boneIDs</code>.
+											</p>
+										</li>
+										<li>
+											<p>
+												If stuff isn't showing up right, it will be helpful to debug visually.  For example, if you say
+
+												<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+													plotSkin(Ys[0]);
+													plotSkin(Ys[1]);
+													plotSkin(Ys[2]);
+												</script>
+
+												Then you should get the following plots
+
+												<table>
+													<tr>
+														<td><h3><code>Ys[0]</code></h3></td>
+														<td><h3><code>Ys[1]</code></h3></td>
+														<td><h3><code>Ys[2]</code></h3></td>
+													</tr>
+													<tr>
+														<td><img src = "Images/Ys0.png" width="70%"></td>
+														<td><img src = "Images/Ys1.png" width="70%"></td>
+														<td><img src = "Images/Ys2.png" width="70%"></td>
+													</tr>
+												</table>
+
+												The plots look strange since we're in local coordinates.
+											</p>
+		
+
 										</li>
 									</ul>
-
-
 									
-
-									<h3><a name = "nearestneighbors">Nearest Neighbors (8 Points)</a></h3>
+									<h3><a name = "updatingTransforms">Updating Transforms (10 Points)</a></h3>
 									<p>
-										For each point <b>p</b> on the skin, compute index of the nearest bone in your list of bones.  For this, treat a bone like a line segment with endpoints <b>a</b> and <b>b</b>, and compute the length of the perpendicular projection of <b>ap</b> onto <b>ab</b>, as shown below:
+										Now that you have the rig loaded, you can move the bones around by applying FABRIK and changing the positions of the joints.  To do this, you'll need to update the transformation matrices of each bone based on how its joints have moved.
+									</p>
+									<h4>Your Task</h4>
+									<p>
+										Implement a method <code>updateFrame</code> in the bone class that updates the transformation matrix based on the last coordinate frame and the current position of the bone.  To do this, first move <code>c</code> to the new center.  Then, update <b>w</b>, and compare it to <b>wLast</b> to determine an axis and an angle of rotation.  You can determine the axis with the cross product <b>wLast x w</b>, and you can determine the angle <b>&theta;</b> between them as you did in <a href = "../HW1_GeomPrimitives//index.html#angle">homework 1</a>.  Finally, use this axis and angle to rotate <b>u</b> and <b>v</b>.  The picture below shows how this would be used to rotate <b>u</b>
 									</p>
 
-									<img src = "projline1.svg" width="20%">
+									<img src = "axisAngleUpdate.svg" width="35%">
 
 									<p>
-										If the perpendicular projection is outside of the line segment, then compute the distance to the nearest point.  The example below shows where the nearest point is <b>b</b> 
-									</p>
-
-									<img src = "projline2.svg" width="25%">
-
-									<p>
-										If you've done this properly and you plot the bone IDs as the color label, using the <code>'Picnic'</code> colorscale, you should see something like the following:
-									</p>
-
-									<img src = "Images/boneIDs.png" width="30%">
-
-
-									<h3><a name = "localcoords">Local Coordinates of Skin (10 Points)</a></h3>
-									<p>
-										Create a list of vec3 <code>Y</code> that contains all of the points in the mesh in the local coordinate system of their bones.  In other words, transform the skin points <b>from world coordinates into bone coordinates</b>.  This means that you will have to multiply each point by the <b>inverse</b> of the <a href = "#bones">transformation matrix you created</a> before (the <code>transformMat4</code> of the <code>vec3</code> class should come in handy here).  
+										Once this is finished, send an updated list of all transformations to the <code>mesh.updateBoneTransforms</code> method.
 									</p>
 
 									<p>
-										If you've done this properly and plot all of the points in their local coordinate system, you'll see something quite bizarre looking, as shown below:
+										As an example, suppose you move the right wrist to the left by 0.8 units and up by 0.6 units:
 									</p>
 
-									<p>
-										<img src = "Images/LocalCoords.png" width="35%">
-									</p>
-									<p>
-										<img src = "Images/LocalCoordsMesh.png" width="35%">
-									</p>
-                                            
+									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+										let chain = getChain(skeleton, "Wrist.R");
+										let target = vec3.clone(skeleton["Wrist.R"].pos);
+										target[0] -= 0.8;
+										target[1] += 0.6;
+										fabrik(chain, target, 10);
+										for (let i = 0; i < bones.length; i++) {
+										  bones[i].updateFrame();
+										}
+										let transformations = bones.map(bone => bone.T); // Assuming I'm storing each transformation as an instance variable T in the bone class
+										mesh.updateBoneTransforms(transformations);
+										mesh.render(mesh.canvas);
+									</script>
 
 									<p>
-										Once this is working, make a call to the provided method <code>mesh.updateRig(Y, boneIDs, transformations);</code>
+										Then I should get this:
 									</p>
+									<img src = "Images/homerMoveRightWrist.png" width="30%">
 
 									<p>
-										where <code>Y</code>, <code>boneIDs</code>, and <code>transformations</code> are 3 arrays with the following info:
+										As another example, suppose I move the left ankle forward in z by 0.4 and up in y by 0.2.  Then I should get this:
 									</p>
 
+									<img src = "Images/homerMoveLeftAnkle.png" width="30%">
+
+
+
+
+									<h4>Hints/Suggestions</h4>
 									<ul>
-										<li><code>Y</code> is the list of skin points in their bone coordinates that you created above</li>
-										<li>boneIDs is a list parallel to <code>Y</code> which holds the bone index each point on the skin is associated to.  This indexes into <code>transformations</code></li>
-										<li><code>transformations</code> is a list of the transformations from bone coordinates to world coordinates for each bone</li>
+										<li>Feel free to use the <code><a href = "https://glmatrix.net/docs/module-quat.html">glMatrix.quat</a></code> quaternion class to help you with axis/angle rotation, or use our code from class</li>
 									</ul>
 
-									<p>
-										If you've done this properly, the mesh should render back as homer again, as I've created a shader to apply the transformations to the local coordinates you sent in
-									</p>
-
-									<img src = "Images/homerMeshOrig.png" width="20%">
+									<h3><a name = "artcontest">Animation Art Contest (5 Points)</a></h3>
 									
 
-									<h3><a name = "animation">Animation (10 Points)</a></h3>
 									<p>
-										Now that you have the rig loaded, you can move the bones around by applying FABRIK and changing the positions of the joints.  You can then send an updated list of transformations to the <code>mesh.updateBoneTransforms</code> method.  For instance, if you move the y coordinate of the <code>Right_Forearm</code> up by 0.2, you should see this
+										Finally, create an animation with at least two joint chains moving.  The example below shows the right wrist changing as 
 									</p>
 
-									<img src = "rightForearm.png" width="35%">
+									<h3>
+										\[ x(t) = x_0 - 0.5(0.5 + 0.5 \cos(t)) \]
+									</h3>
+									<h3>
+										\[ y(t) = y_0 + 0.5 + 0.5 \cos(t) \]
+									</h3>
 
 									<p>
-										And here's an anatomically questionable thing you should see if you move the <code>Left_Shin</code> to the left by 0.2 and up by 0.1
+										And the head changing as
 									</p>
+									<h3>
+										\[ x(t) = x_0 + 0.1(0.5 + 0.5 \cos(t)) \]
+									</h3>
 
-									<img src = "leftShin.png" width="35%">
+									<img src = "Images/homerWristHeadAnimate.gif" width="30%">
 
-									<p>
-										Finally, create an animation with at least two joint chains moving.  The example below shows just the <code>Right_Forearm</code>'s y coordinate changing with the equation
-									</p>
 
-									<div style="width:50px;">
-										<h3>
-											\[  0.1(1+\cos(t)) \]
-										</h3>
-									</div>
 
-									<img src = "Images/homerWave.gif" width="50%">
+
 
 									<p>
 										As you can see, it's far from perfect, but not bad for doing this completely from scratch!
@@ -407,8 +586,9 @@
 
 									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
 										class Animation {
-											constructor(mesh) { // TODO: Add parameters
+											constructor(mesh, skeleton) { // TODO: Add parameters if necessary
 												this.mesh = mesh;
+												this.skeleton = skeleton;
 												this.startTime = (new Date()).getTime();
 												// TODO: Add more stuff
 											}
@@ -424,8 +604,21 @@
 											}
 										}
 									</script>
+									
 
-									-->
+									<h3><a name = "other">Other Ideas (For The Bored)</a></h3>
+									<p>
+										There's lots of directions this can go!
+									</p>
+									<ul>
+										<li>
+											Put some constraints on the rotation angles of the joints, and enforce them during FABRIK.
+										</li>
+										<li>Make it so that you can control the model with a webcam using <a href = "https://gist.github.com/mohdsanadzakirizvi/ce95bcb560eeae899ff6852fda8757a6">real time pose detection in the browser</a></li>
+										<li>
+											Map some of the motions from the <a href = "https://ursinusgraphics.github.io/JavaScript_MOCAP_Animation/">CMU MOCAP database</a> onto Homer using <a href = "https://github.com/ursinusgraphics/JavaScript_MOCAP_Animation">code from past graphics students</a>
+										</li>
+									</ul>
 
                                     </div>
 						</div>
