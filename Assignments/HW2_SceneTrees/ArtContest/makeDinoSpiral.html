@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="gl-matrix-min.js"></script>
+        <script src="ace.js"></script>
+        <script src="dinospiral.js"></script>
+        <style>
+            #dinoCode {
+                position: relative;
+                width: 800px;
+                height: 400px;
+            }
+        </style>
+    </head>
+<body>
+
+    <div id="dinoCode"></div>
+
+<script>
+    makeDinoScene();
+    let dinoEditor = ace.edit("dinoCode");
+    dinoEditor.setFontSize(16);
+    dinoEditor.session.setMode("ace/mode/javascript");
+</script>
+
+
+</body>
+</html>

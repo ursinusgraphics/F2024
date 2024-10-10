@@ -1,0 +1,277 @@
+{
+    "name":"art-scene",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "red":{
+            "kd":[1.0, 0.0, 0.0]
+        },
+        "gray":{
+            "kd":[0.1, 0.1, 0.1]
+        },
+        "yellow":{
+            "kd":[1.0, 1.0, 0]
+        },
+        "purple":{
+            "kd":[1.0, 0, 1.0]
+        },
+        "blue":{
+            "kd":[0, 0, 1.0]
+        },
+        "cyan":{
+            "kd":[0, 1.0,1.0]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 2, 3],
+            "color":[2, 2, 2]
+        },
+        {
+            "pos":[0, 5, 0],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [-4.25,2.70,3.83],
+            "rot": [0.09,0.25,0.02,0.96],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.00, 1.50, -5.00],
+            "rot": [0.00, 1.00, 0.00, 0.00],
+            "fovy": 1.0
+        }
+    ],
+    
+    "children":[
+        {
+            "transform":[0, 0, 1, 0,
+                         0, 1, 0, 1,
+                         -1, 0, 0, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box",
+                        "length":1,
+                        "width":2,
+                        "height":0.1,
+                        "center":[0, 0.5, 0],
+                        "material":"green"
+                    },
+                    {
+                        "type":"box",
+                        "length":0.1,
+                        "width":0.1,
+                        "height":1,
+                        "center":[0.95, 0, 0.45],
+                        "material":"red"
+                    },
+                    {
+                        "type":"box",
+                        "length":0.1,
+                        "width":0.1,
+                        "height":1,
+                        "center":[-0.95, 0, 0.45],
+                        "material":"red"
+                    },
+                    {
+                        "type":"box",
+                        "length":0.1,
+                        "width":0.1,
+                        "height":1,
+                        "center":[-0.95, 0, -0.45],
+                        "material":"red"
+                    },
+                    {
+                        "type":"box",
+                        "length":0.1,
+                        "width":0.1,
+                        "height":1,
+                        "center":[0.95, 0, -0.45],
+                        "material":"red"
+                    }
+            ]
+        },
+        {
+            "transform":[
+                0.3, 0, 0, 0.58,
+                0, 0, 0.3, 0.75,
+                0, -0.3, 0, 0.85,
+                0, 0, 0, 1
+            ],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"ggslac/meshes/dinopet.off",
+                    "material":"yellow"
+                }
+            ]
+        },
+        {
+            "transform":[
+                0.3, 0, 0, -0.58,
+                0, 0, 0.3, 0.75,
+                0, -0.3, 0, 0.85,
+                0, 0, 0, 1
+            ],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"ggslac/meshes/dinopet.off",
+                    "material":"green"
+                }
+            ]
+        },
+        {
+            "transform":[
+                0.3, 0, 0, -0.58,
+                0, 0, 0.3, 0.75,
+                0, -0.3, 0, -0.95,
+                0, 0, 0, 1
+            ],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"ggslac/meshes/dinopet.off",
+                    "material":"purple"
+                }
+            ]
+        },
+        {
+            "transform":[
+                0.3, 0, 0, 0.58,
+                0, 0, 0.3, 0.75,
+                0, -0.3, 0, -0.95,
+                0, 0, 0, 1
+            ],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"ggslac/meshes/dinopet.off",
+                    "material":"blue"
+                }
+            ]
+        },
+        {
+            "transform":[0, 0, 0.5, 0,
+                         0, 0.5, 0, 1.75,
+                         -0.5, 0, 0, -0.5,
+                         0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box",
+                        "length":1,
+                        "width":1,
+                        "height":0.1,
+                        "center":[0, 0.5, 0],
+                        "material":"green"
+                    },
+                    {
+                        "type":"box",
+                        "length":1,
+                        "width":0.1,
+                        "height":1,
+                        "center":[0.5, 1, 0],
+                        "material":"green"
+                    },
+                    {
+                        "type":"box",
+                        "length":0.1,
+                        "width":0.1,
+                        "height":1,
+                        "center":[0.45, 0, 0.45],
+                        "material":"red"
+                    },
+                    {
+                        "type":"box",
+                        "length":0.1,
+                        "width":0.1,
+                        "height":1,
+                        "center":[-0.45, 0, 0.45],
+                        "material":"red"
+                    },
+                    {
+                        "type":"box",
+                        "length":0.1,
+                        "width":0.1,
+                        "height":1,
+                        "center":[-0.45, 0, -0.45],
+                        "material":"red"
+                    },
+                    {
+                        "type":"box",
+                        "length":0.1,
+                        "width":0.1,
+                        "height":1,
+                        "center":[0.45, 0, -0.45],
+                        "material":"red"
+                    }
+            ]
+        },
+        {
+            "transform":[
+                0.3, 0, 0, 0,
+                0, 0, 0.3, 2.15,
+                0, -0.3, 0, 0.1,
+                0, 0, 0, 1
+            ],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"ggslac/meshes/dinopet.off",
+                    "material":"cyan"
+                }
+            ]
+        },
+        {
+            "transform":[
+                0.1, 0, 0, 0,
+                0, 0.1, 0, 2.75,
+                0, 0, 0.1, 0.1,
+                0, 0, 0, 1
+            ],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"ggslac/meshes/octopus.off",
+                    "material":"yellow"
+                }
+            ]
+        },
+        {
+            "transform":[
+                1, 0, 0, 0,
+                0, 1, 0, 2,
+                0, 0, 1, 0,
+                0, 0, 0, 1
+            ],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"ggslac/meshes/proftralie.off",
+                    "material":"yellow"
+                }
+            ]
+        },
+        {
+            "transform":[5, 0, 0, 0,
+                        0, 5, 0, 0.1,
+                        0, 0, 5, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"mesh",
+                "filename":"ggslac/meshes/square.off",
+                "material":"gray"
+                }
+            ]
+        }
+    ]
+}

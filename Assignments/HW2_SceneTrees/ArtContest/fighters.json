@@ -1,0 +1,99 @@
+{
+    "name":"suzaku",
+    "materials":{
+        "lblue":{
+            "ka":[0.05, 0.8, 0.8],
+            "kd":[0.0, 1.0, 1.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "red":{
+            "kd":[1.0, 0.0, 0.0]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 2, 0],
+            "color":[1, 0.8, 1]
+        },
+        {
+            "pos":[0, 2, 0],
+            "color":[1, 0.8, 1]
+        },
+        {
+            "pos":[10, 2, 0],
+            "color":[1, 0.8, 1]
+        },
+        {
+            "pos":[10, 2, 0],
+            "color":[1, 0.8, 1]
+        },
+        {
+            "pos":[10,6,-4],
+            "color":[1,1,1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.00, 2.00, 1],
+            "rot": [0.00, 0.00, 0.00, 1.00],
+            "fovy": 1.0
+        }
+    ],
+    
+    "children":[
+        {
+            "transform":[0, 0, 1, 0,
+                        0, 1, 0, 0.5,
+                        -1, 0, 0, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"tr_reg_076.off"
+                }
+            ]
+        },
+        {
+            "transform":[0.866, 0.5, 0, 5,
+                        -0.5, 0.866, 0, 1,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"tr_reg_019.off"
+                }
+            ]
+        },
+        {
+            "transform":[0, -1, 0, 2.5,
+                        1, 0, 0, 0.95,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"cylinder",
+                    "radius":0.3,
+                    "height":3.8,
+                    "center":[0, 0, 0],
+                    "material":"lblue"
+                }
+            ]
+        },
+        {
+            "transform":[0, 0, 2.3, 6,
+                        0, 2.3, 0, 0.53,
+                        2.3, 0, 0, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"ggslac/meshes/StyrofoamHead.off",
+                    "material":"lblue"
+                }
+            ]
+        }
+    ]
+}

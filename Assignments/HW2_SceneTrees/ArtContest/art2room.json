@@ -1,0 +1,122 @@
+{
+    "name":"art2room",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "red":{
+            "kd":[1.0, 0.0, 0.0]
+        },
+        "brown":{
+            "kd":[0.75, 0.50, 0.25]
+        },
+        "black":{
+            "kd":[0.1, 0.1, 0.1]
+        },
+        "grey":{
+            "kd":[0.9,0.9,0.9]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 2, 2],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 2, -2],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0, 0, 0],
+            "rot": [0.2, 0.40, 0.1, 0.9],
+            "fovy": 1.0
+        }
+    ],
+
+    "children":[
+
+        { 
+            "shapes":[
+                {
+                    "type":"box",
+                    "length":10,
+                    "width":10,
+                    "height":10,
+                    "center":[0, 0, 0],
+                    "material":"brown"
+                },
+                {
+                    "type":"box",
+                    "length":10,
+                    "width":10,
+                    "height":0.1,
+                    "center":[0, 0, 0],
+                    "material":"brown"
+                }
+            ],
+
+            "children":[
+                {
+                    "transform":
+                    [1, 0, 0, 0,
+                    0, 1, 0, 1.75,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type":"scene",
+                            "filename":"art1knighting.json"
+                        }
+                    ]
+                },
+                
+                {
+                    "transform":
+                    [1, 0, 0, 0,
+                    0, 1, 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type":"box",
+                            "length":1,
+                            "width":1,
+                            "height":1,
+                            "center":[0, 0.2, 0.5],
+                            "material":"black"
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "transform":
+                    [0, 0, 1, 4,
+                    0, 1, 0, 3,
+                    -1, 0, 0, 4.8,
+                    0, 0, 0, 1],
+            "shapes":[
+                        {
+                            "type":"box",
+                            "length":4,
+                            "width":0.1,
+                            "height":1,
+                            "center":[-0.1, -0.1, -1.5],
+                            "material":"grey"
+                        },
+                        {
+                            "type":"mesh",
+                            "filename":"bardiche.off",
+                            "material":"black"
+                        }
+                    ]
+        }
+    ]
+}

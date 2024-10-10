@@ -37,3 +37,6 @@
 [submodule "Assignments/HW4_PolygonMeshProcessing/HW4_PolygonMeshProcessing"]
 	path = Assignments/HW4_PolygonMeshProcessing/HW4_PolygonMeshProcessing
 	url = https://github.com/ursinusgraphics/HW4_PolygonMeshProcessing.git
+[submodule "Assignments/HW2_SceneTrees/ArtContest/ggslac"]
+	path = Assignments/HW2_SceneTrees/ArtContest/ggslac
+	url = https://github.com/ctralie/ggslac.git

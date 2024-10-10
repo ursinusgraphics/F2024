@@ -1,0 +1,155 @@
+{
+    "name": "Sonic the Monument",
+    "materials": {
+        "green": {
+            "ka": [0.05, 0.05, 0.05],
+            "kd": [0, 1, 0],
+            "ks": [0.8, 0, 0]
+        },
+        "red": {
+            "kd": [1.0, 0.0, 0.0]
+        },
+        "blue":{
+            "kd": [0.0, 0.0, 1.0]
+        },
+        "stone":{
+            "kd":[0.97, 0.93, 0.81]
+        }
+    },
+    "lights": [
+        {
+            "pos": [0, -80, 0],
+            "color": [1, 1, 1]
+        },
+        {
+            "pos": [-0.52, 3.6, 8.63],
+            "color": [1, 1, 1]
+        },
+        {
+            "pos": [-0.63,7.91,6.34],
+            "color": [1, 1, 1]
+        }
+    ],
+    "cameras": [
+        {
+            "pos": [0, 1.5, 5],
+            "rot": [0, 0, 0, 1],
+            "fovy": 1
+        },
+        {
+            "pos": [0, 1.5, -5],
+            "rot": [0, 1, 0, 0],
+            "fovy": 1
+        }
+    ],
+
+    "children":[
+        {
+            "transform":
+                    [4, 0, 0, 0,
+                     0, 4, 0, 0.002,
+                     0, 0, 4, 0,
+                     0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"sonic-mesh.off",
+                    "material": "stone"
+                }
+            ]
+        },
+        {
+            "transform":
+                    [5, 0, 0, 0,
+                     0, 0.2, 0, 4.5,
+                     0, 0, 5, 0,
+                     0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"box",
+                    "material": "stone"
+                }
+            ]
+        },
+        {
+            "transform":
+                [1, 0, 0, 0,
+                0, 1, 0, 0,
+                0, 0, 1, 0,
+                0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type": "scene",
+                    "filename": "Monument.json"
+                }
+            ]
+        },
+        {
+            "transform":
+                        [2.5, 0, 0, 0,
+                         0, 2, 0, 4.6,
+                         0, 0, 2.5, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"ggslac/meshes/pyramid.off",
+                    "material": "stone"
+                }
+            ]
+        },
+        {
+            "transform":
+                    [5, 0, 0, 0,
+                     0, 0.2, 0, 0,
+                     0, 0, 5, 0,
+                     0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"box",
+                    "material": "stone"
+                }
+            ],
+            "children":[
+                {
+                    "transform":
+                    [0.2, 0, 0, 0,
+                     0, 5, 0, 0,
+                     0, 0, 0.2, 0,
+                     0, 0, 0, 1],
+
+                    "shapes":[
+                        {
+                            "type":"cylinder",
+                            "radius":0.1,
+                            "height":4.5,
+                            "center": [-2.5, 2.25, -2.5],
+                            "material": "stone"
+                        },
+                        {
+                            "type":"cylinder",
+                            "radius":0.1,
+                            "height":4.5,
+                            "center": [2.5, 2.25, -2.5],
+                            "material": "stone"
+                        },
+                        {
+                            "type":"cylinder",
+                            "radius":0.1,
+                            "height":4.5,
+                            "center": [-2.5, 2.25, 2.5],
+                            "material": "stone"
+                        },
+                        {
+                            "type":"cylinder",
+                            "radius":0.1,
+                            "height":4.5,
+                            "center": [2.5, 2.25, 2.5],
+                            "material": "stone"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

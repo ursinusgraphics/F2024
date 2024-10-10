@@ -1,0 +1,336 @@
+{
+    "name":"ArtContest",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "kamehameha":{
+            "kd": [0.69,87.9,90.2]   
+        },
+        "orange": {
+            "kd":[1,0.55,0]
+        },
+        "gray": {
+            "kd": [0.42,0.42,0.42]
+        },
+        "skin": {
+            "kd": [0.969,0.69,0.6]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[100, 100, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[-100, 100, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 200, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 1.75, -9],
+            "color":[0.69,87.9,90.2],
+            "atten": [1.12,2.36,0.4]
+        }
+
+    ],
+    
+    "cameras":[
+        {
+            "pos":[-13.48,2.00,-18.16],
+            "rot":[0.02,0.91,0.05,0.41]
+            },
+        {
+            "pos": [-10.00, 15.00, -10.00],
+            "rot": [0.13,0.86,0.27,0.41]  
+        },
+        {
+            "pos": [0.00, 0, 0],
+            "rot": [0.00, 0.00, 0.00, 0.00]
+        },
+        {   "View on...": "Goku Black",
+            "pos": [-0.69,-1.55,-12.53],
+            "rot": [0.50, 0.00, 0.00, 0.86]
+        },
+        { "View on...": "Tralie 'n' Goku",
+            "pos": [-0.73,5.11,-6.89],
+            "rot": [0,1,-0.23,0.11]
+        },
+        {   "View on...": "above",
+        "rot":[-0.00,0.98,0.18,-0.00],
+        "pos": [0.35,6.64,-27.47]
+        }
+    ],
+    
+    "children":[
+        {
+        "This is the...": "Backdrop",
+        "shapes":[
+            {
+            "type":"scene",
+            "filename":"ruins.json"
+            }
+        ],
+        "children": [
+            {
+                "Here is": "Beam Clash",
+                "shapes":[{
+                    "type":"sphere",
+                    "radius": 1,
+                    "center": [0,1.75,-8.25],
+                    "material": "kamehameha"
+                }]         
+            },
+            {"Here is..": "Goku Black Head & Goku",
+            "transform":[1, 0, 0, 0,
+                         0, 0.707, 0.707, 10,
+                         0, -0.707, 0.707, 0,
+                         0, 0, 0, 1],
+            "children": [{
+                        "transform":
+                        [0, 0, -1, 0,
+                        0, 1, 0, 0,
+                        1, 0, 0, 0,
+                        0, 0, 0, 1],   
+                        "children": [{
+                            "transform":
+                            [0, 0, -1, 0,
+                            0, 1, 0, 0,
+                            1, 0, 0, 0,
+                            0, 0, 0, 1], 
+                            "children": [
+                                {
+                                   "transform":
+                                    [1, 0, 0, -4,
+                                    0, 1, 0, -4,
+                                    0, 0, 1, -4,
+                                    0, 0, 0, 1],
+                                    "children": [
+                                        {
+                                           "transform":
+                                            [0.92, 0, -0.38, 7.5,
+                                            0,1, 0, 2.25,
+                                            0.38, 0, 0.92, 6.5,
+                                            0, 0, 0, 1],
+                                                "children": [{
+                                                        "transform":
+                                                        [2.5, 0, 0, 0,
+                                                        0, 2.5, 0, 0,
+                                                        0, 0, 2.5, 0,
+                                                        0, 0, 0, 1],
+                                                        "shapes":[{
+                                                            "type": "scene",
+                                                            "filename": "gokuBody.json"
+                                                        }]
+                                                    },
+                                                    {
+                                                        "transform":
+                                                        [0.5, 0, 0, 0.1,
+                                                        0, 0.5, 0, 2,
+                                                        0, 0, 0.5, -0.35,
+                                                        0, 0, 0, 1],
+                                                        "children": [{
+                                                            "transform":[0, 0, -1, 0,
+                                                            0, 1, 0, 0,
+                                                            1, 0, 0, 0,
+                                                            0, 0, 0, 1],
+                                                            "children": [{
+                                                                "transform":
+                                                                [0, 0, -1, 0,
+                                                                0, 1, 0, 0,
+                                                                1, 0, 0, 0,
+                                                                0, 0, 0, 1],
+                                                                    "shapes":[{
+                                                                        "type": "scene",
+                                                                        "filename": "goku_head.json"
+                                                                    }]
+                                                                }]
+                                                        }]
+                                                    }
+                                                    ]
+                                                }]
+
+                                                     
+                                },
+                                {   "Goku Tralie Body": "And head",
+                                    "transform":
+                                     [1, 0, 0, 0.5,
+                                     0, 1, 0, -4,
+                                     0, 0, 1, -4,
+                                     0, 0, 0, 1],
+                                     "children": [
+                                         {
+                                            "transform":
+                                             [0.92, 0, 0.38, -4.5,
+                                             0, 1, 0, 2.25,
+                                             -0.38, 0, 0.92, 6.5,
+                                             0, 0, 0, 1],
+                                                 "children": [{
+                                                         "transform":
+                                                         [2.5, 0, 0, 0,
+                                                         0, 2.5, 0, 0,
+                                                         0, 0, 2.5, 0,
+                                                         0, 0, 0, 1],
+                                                         "shapes":[{
+                                                             "type": "scene",
+                                                             "filename": "gokuBody.json"
+                                                         }]
+                                                     },
+                                                     {
+                                                         "transform":
+                                                         [0.5, 0, 0, 0.1,
+                                                         0, 0.5, 0, 2,
+                                                         0, 0, 0.5, -0.35,
+                                                         0, 0, 0, 1],
+                                                         "children": [{
+                                                             "transform":[0, 0, -1, 0,
+                                                             0, 1, 0, 0,
+                                                             1, 0, 0, 0,
+                                                             0, 0, 0, 1],
+                                                             "children": [{
+                                                                 "transform":
+                                                                 [0, 0, -1, 0,
+                                                                 0, 1, 0, 0,
+                                                                 1, 0, 0, 0,
+                                                                 0, 0, 0, 1],
+                                                                     "shapes":[{
+                                                                         "type": "scene",
+                                                                         "filename": "SSJTralie.json"
+                                                                     }]
+                                                                 }]
+                                                         }]
+                                                     }
+                                                     ]
+                                                 }]
+ 
+                                                      
+                                 },
+                                {
+                                "transform":
+                                [0.5, 0, 0, 0,
+                                0, 0.5, 0, 0,
+                                0, 0, 0.5, 0,
+                                0, 0, 0, 1],
+                                "children": [{
+                                    "transform":
+                                    [1, 0, 0, -0.2,
+                                    0, 1, 0, 1.5,
+                                    0, 0, 1, 43.25,
+                                    0, 0, 0, 1],   
+                                    "shapes":[{
+                                        "type": "scene",
+                                        "filename": "gokuBlack_head.json"
+                                        }]
+                                }]
+                            }]
+                        }]
+                    }]
+            },
+            {"Here is..": "Goku Kamehameha",
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+                    "children": [{
+                    "transform":[1, 0, 0, 0,
+                                0, 0.707, -0.707, 0,
+                                0, 0.707, 0.707, 0,
+                                0, 0, 0, 1],
+                                "children": [
+                                                {
+                                                "transform":
+                                                    [0.92, -0.38, 0, 0,
+                                                    0.38,0.92, 0, 0,
+                                                    0, 0, 1, 0,
+                                                    0, 0, 0, 1],
+                                                    "shapes":[
+                                                    {
+                                                        "type":"cylinder",
+                                                                "radius":0.25,
+                                                                "height":8,
+                                                                "center":[-1.5,0.5, -6.75],
+                                                                "material":"kamehameha"
+                                                    }
+                                                    ]
+                                                    
+                                                }
+                                            ]
+                                        }
+                                    ]
+        },
+        { "Here is...": "Traliehameha!!!",
+                            "children": [{
+                                "transform":[1, 0, 0, 0,
+                                            0, -0.707, 0.707, 0,
+                                            0, -0.707, -0.707, 0,
+                                            0, 0, 0, 1],
+                                        "children": [
+                                                {
+                                                "transform":
+                                                    [0.92, -0.38, 0, 0,
+                                                    0.38,0.92, 0, 0,
+                                                    0, 0, 1, 0,
+                                                    0, 0, 0, 1],
+                                                    "shapes":[
+                                                    {
+                                                        "type":"cylinder",
+                                                                "radius":0.25,
+                                                                "height":8.5,
+                                                                "center":[1.85,-0.7,6.65],
+                                                                "material":"kamehameha"
+                                                    }
+                                                    ]
+                                                    
+                                                }
+                                            ]
+                                        
+            }]
+        },
+            {"Here is...": "Goku Black Kamehameha",
+            "transform":[1, 0, 0, 0,
+                         0, 0.707, -0.707, 10,
+                         0, 0.707, 0.707, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+            {
+                "type":"cylinder",
+                        "radius":0.25,
+                        "height":8,
+                        "center":[0, -16, 0],
+                        "material":"kamehameha"
+            }
+            ],
+            "children":[
+                {
+                "Here is..": "Goku Black Body",
+                "transform":
+                [1, 0, 0, 0,
+                0, 0, 1, -21.25,
+                0, -1, 0, 1.25,
+                0, 0, 0, 1],
+                "children": [{
+                        "transform":
+                        [2.5, 0, 0, 0,
+                        0, 2.5, 0, 0,
+                        0, 0, 2.5, 0,
+                        0, 0, 0, 1],
+                        "shapes":[{
+                            "type": "scene",
+                            "filename": "gokuBlackBody.json"
+                        }]
+                     }
+                    ]
+                }
+            ]
+        }
+        ]
+
+        }
+    ]
+}

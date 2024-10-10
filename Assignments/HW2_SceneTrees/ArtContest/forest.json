@@ -1,0 +1,372 @@
+{
+    "name": "forestscene",
+    "materials": {
+        "green": { "ka": [0.0, 0.5, 0.0] },
+        "brown": { "ka": [0.5, 0.3, 0.1] },
+        "darkgreen": { "ka": [0.0, 0.5, 0.01] }
+    },
+    "lights": [
+        {
+            "pos": [0, 5, 5],
+            "color": [1, 1, 1]
+        }
+    ],
+    "cameras": [
+        {
+            "pos": [0.0, 3.0, 10.0],
+            "rot": [0.0, 0.0, 0.0, 1.0],
+            "fovy": 1.0
+        }
+    ],
+    "children": [
+        {
+            "transform": [
+                1, 0, 0, 0,
+                0, 1, 0, 0,
+                0, 0, 1, 0,
+                0, 0, 0, 1
+            ],
+            "shapes": [
+                {
+                    "type": "box",
+                    "length": 10,
+                    "width": 10,
+                    "height": 0.1,
+                    "center": [0, -0.05, 0],
+                    "material": "green"
+                }
+            ]
+        },
+        {
+            "transform": [
+                1, 0, 0, 5,
+                0, 1, 0, 0,
+                0, 0, 1, 0,
+                0, 0, 0, 1
+            ],
+            "children": [
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cylinder",
+                            "radius": 0.2,
+                            "height": 0.5,
+                            "center": [-2, 0, 0],
+                            "material": "brown"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cone",
+                            "radius": 0.8,
+                            "height": 5,
+                            "center": [-2, 0, 0],
+                            "material": "darkgreen"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cylinder",
+                            "radius": 0.2,
+                            "height": 0.5,
+                            "center": [-2, 0, 3],
+                            "material": "brown"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cone",
+                            "radius": 0.8,
+                            "height": 5,
+                            "center": [-2, 0, 3],
+                            "material": "darkgreen"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cylinder",
+                            "radius": 0.2,
+                            "height": 0.5,
+                            "center": [-2, 0, -3],
+                            "material": "brown"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cone",
+                            "radius": 0.8,
+                            "height": 5,
+                            "center": [-2, 0, -3],
+                            "material": "darkgreen"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cylinder",
+                            "radius": 0.2,
+                            "height": 0.5,
+                            "center": [-4, 0, -3],
+                            "material": "brown"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cone",
+                            "radius": 0.8,
+                            "height": 5,
+                            "center": [-4, 0, -3],
+                            "material": "darkgreen"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cylinder",
+                            "radius": 0.2,
+                            "height": 0.5,
+                            "center": [-4, 0, -3],
+                            "material": "brown"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cone",
+                            "radius": 0.8,
+                            "height": 5,
+                            "center": [-6, 0, -3],
+                            "material": "darkgreen"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cylinder",
+                            "radius": 0.2,
+                            "height": 0.5,
+                            "center": [-6, 0, -3],
+                            "material": "brown"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cone",
+                            "radius": 0.8,
+                            "height": 5,
+                            "center": [-8, 0, -3],
+                            "material": "darkgreen"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cylinder",
+                            "radius": 0.2,
+                            "height": 0.5,
+                            "center": [-8, 0, 0],
+                            "material": "brown"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cone",
+                            "radius": 0.8,
+                            "height": 5,
+                            "center": [-8, 0, 0],
+                            "material": "darkgreen"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cylinder",
+                            "radius": 0.2,
+                            "height": 0.5,
+                            "center": [-8, 0, 3],
+                            "material": "brown"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cone",
+                            "radius": 0.8,
+                            "height": 5,
+                            "center": [-8, 0, 3],
+                            "material": "darkgreen"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.2,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cylinder",
+                            "radius": 0.2,
+                            "height": 0.5,
+                            "center": [-8, 0, -3],
+                            "material": "brown"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, 0.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "cone",
+                            "radius": 0.8,
+                            "height": 5,
+                            "center": [-8, 0, -3],
+                            "material": "darkgreen"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "transform":[
+                1, 0, 0, 0,
+                0, 1, 0, 0,
+                0, 0, 1, 0,
+                0, 0, 0, -5
+            ],
+            "shapes":[
+                {
+                    "type":"scene",
+                    "filename":"garden.json"
+                }
+
+            ]
+        }
+    ]
+}

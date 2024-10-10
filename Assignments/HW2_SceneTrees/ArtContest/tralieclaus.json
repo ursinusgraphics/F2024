@@ -1,0 +1,121 @@
+{
+    "name":"artcontest",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "red":{
+            "kd":[1.0, 0.0, 0.0]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0.1, 1.9, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0.1, 5, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 2, 5],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos": [2, -3, 0],
+            "color": [1, 1, 1]
+        },
+        {
+            "pos": [-2, -3, 0],
+            "color": [1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.00, 1.50, 5.00],
+            "rot": [0.00, 0.00, 0.00, 1.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.00, 1.50, -5.00],
+            "rot": [0.00, 1.00, 0.00, 0.00],
+            "fovy": 1.0
+        }
+    ],
+    
+    "children":[
+        {
+            "transform":[
+                0.005, 0, 0, 0.5,
+                0, 0.005, 0, 0,
+                0, 0, 0.005, 5,
+                0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"mesh",
+                "filename":"ggslac/meshes/proftralie.off"
+                }
+            ]
+        },
+        {
+            "shapes": [
+                {
+                    "type":"cone",
+                    "radius":0.6,
+                    "height":1,
+                    "center":[0.1, 0.9, 0],
+                    "material":"red"
+                }
+            ],
+            "children": [
+                {
+                    "shapes": [
+                        {
+                            "type": "sphere",
+                            "radius": 1,
+                            "center": [0.1, -1, 0],
+                            "material": "red"
+                        }
+                    ]
+                },
+                {
+                    "shapes": [
+                        {
+                            "type": "box",
+                            "length":0.1,
+                            "width":4,
+                            "height":0.1,
+                            "center":[0.1, -0.5, 0]
+                        }
+                    ]
+                },
+                {
+                    "shapes": [
+                        {
+                            "type": "box",
+                            "length":0.1,
+                            "width":0.1,
+                            "height":2,
+                            "center":[-0.4, -2, 0]
+                        }
+                    ]
+                },
+                {
+                    "shapes": [
+                        {
+                            "type": "box",
+                            "length":0.1,
+                            "width":0.1,
+                            "height":2,
+                            "center":[0.6, -2, 0]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

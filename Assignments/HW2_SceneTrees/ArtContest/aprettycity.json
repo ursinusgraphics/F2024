@@ -1,0 +1,3366 @@
+{
+    "name":"testscene",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "red":{
+            "kd":[1.0, 0.0, 0.0]
+        }, 
+        "blue" : {
+            "kd" : [0.67058823529411764705882352941176, 1, 0.98039215686274509803921568627451]
+        },
+        "yellow" : {
+            "kd" : [1, 0.94117647058823529411764705882353, 0.43529411764705882352941176470588]
+        }, 
+        "light gray" : {
+            "kd" : [0.66274509803921568627450980392157, 0.66274509803921568627450980392157, 0.66274509803921568627450980392157]
+        }, 
+        "black" : {
+            "kd" : [0, 0, 0]
+        }, 
+        "auburn" : {
+            "kd" : [0.73333333333333333333333333333333, 0.30588235294117647058823529411765, 0.30588235294117647058823529411765]
+        }, 
+        "gray" : {
+            "kd" : [0.23529411764705882352941176470588, 0.23529411764705882352941176470588, 0.23529411764705882352941176470588]
+        }, 
+        "bright yellow" : {
+            "kd" : [1, 1, 0]
+        }, 
+        "white" : {
+            "kd" : [1, 1, 1]
+        }, 
+        "aqua blue" : {
+            "kd" : [0.3960784313725490196078431372549, 0.9960784313725490196078431372549, 1]
+        }, 
+        "purple" : {
+            "kd" : [1, 0.39608, 0.99609]
+        }, 
+        "light green" : {
+            "kd" : [0.70196078431372549019607843137255, 0.92156862745098039215686274509804, 0.56862745098039215686274509803922]
+        }, 
+        "teal" : {
+            "kd" : [0.56862745098039215686274509803922, 0.92156862745098039215686274509804, 0.78431372549019607843137254901961]
+        }, 
+        "rust" : {
+            "kd" : [0.85490196078431372549019607843137, 0.44705882352941176470588235294118, 0.17647058823529411764705882352941]
+        }, 
+        "deep blue" : {
+            "kd" : [0, 0.1764705882352941176470588235294, 1]
+        }, 
+        "wine red" : {
+            "kd" : [0.53333333333333333333333333333333, 0.10196078431372549019607843137255, 0.24313725490196078431372549019608]
+        },
+        "dark blue" : {
+            "kd" : [0.14117647058823529411764705882353, 0.30588235294117647058823529411765, 0.30588235294117647058823529411765]
+        }, 
+        "neon green" : {
+            "kd" : [0.09019607843137254901960784313725, 1, 0]
+        }, 
+        "green-ish gray" : {
+            "kd" : [0.44313725490196078431372549019608, 0.52156862745098039215686274509804, 0.44313725490196078431372549019608]
+        }, 
+        "pink" : {
+            "kd" : [1, 0, 0.65490196078431372549019607843137]
+        }, 
+        "key lime green" : {
+            "kd" : [0, 1, 0.5960784313725490196078431372549]
+        }, 
+        "puke green" : {
+            "kd" : [0.42745098039215686274509803921569, 0.81568627450980392156862745098039, 0.24705882352941176470588235294118]
+        }, 
+        "dusty red" : {
+            "kd" : [0.81568627450980392156862745098039, 0.24705882352941176470588235294118, 0.34901960784313725490196078431373]
+        }, 
+        "blood red" : {
+            "kd" : [0.36470588235294117647058823529412, 0.12156862745098039215686274509804, 0.16470588235294117647058823529412]
+        }, 
+        "dusty pink" : {
+            "kd" : [0.64705882352941176470588235294118, 0.32156862745098039215686274509804, 0.38039215686274509803921568627451]
+        }
+
+
+
+    },
+
+    "lights":[
+        {
+            "pos":[0, 200, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[-5, 2, -10],
+            "color":[1, 1, 1]
+        }, 
+        {
+            "pos":[5, 2, 10], 
+            "color" : [1, 1, 1]
+        }, 
+        {
+            "pos" : [0, 5, -99], 
+            "color" : [0.62745098039215686274509803921569, 0.62745098039215686274509803921569, 0.62745098039215686274509803921569]
+        }, 
+        {
+            "pos" : [0, 5, 99], 
+            "color" : [0.62745098039215686274509803921569, 0.62745098039215686274509803921569, 0.62745098039215686274509803921569]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.00, 1.50, 5.00],
+            "rot": [0.00, 0.00, 0.00, 1.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.00, 1.50, -5.00],
+            "rot": [0.00, 1.00, 0.00, 0.00],
+            "fovy": 1.0
+        }
+    ],
+    
+    "children":[
+        {
+            "transform":[200, 0, 0, 0,
+                        0, 200, 0, 0,
+                        0, 0, 200, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"mesh",
+                "filename":"ggslac/meshes/square.off",
+                "material":"green"
+                }
+            ]
+        },
+        {
+            "transform": [6, 0, 0, 0,
+            0, 6, 0, 0,
+            0, 0, 6, -100,
+            0, 0, 0, 1],
+            "shapes" : [
+                {
+                    "type": "mesh", 
+                    "filename" : "ggslac/meshes/torus30x30.off", 
+                    "material" : "gray"
+                }
+            ]
+        },
+        {
+            "transform": [6.75, 0, 0, 0,
+            0, 6.75, 0, 0,
+            0, 0, 6.75, -95,
+            0, 0, 0, 1],
+            "shapes" : [
+                {
+                    "type": "mesh", 
+                    "filename" : "ggslac/meshes/torus30x30.off", 
+                    "material" : "auburn"
+                }
+            ]
+        },
+        {
+            "transform": [6, 0, 0, 0,
+            0, 6, 0, 0,
+            0, 0, 6, 100,
+            0, 0, 0, 1],
+            "shapes" : [
+                {
+                    "type": "mesh", 
+                    "filename" : "ggslac/meshes/torus30x30.off", 
+                    "material" : "gray"
+                }
+            ]
+        },
+        {
+            "transform": [6.75, 0, 0, 0,
+            0, 6.75, 0, 0,
+            0, 0, 6.75, 95,
+            0, 0, 0, 1],
+            "shapes" : [
+                {
+                    "type": "mesh", 
+                    "filename" : "ggslac/meshes/torus30x30.off", 
+                    "material" : "auburn"
+                }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 200, 
+                        "width": 40, 
+                        "height" : 2, 
+                        "center" : [0, 0, 0]
+                    }
+                ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 200, 
+                        "width": 1.5, 
+                        "height" : 2.5, 
+                        "center" : [-1.5, 0, 0], 
+                        "material" : "bright yellow"
+                    }
+                ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 20, 
+                        "width": 1.5, 
+                        "height" : 2.5, 
+                        "center" : [1.5, 0, -90], 
+                        "material" : "bright yellow"
+                    }
+                ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 20, 
+                        "width": 1.5, 
+                        "height" : 2.5, 
+                        "center" : [1.5, 0, -60], 
+                        "material" : "bright yellow"
+                    }
+                ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 20, 
+                        "width": 1.5, 
+                        "height" : 2.5, 
+                        "center" : [1.5, 0, -30], 
+                        "material" : "bright yellow"
+                    }
+                ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 20, 
+                        "width": 1.5, 
+                        "height" : 2.5, 
+                        "center" : [1.5, 0, 0], 
+                        "material" : "bright yellow"
+                    }
+                ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 20, 
+                        "width": 1.5, 
+                        "height" : 2.5, 
+                        "center" : [1.5, 0, 30], 
+                        "material" : "bright yellow"
+                    }
+                ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 20, 
+                        "width": 1.5, 
+                        "height" : 2.5, 
+                        "center" : [1.5, 0, 60], 
+                        "material" : "bright yellow"
+                    }
+                ], 
+                "children" : [
+                    {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 20, 
+                        "width": 1.5, 
+                        "height" : 2.5, 
+                        "center" : [1.5, 0, 90], 
+                        "material" : "bright yellow"
+                    }
+                ]
+                        
+                    }
+                ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 20, 
+                        "width": 1.5, 
+                        "height" : 2.5, 
+                        "center" : [1.5, 0, 90], 
+                        "material" : "bright yellow"
+                    }
+                ]
+        },
+        {
+            "transform":[1, 0, 0, 100,
+                         0, 1, 0, 100,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"box",
+                "length":200,
+                "width":2,
+                "height":200,
+                "center":[0, 0, 0], 
+                "material" : "blue"
+                }
+            ]
+        }, 
+        {
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"box",
+                "length":2,
+                "width":40,
+                "height":40,
+                "center":[0, 5, -99], 
+                "material" : "black"
+                }
+            ]
+        }, 
+        {
+            "transform":[1, 0, 0, 1,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 10, 
+                        "width": 7, 
+                        "height" : 8, 
+                        "center" : [-12, 6, 0], 
+                        "material" : "red"
+                    }
+                ], 
+            "children" : [
+                {
+                    "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 15, 
+                                "width": 8, 
+                                "height" :5, 
+                                "center" : [-12, 4.5, 0], 
+                                "material" : "red"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 8, 
+                                        "width": 7.25, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }
+                        ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 10.25, 
+                                        "width": 6, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-14, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-10, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }
+            ]
+        },
+        {
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"box",
+                "length":2,
+                "width":40,
+                "height":40,
+                "center":[0, 5, 99], 
+                "material" : "black"
+                }
+            ]
+        }, 
+        {
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0, 
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+            "shapes":[
+                {
+                "type":"box",
+                "length":2, 
+                "width":40, 
+                "height":40,
+                "center": [80, 180, -98],
+                "material" : "yellow"
+                }
+            ], 
+            "children": [
+                {
+                   "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0, 
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length":40,
+                        "width":2,
+                        "height":40,
+                        "center": [98, 180, -80],
+                        "material" : "yellow"
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[1, 0, 0, 0,
+                          0, 1, 0, 0, 
+                          0, 0, 1, 0,
+                          0, 0, 0, 1],
+                     "shapes":[
+                         {
+                         "type":"box",
+                         "length":40,  
+                         "width":40, 
+                         "height":2, 
+                         "center": [80, 198, -80],
+                         "material" : "yellow"
+                         }
+                     ]
+                 }
+            ]
+        }, 
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 30,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 10, 
+                        "width": 7, 
+                        "height" : 8, 
+                        "center" : [-12, 6, 0], 
+                        "material" : "light green"
+                    }
+                ], 
+            "children" : [
+                {
+                    "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 15, 
+                                "width": 8, 
+                                "height" :5, 
+                                "center" : [-12, 4.5, 0], 
+                                "material" : "light green"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 8, 
+                                        "width": 7.25, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }
+                        ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 10.25, 
+                                        "width": 6, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-14, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-10, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }
+            ]
+        }, 
+        {
+            "transform":[1, 0, 0, -1,
+                        0, 1, 0, 0,
+                        0, 0, 1, -50,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 10, 
+                        "width": 7, 
+                        "height" : 8, 
+                        "center" : [-12, 6, 0], 
+                        "material" : "purple"
+                    }
+                ], 
+            "children" : [
+                {
+                    "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 15, 
+                                "width": 8, 
+                                "height" :5, 
+                                "center" : [-12, 4.5, 0], 
+                                "material" : "purple"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 8, 
+                                        "width": 7.25, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }
+                        ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 10.25, 
+                                        "width": 6, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-14, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-10, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }
+            ]
+        }, 
+        {
+            "transform":[1, 0, 0, -1,
+                        0, 1, 0, 0,
+                        0, 0, 1, 80,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 10, 
+                        "width": 7, 
+                        "height" : 8, 
+                        "center" : [-12, 6, 0], 
+                        "material" : "rust"
+                    }
+                ], 
+            "children" : [
+                {
+                    "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 15, 
+                                "width": 8, 
+                                "height" :5, 
+                                "center" : [-12, 4.5, 0], 
+                                "material" : "rust"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 8, 
+                                        "width": 7.25, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }
+                        ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 10.25, 
+                                        "width": 6, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-14, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-10, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }
+            ]
+        }, 
+        {
+            "transform":[1, 0, 0, 25.5,
+                        0, 1, 0, 0,
+                        0, 0, 1, 46,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 10, 
+                        "width": 7, 
+                        "height" : 8, 
+                        "center" : [-12, 6, 0], 
+                        "material" : "wine red"
+                    }
+                ], 
+            "children" : [
+                {
+                    "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 15, 
+                                "width": 8, 
+                                "height" :5, 
+                                "center" : [-12, 4.5, 0], 
+                                "material" : "wine red"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 8, 
+                                        "width": 7.25, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }
+                        ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 10.25, 
+                                        "width": 6, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-14, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-10, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }
+            ]
+        }, 
+        {
+            "transform":[1, 0, 0, 20,
+            0, 1, 0, 0,
+            0, 0, 1, 0,
+            0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 10, 
+                        "width": 7, 
+                        "height" : 8, 
+                        "center" : [-12, 6, 0], 
+                        "material" : "teal"
+                    }
+                ], 
+            "children" : [
+                {
+                    "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 15, 
+                                "width": 8, 
+                                "height" :5, 
+                                "center" : [-12, 4.5, 0], 
+                                "material" : "teal"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 8, 
+                                        "width": 7.25, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }
+                        ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 10.25, 
+                                        "width": 6, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-14, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-10, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }
+            ]
+        }, 
+        {
+            "transform":[1, 0, 0, 24,
+                        0, 1, 0, 0,
+                        0, 0, 1, -60,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 10, 
+                        "width": 7, 
+                        "height" : 8, 
+                        "center" : [-12, 6, 0], 
+                        "material" : "neon green"
+                    }
+                ], 
+            "children" : [
+                {
+                    "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 15, 
+                                "width": 8, 
+                                "height" :5, 
+                                "center" : [-12, 4.5, 0], 
+                                "material" : "neon green"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 8, 
+                                        "width": 7.25, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }
+                        ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 10.25, 
+                                        "width": 6, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-14, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-10, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }
+            ]
+        }, 
+        {
+            "transform":[1, 0, 0, 1,
+                        0, 1, 0, 0,
+                        0, 0, 1, -95,
+                        0, 0, 0, 1],
+            "shapes":[
+                    {
+                        "type":"box", 
+                        "length": 10, 
+                        "width": 7, 
+                        "height" : 8, 
+                        "center" : [-12, 6, 0], 
+                        "material" : "green-ish gray"
+                    }
+                ], 
+            "children" : [
+                {
+                    "transform":[1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 15, 
+                                "width": 8, 
+                                "height" :5, 
+                                "center" : [-12, 4.5, 0], 
+                                "material" : "green-ish gray"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 8, 
+                                        "width": 7.25, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }
+                        ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 8, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 8, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, 4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, 4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[0, -1, 0, 0,
+                                1, 0, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius" : 2, 
+                        "height" : 1,
+                        "center":[3, 16, -4], 
+                        "material" : "black"
+                        }
+                    ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0, 
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 1, 
+                                "height" : 1.5,
+                                "center":[3, 16, -4], 
+                                "material" : "white"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 10.25, 
+                                        "width": 6, 
+                                        "height" : 2, 
+                                        "center" : [-12, 8, 0], 
+                                        "material" : "aqua blue"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-14, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }, 
+                {
+                           "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15.5,  
+                                        "width": 1, 
+                                        "height" : 1, 
+                                        "center" : [-10, 5, 0], 
+                                        "material" : "bright yellow"
+                                    }
+                                ] 
+                        }
+            ]
+        }, 
+                {
+                    "transform":[1, 0, 0, 1,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 10, 
+                                "width": 7, 
+                                "height" : 8, 
+                                "center" : [-12, 6, 0], 
+                                "material" : "red"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15, 
+                                        "width": 8, 
+                                        "height" :5, 
+                                        "center" : [-12, 4.5, 0], 
+                                        "material" : "red"
+                                    }
+                                ], 
+                            "children" : [
+                                {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 8, 
+                                                "width": 7.25, 
+                                                "height" : 2, 
+                                                "center" : [-12, 8, 0], 
+                                                "material" : "aqua blue"
+                                            }
+                                        ] 
+                                }
+                                ]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 8, -4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 8, -4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 8, 4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 8, 4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 16, 4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 16, 4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 16, -4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 16, -4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 10.25, 
+                                                "width": 6, 
+                                                "height" : 2, 
+                                                "center" : [-12, 8, 0], 
+                                                "material" : "aqua blue"
+                                            }
+                                        ] 
+                                }, 
+                        {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 15.5,  
+                                                "width": 1, 
+                                                "height" : 1, 
+                                                "center" : [-14, 5, 0], 
+                                                "material" : "bright yellow"
+                                            }
+                                        ] 
+                                }, 
+                        {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 15.5,  
+                                                "width": 1, 
+                                                "height" : 1, 
+                                                "center" : [-10, 5, 0], 
+                                                "material" : "bright yellow"
+                                            }
+                                        ] 
+                                }
+                    ]
+                },
+                {
+                    "transform":[1, 0, 0, 0,
+                                 0, 1, 0, 0,
+                                 0, 0, 1, 0,
+                                 0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length":2,
+                        "width":40,
+                        "height":40,
+                        "center":[0, 5, 99], 
+                        "material" : "black"
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[1, 0, 0, -100,
+                                 0, 1, 0, 100,
+                                 0, 0, 1, 0,
+                                 0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length":200,
+                        "width":2,
+                        "height":200,
+                        "center":[0, 0, 0], 
+                        "material" : "blue"
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[1, 0, 0, 0,
+                                 0, 1, 0, 100,
+                                 0, 0, 1, -100,
+                                 0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length":2,
+                        "width":200,
+                        "height":200,
+                        "center":[0, 0, 0], 
+                        "material" : "blue"
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[1, 0, 0, 0,
+                                 0, 1, 0, 100,
+                                 0, 0, 1, 100,
+                                 0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length":2,
+                        "width":200,
+                        "height":200,
+                        "center":[0, 0, 0], 
+                        "material" : "blue"
+                        }
+                    ]
+                }, 
+                {
+                    "transform":[1, 0, 0, 0,
+                                 0, 1, 0, 0, 
+                                 0, 0, 1, 0,
+                                 0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length":2, 
+                        "width":40, 
+                        "height":40,
+                        "center": [80, 180, -98],
+                        "material" : "yellow"
+                        }
+                    ], 
+                    "children": [
+                        {
+                           "transform":[1, 0, 0, 0,
+                                 0, 1, 0, 0, 
+                                 0, 0, 1, 0,
+                                 0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"box",
+                                "length":40,
+                                "width":2,
+                                "height":40,
+                                "center": [98, 180, -80],
+                                "material" : "yellow"
+                                }
+                            ]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                                  0, 1, 0, 0, 
+                                  0, 0, 1, 0,
+                                  0, 0, 0, 1],
+                             "shapes":[
+                                 {
+                                 "type":"box",
+                                 "length":40,  
+                                 "width":40, 
+                                 "height":2, 
+                                 "center": [80, 198, -80],
+                                 "material" : "yellow"
+                                 }
+                             ]
+                         }
+                    ]
+                }, 
+                {
+                    "transform":[1, 0, 0, -1,
+                                0, 1, 0, 0,
+                                0, 0, 1, -50,
+                                0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 10, 
+                                "width": 7, 
+                                "height" : 8, 
+                                "center" : [-12, 6, 0], 
+                                "material" : "key lime green"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15, 
+                                        "width": 8, 
+                                        "height" :5, 
+                                        "center" : [-12, 4.5, 0], 
+                                        "material" : "key lime green"
+                                    }
+                                ], 
+                            "children" : [
+                                {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 8, 
+                                                "width": 7.25, 
+                                                "height" : 2, 
+                                                "center" : [-12, 8, 0], 
+                                                "material" : "aqua blue"
+                                            }
+                                        ] 
+                                }
+                                ]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 8, -4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 8, -4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 8, 4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 8, 4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 16, 4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 16, 4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 16, -4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 16, -4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 10.25, 
+                                                "width": 6, 
+                                                "height" : 2, 
+                                                "center" : [-12, 8, 0], 
+                                                "material" : "aqua blue"
+                                            }
+                                        ] 
+                                }, 
+                        {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 15.5,  
+                                                "width": 1, 
+                                                "height" : 1, 
+                                                "center" : [-14, 5, 0], 
+                                                "material" : "bright yellow"
+                                            }
+                                        ] 
+                                }, 
+                        {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 15.5,  
+                                                "width": 1, 
+                                                "height" : 1, 
+                                                "center" : [-10, 5, 0], 
+                                                "material" : "bright yellow"
+                                            }
+                                        ] 
+                                }
+                    ]
+                }, 
+                {
+                    "transform":[1, 0, 0, 22,
+                                0, 1, 0, 0,
+                                0, 0, 1, 97,
+                                0, 0, 0, 1],
+                    "shapes":[
+                            {
+                                "type":"box", 
+                                "length": 10, 
+                                "width": 7, 
+                                "height" : 8, 
+                                "center" : [-12, 6, 0], 
+                                "material" : "deep blue"
+                            }
+                        ], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[
+                                    {
+                                        "type":"box", 
+                                        "length": 15, 
+                                        "width": 8, 
+                                        "height" :5, 
+                                        "center" : [-12, 4.5, 0], 
+                                        "material" : "deep blue"
+                                    }
+                                ], 
+                            "children" : [
+                                {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 8, 
+                                                "width": 7.25, 
+                                                "height" : 2, 
+                                                "center" : [-12, 8, 0], 
+                                                "material" : "aqua blue"
+                                            }
+                                        ] 
+                                }
+                                ]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 8, -4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 8, -4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 8, 4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 8, 4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 16, 4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 16, 4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius" : 2, 
+                                "height" : 1,
+                                "center":[3, 16, -4], 
+                                "material" : "black"
+                                }
+                            ], 
+                            "children" : [
+                                {
+                                    "transform":[1, 0, 0, 0,
+                                    0, 1, 0, 0, 
+                                    0, 0, 1, 0,
+                                    0, 0, 0, 1],
+                                    "shapes":[
+                                        {
+                                        "type":"cylinder",
+                                        "radius" : 1, 
+                                        "height" : 1.5,
+                                        "center":[3, 16, -4], 
+                                        "material" : "white"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 10.25, 
+                                                "width": 6, 
+                                                "height" : 2, 
+                                                "center" : [-12, 8, 0], 
+                                                "material" : "aqua blue"
+                                            }
+                                        ] 
+                                }, 
+                        {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 15.5,  
+                                                "width": 1, 
+                                                "height" : 1, 
+                                                "center" : [-14, 5, 0], 
+                                                "material" : "bright yellow"
+                                            }
+                                        ] 
+                                }, 
+                        {
+                                   "transform":[1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
+                                    "shapes":[
+                                            {
+                                                "type":"box", 
+                                                "length": 15.5,  
+                                                "width": 1, 
+                                                "height" : 1, 
+                                                "center" : [-10, 5, 0], 
+                                                "material" : "bright yellow"
+                                            }
+                                        ] 
+                                }
+                    ]
+                }, 
+                {
+                   "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                    "shapes" : [
+                        {
+                            "type" : "box", 
+                            "length": 40, 
+                            "width" : 40, 
+                            "height" : 100, 
+                            "center" : [-80, 50, 0], 
+                            "material" : "black"
+                        }], 
+                    "children" : [
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 54, 0], 
+                                    "material" : "white"
+                                }]
+                        },
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 45, 0], 
+                                    "material" : "white"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 36, 0], 
+                                    "material" : "white"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 27, 0], 
+                                    "material" : "white"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 18, 0], 
+                                    "material" : "white"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 9, 0], 
+                                    "material" : "white"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 8, 
+                                    "width" : 43, 
+                                    "height" : 16, 
+                                    "center" : [-80, 4, 0], 
+                                    "material" : "aqua blue"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 3, 
+                                    "center" : [-80, 2.5, 0], 
+                                    "material" : "white"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 63, 0], 
+                                    "material" : "white"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 72, 0], 
+                                    "material" : "white"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 81, 0], 
+                                    "material" : "white"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 36, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 90, 0], 
+                                    "material" : "white"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 41, 
+                                    "width" : 42, 
+                                    "height" : 8, 
+                                    "center" : [-80, 99, 0], 
+                                    "material" : "bright yellow"
+                                }]
+                        },
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 2, 
+                                    "width" : 2, 
+                                    "height" : 100, 
+                                    "center" : [-60, 50, 19], 
+                                    "material" : "bright yellow"
+                                }]
+                        }, 
+                        {
+                            "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                            "shapes" : [
+                                {
+                                    "type" : "box", 
+                                    "length": 2, 
+                                    "width" : 2, 
+                                    "height" : 100, 
+                                    "center" : [-60, 50, -19], 
+                                    "material" : "bright yellow"
+                                }]
+                        }
+                        
+                    ]
+                }, 
+                {
+                   "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                    "shapes" : [
+                        {
+                            "type" : "box", 
+                            "length": 40, 
+                            "width" : 40, 
+                            "height" : 150, 
+                            "center" : [-80, 75, -45], 
+                            "material" : "dusty pink"
+                        }]
+                }, 
+                {
+                   "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                    "shapes" : [
+                        {
+                            "type" : "box", 
+                            "length": 30, 
+                            "width" : 40, 
+                            "height" : 75, 
+                            "center" : [-80, 35, -85], 
+                            "material" : "wine red"
+                        }]
+                }, 
+                {
+                   "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                    "shapes" : [
+                        {
+                            "type" : "box", 
+                            "length": 40, 
+                            "width" : 40, 
+                            "height" : 90, 
+                            "center" : [-80, 45, 45], 
+                            "material" : "dusty red"
+                        }]
+                }, 
+                {
+                   "transform":[1, 0, 0, 0,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1], 
+                    "shapes" : [
+                        {
+                            "type" : "box", 
+                            "length": 30, 
+                            "width" : 40, 
+                            "height" : 120, 
+                            "center" : [-80, 60, 85], 
+                            "material" : "blood red"
+                        }]
+                }
+            ]
+        }

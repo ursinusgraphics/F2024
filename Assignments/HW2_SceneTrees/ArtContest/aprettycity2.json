@@ -1,0 +1,44 @@
+{
+    "name": "recursive",
+    "materials": {},
+    "lights": [
+      {
+        "pos": [0, 200, 0],
+        "color": [1, 1, 1]
+      },
+      {
+        "pos": [-5, 2, -10],
+        "color": [1, 1, 1]
+      }, 
+      {
+        "pos" : [5, 2, 10], 
+        "color" : [1, 1, 1]
+      }
+    ],
+    "children" : [
+      {
+        "transform":[1, 0, 0, 0,
+                    0, 1, 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1],
+        "shapes":[
+            {
+              "type":"scene", 
+              "filename":"aprettycity.json"
+            }
+        ]
+    }, 
+    {
+      "transform":[-1, 0, 0, 0,
+                  0, -1, 0, 200,
+                  0, 0, 1, 0,
+                  0, 0, 0, 1],
+      "shapes":[
+          {
+            "type":"scene", 
+            "filename":"aprettycity.json"
+          }
+      ]
+  }
+  ]
+}

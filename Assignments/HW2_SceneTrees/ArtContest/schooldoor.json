@@ -1,0 +1,110 @@
+{
+    "name":"window",
+    "materials":{
+        "skyblue":{
+            "ka":[0.25, 0.4, 0.45],
+            "kd":[0.5, 0.8, 0.9],
+            "ks":[1.0, 1.0, 1.0]
+        },
+        "white":{
+            "ka":[0.75, 0.75, 0.75],
+            "kd":[0.8, 0.8, 0.8]
+        },
+        "gray":{
+            "kd":[0.6, 0.6, 0.6]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 2, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 2, 3],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0.00, 1.50, 7.00],
+            "rot": [0.00, 0.00, 0.00, 1.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.00, 1.50, -5.00],
+            "rot": [0.00, 1.00, 0.00, 0.00],
+            "fovy": 1.0
+        }
+    ],
+    
+    "children":[
+        {
+            "shapes":[
+                {
+                    "type":"box",
+                    "length":0.1,
+                    "width":3,
+                    "height":5,
+                    "center":[0, 0, 0],
+                    "material":"white"
+                },
+                {
+                    "type":"box",
+                    "length":0.1,
+                    "width":1.25,
+                    "height":2.25,
+                    "center":[0.675,-1.175,0.01],
+                    "material": "skyblue"
+                },
+                {
+                    "type":"box",
+                    "length":0.1,
+                    "width":1.25,
+                    "height":2.25,
+                    "center":[0.675,1.175,0.01],
+                    "material": "skyblue"
+                },
+                {
+                    "type":"box",
+                    "length":0.1,
+                    "width":1.25,
+                    "height":2.25,
+                    "center":[-0.675,1.175,0.01],
+                    "material": "skyblue"
+                },
+                {
+                    "type":"box",
+                    "length":0.1,
+                    "width":1.25,
+                    "height":2.25,
+                    "center":[-0.675,-1.175,0.01],
+                    "material": "skyblue"
+                }
+            ],
+            "children":[
+                {
+                    "transform": [1, 0, 0, 1.4,
+                                0, 0, -1, 0,
+                                0, 1, 0, 0.1,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type":"cylinder",
+                            "radius":0.05,
+                            "height":0.15,
+                            "material":"gray"
+                        },
+                        {
+                            "type":"sphere",
+                            "radius":0.1,
+                            "center":[0, 0.1, 0],
+                            "material":"gray"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

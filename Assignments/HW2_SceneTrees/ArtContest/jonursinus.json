@@ -1,0 +1,762 @@
+{
+    "name":"boxes",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "red":{
+            "kd":[1.0, 0.0, 0.0]
+        },
+        "white":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[1.0, 1.0, 1.0],
+            "ks":[0.8, 0.8, 0.8]
+        },
+        "yellow":{
+            "ka":[0.25, 0.20, 0.07],
+            "kd":[1.0, 0.84, 0.0],
+            "ks":[0.63, 0.56, 0.37]
+        },
+        "black":{
+            "ka":[0.1, 0.1, 0.1],
+            "kd":[0.1, 0.1, 0.1],
+            "ks":[0.1, 0.1, 0.1]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 2, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 2, -3],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 200, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[-5, 2, -10],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[5, 2, 10],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [-10.40, 3.93, -26.62],
+            "rot": [0.00, 1.0, 0.05, 0.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.00, 1.50, -5.00],
+            "rot": [0.00, 1.00, 0.00, 0.00],
+            "fovy": 1.0
+        }
+    ],
+
+    
+        
+    "children": [
+        {
+            "name": "U",
+            "transform": [1, 0, 0, 0,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 3,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 2,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 3,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, -1.15,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "R",
+            "transform": [1, 0, 0, -3.5,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 1.65,
+                            "center": [0, 0.68, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 2,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 3,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, 1.15,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, 0.2,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [0.807, -0.807, 0, 1,
+                                0.807, 0.807, 0, -0.2,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 3,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "S",
+            "transform": [1, 0, 0, -7,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 1.85,
+                            "center": [0, -0.58, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 2,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 1.85,
+                            "center": [0, 0.58, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 3,
+                            "height": 0.7,
+                            "center": [0, 1.15, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 3,
+                            "height": 0.7,
+                            "center": [0, -1.15, 0],
+                            "material": "red" }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "I",
+            "transform": [1, 0, 0, -9.5,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 3,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 0,
+                                0, 1, 0, 1.15,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 3,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 0,
+                                0, 1, 0, -1.15,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 3,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "name": "N",
+            "transform": [1, 0, 0, -14,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 3,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 2,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 3,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [0.807, -0.957, 0, 1,
+                                0.957, 0.807, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 2.5,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "U",
+            "transform": [1, 0, 0, -17.5,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 3,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 2,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 3,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, -1.15,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "S",
+            "transform": [1, 0, 0, -21,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 1.85,
+                            "center": [0, -0.58, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 2,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 1.85,
+                            "center": [0, 0.58, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 3,
+                            "height": 0.7,
+                            "center": [0, 1.15, 0],
+                            "material": "red" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 3,
+                            "height": 0.7,
+                            "center": [0, -1.15, 0],
+                            "material": "red" }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "UM",
+            "transform": [1, 0, 0, -10.5,
+                        0, 1, 0, 7,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 3,
+                            "center": [0, 0, 0],
+                            "material": "yellow" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 2,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 3,
+                            "center": [0, 0, 0],
+                            "material": "yellow" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 1,
+                                0, 1, 0, -1.15,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 0.7,
+                            "center": [0, 0, 0],
+                            "material": "yellow" }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Plate",
+            "transform": [1, 0, 0, -10.5,
+                        0, 1, 0, 7,
+                        0, 0, 1, 0.2,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 5,
+                            "height": 5,
+                            "center": [1, 0.5, 0],
+                            "material": "red"
+                             }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 2,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 5,
+                            "center": [2, 0.5, 0],
+                            "material": "yellow" }
+                    ]
+                },
+                {
+                    "transform": [1, 0, 0, 2,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 1,
+                            "height": 5,
+                            "center": [-4, 0.5, 0],
+                            "material": "yellow" }
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "name": "Plate2",
+            "transform": [1, 0, 0, -10.5,
+                        0, 1, 0, 7,
+                        0, 0, 1, 0.4,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.4,
+                            "width": 7,
+                            "height": 8,
+                            "center": [1, -0.5, 0],
+                            "material": "yellow"
+                             }
+                    ]
+                },
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.4,
+                            "width": 7.5,
+                            "height": 8.5,
+                            "center": [1, -0.5, 0.1],
+                            "material": "black"
+                             }
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "name": "PlateBottomL",
+            "transform": [0.807, -0.807, 0, -10.5,
+                        0.807, 0.807, 0, 2.5,
+                        0, 0, 1, 0.2,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.15,
+                            "width": 4,
+                            "height": 1,
+                            "center": [3, 0, 0],
+                            "material": "red"
+                             }
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "name": "PlateBottomR",
+            "transform": [-0.807, 0.807, 0, -11,
+                        0.807, 0.807, 0, 5,
+                        0, 0, 1, 0.2,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.15,
+                            "width": 4,
+                            "height": 1,
+                            "center": [0, 0, 0],
+                            "material": "red"
+                             }
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "name": "PlateBottomM",
+            "transform": [1, 0, 0, -9.5,
+                        0, 1, 0, 5,
+                        0, 0, 1, 0.2,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.15,
+                            "width": 2,
+                            "height": 1.5,
+                            "center": [0, 0, 0],
+                            "material": "red"
+                             }
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "name": "BehindText",
+            "transform": [1, 0, 0, -9.5,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0.2,
+                        0, 0, 0, 1],
+            "children": [
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 25,
+                            "height": 4,
+                            "center": [0, 0, 0],
+                            "material": "yellow" }
+                    ]
+                },
+                {
+                    "shapes": [
+                        {   "type": "box",
+                            "length": 0.2,
+                            "width": 26,
+                            "height": 5,
+                            "center": [0, 0, 0.1],
+                            "material": "black" }
+                    ]
+                }
+                
+                
+            ]
+        },
+        {
+            "transform":[
+                0.003, 0, 0, -22,
+                0, 0.003, 0, 2.5,
+                0, 0, -0.003, -2.75,
+                0, 0, 0, 1],
+            "shapes":[
+                {
+                    "type":"mesh",
+                    "filename":"ggslac/meshes/proftralie.off"
+                }
+
+            ]
+        },
+            
+
+                
+
+                
+
+                {
+                    "transform":[60, 0, 0, -10.5,
+                                0, 60, 0, -5,
+                                0, 0, 60, 0,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"mesh",
+                        "filename":"ggslac/meshes/square.off",
+                        "material":"black"
+                        }
+                    ]
+                },
+                {
+                    "transform":[60, 0, 0, -10.5,
+                                0, 0, -60, -5,
+                                0, 60, 0, 5,
+                                0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"mesh",
+                        "filename":"ggslac/meshes/square.off",
+                        "material":"white"
+                        }
+                    ]
+                }
+
+                
+        
+
+                
+            
+        
+    ]
+
+    
+
+
+}

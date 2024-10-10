@@ -1,0 +1,188 @@
+{
+    "name" : "gokuBlackBody",
+    "Best Shader to View Model": "gouraud",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "gi":{
+            "kd":[0.42,0.42,0.42]
+        },
+        "accent": {
+            "kd": [0,0,0]
+        },
+        "skin": {
+            "kd": [0.969,0.69,0.6]
+        },
+        "red": {
+            "kd": [1,0,0]
+        },
+        "white": {
+            "kd": [1,1,1]
+        }
+    },
+
+    "cameras":[
+        {
+            "pos": [0.00, 0.00, -5.00],
+            "rot": [0.00, 1.00, 0.00, 0.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [-6, 0.00, -2],
+            "rot": [0.05,0.83,0.08,0.56],   
+            "fovy": 1.0
+        }   
+    ],
+
+    "lights":[
+        {
+            "pos":[0, 200, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[-5, 2, -10],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[5, 2, 10],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, -5, 1],
+            "color":[1,1,1]
+        }
+    ],
+
+    "children": [
+        {
+            "shapes":[{
+            "type":"mesh",
+            "filename":"tr_reg_076.off",
+            "material": "skin"
+            },
+            {
+                "type":"box",
+                "length":0.3,
+                "width":0.2,
+                "height":0.35,
+                "center":[0.025, 0.35, -0.166],
+                "material":"accent"
+            },    
+            {
+                "type":"box",
+                "length":0.39,
+                "width":0.415,
+                "height":0.125,
+                "center":[0.025, 0.125, -0.175],
+                "material":"red"
+            },
+            {
+                "type":"box",
+                "length":0.25,
+                "width":0.4,
+                "height":0.45,
+                "center":[0.025, 0.2, -0.166],
+                "material":"gi"
+            },
+            {   "Change these below shoes": "to be blue for goku",
+                "type":"box",
+                "length":0.19,
+                "width":0.175,
+                "height":0.45,
+                "center":[-0.19, -0.7, -0.25],
+                "material":"white"
+            },
+            {   
+                "type":"box",
+                "length":0.19,
+                "width":0.175,
+                "height":0.45,
+                "center":[0.17, -0.7, -0.25],
+                "material":"white"
+            },
+            {   
+                "type":"box",
+                "length":0.325,
+                "width":0.185,
+                "height":0.088,
+                "center":[0.17, -0.89, -0.18],
+                "material":"white"
+            },
+            {   
+                "type":"box",
+                "length":0.325,
+                "width":0.185,
+                "height":0.088,
+                "center":[-0.19, -0.89, -0.18],
+                "material":"white"
+            }
+            ],
+            "children":[
+                {
+                    "transform":[1, 0.3, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[{
+                    "type":"box",
+                    "length":0.35,
+                    "width":0.125,
+                    "height":0.75,
+                    "center":[0.035, 0.225, -0.175],
+                    "material":"gi"
+                    }],
+                    "children": [
+                        {
+                            "transform":[1, -0.6, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[{
+                                "type":"box",
+                                "length":0.35,
+                                "width":0.125,
+                                "height":0.75,
+                                "center":[0.035, 0.225, -0.175],
+                                "material":"gi"
+                            }]
+                        }
+                        ]
+                },
+                {   "These are...": "Pant legs",
+                    "transform":[1, 0.2, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                    "shapes":[{
+                    "type":"box",
+                    "length":0.35,
+                    "width":0.225,
+                    "height":0.7,
+                    "center":[-0.07, -0.25, -0.175],
+                    "material":"gi"
+                    }],
+                    "children": [
+                        {
+                            "transform":[1, -0.3, 0, 0,
+                                0, 1, 0, 0,
+                                0, 0, 1, 0,
+                                0, 0, 0, 1],
+                            "shapes":[{
+                                "type":"box",
+                                "length":0.35,
+                                "width":0.225,
+                                "height":0.7,
+                                "center":[0.1, -0.25, -0.175],
+                                "material":"gi"
+                            }]
+                        }
+                        ]
+                }
+            ]
+        }
+
+    ]
+}

@@ -1,0 +1,197 @@
+{
+    "name" : "gokuHead",
+    "Best Shader to View Model": "gouraud",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "form":{
+            "kd":[1,1,0],
+            "refraction": 5.0,
+            "shininess": 100.0,
+            "special": true
+        },
+        "skin": {
+            "kd": [0.969,0.69,0.6]
+        },
+        "white": {
+            "kd": [1,1,1]
+        },
+        "eyes": {
+            "kd": [0,1,1]
+        },
+        "black": {
+            "kd": [0,0,0]
+        }
+    },
+
+    "cameras":[
+        {
+            "pos": [0.00, 0.00, -5.00],
+            "rot": [0.00, 1.00, 0.00, 0.00],
+            "fovy": 1.0
+        },
+        {
+            "pos": [-6, 0.00, -2],
+            "rot": [0.05,0.83,0.08,0.56],   
+            "fovy": 1.0
+        }   
+    ],
+
+    "lights":[
+        {
+            "pos":[0, 200, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[-5, 2, -10],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[5, 2, 10],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, -5, 1],
+            "color":[1,1,1]
+        }
+    ],
+
+    "children": [
+
+        {   "Body Part": "Head",
+            "transform":[0, 0, 1, 0,
+                         0, 1, 0, 0,
+                         -1, 0, 0, 0,
+                         0, 0, 0, 1],
+            "children": [
+                    {
+                        "transform":[0, 0, 1, 0,
+                                     0, 1, 0, 0,
+                                    -1, 0, 0, 0,
+                                     0, 0, 0, 1],
+                        "children": [
+                    {
+                        "transform":[1, 0, 0, 0.5,
+                                     0, 1, 0, -0.75,
+                                    0, 0, 1, 7.15,
+                                     0, 0, 0, 1],
+                            "children": [
+                            {
+                                "transform":[0.007, 0, 0, 0,
+                                            0, 0.007, 0, 0,
+                                            0, 0, 0.007, 0,
+                                            0, 0, 0, 1],
+                                
+                                "shapes":[
+                                    {
+                                        "type":"mesh",
+                                        "filename":"ggslac/meshes/proftralie.off",
+                                        "material":"skin"
+                                        }
+                                    ]
+
+                                }
+                                ]
+                        }
+                    ]
+                    }
+                    ]
+                
+        },
+
+
+
+        {   "Body Part": "Main Hair",
+            "transform":[1.65, 0, 0, 0,
+                        0, 1.65, 0, 0,
+                        0, 0, 1.65, 0,
+                        0, 0, 0, 1],
+            
+            "children": [
+                    {
+                        "transform":[1, 0, 0, 0,
+                                    0, 0.707, 0.707, 0,
+                                    0, -0.707, 0.707, 0,
+                                    0, 0, 0, 1],
+                        "children": [
+                        {
+                                "transform":[0.707, 0, 0.707, 0,
+                                            0, 1, 0, 0,
+                                            -0.707, 0, 0.707, 0,
+                                            0, 0, 0, 1],
+                                "children": [
+                                {
+                                    
+                                    "children": [
+                                    {
+                                                "transform":[1, 0, 0, -0.25,
+                                                0, 1, 0, 0.15,
+                                                0, 0, 1, 0.25,
+                                                0, 0, 0, 1],
+                                                "shapes":[
+                                                {
+                                                "type":"box",
+                                                "length":1,
+                                                "width":1,
+                                                "height":1,
+                                                "center":[0, 0, 0],
+                                                "material":"form"
+                                                }
+                                                ]
+                                        }
+                                        ]
+                                }   
+                                ]
+                        }
+                        ]
+                    }
+                    ]
+        },
+
+
+        {   "Body Part": "Hair Side Spikes",
+            "transform": [0.71,-0.71,0,0,
+                        0.71,0.71,0,0,
+                        0,0,1,0,
+                        0,0,0,1],
+            "children": [
+            {
+                "transform":[1, 0, 0, 0.5,
+                            0, 1, 0, -0.15,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length":1,
+                        "width":1,
+                        "height":1,
+                        "center":[0, 0, 0],
+                        "material":"form"
+                        }
+                        ]
+                    },
+            {
+                "transform":[1, 0, 0, -0.15,
+                            0, 1, 0, 0.5,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                    "shapes":[
+                        {
+                        "type":"box",
+                        "length":1,
+                        "width":1,
+                        "height":1,
+                        "center":[0, 0, 0],
+                        "material":"form"
+                        }
+                        ]
+                    }
+                ]          
+                
+        }
+    ]
+}

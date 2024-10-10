@@ -1,5 +1,5 @@
 {
-    "name":"artcontest",
+    "name":"dalek",
     "materials":{
         "green":{
             "ka":[0.05, 0.05, 0.05],
@@ -9,185 +9,203 @@
         "red":{
             "kd":[1.0, 0.0, 0.0]
         },
-    
-    "gray":{
-        "kd":[0.50, 0.50, 0.50]
-
-
+        "white":{
+            "kd":[1.0, 1.0, 1.0]
+        },
+        "blue":{
+            "kd":[0.0, 0.0, 1.0]
+        },
+        "black":{
+            "kd":[0.1, 0.1, 0.1]
+        },
+        "yellow":{
+            "kd":[1, 1, 0.2]
+        }
     },
-    "blue":{
-        "kd":[0,0,1]
-    }
-    },
+
     "lights":[
         {
-            "pos":[0, 200, 0],
+            "pos":[1, 2, 1],
             "color":[1, 1, 1]
         },
         {
-            "pos":[-5, 2, -10],
+            "pos":[-1, 2, -1],
             "color":[1, 1, 1]
         },
         {
-            "pos":[5, 2, 10],
+            "pos":[1, 2, -1],
             "color":[1, 1, 1]
         },
         {
-            "pos":[0, 200, 0],
+            "pos":[-1, 2, 1],
             "color":[1, 1, 1]
         }
     ],
+
     "cameras":[
         {
-            "pos": [-24.14, 13.53, -0.49],
-            "rot": [0.16, 0.71, 0.18, 0.66],
-            "fovy": 1.0
+            "pos": [0,1,2],
+            "rot": [0,0,0,0]
         }
-        
     ],
-        "children":[
-            {
-                "shapes":[
-                    {
-                        "type":"sphere",
-                        "radius":0.1,
-                        "center":[0, 0, -1],
-                        "material":"blue"
 
-                    },
-                    {
-                        "type":"cylinder",
-                        "radius":1,
-                        "height":3,
-                        "center":[-1, -1, 0],
-                        "material":"gray"
-                    },
-                    {
-                        "type":"cylinder",
-                        "radius":1,
-                        "height":3,
-                        "center":[1, -1, 0],
-                        "material":"gray"
-                    },
-                    {
-                        "type":"cylinder",
-                        "radius":1,
-                        "height":3,
-                        "center":[0, -1, 1],
-                        "material":"green"
-                    },
-                    {
-                        "type":"cone",
-                        "radius":1,
-                        "height":2,
-                        "center":[-1, -4, 0],
-                        "material":"red" 
-                    },
-                    {
-                        "type":"cone",
-                        "radius":1,
-                        "height":2,
-                        "center":[1, -4, 0],
-                        "material":"red" 
-                    },
-                    {
-                        "type":"mesh",
-                        "filename":"ggslac/meshes/dinopet.off",
-                        "center":[-1, -7, 1],
-                        "material":"red" 
-                    },
-                    {
-                        "type":"sphere",
-                        "radius":-0.1,
-                        "center":[0, 2.5, 0.5],
-                        "material":"blue"
-
-                    },
-                    {
-                        "type":"cone",
-                        "radius":1,
-                        "height":2,
-                        "center":[0, 3, 0.5],
-                        "material":"red"
-                        
-                    },
-                    {
-                        
-                            "type":"box",
-                            "length":20,
-                            "width":20,
-                            "height":20,
-                            "center":[0, -15, 0],
-                            "material":"green"
-                            
-                    },
-                    {
-                        "type":"box",
-                        "length":2,
-                        "width":2,
-                        "height":2,
-                        "center":[-1, -5, 0],
-                        "material":"gray"
-                    
-                },
+    "children":[
+        {
+            "shapes":[
                 {
-                "type":"box",
-                "length":2,
-                "width":2,
-                "height":2,
-                "center":[1, -5, 0],
-                "material":"gray"
+                "type":"cylinder",
+                "radius":0.5,
+                "height":1,
+                "center":[0, 0, 0],
+                "material":"white"
                 }
+            ],
 
-                    
+            "children":[
+                {
+                    "transform":[1, 0.5, 0, -0.25,
+                                 0, 1, 0, 0,
+                                 0, 0, 1, 0,
+                                 0, 0, 0, 1],
 
+                    "shapes":[
+                        {
+                        "type":"cylinder",
+                        "radius":0.5,
+                        "height":1,
+                        "center":[0, 0, 0],
+                        "material":"white"
+                        }
+                    ],
 
+                    "children":[
+                        {
+                            "transform":[1, 0, 0, -0.2,
+                                         0, 1, 0, 0,
+                                         0, 0, 1, 0,
+                                         0, 0, 0, 1],
 
+                            "shapes":[
+                                {
+                                "type":"cylinder",
+                                "radius":0.5,
+                                "height":1.5,
+                                "center":[0, 0.2, 0],
+                                "material":"white"
+                                }
+                            ]
+                        }
+                    ]
+                },
 
-                    
-                ],
+                {
+                    "transform":[1.55, 0, 0, 0,
+                                 0, 1, 0, 0,
+                                 0, 0, 1, 0,
+                                 0, 0, 0, 1],
 
-                "children":[
-                    {
-                    "transform":[1, 0, 0, 0,
-                        0, 1, 0, 0,
-                        0, 0, 1, 0,
-                        0, 0, 0, 1],
-                        
-                        "shapes":[
-                            {
-                            "type":"scene",
-                        "filename":"../scenes/artbase.json"
-                            }
-                            
-                           
-                        ]
-                    }
-             
-                ]
-                
+                    "shapes":[
+                        {
+                            "type":"cylinder",
+                            "radius":0.6,
+                            "height":0.1,
+                            "center":[-0.23, -0.51, 0],
+                            "material":"black"
+                        }
+                    ]
+                },
 
+                {
+                    "transform":[0.5, 0, 0, 0,
+                                 0, 0.5, 0, 1,
+                                 0, 0, 0.5, 0,
+                                 0, 0, 0, 1],
 
-            }
-        ]
-       
+                    "shapes":[
+                        {
+                            "type":"cylinder",
+                            "radius":1,
+                            "height":2.5,
+                            "center":[0, 0, 0],
+                            "material":"white"
+                        },
+                        {
+                            "type":"sphere",
+                            "radius":1,
+                            "center":[0, 1.2, 0],
+                            "material":"white"
+                        }
+                    ],
+                    "children":[
+                        {
+                            "transform":[0, -1, 0, 0,
+                                        1, 0, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1],
 
-    }
+                            "shapes": [
+                                {
+                                    "type":"cylinder",
+                                    "radius":0.1,
+                                    "height":1.5,
+                                    "center":[1.8, 1.5, 0],
+                                    "material":"white"
+                                },
+                                {
+                                    "type":"cylinder",
+                                    "radius":0.1,
+                                    "height":1,
+                                    "center":[0.2, 1.2, 0.6],
+                                    "material":"white"
+                                },
+                                {
+                                    "type":"cylinder",
+                                    "radius":0.1,
+                                    "height":1.5,
+                                    "center":[0.2, 1.5, -0.6],
+                                    "material":"white"
+                                }
+                            ],
+                            "children":[
+                                {
+                                    "transform":[0.2, 0, 0, 1.8,
+                                                0, 0.2, 0, 2.1,
+                                                0, 0, 0.2, 0,
+                                                0, 0, 0, 1],
 
+                                    "shapes":[
+                                        {
+                                            "type":"sphere",
+                                            "radius":1,
+                                            "center":[0, 0, 0],
+                                            "material":"black"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "transform":[1, 0, 0, 0,
+                                                         0, 1, 0, 0,
+                                                         0, 0, 1, 0,
+                                                         0, 0, 0, 1],
 
-                        
-
-                        
-                            
-
-                
-
-        
-            
-        
-        
-
-        
-        
-
-
+                                            "shapes":[
+                                                {
+                                                    "type":"cylinder",
+                                                    "radius":0.4,
+                                                    "height":1,
+                                                    "center":[0, 0.5, 0],
+                                                    "material":"blue"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                    
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

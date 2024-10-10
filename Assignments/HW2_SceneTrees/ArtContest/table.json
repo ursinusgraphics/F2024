@@ -1,0 +1,345 @@
+{
+    "name": "table",
+    "materials": {
+        "green": {
+            "ka": [0.05, 0.05, 0.05],
+            "kd": [0.0, 1.0, 0.0],
+            "ks": [0.8, 0.0, 0.0]
+        },
+        "red": {
+            "kd": [1.0, 0.0, 0.0]
+        },
+        "brown": {
+            "ka": [0.05, 0.05, 0.05],
+            "kd": [0.427, 0.310, 0.294],
+            "ks": [0.3, 0.2, 0.1]
+        },
+        "teddy": {
+            "ka": [0.1, 0.1, 0.1],
+            "kd": [0.361, 0.322, 0.282],
+            "ks": [0.3, 0.2, 0.1]
+        }
+    },
+
+    "lights": [
+        {
+            "pos": [0, 1.8, 1.5],
+            "color": [0.5, 0.3, 0.1]
+        },
+        {
+            "pos": [0, 1.8, -1.5],
+            "color": [0.5, 0.3, 0.1]
+        }
+    ],
+
+    "cameras": [
+        {
+            "pos": [-3.11,2.97,0.04],
+            "rot": [0.18,0.68,0.18,0.69],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.00, 1.50, -5.00],
+            "rot": [0.00, 0.00, 0.00, 1.00],
+            "fovy": 1.0
+        }
+    ],
+
+    "children": [
+        {
+            "transform": [1, 0, 0, 0,
+                          0, 1, 0, 0,
+                          0, 0, 1, 0,
+                          0, 0, 0, 1],
+            "shapes": [
+                {
+                    "type": "box",
+                    "length": 4.5,
+                    "width": 2.5,
+                    "height": 0.2,
+                    "center": [0, 1, 0],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.2,
+                    "width": 0.2,
+                    "height": 2.0,
+                    "center": [-1, -0.1, 2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.2,
+                    "width": 0.2,
+                    "height": 2.0,
+                    "center": [1, -0.1, 2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.2,
+                    "width": 0.2,
+                    "height": 2.0,
+                    "center": [-1, -0.1, -2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.2,
+                    "width": 0.2,
+                    "height": 2.0,
+                    "center": [1, -0.1, -2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.2,
+                    "width": 2,
+                    "height": 0.2,
+                    "center": [0, -0.5, -2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.2,
+                    "width": 2,
+                    "height": 0.2,
+                    "center": [0, -0.5, 2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 4,
+                    "width": 0.2,
+                    "height": 0.2,
+                    "center": [-1, -0.2, 0],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 4,
+                    "width": 0.2,
+                    "height": 0.2,
+                    "center": [1, -0.2, 0],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 4,
+                    "width": 0.1,
+                    "height": 0.2,
+                    "center": [1, 0.8, 0],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 4,
+                    "width": 0.1,
+                    "height": 0.2,
+                    "center": [-1, 0.8, 0],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.1,
+                    "width": 2,
+                    "height": 0.2,
+                    "center": [0, 0.8, -2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.1,
+                    "width": 2,
+                    "height": 0.2,
+                    "center": [0, 0.8, 2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.35,
+                    "width": 0.35,
+                    "height": 0.35,
+                    "center": [-1, 0.8, 2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.35,
+                    "width": 0.35,
+                    "height": 0.35,
+                    "center": [-1, 0.8, -2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.35,
+                    "width": 0.35,
+                    "height": 0.35,
+                    "center": [1, 0.8, -2],
+                    "material": "brown"
+                },
+                {
+                    "type": "box",
+                    "length": 0.35,
+                    "width": 0.35,
+                    "height": 0.35,
+                    "center": [1, 0.8, 2],
+                    "material": "brown"
+                }
+            ],
+            "children": [
+                {
+                    "transform": [
+                        1, 0, 0, 3,
+                        0, 1, 0, 0,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "scene",
+                            "filename": "chair.json"
+                        }
+                    ],
+                    "children": [
+                        {
+                            "transform": [-1, 0, 0, -6,
+                                          0, 1, 0, 0,
+                                          0, 0, -1, 0,
+                                          0, 0, 0, 1],
+                            "children": [
+                                {
+                                    "shapes": [
+                                        {
+                                            "type": "scene",
+                                            "filename": "chair.json"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "transform": [
+                1, 0, 0, 0,
+                0, 1, 0, 1.4,
+                0, 0, 1, -1.5,
+                0, 0, 0, 1
+            ],
+            "shapes": [
+                {
+                    "type": "scene",
+                    "filename": "candle.json"
+                }
+            ]
+        },
+        {
+            "transform": [
+                1, 0, 0, 0,
+                0, 1, 0, 1.4,
+                0, 0, 1, 1.5,
+                0, 0, 0, 1
+            ],
+            "shapes": [
+                {
+                    "type": "scene",
+                    "filename": "candle.json"
+                }
+            ],
+
+            "children": [
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, -1.5,
+                        0, 0, 1, 0,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "scene",
+                            "filename": "floor.json"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, -1.5,
+                        0, 0, 1, 6,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "scene",
+                            "filename": "floor.json"
+                        }
+                    ]
+                },
+                {
+                    "transform": [
+                        1, 0, 0, 0,
+                        0, 1, 0, -1.5,
+                        0, 0, 1, -6,
+                        0, 0, 0, 1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "scene",
+                            "filename": "floor.json"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "transform": [
+                1, 0, 0, 6,
+                0, 1, 0, 1.5,
+                0, 0, 1, 0,
+                0, 0, 0, 1
+            ],
+            "shapes": [
+                {
+                    "type": "scene",
+                    "filename": "walls.json"
+                }
+            ]
+        },
+        {
+            "transform": [
+                -0.03, 0, 0, 5,
+                0, 0.03, -0.005, -0.5,
+                0, 0.005, 0.03, -2,
+                0, 0, 0, 1
+            ],
+            "shapes": [
+                {
+                    "type":"mesh",
+                    "filename":"079.off",
+                    "material":"teddy"
+                }
+            ]
+            
+        },
+        {
+            "transform": [
+                1, 0, 0, 0,
+                0, 1, 0, 1.35,
+                0, 0, 1, 0,
+                0, 0, 0, 1
+            ],
+            "shapes": [
+                {
+                    "type": "scene",
+                    "filename": "dinner.json"
+                }
+            ]
+        }
+    ]
+}

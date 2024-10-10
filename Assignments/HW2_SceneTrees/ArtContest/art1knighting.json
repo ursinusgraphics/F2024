@@ -1,0 +1,88 @@
+{
+    "name":"art1knighting",
+    "materials":{
+        "green":{
+            "ka":[0.05, 0.05, 0.05],
+            "kd":[0.0, 1.0, 0.0],
+            "ks":[0.8, 0.0, 0.0]
+        },
+        "red":{
+            "kd":[1.0, 0.0, 0.0]
+        }
+    },
+
+    "lights":[
+        {
+            "pos":[0, 2, 2],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[0, 2, -2],
+            "color":[1, 1, 1]
+        }
+    ],
+    
+    "cameras":[
+        {
+            "pos": [0, 0, 0],
+            "rot": [0.2, 0.40, 0.1, 0.9],
+            "fovy": 1.0
+        }
+    ],
+
+    "children":[
+
+        { 
+            "transform":
+                [1, 0, 0, 0,
+                 0, 0, 1, 0,
+                 0, -1, 0, 0,
+                 0, 0, 0, 1],
+
+            "children":[
+                {
+                    "transform":
+                    [-0.4, 0, 0, 0.6,
+                    0, -0.4, 0, 1.2,
+                    0, 0, 0.4, -1.2,
+                    0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type":"mesh",
+                            "filename":"ggslac/meshes/longsword.off",
+                            "material":"red"
+                        }
+                    ]
+                },
+                {
+                    "transform":
+                    [0.003, 0, 0, 0.4,
+                    0, -0.00212, -0.00212, 0,
+                    0, 0.00212, -0.00212, -3.5,
+                    0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type":"mesh",
+                            "filename":"ggslac/meshes/proftralie.off"
+                        }
+                    ]
+                },
+                {
+                    "transform":
+                    [-1, 0, 0, 0,
+                    0, -1, 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1],
+                    "shapes":[
+                        {
+                            "type":"mesh",
+                            "filename":"ggslac/meshes/head.off"
+                        }
+                    ]
+                }
+
+            ]
+
+        }
+    ]
+}

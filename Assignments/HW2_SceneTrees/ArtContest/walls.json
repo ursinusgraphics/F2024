@@ -1,0 +1,96 @@
+{
+    "name":"walls",
+    "materials":{
+        "red":{
+            "kd":[1.0, 0.0, 0.0]
+        },
+        "brown": {
+            "ka": [0.08, 0.08, 0.07],
+            "kd": [0.15, 0.15, 0.1],
+            "ks": [0.01, 0.01, 0.01]
+        },
+        "black": {
+            "ka": [0.0, 0.0, 0.0],
+            "kd": [0.0, 0.0, 0.0],
+            "ks": [0.0, 0.0, 0.0]
+
+        }
+    },
+
+    "lights":[
+        {},{},{}
+    ],
+    
+    "cameras":[
+        {
+            "pos": [-6.26,2.25,-0.41],
+            "rot": [0.11,0.73,0.12,0.67],
+            "fovy": 1.0
+        },
+        {
+            "pos": [0.00,1.50,-5.00],
+            "rot": [0.00,0.00,0.00,1.00],
+            "fovy": 1.0
+        }
+    ],
+    
+    "children":[
+        {
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],
+            
+            "shapes":[
+                {
+                    "type":"box",
+                    "length":18,
+                    "width":0.2,
+                    "height":8,
+                    "center":[0, 1, 0],
+                    "material":"brown"
+                },
+                {
+                    "type":"box",
+                    "length":18,
+                    "width":0.2,
+                    "height":8,
+                    "center":[-11.4, 1, 0],
+                    "material":"brown"
+                },
+                {
+                    "type":"box",
+                    "length":0.2,
+                    "width":15,
+                    "height":8,
+                    "center":[-5, 1, 7.5],
+                    "material":"brown"
+                },
+                {
+                    "type":"box",
+                    "length":0.2,
+                    "width":15,
+                    "height":8,
+                    "center":[-5, 1, -7.5],
+                    "material":"brown"
+                },
+                {
+                    "type":"box",
+                    "length":60,
+                    "width":30,
+                    "height":0.2,
+                    "center":[0, 6, -8.5],
+                    "material":"brown"
+                },
+                {
+                    "type":"box",
+                    "length":60,
+                    "width":30,
+                    "height":0.1,
+                    "center":[0, -2.65, -8.5],
+                    "material":"black"
+                }
+            ]
+        }
+    ]
+}
