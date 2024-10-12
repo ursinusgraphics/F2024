@@ -49,7 +49,7 @@
                     "shapes":[
                         {
                             "type":"mesh",
-                            "filename":"ggslac/meshes/longsword.off",
+                            "filename":"longsword.off",
                             "material":"red"
                         }
                     ]
@@ -76,7 +76,7 @@
                     "shapes":[
                         {
                             "type":"mesh",
-                            "filename":"ggslac/meshes/head.off"
+                            "filename":"head.off"
                         }
                     ]
                 }
