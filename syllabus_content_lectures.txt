@@ -107,15 +107,15 @@ Half-Edge Boundaries, Per-Vertex Normals
 
 <ul><li><a href = "http://www.bytehazard.com/articles/vertnorm.html">Per-vertex normals notes</a></li></ul>
 LECTURE
+Edge Collapse, Mesh Simplification
+
+
+LECTURE
 Begin Subdivision Surfaces
 
 <ul><li><a href = "../CurveSubdivision">CurveSubdivision class exercise</a></li><li><a href = "https://ursinus-cs477-f2021.github.io/CoursePage/Materials/MazeExplorer/">CS 477 Graph Search Algorithms</a></li><li><a href = "https://graphics.stanford.edu/~mdfisher/subdivision.html">Matt Fisher quick subdivision notes</a></li><li><a href = "https://mrl.nyu.edu/publications/subdiv-course2000/coursenotes00.pdf">SIGGRAPH 2000 Subdivision Surface Notes</a> (Long)</li><li><a href = "https://threejs.org/examples/webgl_modifier_subdivision.html">three.js subdivision demo</a></li></ul>
 LECTURE
-Finish Subdivision Surfaces, Edge Collapse
-
-
-LECTURE
-Mesh Simplification
+Finish Subdivision Surfaces
 
 
 LECTURE
