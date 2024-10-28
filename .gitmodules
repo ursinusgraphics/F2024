@@ -40,3 +40,6 @@
 [submodule "Assignments/HW2_SceneTrees/ArtContest/ggslac"]
 	path = Assignments/HW2_SceneTrees/ArtContest/ggslac
 	url = https://github.com/ctralie/ggslac.git
+[submodule "ClassExercises/Week10_Subdivision/CurveSubdivision"]
+	path = ClassExercises/Week10_Subdivision/CurveSubdivision
+	url = https://github.com/ursinusgraphics/CurveSubdivision.git
