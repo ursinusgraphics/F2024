@@ -28,6 +28,9 @@ Module 8: Axis-Angle Rotation And Quaternions Due Before Class
 <a href = "%s../Modules/Module11/Video1">Module 11 Part 1: Mesh Data Structures</a> due before class
 
 2024-10-25
+<a href = "%s../Modules/Module12_Implicit/Video1">Module 12: Heightmaps And Implicit Surfaces</a> due before class
+
+2024-11-01
 <a href = "https://ursinus.instructure.com/courses/18079/assignments/207797">Software Environment Configuration</a> Due
 
 2024-08-27
