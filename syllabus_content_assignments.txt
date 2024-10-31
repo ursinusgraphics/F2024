@@ -16,19 +16,19 @@
 <a href = "../Modules/Module6/Video1">Module 6: 2D Matrices Definition, Composition, And Inverses</a> due before class
 
 2024-09-11
-<a href = "%s../Modules/Module7/Video0">Module 7: Homogeneous Coordinates, 3D Transformations, And Scene Trees</a> due before class
+<a href = "../Modules/Module7/Video0">Module 7: Homogeneous Coordinates, 3D Transformations, And Scene Trees</a> due before class
 
 2024-09-16
 Module 8: Axis-Angle Rotation And Quaternions Due Before Class
 
 2024-09-27
-<a href = "%s../Modules/Module10/Video1">Module 10: Topological Properties of Manifold Meshes</a> due before class
+<a href = "../Modules/Module10/Video1">Module 10: Topological Properties of Manifold Meshes</a> due before class
 
 2024-10-18
-<a href = "%s../Modules/Module11/Video1">Module 11 Part 1: Mesh Data Structures</a> due before class
+<a href = "../Modules/Module11/Video1">Module 11 Part 1: Mesh Data Structures</a> due before class
 
 2024-10-25
-<a href = "%s../Modules/Module12_Implicit/Video1">Module 12: Heightmaps And Implicit Surfaces</a> due before class
+<a href = "../Modules/Module12_Implicit/Video1">Module 12: Heightmaps And Implicit Surfaces</a> due before class
 
 2024-11-01
 <a href = "https://ursinus.instructure.com/courses/18079/assignments/207797">Software Environment Configuration</a> Due
