@@ -31,6 +31,9 @@ Module 8: Axis-Angle Rotation And Quaternions Due Before Class
 <a href = "../Modules/Module12_Implicit/Video1">Module 12: Heightmaps And Implicit Surfaces</a> due before class
 
 2024-11-01
+<a href = "../Modules/Module13Shaders/Video1">Module 13: GLSL And Shaders</a> due before class
+
+2024-11-04
 <a href = "https://ursinus.instructure.com/courses/18079/assignments/207797">Software Environment Configuration</a> Due
 
 2024-08-27
@@ -81,8 +84,8 @@ Assignment 4 Required Tasks Due
 2024-10-28
 Assignment 4 Final Submission Deadline
 
-2024-11-04
-<HR>Assignment 5: Shaders And Image Processing Out<!--<a href = "Assignments/HW5_Shaders">Assignment 5: Shaders And Image Processing</a> Out!-->
+2024-11-05
+<HR><a href = "Assignments/HW5_Shaders">Assignment: Shaders, Image Processing, And Music Visualizers</a> Out
 
 2024-11-04
 Assignment 5 Due
