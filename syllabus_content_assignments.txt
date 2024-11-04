@@ -31,9 +31,12 @@ Module 8: Axis-Angle Rotation And Quaternions Due Before Class
 <a href = "../Modules/Module12_Implicit/Video1">Module 12: Heightmaps And Implicit Surfaces</a> due before class
 
 2024-11-01
-<a href = "../Modules/Module13Shaders/Video1">Module 13: GLSL And Shaders</a> due before class
+<a href = "../Modules/Module13Shaders/Video1">Module 13: GLSL And Shaders</a> parts 1 and 2 due before class
 
 2024-11-04
+<a href = "../Modules/Module13Shaders/Video3">Module 13: GLSL And Shaders</a> part 3 due before class
+
+2024-11-06
 <a href = "https://ursinus.instructure.com/courses/18079/assignments/207797">Software Environment Configuration</a> Due
 
 2024-08-27
