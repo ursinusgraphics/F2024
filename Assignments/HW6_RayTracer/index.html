@@ -42,9 +42,7 @@
 								<section>
 									<header class="main">
                                         <h2>Assignment 6: Real Time Ray Tracing (120 Points)</h2>
-                                        <h3><a href = "ArtContest">Click here</a> to see the art contest results!</h3>
-                                        <h3>Due Wednesday 12/8/2022 at 11:59PM</h3>
-                                        <h3>You may work with a <a href = "../../index.html#buddy">buddy</a> on this assignment</h3>
+                                        <!--<h3><a href = "ArtContest">Click here</a> to see the art contest results!</h3>!-->
                                     </header>
 
 									<div id="page-content">
@@ -98,15 +96,22 @@
 										<p>
 										This assignment will walk students through the construction of a real time ray tracer using a mix of Javascript and GLSL.  All of the assignments we have done so far have built up to this point!  Since we are using GLSL, all rays are traced in parallel, which makes this <i>substantially faster</i> than a CPU implementation of ray tracing. (NOTE: This was heavily inspired by a <a href = "https://www.cs.princeton.edu/courses/archive/spring19/cos426/assign/A3/">recent assignment</a> in Princeton's computer graphics class, which is a modern version of the assignment I did a decade ago in the same class).  You should expect this assignment to be very challenging and painful at times, but it is also <i>incredibly</i> rewarding.  So stick with it!
                                         </p>
-                                        
-                                        <h3>Scoring</h3>
+
+                                        <h3>Deadlines / Scoring</h3>
                                         <p>
-                                            This assignment is out of <b>120 points</b>.  85 of these points are <b>required tasks</b> that everyone has to do.  Beyond that, there are 100 points up for grabs which you can choose from to pursue your interests and "make the assignment your own."  Any points that you get beyond 35 will apply to extra credit at a rate of 1 point, 4/5 points, 4/5^2 points, 4/5^3 points, etc.  The required points and the optional points will be graded independently.  So, for instance, if you get an 80/85 on the required points and you earn 50 optional points, then your final score will be <b>80 + 35 + 4.8 = 119.8/120</b> points, which is quite a formidable score!
+                                            There are three deadlines to keep you on track with this assignment:
+                                            <ol>
+                                                <li>(40 Points) The first deadline encompasses the first four required tasks: perspective ray casting, ray intersect triangle, ray intersect sphere, and ray intersect axis-aligned box</li>
+                                                <li>(45 Points) The second deadline enccompasses ray instancing, as well as all of the required tasks for illumination (Blinn-Phong shading, point light shadows, mirror reflections)</li>
+                                                <li>(35 Points) For the third deadline, you will choose your own adventure among the remaining tasks to earn 35 points. Any points that you get beyond 35 will apply to extra credit at a rate of 1 point, 4/5 points, 4/5^2 points, 4/5^3 points, etc.
+
+                                                </li>
+                                            </ol>
                                         </p>
 
                                         <h3><a name = "collaboration">Collaboration</a></h3>
                                         <p>
-                                            Since this is a very intense assignment, you are allowed to work very closely with other students in the class in a <a href = "../../index.html#buddy">buddy</a> capacity, and that permits looking at each others' code as you're debugging.  <b>But I expect each student to submit their own code.</b>  Please indicate to me on your README who your buddies were.
+                                            Since this is a very intense assignment, you are allowed to work very closely with other students in the class in a <a href = "../../index.html#buddy">buddy</a> capacity, and that permits looking at each others' code as you're debugging.  <b>But I expect each student to submit their own code.</b>  Please indicate to me on when you submit who your buddies were.
                                         </p>
 
 										<h3>Getting Started</h3>
@@ -122,14 +127,14 @@
                                                 </p>
                                             </li>
                                             <li>
-                                                You should definitely work on this using the live web server in VS Code.  The entry point is the file <code><a href = "Assignment4_RayTracer/RayViewer.html">RayViewer.html</a></code>
+                                                You should definitely work on this using the live web server in VS Code.  The entry point is the file <code><a href = "HW6_RayTracer/RayViewer.html">RayViewer.html</a></code>
                                             </li>
                                         </ol>
 
 
                                         <h3>Debugging GUI</h3>
                                         <p>
-                                        The main file where you view the results of your ray tracer is <code><a href = "Assignment4_RayTracer/RayViewer.html">RayViewer.html</a></code>.  In this file, you can switch back between your ray tracer and the standard object-first shader with Lambertian and specular Blinn-Phong shading.  You can use the object-first view to help you debug.  The GUI also allows you to change the positions and colors of lights and cameras real time.  Use this to your advantage to probe your program as you're debugging and to generate the most aesthetically pleasing scene if you plan to submit to the art contest.  Below is a screenshot of the object-first view.
+                                        The main file where you view the results of your ray tracer is <code><a href = "HW6_RayTracer/RayViewer.html">RayViewer.html</a></code>.  In this file, you can switch back between your ray tracer and the standard object-first shader with Lambertian and specular Blinn-Phong shading.  You can use the object-first view to help you debug.  The GUI also allows you to change the positions and colors of lights and cameras real time.  Use this to your advantage to probe your program as you're debugging and to generate the most aesthetically pleasing scene if you plan to submit to the art contest.  Below is a screenshot of the object-first view.
                                         </p>
                                             
                                             <img src = "ObjectFirstView.png">
@@ -179,8 +184,11 @@
 										<h2><a name = "submission">Submission Instructions</a></h2>
 										
 										<p>
-                                            You will submit all of your <code>raytracer.frag</code> code to Canvas when you are finished, along with any screenshots or videos for the art contest if you did that. Let me know a title and your name/pseudonym for the art contest.
+                                            For all three deadlines, you will submit your <code>raytracer.frag</code> code to Canvas when you are finished.  
                                         </p> 
+                                        <p>
+                                            If you do the art contest for the final submission, you should also submit any screenshots or videos to go along with it, as well as a title and your name/pseudonym.
+                                        </p>
                                             
 
                                             
@@ -818,18 +826,16 @@
 													</ul>
 													-->
 												</li>
-
-												<!--
-
 												<li>
 													<a href = "../../Assignments/HW6_RayTracer/index.html">HW6: Real Time Ray Tracing</a>
+													<!--
 													<ul>
 														<li>
 															<a href = "../../Assignments/HW6_RayTracer/ArtContest/index.html">Art Contest</a>
 														</li>
 													</ul>
+													!-->
 												</li>
-												!-->
 											</ul>
 										</li>
 										<li>
@@ -850,9 +856,9 @@
 														<li><a href = "../../../Modules/Module11/Video1">Module 11: Mesh Data Structures And Mesh Simplification</a></li>
 														<li><a href = "../../../Modules/Module12_Implicit/Video1">Module 12: Heightmaps And Implicit Surfaces</a></li>
 														<li><a href = "../../../Modules/Module13Shaders/Video1">Module 13: GLSL And Shaders</a></li>
+														<li><a href = "../../../Modules/Module14_LocalIllumination/Video1">Module 14: Local Illumination</a></li>
+														<li><a href = "../../../Modules/Module15_RayCasting/Video1">Module 15: Ray Casting</a></li>
 														<!--
-														<li><a href = "../../../Modules/Module10/Video1">Module 10: Local Illumination via Gouraud Shading</a></li>
-														<li><a href = "../../../Modules/Module11/Video1">Module 11: Ray Casting</a></li>
 														<li><a href = "../../../Modules/Module12/Video1">Module 12: Global Illumination Part 1</a></li>
 														<li><a href = "../../../Modules/Module13/Video1">Module 13: Object-First Viewing Projections</a></li>
 
@@ -883,11 +889,13 @@
 														<li>
 															<a href = "../../../CurveSubdivision">Week 9: Curve Subdivision</a>
 														</li>
-														
+																											
+														<li><a href = "../../ClassExercises/Week11_EmbossMedian/index.html">Week 11: Image Processing Exercises</a></li>
+
+														<li><a href = "../../ClassExercises/Week11_JuliaSets/index.html">Week 11: Julia Sets Exercises</a></li>
 														<!--
 
-														
-														<li><a href = "../../ClassExercises/Week11_EmbossMedian/index.html">Week 11: Image Processing Exercises</a></li>
+	
 														
 														<li>
 															<a href = "https://ursinus-cs476-f2022.github.io/Modules/Lighting/Lambertian">Week 12: Lambertian and Blinn-Phong Shading Class Exercises</a>

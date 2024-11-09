@@ -151,23 +151,11 @@ rayIntersectScene, Ray Instancing, Normal Matrices
 
 
 LECTURE
-Global Illumination: Multiple Lights, Shadows
+Global Illumination: Multiple Lights, Shadows, Specular Reflections, Refraction/Transmission
 
 <ul><li><a href = "https://slate.com/culture/2014/06/the-acoustics-of-eavesdropping-how-curved-ceilings-and-walls-redirect-and-amplify-sound.html">The acoustics of eavesdropping</a></li><li><a href = "https://www.youtube.com/watch?v=8hZl3arO7SY">Carl Sagan's explanation of how the Ancient Greeks knew the earth was round (PBS)</a></li></ul>
 LECTURE
-Global Illumination: Specular Reflections, Refraction/Transmission
-
-
-LECTURE
-Monte Carlo Path Tracing
-
-<ul><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
-LECTURE
-Virtual Reality, Augmented Reality
-
-
-LECTURE
-Object-first rendering: The Camera Matrix, Perspective/Viewing matrices, Depth Sorting
+Object-first rendering: The Camera Matrix, Perspective/Viewing matrices, Depth Sorting<p>Beginning Blender</p>
 
 <ul><li><a href = "https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/gluLookAt.xml">gluLookAt</a> documentation</li></ul>
 LECTURE
@@ -177,4 +165,20 @@ Cel Shading / Toon Shading, Hidden Surface Removal/Culling
 LECTURE
 Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps
 
-<ul><li><a href = "https://docs.google.com/presentation/d/1nN94a5gkN7BladB9E5SAcvvQCajF8xSdC_-sytOyh7E/edit?usp=sharing">Slides from today</a></li><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo</a></li></ul>
+<ul><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo</a></li></ul>
+LECTURE
+Shaders in Blender
+
+
+LECTURE
+The Rendering Equation, Monte Carlo Path Tracing
+
+<ul><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
+LECTURE
+Virtual Reality, three.js And Augmented Reality
+
+
+LECTURE
+Dynamic 3D Gaussians
+
+<ul><li><a href = "https://dynamic3dgaussians.github.io/">Link to paper on dynamic 3D Gaussians</a></li></ul>

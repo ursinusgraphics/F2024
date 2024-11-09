@@ -79,9 +79,6 @@ Assignment 3 Part 2 Due
 <HR><a href = "Assignments/HW4_PolygonMeshProcessing">Assignment 4: Polygon Mesh Processing (Group)</a> Out
 
 2024-10-21
-Last day to drop courses with a "W"
-
-2024-12-09
 Assignment 4 Required Tasks Due
 
 2024-10-28
@@ -97,15 +94,21 @@ Assignment 5 Due
 <HR><a href = "Assignments/HW6_RayTracer">Assignment 6: Real Time Ray Tracing Out<!--<a href = "Assignments/HW6_RayTracer">Assignment 6: Real Time Ray Tracing</a> Out!-->
 
 2024-11-15
-Assignment 6 Due
+Assignment 6 Part 1 Due
 
-2024-12-05
+2024-11-22
+Assignment 6 Part 2 Due
+
+2024-12-04
+Assignment 6 Part 3 Due
+
+2024-12-09
 Final Project Proposal Due
 
 2024-11-18
-Final Project Checkpoint
-
-2024-12-06
 Cel Shading Art Contest
 
 2024-11-29
+<HR>Last day to drop courses with a "W"
+
+2024-12-09
