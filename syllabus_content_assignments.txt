@@ -37,6 +37,21 @@ Module 8: Axis-Angle Rotation And Quaternions Due Before Class
 <a href = "../Modules/Module13Shaders/Video3">Module 13: GLSL And Shaders</a> part 3 due before class
 
 2024-11-06
+<a href = "../Modules/Module14_LocalIllumination/Video1">Module 14 Local Illumination: Exercises 1 and 2 Due</a>
+
+2024-11-11
+<a href = "../Modules/Module14_LocalIllumination/Video3">Module 14 Local Illumination: Exercises 3 Due</a>
+
+2024-11-13
+<a href = "../Modules/Module15_RayCasting/Video1">Module 15: Ray Casting Due</a>
+
+2024-11-14
+<a href = "../Modules/Module16/Video1">Module 16: Ray Tracing / Global Illumination Due</a>
+
+2024-11-17
+<a href = "../Modules/Module17/Video2">Module 17: Perspective Projections</a> Due Before Class
+
+2024-11-20
 <a href = "https://ursinus.instructure.com/courses/18079/assignments/207797">Software Environment Configuration</a> Due
 
 2024-08-27

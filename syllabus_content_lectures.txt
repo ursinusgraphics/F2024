@@ -155,23 +155,23 @@ Global Illumination: Multiple Lights, Shadows, Specular Reflections, Refraction/
 
 <ul><li><a href = "https://slate.com/culture/2014/06/the-acoustics-of-eavesdropping-how-curved-ceilings-and-walls-redirect-and-amplify-sound.html">The acoustics of eavesdropping</a></li><li><a href = "https://www.youtube.com/watch?v=8hZl3arO7SY">Carl Sagan's explanation of how the Ancient Greeks knew the earth was round (PBS)</a></li></ul>
 LECTURE
-Object-first rendering: The Camera Matrix, Perspective/Viewing matrices, Depth Sorting<p>Beginning Blender</p>
+Object-first rendering: The Camera Matrix, Perspective/Viewing matrices, Depth Sorting
 
-<ul><li><a href = "https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/gluLookAt.xml">gluLookAt</a> documentation</li></ul>
+<ul><li>Class Exercise: gluLookAt</li><li><a href = "https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/gluLookAt.xml">gluLookAt</a> documentation</li></ul>
 LECTURE
 Cel Shading / Toon Shading, Hidden Surface Removal/Culling
 
 <ul><li><a href = "ClassExercises/Week9_CelShading/CelShading.zip">Cel shading code from class</a></li><li><a href = "https://en.wikipedia.org/wiki/Cel_shading">Wikipedia Page on Cel Shading</a></li><li><a href = "https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S17/final_projects/amy_toshi.pdf">RPI Final Project on Ray Tracing Cel Shading</a></li></ul>
 LECTURE
-Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps
+Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps<p>Beginning Blender</p>
 
-<ul><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo</a></li></ul>
+<ul><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo, Using Shadow Maps</a></li></ul>
 LECTURE
-Shaders in Blender
+Shaders And Materials in Blender
 
 
 LECTURE
-The Rendering Equation, Monte Carlo Path Tracing
+The Rendering Equation, Monte Carlo Path Tracing, Examples in Blender
 
 <ul><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
 LECTURE
