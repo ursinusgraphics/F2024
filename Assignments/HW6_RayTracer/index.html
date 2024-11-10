@@ -68,7 +68,7 @@
                                                 </li>
                                                 <li><a href = "#part2">Part 2: Illumination/Materials: Required Tasks</a>
                                                     <ul>
-                                                        <li><a href = "#blinnphong">Blinn-Phong Shading (15 Points)</a></li>
+                                                        <li><a href = "#blinnphong">Blinn-Phong Illumination (15 Points)</a></li>
                                                         <li><a href = "#shadows">Point Light Shadows (10 Points)</a></li>
                                                         <li><a href = "#reflections">Mirror Material Reflections (10 Points)</a></li>
                                                     </ul>
@@ -102,7 +102,7 @@
                                             There are three deadlines to keep you on track with this assignment:
                                             <ol>
                                                 <li>(40 Points) The first deadline encompasses the first four required tasks: perspective ray casting, ray intersect triangle, ray intersect sphere, and ray intersect axis-aligned box</li>
-                                                <li>(45 Points) The second deadline enccompasses ray instancing, as well as all of the required tasks for illumination (Blinn-Phong shading, point light shadows, mirror reflections)</li>
+                                                <li>(45 Points) The second deadline enccompasses ray instancing, as well as all of the required tasks for illumination (Blinn-Phong illumination, point light shadows, mirror reflections)</li>
                                                 <li>(35 Points) For the third deadline, you will choose your own adventure among the remaining tasks to earn 35 points. Any points that you get beyond 35 will apply to extra credit at a rate of 1 point, 4/5 points, 4/5^2 points, 4/5^3 points, etc.
 
                                                 </li>
@@ -134,7 +134,7 @@
 
                                         <h3>Debugging GUI</h3>
                                         <p>
-                                        The main file where you view the results of your ray tracer is <code><a href = "HW6_RayTracer/RayViewer.html">RayViewer.html</a></code>.  In this file, you can switch back between your ray tracer and the standard object-first shader with Lambertian and specular Blinn-Phong shading.  You can use the object-first view to help you debug.  The GUI also allows you to change the positions and colors of lights and cameras real time.  Use this to your advantage to probe your program as you're debugging and to generate the most aesthetically pleasing scene if you plan to submit to the art contest.  Below is a screenshot of the object-first view.
+                                        The main file where you view the results of your ray tracer is <code><a href = "HW6_RayTracer/RayViewer.html">RayViewer.html</a></code>.  In this file, you can switch back between your ray tracer and the standard object-first shader with Lambertian and specular Blinn-Phong illumination.  You can use the object-first view to help you debug.  The GUI also allows you to change the positions and colors of lights and cameras real time.  Use this to your advantage to probe your program as you're debugging and to generate the most aesthetically pleasing scene if you plan to submit to the art contest.  Below is a screenshot of the object-first view.
                                         </p>
                                             
                                             <img src = "ObjectFirstView.png">
@@ -415,7 +415,7 @@
 
 
                                                 <BR><BR><HR><h2><a name = "part2">Part 2: Illumination/Materials: Required Tasks</a></h2>
-                                                <BR><BR><h3><a name = "blinnphong">Blinn-Phong Shading (15 Points)</a></h3>
+                                                <BR><BR><h3><a name = "blinnphong">Blinn-Phong Illumination (15 Points)</a></h3>
                                                 
                                                 <p>
                                                     Given a ray, an intersection point/normal, material properties of the intersected object, and a set of lights in the scene, add the Blinn-Phong contribution (diffuse + specular) of each light.  The basic equation of the final color <b>C</b> at the fragment for <b>L</b> lights is below
@@ -459,7 +459,7 @@
 
                                                         <li>You should have a loop up to <code>MAX_LIGHTS</code> and index into the uniform list <code>lights</code>, but break out of the loop before you reach <code>numLights</code> (this is the weird way we have to loop in GLSL).</li>
 
-                                                        <li>You may want to refer back to <a href = "https://ursinus-cs476-f2020.github.io/Modules/Module10/Exercise2">Module 11</a> where we did Phong Shading for a single light in the object-first shader.  The code will actually be very similar, but you'll have to put it in a loop</li>
+                                                        <li>You may want to refer back to <a href = "../../../Modules/Module14_LocalIllumination/Exercise2">Module 14</a> where we did Phong illumination for a single light in the object-first shader.  The code will actually be very similar, but you'll have to put it in a loop</li>
                                                     </ul>
                                                 </div>
 
@@ -478,7 +478,7 @@
                                             <BR><BR><h3><a name = "shadows">Point Light Shadows (10 Points)</a></h3>
                                         
                                                 <p>
-                                                When applying <a href = "#blinnphong">Blinn-Phong shading</a>, only include a light if it is not blocked by an object in the scene.  You can accomplish this by tracing a new ray from the point of intersection of the material towards the light (using <code>rayIntersectScene</code>), and seeing if it hits anything before it gets to the light.
+                                                When applying <a href = "#blinnphong">Blinn-Phong illumination</a>, only include a light if it is not blocked by an object in the scene.  You can accomplish this by tracing a new ray from the point of intersection of the material towards the light (using <code>rayIntersectScene</code>), and seeing if it hits anything before it gets to the light.
                                                 </p>
                                                 
                                                 <p>
