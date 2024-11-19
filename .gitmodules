@@ -52,3 +52,6 @@
 [submodule "Assignments/HW6_RayTracer/HW6_RayTracer"]
 	path = Assignments/HW6_RayTracer/HW6_RayTracer
 	url = https://github.com/ursinusgraphics/HW6_RayTracer.git
+[submodule "ClassExercises/ObjectFirstPerspectiveCamera"]
+	path = ClassExercises/ObjectFirstPerspectiveCamera
+	url = https://github.com/ursinusgraphics/ObjectFirstPerspectiveCamera.git
