@@ -41,18 +41,18 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Final Project: 3D Scanning Campus / Video Game Plugin</h1>
+										<h1>Final Project</h1>
 									</header>
 									
 
 									<h2>Overview</h2>
 
 									<p>
-										There will be a final project in this course which accounts for 10% of the overall course grade and which will be completed during the last month of the course, aftermost of the major programming assignments have wrapped up.  In particular, students will work together to 3D scan different buildings on campus simply by taking pictures of them, a process known as <a href = "https://www.photogrammetry.com/">photogrammetry</a>.  This is the technique that we used the last time graphics occurred to create a <a href = "https://www.ucsmokestack.com">virtual 3D model of the Ursinus smokestack</a>.
+										There will be a final project in this course which accounts for 10% of the overall course grade and which will be completed during the last month of the course, aftermost of the major programming assignments have wrapped up.  
 									</p>
 
 									<p>
-										Alternatively, if a students are doing the <a href = "../index.html#linq">linked inquiry</a> with DIGS-250, they will create a plugin programmatically to add some effect to the game they're working on in that class.
+										If students are doing the <a href = "../index.html#linq">linked inquiry</a> with DIGS-250, they will create a plugin programmatically to add some effect to the game they're working on in that class.  Otherwise, the project is open-ended.
 									</p>
 
 									<H3>Objectives</H3>
@@ -70,74 +70,43 @@
 									<a name = "presentations"><h2>Documentation</h2></a>
                                     
 									<p>
-									To save time in class, students will be required to make videos summarizing their work.  For students doing the game, a simple way to do this could be to screencast playing the game, while talking over and explaining how it works.  For students doing the 3D scanning, make a video showing walking around the scan virtually.  Students may also want to include some slides explaining some of the implementation details further.  Once the videos are completed, each student will be randomly assigned 3-4 videos from other groups in the course to watch and for which to provide critical feedback.  This feedback will factor into the participation grade.  <BR>
+									To save time in class, students will be required to make videos summarizing their work.  For students doing the game, a simple way to do this could be to screencast playing the game, while talking over and explaining how it works.  Students may also want to include some slides explaining some of the implementation details further.  Once the videos are completed, each student will be randomly assigned 3-4 videos from other groups in the course to watch and for which to provide critical feedback.  This feedback will factor into the participation grade.  <BR>
 									<b>NOTE: I will of course also be watching each video carefully myself.</b><BR>
 									</p>  
                                     
 									<HR>
-									<h2>Game Plugin Grading Rubric</h2>
+									<h2>Game Plugin Specification</h2>
+
+									<p>
+										For those in the LINQ, you will add on some effect to your plugin that uses concepts we went over in the class.  For instance, you might implement a shader <a href = "https://www.shadertoy.com/view/4syGWK">like this</a> to make one of your characters pop.  Or you might do something interesting with quaternions to help move your camera around in a custom way.  Or something else entirely!
+									</p>
 									
+									<HR>
+									<h2><a name = "general">General Project Specification for Everyone Else</a></h2>
+									<p>
+										For everyone else, the sky is the limit!  The only absolute requirement is that the project should use geometry in some way.  In addition, you should do at least one other thing on this list:
+									</p>
+
+									
+									<ul>
+										<li>Put in an interesting graphical effect</li>
+										<li>Incorporate real-time user interaction</li>
+										<li>Incorporate basic physics or collision checks (using an engine is fine for this)</li>
+										<li>Procedurally generate objects in the scene</li>
+									</ul>
+
+
+									<HR>
+									<h2><a name = "rubric">Grading Rubric</a></h2>
 									<table cellpadding = 10>
-									<tr><td><b>60%</b></td><td><u>Technical refinement:</u> Does your game incorporate concepts we learned in graphics?  How much did the project mature over the time you worked on it?  How close are you to the final goal that you had?</td></tr>
-									<tr><td><b>15%</b></td><td><u>Narrated video:</u> Graded for overall clarity, quality of figures/animations, and demonstration of what you did so that other students can understand it</td></tr>
-									<tr><td><b>10%</b></td><td><u>Code/Documentation/Mini Report:</u> In lieu of a formal final report, you will submit a brief summary of what you accomplished, along with code and directions on how to use it.  You can think of this as an extended README.  You will be graded on the quality of your code and documentation (how easy is it for someone who doesn't know your project to run your code?).<BR>
-									</td></tr>
-									<tr><td><b>15%</b></td><td><u>Above and beyond</u>: How much did you do to refine this project and to make it your own?  Did you put any unique twists on it that weren't suggested by the instructor?</td></tr>
-									</table>
-									
-									<BR><HR>
-									<h2><a name = "scanning">3D Scanning Directions/Rubric</a></h2>
+										<tr><td><b>60%</b></td><td><u>Technical refinement:</u> Does your project incorporate concepts we learned in graphics?  How much did the project mature over the time you worked on it?  How close are you to the final goal that you had?</td></tr>
+										<tr><td><b>15%</b></td><td><u>Narrated video:</u> Graded for overall clarity, quality of figures/animations, and demonstration of what you did so that other students can understand it</td></tr>
+										<tr><td><b>10%</b></td><td><u>Code/Documentation/Mini Report:</u> In lieu of a formal final report, you will submit a brief summary of what you accomplished, along with code and directions on how to use it.  You can think of this as an extended README.  You will be graded on the quality of your code and documentation (how easy is it for someone who doesn't know your project to run your code?).<BR>
+										</td></tr>
+										<tr><td><b>15%</b></td><td><u>Above and beyond</u>: How much did you do to refine this project and to make it your own?  Did you put any unique twists on it that weren't suggested by the instructor?</td></tr>
+										</table>
 
-									<h3>Buildings To Scan</h3>
-									<p>
-										Here are some buildings we can scan from the outside.  Each student can pick a different building
-									</p>
-									<Ul>
-										<Li>Pfahler/IDC/Thomas: This is a big one, so you might want to try just pictures of Pfahler by themselves first</Li>
-										<li>
-											Upper Wismer / Lower Wismer
-										</li>
-										<li>
-											Myrin Library
-										</li>
-										<li>
-											Schellhase Commons
-										</li>
-										<li>
-											Bomberger hall outside, and chapel inside
-										</li>
-										<li>
-											The Kaleidoscope
-										</li>
-										<li>
-											Berman museum of art
-										</li>
-										<li>
-											Olin Hall
-										</li>
-									</Ul>
-									
 
-									<H3>Step 1: Photogrammetry (50%)</H3>
-									<p>
-										The first step is to take a bunch of pictures of the building that you're scanning, and then to use photogrammetry software to stitch them together.  I highly recommend using the open source program <a href = "https://meshroom-manual.readthedocs.io/en/latest/first-steps/install/index.html">meshroom</a> to do the reconstruction.  They have an official tutorial at <a href = "https://meshroom-manual.readthedocs.io/en/latest/tutorials/sketchfab/sketchfab.html">this link</a>, and there are many videos on youtube about how to do this (such as <a href = "https://www.youtube.com/watch?v=R0PDCp0QF1o">this one</a>).  It may take some time to run, and you may find that you need to take more pictures to fill in certain areas and to tweak some of the parameters a bit.  But overall, this is one of the most user friendly programs I have seen to do this.
-									</p>
-
-									<h3>Step 2: Geometry simplification (15%)</h3>
-									<p>
-										You will notice that the geometry on your model can be quite messy, and that there are a lot of vertices.  This is a drawback when making things interactive in the browser over a network, particularly on mobile devices using mobile data.  We should start by simplifying the geometry as much as possible so it's quick to load and render.  <a href = "https://github.com/wjakob/instant-meshes">Instant meshes</a> is an excellent tool to do this.  You can read a tutorial about it at <a href = "https://styly.cc/tips/jp-instant-meshes/">this link</a>.  Unfortunately, it does not also apply the existing texture.  For this, we have one more step to do, as explained next
-									</p>
-
-									<h3>Step 3: Baking high resolution texture onto low resolution model (25%)</h3>
-
-									<p>
-										Now that we have a lower resolution module, we need to create a texture for it.  We can do this by lining it up with the original model and "baking" the old texture onto it (we're basically rendering it on).  <a href = "https://styly.cc/tips/retopology_bake/">Click here</a> to read a tutorial about how to do this using Blender.
-									</p>
-
-									<h3>Narrated Video (10%)</h3>
-									<p>
-										Show a flythrough/walkthrough of your final model
-									</p>
 
 									
 						</div>
