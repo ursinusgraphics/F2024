@@ -159,17 +159,21 @@ Object-first rendering: The Camera Matrix, Perspective/Viewing matrices, Depth S
 
 <ul><li>Class Exercise: gluLookAt</li><li><a href = "https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/gluLookAt.xml">gluLookAt</a> documentation</li></ul>
 LECTURE
+Flex Day
+
+
+LECTURE
 Cel Shading / Toon Shading, Hidden Surface Removal/Culling
 
 <ul><li><a href = "ClassExercises/Week9_CelShading/CelShading.zip">Cel shading code from class</a></li><li><a href = "https://en.wikipedia.org/wiki/Cel_shading">Wikipedia Page on Cel Shading</a></li><li><a href = "https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S17/final_projects/amy_toshi.pdf">RPI Final Project on Ray Tracing Cel Shading</a></li></ul>
 LECTURE
-Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps<p>Beginning Blender</p>
-
-<ul><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo, Using Shadow Maps</a></li></ul>
-LECTURE
 Shaders And Materials in Blender
 
 
+LECTURE
+Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps<p>Beginning Blender</p>
+
+<ul><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo, Using Shadow Maps</a></li></ul>
 LECTURE
 The Rendering Equation, Monte Carlo Path Tracing, Examples in Blender
 
@@ -178,7 +182,4 @@ LECTURE
 Virtual Reality, three.js And Augmented Reality
 
 
-LECTURE
-Dynamic 3D Gaussians
 
-<ul><li><a href = "https://dynamic3dgaussians.github.io/">Link to paper on dynamic 3D Gaussians</a></li></ul>
