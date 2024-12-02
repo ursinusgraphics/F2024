@@ -421,7 +421,7 @@
                                                     Given a ray, an intersection point/normal, material properties of the intersected object, and a set of lights in the scene, add the Blinn-Phong contribution (diffuse + specular) of each light.  The basic equation of the final color <b>C</b> at the fragment for <b>L</b> lights is below
 
                                                     <h3>
-                                                    \[ C = \sum_{i = 1}^L c_i \left(  k_d(\vec{n} \cdot \vec{\ell_i^N}) + k_s(\vec{h_i} \cdot \vec{dh})^s \right) \]
+                                                    \[ C = \sum_{i = 1}^L c_i \left(  k_d(\vec{n} \cdot \vec{\ell_i^N}) + k_s(\vec{h} \cdot \vec{dh_i})^s \right) \]
                                                     </h3>
 
                                                     And the equation for a light with attenuation is
@@ -431,10 +431,13 @@
                                                     where 
                                                     <ul>
                                                         <li>
-                                                            <b>&ell;<SUB>i</SUB></b> is the vector from the point of intersection to the light, and <b>&ell;<SUB>i</SUB><SUP>N</SUP></b> is the normalized vector from the point of intersection to the light.  (the position of the light is the <code>pos</code> field of the <code>Light</code> struct)
+                                                            <b>&ell;<SUB>i</SUB></b> is the vector from the point of intersection to the i<SUP>th</SUP> light, and <b>&ell;<SUB>i</SUB><SUP>N</SUP></b> is the normalized vector from the point of intersection to that light.  (the position of the light is the <code>pos</code> field of the <code>Light</code> struct)
                                                         </li>
                                                         <li>
-                                                            <b>h<SUB>i</SUB></b> is the unit vector from the point of intersection to the eye
+                                                            <b>h</b> is the unit vector from the point of intersection to the eye
+                                                        </li>
+                                                        <li>
+                                                            <b>dh<SUB>i</SUB></b> is the the reflection of <b>&ell;_i</b> about the normal.
                                                         </li>
                                                         <li>
                                                             <b>n</b> is the normal vector at the surface at the point of intersection
