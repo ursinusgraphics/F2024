@@ -421,7 +421,7 @@
                                                     Given a ray, an intersection point/normal, material properties of the intersected object, and a set of lights in the scene, add the Blinn-Phong contribution (diffuse + specular) of each light.  The basic equation of the final color <b>C</b> at the fragment for <b>L</b> lights is below
 
                                                     <h3>
-                                                    \[ C = \sum_{i = 1}^L c_i \left(  k_d(\vec{N} \cdot \vec{\ell_i^N}) + k_s(-\vec{v} \cdot \vec{h_i})^s \right) \]
+                                                    \[ C = \sum_{i = 1}^L c_i \left(  k_d(\vec{n} \cdot \vec{\ell_i^N}) + k_s(\vec{h_i} \cdot \vec{dh})^s \right) \]
                                                     </h3>
 
                                                     And the equation for a light with attenuation is
@@ -431,10 +431,19 @@
                                                     where 
                                                     <ul>
                                                         <li>
+                                                            <b>&ell;<SUB>i</SUB></b> is the vector from the point of intersection to the light, and <b>&ell;<SUB>i</SUB><SUP>N</SUP></b> is the normalized vector from the point of intersection to the light.  (the position of the light is the <code>pos</code> field of the <code>Light</code> struct)
+                                                        </li>
+                                                        <li>
+                                                            <b>h<SUB>i</SUB></b> is the unit vector from the point of intersection to the eye
+                                                        </li>
+                                                        <li>
+                                                            <b>n</b> is the normal vector at the surface at the point of intersection
+                                                        </li>
+                                                        <li>
                                                             <b>I<SUB>0</SUB></b> is the original color of the light (the <code>color</code> field of the <code>Light</code> struct)
                                                         </li>
                                                         <li>
-                                                            <b>d</b> is the distance of the light to the point of intersection (the position of the light is the <code>pos</code> field of the <code>Light</code> struct)
+                                                            <b>d</b> is the distance of the light to the point of intersection 
                                                         </li>
                                                         <li>
                                                             <b>c<SUB>a</SUB></b>, <b>l<SUB>a</SUB></b>, and <b>q<SUB>a</SUB></b> are constants (found as the x, y, and z components, respectively, of the <code>atten</code> field of the <code>Light</code> struct).
