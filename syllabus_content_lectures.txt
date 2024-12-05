@@ -129,7 +129,7 @@ In this part of the course, we discuss how to use a computer to generate images 
 LECTURE
 Shaders And GLSL: Attributes, Varying, Uniforms
 
-<ul><li><a href = "ClassExercises/Week10_Shaders/slides.pdf">Overview Slides</li><li><a href = "https://en.wikibooks.org/wiki/GLSL_Programming">GLSL Programming WikiBook</a></li><li><a href = "https://www.shadertoy.com/">shadertoy.com</a></li><li>Class Exercise: Blobby Shaders</li></ul>
+<ul><li><a href = "ClassExercises/Week10_Shaders/slides.pdf">Overview Slides</li><li><a href = "https://en.wikibooks.org/wiki/GLSL_Programming">GLSL Programming WikiBook</a></li><li><a href = "https://www.shadertoy.com/">shadertoy.com</a></li><li><a href = "https://www.youtube.com/watch?v=0ifChJ0nJfM">Basic shader tutorial</a></li><li>Class Exercise: Blobby Shaders</li></ul>
 LECTURE
 Animations with Shaders, Textures, Image Processing with Shaders
 
@@ -167,17 +167,17 @@ Cel Shading / Toon Shading, Hidden Surface Removal/Culling
 
 <ul><li><a href = "ClassExercises/Week9_CelShading/CelShading.zip">Cel shading code from class</a></li><li><a href = "https://en.wikipedia.org/wiki/Cel_shading">Wikipedia Page on Cel Shading</a></li><li><a href = "https://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S17/final_projects/amy_toshi.pdf">RPI Final Project on Ray Tracing Cel Shading</a></li></ul>
 LECTURE
-Shaders And Materials in Blender
+Antialiasing, Regular Expressions in Lighting
 
 
 LECTURE
-Object-First Rendering: Bump Maps, Displacement Maps, Shadow Maps<p>Beginning Blender</p>
+The Rendering Equation, Monte Carlo Path Tracing, Shaders/Materials in Blender
+
+<ul><li><a href = "https://www.youtube.com/watch?v=AODo_RjJoUA">NVidia Primer on path tracing</a><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
+LECTURE
+Continue Blender: Bump Maps, Displacement Maps, Shadow Maps
 
 <ul><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo, Using Shadow Maps</a></li></ul>
-LECTURE
-The Rendering Equation, Monte Carlo Path Tracing, Examples in Blender
-
-<ul><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
 LECTURE
 Virtual Reality, three.js And Augmented Reality
 
