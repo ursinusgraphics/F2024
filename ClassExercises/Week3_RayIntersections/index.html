@@ -103,6 +103,23 @@
 										<HR>
 										<h3>Ray Intersect Triangle</h3>
 
+										<p>
+											Intersecting a ray with a triangle starts off exactly like intersecting a ray with a plane.  First, we find the plane that the triangle determines.  A point on the plane is one of the points on the triangle (e.g. point <b>a</b>), and the normal can be found by computing 
+										</p>
+
+										<div style="width:100px;">
+											<h3>
+												\[ \vec{n}  = (\vec{b} - \vec{a}) \times (\vec{c} - \vec{a})  \]
+											</h3>
+										</div>
+
+										<p>
+											Then, we intersect a ray with the plane using the math we derived above.  But before we declare victory, we need to make sure the point on the plane is inside of the triangle.  There are many ways to do this, but one way is by using the <a href = "../../Materials/BarycentricExploration/BarycentricTriangles.html">area ratio method</a>
+										</p>
+
+										<img src = "rayIntersectTriangle.svg" width="50%">
+
+
 
 										
 <HR>
@@ -312,6 +329,17 @@
 												</td>
 											</tr>
 										</table>
+
+
+									<HR>
+										<h3>Ray Intersect Cylinder</h3>
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/6VHpZYTHZG4?si=cUJBGLykwqdsc1xx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+										<p></p>
+
+										<p>
+											<img src = "rayIntersectCylinder.svg" width="95%">
+										</p>
+
 
                                     </div>
 						</div>
