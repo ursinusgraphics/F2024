@@ -171,15 +171,14 @@ Antialiasing, Regular Expressions in Lighting
 
 
 LECTURE
-The Rendering Equation, Monte Carlo Path Tracing, Shaders/Materials in Blender
+The Rendering Equation
 
-<ul><li><a href = "https://www.youtube.com/watch?v=AODo_RjJoUA">NVidia Primer on path tracing</a><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
+<ul><li><a href = "https://www.youtube.com/watch?v=AODo_RjJoUA">NVidia Primer on path tracing</a></ul>
 LECTURE
-Continue Blender: Bump Maps, Displacement Maps, Shadow Maps
+Monte Carlo Path Tracing, Shaders/Materials in Blender
+
+<ul><li><a href = "https://www.youtube.com/watch?v=gsZiJeaMO48">Josh Maros ray tracing video</a></li></ul>
+LECTURE
+<p>Continue Blender: Normal Maps, Displacement Maps, Shadow Maps, UV Unwrapping</p><p><b>Evening 8PM: Chat with <a href = "https://www.jamestralie.com/">James Tralie</a></b></p>
 
 <ul><li><a href = "https://commons.erau.edu/cgi/viewcontent.cgi?article=1206&context=jdfsl">A 3D Stability Analysis of Lee Harvey Oswald in the Backyard Photo, Using Shadow Maps</a></li></ul>
-LECTURE
-Virtual Reality, three.js And Augmented Reality
-
-
-
